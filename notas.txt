@@ -1,0 +1,5 @@
+en sql no dejar int sino varchar para poder ingresar datos en blanco
+
+- hacer q se seleccione sola la fecha
+
+- ver el tema de acuenta con pedidos

@@ -1,12 +1,11 @@
-
-//Bootstrap
-@import "./vendors/_bootstrap.scss";
 //Abstracts
-@import "./abstracts/_mixins";
 @import "./abstracts/_variables";
+@import "./abstracts/_mixins";
 //Base
 @import "./base/_reset";
 @import "./base/_base";
+//Bootstrap
+@import "./vendors/_bootstrap.scss";
 //Layouts
 @import "./layout/_navbar";  
 @import "./layout/_header";  

@@ -18,10 +18,8 @@
     });
     </script>
 </head>
-
 <!-- TERMINA HEAD -->
 <!-- EMPIEZA BODY -->
-
 <center>
 
     <body>
@@ -29,26 +27,28 @@
         <!-- NAV BAR -->
 
         <header>
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.php">Inicio</a></li>
+                    <li class="nav-item"><a href="registrar.php">Registrar</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item">
 
-            <ul class="nav">
-                <li class="liLeft"><a href="index.php">Inicio</a></li>
-                <li class="liLeft"><a href="registrar.php">Registrar</a></li>
-                <li class="liRight"><a href="#about">About</a></li>
-                <li class="liLeft active">
-
-                    <button id="btn" style="font-family: 'PT Serif', serif; margin: 0px; width: 110px; height:47px;
+                        <button id="btn" style="font-family: 'PT Serif', serif; margin: 0px; width: 110px; height:47px;
 						 color:white ; border-right: grey solid .1px; cursor: pointer;" type="submit"
-                        onclick="javascript: location.href='deposito.php';">Depósito</button>
+                            onclick="javascript: location.href='deposito.php';">Depósito</button>
 
-                </li>
-                <li class="liLeft">
+                    </li>
+                    <li class="nav-item">
 
-                    <button id="btn" style="font-family: 'PT Serif', serif; margin: 0px; width: 110px; height:47px;
+                        <button id="btn" style="font-family: 'PT Serif', serif; margin: 0px; width: 110px; height:47px;
 						 color:white ; border-right: grey solid .1px; cursor: pointer;" type="submit"
-                        onclick="javascript: location.href='resumen.php';">Resumen</button>
+                            onclick="javascript: location.href='resumen.php';">Resumen</button>
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </nav>
+
         </header>
 
         <!-- TABLA VENTAS -->

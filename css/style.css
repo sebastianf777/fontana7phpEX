@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb {
 .navbar .navbar-nav .logo {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   text-align: center;
   letter-spacing: 0.3ch;
   width: 100%;
@@ -72,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar .navbar-nav .nav-item .nav-link .link-text {
   display: none;
-  margin-left: 1rem;
+  margin-left: 3.5rem;
 }
 .navbar .navbar-nav .nav-item .nav-link:hover {
   filter: grayscale(0%) opacity(1);

@@ -16,7 +16,7 @@
         .logo {
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 1rem;
+            margin: 1rem 0;
             text-align: center;
             letter-spacing: 0.3ch;
             width: 100%;
@@ -58,7 +58,7 @@
 
                 .link-text {
                     display: none;
-                    margin-left: 1rem;
+                    margin-left: 3.5rem;
                 }
 
                 &:hover {

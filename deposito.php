@@ -124,7 +124,7 @@
                 <li class="nav-item">
                     <a href="resumen.php">Resumen</a>
                 </li>
-                <li class="lnav-item">
+                <li class="nav-item">
                     <a href="#about">About</a>
                 </li>
             </ul>

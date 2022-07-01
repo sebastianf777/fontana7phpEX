@@ -22,16 +22,29 @@
             width: 100%;
 
             .nav-link {
-                
+                display: flex;
+
                 svg {
-                    width: 3rem;
+                    margin: 0 1rem;
+                    width: 4rem;
                     height: 3rem;
                     transform: rotate(0deg);
                     transition: $transition-speed-2;
                 }
+
                 .link-text {
                     display: none;
-                    margin-left: 1rem;
+
+                }
+
+                &:hover {
+                    filter: grayscale(0%) opacity(1);
+                    transition: $transition-speed-1;
+                    background: $bg_secondary;
+
+                    svg {
+                        filter: invert(1);
+                    }
                 }
             }
 
@@ -58,7 +71,9 @@
 
                 .link-text {
                     display: none;
-                    margin-left: 3.5rem;
+                    margin: 0 auto;
+                    padding-right: 7px;
+                    font-weight: bold;
                 }
 
                 &:hover {
@@ -73,36 +88,73 @@
             }
         }
 
-        .nav-item:last-child {
-            margin-top: auto;
+
+    }
+
+
+    @media only screen and (min-width: 601px) {
+        &:hover {
+            width: 16rem;
+
+            .nav-item .nav-link .link-text {
+                display: block;
+                filter: invert(1);
+            }
+
+            .logo .nav-link {
+                .link-text {
+                    display: block;
+                    filter: invert(1);
+
+                }
+
+                svg {
+                    transform: rotate(-360deg);
+                }
+            }
+
+        }
+
+        .navbar-nav {
+
+            .nav-item:last-child {
+                position: absolute;
+                bottom: 0;
+            }
         }
     }
 
-    &:hover {
-        width: 16rem;
-
-        .nav-item .nav-link .link-text{
-            display: block;
-            filter: invert(1);
-        }
-        .logo .nav-link svg{
-            transform: rotate(-360deg);
-        }
-    }
     @media only screen and (max-width: 600px) {
         bottom: 0;
         width: 100vw;
         height: 4rem;
-        .navbar-nav{
+
+        &:hover {
+
+            .nav-item .nav-link {
+                height: 4rem;
+
+                .link-text {
+
+                    filter: invert(1);
+                }
+            }
+
+        }
+
+        .navbar-nav {
+            display: flex;
             flex-direction: row;
-            .logo{
+
+            .logo {
                 display: none;
             }
-            .nav-item{
-                .nav-link{
+
+            .nav-item {
+                .nav-link {
                     justify-content: center;
                 }
             }
         }
-      }
+    }
 }

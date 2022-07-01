@@ -43,15 +43,26 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.3ch;
   width: 100%;
 }
+.navbar .navbar-nav .logo .nav-link {
+  display: flex;
+}
 .navbar .navbar-nav .logo .nav-link svg {
-  width: 3rem;
+  margin: 0 1rem;
+  width: 4rem;
   height: 3rem;
   transform: rotate(0deg);
   transition: 300ms;
 }
 .navbar .navbar-nav .logo .nav-link .link-text {
   display: none;
-  margin-left: 1rem;
+}
+.navbar .navbar-nav .logo .nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  transition: 600ms;
+  background: #141418;
+}
+.navbar .navbar-nav .logo .nav-link:hover svg {
+  filter: invert(1);
 }
 .navbar .navbar-nav .nav-item {
   width: 100%;
@@ -72,7 +83,9 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar .navbar-nav .nav-item .nav-link .link-text {
   display: none;
-  margin-left: 3.5rem;
+  margin: 0 auto;
+  padding-right: 7px;
+  font-weight: bold;
 }
 .navbar .navbar-nav .nav-item .nav-link:hover {
   filter: grayscale(0%) opacity(1);
@@ -82,18 +95,25 @@ body::-webkit-scrollbar-thumb {
 .navbar .navbar-nav .nav-item .nav-link:hover svg {
   filter: invert(1);
 }
-.navbar .navbar-nav .nav-item:last-child {
-  margin-top: auto;
-}
-.navbar:hover {
-  width: 16rem;
-}
-.navbar:hover .nav-item .nav-link .link-text {
-  display: block;
-  filter: invert(1);
-}
-.navbar:hover .logo .nav-link svg {
-  transform: rotate(-360deg);
+@media only screen and (min-width: 601px) {
+  .navbar:hover {
+    width: 16rem;
+  }
+  .navbar:hover .nav-item .nav-link .link-text {
+    display: block;
+    filter: invert(1);
+  }
+  .navbar:hover .logo .nav-link .link-text {
+    display: block;
+    filter: invert(1);
+  }
+  .navbar:hover .logo .nav-link svg {
+    transform: rotate(-360deg);
+  }
+  .navbar .navbar-nav .nav-item:last-child {
+    position: absolute;
+    bottom: 0;
+  }
 }
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -101,7 +121,14 @@ body::-webkit-scrollbar-thumb {
     width: 100vw;
     height: 4rem;
   }
+  .navbar:hover .nav-item .nav-link {
+    height: 4rem;
+  }
+  .navbar:hover .nav-item .nav-link .link-text {
+    filter: invert(1);
+  }
   .navbar .navbar-nav {
+    display: flex;
     flex-direction: row;
   }
   .navbar .navbar-nav .logo {

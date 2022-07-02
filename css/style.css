@@ -168,5 +168,21 @@ section {
     visibility: visible;
   }
 }
+.registrar_form {
+  background: white;
+  border-radius: 1rem;
+}
+.registrar_form .registrar_ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.registrar_form .registrar_ul li {
+  width: fit-content;
+}
+.registrar_form .registrar_ul .registrar_numero {
+  display: flex;
+  flex-direction: row;
+}
 
 /*# sourceMappingURL=style.css.map */

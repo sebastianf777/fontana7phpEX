@@ -147,31 +147,32 @@
         </nav>
     </header>
     <section>
-        <form id="registrar_form" class="appnitro" method="post" action="registrar_formulas.php">
+        <form class="registrar_form" method="post" action="registrar_formulas.php">
 
-            <ul>
-                <li>
-                    <label class="description" for="element_1">NÚMERO: </label>
+            <ul class="registrar_ul">
+                <li class="registrar_numero">
+                    <label for="element_1">N°: </label>
                     <div>
-                        <input id="element_1" name="element_1" class="element text small" type="text" maxlength="255"
+                        <input id="element_1" name="element_1" type="text" maxlength="255"
                             value="" />
                     </div>
                 </li>
 
-                <li>
-                    <label class="description titulo_materiales" for="element_2">MATERIALES:</label>
-                    <div>
-                        <input id="element_2" name="element_2" class="materiales element text medium" type="text"
-                            maxlength="255" value="" />
+                <li class="registrar_materiales_importe">
+                    <div class="registrar_materiales">
+                        <label class="titulo_materiales" for="element_2">MATERIALES:</label>
+                        <div>
+                            <input id="element_2" name="element_2" class="materiales element text medium" type="text"
+                                maxlength="255" value="" />
+                        </div>
                     </div>
-                </li>
-                <li>
-
-                    <label class="description" for="element_5">IMPORTE MATERIALES: </label>
-                    <div class="signo_importe">
-                        <div class="signo">$</div>
-                        <input id="element_5" name="element_5" class="signo_input element text " type="number"
-                            maxlength="255" value="" step=".01" />
+                    <div class="registrar_importe">
+                        <label class="description" for="element_5">IMPORTE MATERIALES: </label>
+                        <div class="signo_importe">
+                            <div class="signo">$</div>
+                            <input id="element_5" name="element_5" class="signo_input element text " type="number"
+                                maxlength="255" value="" step=".01" />
+                        </div>
                     </div>
                 </li>
                 <li>
@@ -222,7 +223,7 @@
                         <input id="element_12" name="element_12" class="signo_input element text " type="number"
                             maxlength="255" value="" step=".01" />
                     </div>
-                <li class="radial_li" id="li_3">
+                <li class="radial_li">
                     <label class="description">TIPO DE PAGO: </label>
                     <div class="radial_options">
                         <label class="radial_label" for="element_8_1">Contado</label>
@@ -235,7 +236,7 @@
                         <input id="element_8_3" name="element_8" class="element text" type="radio" maxlength="255"
                             value="Fiado" />
                     </div>
-                <li class="radial_li" id="li_3">
+                <li class="radial_li">
                     <label class="description">MOSTRAR: </label>
                     <div class="radial_options">
                         <label class="radial_label" for="element_13_1">SI</label>
@@ -257,38 +258,30 @@
                             value="Sebastian" />
                     </div>
                 </li>
-                <li id="li_4">
+                <li>
                     <label class="description" for="element_4">FECHA DE INGRESO : </label>
-                    <span>
-                        <input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value=""
-                            type="text" required> /
-                        <label for="element_4_1">MM</label>
-                    </span>
-                    <span>
-                        <input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value=""
-                            type="text" required> /
-                        <label for="element_4_2">DD</label>
-                    </span>
-                    <span>
-                        <input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value=""
-                            type="text" required>
-                        <label for="element_4_3">YYYY</label>
-                    </span>
+                    <div class="fecha">
+                        <span>
+                            <input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value=""
+                                type="text" required> /
+                            <label for="element_4_1">MM</label>
+                        </span>
+                        <span>
+                            <input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value=""
+                                type="text" required> /
+                            <label for="element_4_2">DD</label>
+                        </span>
+                        <span>
+                            <input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value=""
+                                type="text" required>
+                            <label for="element_4_3">YYYY</label>
+                        </span>
+                    </div>
 
                     <span id="calendar_4">
                         <img id="cal_img_4" class="datepicker" src="total/js_calendar/calendar.gif" alt="Pick a date.">
                     </span>
-                    <script type="text/javascript">
-                    Calendar.setup({
-                        inputField: "element_4_3",
-                        baseField: "element_4",
-                        displayArea: "calendar_4",
-                        button: "cal_img_4",
-                        ifFormat: "%B %e, %Y",
-                        onSelect: selectDate,
-
-                    });
-                    </script>
+                    
                 </li>
 
                 <li class="buttons">

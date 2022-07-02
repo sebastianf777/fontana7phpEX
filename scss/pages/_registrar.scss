@@ -1,0 +1,13 @@
+.registrar_form{
+    background: white;
+    border-radius: 1rem;
+    .registrar_ul{
+        @include flexColumnCenter;
+        li{
+            width: fit-content;
+        }
+        .registrar_numero{
+            @include flexRow;
+        }
+    }
+}

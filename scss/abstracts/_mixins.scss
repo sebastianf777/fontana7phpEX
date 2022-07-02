@@ -3,7 +3,18 @@
     flex-direction: column;
 }
 
+@mixin flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
 @mixin flexCenter{
     display: flex;
     justify-content: center;
+}
+
+@mixin flexColumnCenter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

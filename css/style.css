@@ -39,6 +39,13 @@ body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
 
+section {
+  margin: 0 auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 .navbar {
   width: 5rem;
   height: 100vh;

@@ -171,18 +171,39 @@ section {
 .registrar_form {
   background: white;
   border-radius: 1rem;
+  font-size: 0.7rem;
 }
 .registrar_form .registrar_ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .registrar_form .registrar_ul li {
+  padding-bottom: 1rem;
   width: fit-content;
 }
 .registrar_form .registrar_ul .registrar_numero {
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
+}
+.registrar_form .registrar_ul .registrar_numero input {
+  width: 2rem;
+  text-align: center;
+}
+.registrar_form .registrar_ul .registrar_materiales_importe {
+  display: flex;
+  flex-direction: row;
+}
+.registrar_form .registrar_ul .registrar_materiales_importe .registrar_materiales {
+  display: flex;
+  align-items: center;
+}
+.registrar_form .registrar_ul div textarea {
+  height: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

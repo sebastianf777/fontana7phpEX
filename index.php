@@ -4,18 +4,23 @@
 <head>
 
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/style.css">
 	<title>-inicio Fontana Viamonte</title>
-
+	<!-- JS -->
+	<script>
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		let vh = window.innerHeight * 0.01;
+		// Then we set the value in the --vh custom property to the root of the document
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	</script>
 </head>
 
 <!-- BODY -->
 
 <body>
-
 
 	<header>
 		<nav class="navbar">
@@ -120,35 +125,13 @@
 			</ul>
 		</nav>
 	</header>
-	<!-- CLEAR-FLOATS -->
-
-	<div class="clearFloats">
-	</div>
 
 	<!-- BOTONES DIRECTO A ENLACES -->
 
-	<div class="limiter">
-		<div class="container-table100">
-			<div class="logoI"></div>
-			<div class="wrap-table100">
-				<h1>CONTROL VIAMONTE</h1>
-				<br>
+	<section class="index">
+		<h1>CONTROL VIAMONTE</h1>
+	</section>
 
-				<div id="wrap">
-					<div id="header">
-						<p align="center">
-
-						<form class="example" target="_blank" method="post" action="deposito.php" style=" margin-left: auto; margin-right: auto; width: 425px;">
-							<input id="TABLA" name="TABLA" type="hidden" value="productos">
-							<button style=" margin: 5px; width: 200px; background-color: #4CAF50 " type="submit" onclick="javascript: form.action='deposito.php';">Ver tabla completa</button>
-							<button style=" margin: 5px; width: 200px; background-color: #4CAF50 " type="submit" onclick="javascript: form.action='registrar.php';">Registrar Producto</button>
-
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 </body>
 

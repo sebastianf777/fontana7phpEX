@@ -1,8 +1,11 @@
 body{
     color: blue;
-    background-color: yellow;
     margin: 0;
     padding: 0;
+    background: url(/img/fondo1.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     &::-webkit-scrollbar{
         width: 0.25rem;
     }

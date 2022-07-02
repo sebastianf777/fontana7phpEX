@@ -1,4 +1,18 @@
 :root{
     font-size: 16px;
     font-family: 'Open Sans';
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: -webkit-fill-available;
+}
+body {
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+  }
+h1{
+    padding: 0;
+    margin: 0;
 }

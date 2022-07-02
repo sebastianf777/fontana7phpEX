@@ -1,13 +1,33 @@
 :root {
   font-size: 16px;
   font-family: "Open Sans";
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   color: blue;
-  background-color: yellow;
   margin: 0;
   padding: 0;
+  background: url(/img/fondo1.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -32,7 +52,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
   align-items: center;
   height: 100%;
-  display: center;
+  display: flex;
   flex-direction: column;
 }
 .navbar .navbar-nav .logo {
@@ -109,7 +129,7 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 600px) {
   .navbar {
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     height: 4rem;
   }
   .navbar:hover .nav-item .nav-link {

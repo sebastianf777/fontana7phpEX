@@ -124,46 +124,39 @@
                     <input id="element_1" name="element_1" type="text" maxlength="255" value="" />
                 </li>
 
-                <li class="registrar_materiales_importe">
-                    <div class="registrar_materiales">
-                        <label class="titulo_materiales" for="element_2">MATERIALES:</label>
+                <li class="registrar_item_importe">
+                    <div class="registrar_item">
+                        <label for="element_2">MATERIALES:</label>
                         <textarea id="element_2" name="element_2" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
                     <div class="registrar_importe">
-                        <label class="description" for="element_5">$</label>
+                        <label for="element_5">$</label>
                         <input id="element_5" name="element_5" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
                     </div>
                 </li>
-                <li>
-
-                    <label class="description titulo_ferreteria" for="element_6">FERRETERIA: </label>
-                    <div>
-                        <input id="element_6" name="element_6" class="ferreteria element text medium" type="text" maxlength="255" value="" />
+                <li class="registrar_item_importe">
+                    <div class="registrar_item">
+                        <label for="element_6">FERRETERIA: </label>
+                        <textarea id="element_6" name="element_6" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
-                </li>
 
-                <li>
-                    <label class="description" for="element_7">IMPORTE FERRETERIA: </label>
-                    <div class="signo_importe">
-                        <div class="signo">$</div>
+                    <div class="registrar_item">
+                        <label for="element_7">$</label>
                         <input id="element_7" name="element_7" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
                     </div>
-                </li>
-                <li>
 
-                <li>
-                    <label class="description titulo_pedido" for="element_9">PEDIDO: </label>
-                    <div>
-                        <input id="element_9" name="element_9" class="pedido element text medium" type="text" maxlength="255" value="" />
-                    </div>
                 </li>
-                <li>
-                    <label class="description" for="element_10">IMPORTE PEDIDO: </label>
-                    <div class="signo_importe">
-                        <div class="signo">$</div>
+                <li class="registrar_item_importe">
+                    <div class="registrar_item">
+                        <label for="element_9">PEDIDO: </label>
+                        <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                    </div>
+                    <div class="registrar_importe">
+                        <label for="element_10">$</label>
                         <input id="element_10" name="element_10" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
                     </div>
                 </li>
+
                 <li>
                     <label class="description titulo_cliente" for="element_11">CLIENTE: </label>
                     <div>

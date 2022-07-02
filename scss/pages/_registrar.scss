@@ -19,15 +19,16 @@
                 text-align: center;
             }
         }
-        .registrar_materiales_importe{
+        .registrar_item_importe{
             @include flexRow;
-            .registrar_materiales{
+            .registrar_item{
                 display: flex;
                 align-items: center;
             }
         }
         div textarea{
             height: 1rem;
+            resize: none;
         }
     }
 }

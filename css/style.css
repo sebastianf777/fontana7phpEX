@@ -194,16 +194,17 @@ section {
   width: 2rem;
   text-align: center;
 }
-.registrar_form .registrar_ul .registrar_materiales_importe {
+.registrar_form .registrar_ul .registrar_item_importe {
   display: flex;
   flex-direction: row;
 }
-.registrar_form .registrar_ul .registrar_materiales_importe .registrar_materiales {
+.registrar_form .registrar_ul .registrar_item_importe .registrar_item {
   display: flex;
   align-items: center;
 }
 .registrar_form .registrar_ul div textarea {
   height: 1rem;
+  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

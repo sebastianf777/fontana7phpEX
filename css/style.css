@@ -172,6 +172,7 @@ section {
   background: white;
   border-radius: 1rem;
   font-size: 0.7rem;
+  width: 80vw;
 }
 .registrar_form .registrar_ul {
   list-style: none;
@@ -201,6 +202,26 @@ section {
 .registrar_form .registrar_ul .registrar_item_importe .registrar_item {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  width: 70%;
+}
+.registrar_form .registrar_ul .registrar_item_importe .registrar_item .item_titulo {
+  width: 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.registrar_form .registrar_ul .registrar_item_importe .registrar_item input {
+  width: 100%;
+}
+.registrar_form .registrar_ul .registrar_item_importe .registrar_importe {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+}
+.registrar_form .registrar_ul .registrar_item_importe .registrar_importe input {
+  width: 100%;
 }
 .registrar_form .registrar_ul div textarea {
   height: 1rem;

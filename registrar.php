@@ -126,7 +126,7 @@
 
                 <li class="registrar_item_importe">
                     <div class="registrar_item">
-                        <label for="element_2">MATERIALES:</label>
+                        <label class="item_titulo" for="element_2">MATERIALES:</label>
                         <textarea id="element_2" name="element_2" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
                     <div class="registrar_importe">
@@ -136,11 +136,11 @@
                 </li>
                 <li class="registrar_item_importe">
                     <div class="registrar_item">
-                        <label for="element_6">FERRETERIA: </label>
+                        <label class="item_titulo" for="element_6">FERRETERIA: </label>
                         <textarea id="element_6" name="element_6" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
 
-                    <div class="registrar_item">
+                    <div class="registrar_importe">
                         <label for="element_7">$</label>
                         <input id="element_7" name="element_7" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
                     </div>
@@ -148,7 +148,7 @@
                 </li>
                 <li class="registrar_item_importe">
                     <div class="registrar_item">
-                        <label for="element_9">PEDIDO: </label>
+                        <label class="item_titulo" for="element_9">PEDIDO: </label>
                         <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
                     <div class="registrar_importe">
@@ -158,17 +158,19 @@
                 </li>
 
                 <li>
-                    <label class="description titulo_cliente" for="element_11">CLIENTE: </label>
-                    <div>
-                        <input id="element_11" name="element_11" class="cliente element text medium" type="text" maxlength="255" value="" />
+                    <div class="registrar_item_importe">
+                        <div class="registrar_item">
+                            <label class="item_titulo" for="element_11">CLIENTE: </label>
+                            <input id="element_11" name="element_11" class="cliente element text medium" type="text" maxlength="255" value="" />
+                        </div>
+                        <div class="registrar_importe">
+                            <label for="element_12">$</label>
+                            <input id="element_12" name="element_12" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <label class="description" for="element_12">A CUENTA: </label>
-                    <div class="signo_importe">
-                        <div class="signo">$</div>
-                        <input id="element_12" name="element_12" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
-                    </div>
+
                 <li class="radial_li">
                     <label class="description">TIPO DE PAGO: </label>
                     <div class="radial_options">

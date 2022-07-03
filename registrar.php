@@ -114,17 +114,17 @@
                     <input id="element_1" name="element_1" type="text" maxlength="255" value="" />
                 </li>
 
-                <li class="registrar_item_importe">
+                <li class="registrar_item-importe">
                     <div class="registrar_item">
                         <label class="item_titulo" for="element_2">MATERIALES:</label>
                         <textarea id="element_2" name="element_2" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
                     <div class="registrar_importe">
                         <label for="element_5">$</label>
-                        <input id="element_5" name="element_5" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
+                        <input id="element_5" name="element_5" type="number" maxlength="255" value="" step=".01" />
                     </div>
                 </li>
-                <li class="registrar_item_importe">
+                <li class="registrar_item-importe">
                     <div class="registrar_item">
                         <label class="item_titulo" for="element_6">FERRETERIA: </label>
                         <textarea id="element_6" name="element_6" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
@@ -132,76 +132,76 @@
 
                     <div class="registrar_importe">
                         <label for="element_7">$</label>
-                        <input id="element_7" name="element_7" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
+                        <input id="element_7" name="element_7" type="number" maxlength="255" value="" step=".01" />
                     </div>
 
                 </li>
-                <li class="registrar_item_importe">
+                <li class="registrar_item-importe">
                     <div class="registrar_item">
                         <label class="item_titulo" for="element_9">PEDIDO: </label>
                         <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
                     <div class="registrar_importe">
                         <label for="element_10">$</label>
-                        <input id="element_10" name="element_10" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
+                        <input id="element_10" name="element_10" type="number" maxlength="255" value="" step=".01" />
                     </div>
                 </li>
 
-                <li>
-                    <div class="registrar_item_importe">
-                        <div class="registrar_item">
-                            <label class="item_titulo" for="element_11">CLIENTE: </label>
-                            <textarea id="element_11" name="element_11" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                        </div>
-                        <div class="registrar_importe">
-                            <label for="element_12">$</label>
-                            <input id="element_12" name="element_12" class="signo_input element text " type="number" maxlength="255" value="" step=".01" />
-                        </div>
-                    </div>
-                </li>
-                <li>
+                <li class="registrar_item-importe">
 
-                <li class="radial_li">
-                    <label class="description">TIPO DE PAGO: </label>
-                    <div class="radial_options">
-                        <label class="radial_label" for="element_8_1">Contado</label>
-                        <input id="element_8_1" name="element_8" class="element text" type="radio" maxlength="255" value="Contado" checked="checked" />
-                        <label class="radial_label" for="element_8_2">Débito</label>
-                        <input id="element_8_2" name="element_8" class="element text" type="radio" maxlength="255" value="Debito" />
-                        <label class="radial_label" for="element_8_3">Fiado</label>
-                        <input id="element_8_3" name="element_8" class="element text" type="radio" maxlength="255" value="Fiado" />
+                    <div class="registrar_item">
+                        <label class="item_titulo" for="element_11">CLIENTE: </label>
+                        <textarea id="element_11" name="element_11" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                    </div>
+                    <div class="registrar_importe">
+                        <label for="element_12">$</label>
+                        <input id="element_12" name="element_12" type="number" maxlength="255" value="" step=".01" />
+                    </div>
+
+                <li class="registrar_opciones-titulo">
+                    <div class="registrar_titulo">
+                        TIPO DE PAGO:
+                    </div>
+                    <div class="registrar_opciones">
+                        <input id="element_8_1" name="element_8" type="radio" maxlength="255" value="Contado" checked="checked" />
+                        <label for="element_8_1">Contado</label>
+                        <input id="element_8_2" name="element_8" type="radio" maxlength="255" value="Debito" />
+                        <label for="element_8_2">Débito</label>
+                        <input id="element_8_3" name="element_8" type="radio" maxlength="255" value="Fiado" />
+                        <label for="element_8_3">Fiado</label>
+
                     </div>
                 <li class="radial_li">
                     <label class="description">MOSTRAR: </label>
                     <div class="radial_options">
-                        <label class="radial_label" for="element_13_1">SI</label>
-                        <input id="element_13_1" name="element_13" class="element text" type="radio" maxlength="255" value="Si" />
-                        <label class="radial_label" for="element_13_2">NO</label>
-                        <input id="element_13_2" name="element_13" class="element text" type="radio" maxlength="255" value="No" checked="checked" />
+                        <label for="element_13_1">SI</label>
+                        <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
+                        <label for="element_13_2">NO</label>
+                        <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No" checked="checked" />
                     </div>
                 </li>
                 <li class="radial_li">
                     <label class="description">VENDEDOR: </label>
                     <div class="radial_options">
-                        <label class="radial_label" for="element_3_1">Brian</label>
-                        <input id="element_3_1" name="element_3" class="element text" type="radio" maxlength="255" value="Brian" checked="checked" />
-                        <label class="radial_label" for="element_3_2">Sebastian</label>
-                        <input id="element_3_2" name="element_3" class="element text" type="radio" maxlength="255" value="Sebastian" />
+                        <label for="element_3_1">Brian</label>
+                        <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian" checked="checked" />
+                        <label for="element_3_2">Sebastian</label>
+                        <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
                     </div>
                 </li>
                 <li>
                     <label class="description" for="element_4">FECHA DE INGRESO : </label>
                     <div class="fecha">
                         <span>
-                            <input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value="" type="text" required> /
+                            <input id="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" required> /
                             <label for="element_4_1">MM</label>
                         </span>
                         <span>
-                            <input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value="" type="text" required> /
+                            <input id="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" required> /
                             <label for="element_4_2">DD</label>
                         </span>
                         <span>
-                            <input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value="" type="text" required>
+                            <input id="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" required>
                             <label for="element_4_3">YYYY</label>
                         </span>
                     </div>

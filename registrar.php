@@ -136,6 +136,16 @@
                     </div>
 
                 </li>
+                <li class="registrar_opciones-titulo">
+                    <label class="registrar_titulo">MOSTRAR: </label>
+                    <div class="registrar_opciones">
+                        <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
+                        <label for="element_13_1">SI</label>
+                        <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No" checked="checked" />
+                        <label for="element_13_2">NO</label>
+
+                    </div>
+                </li>
                 <li class="registrar_item-importe">
                     <div class="registrar_item">
                         <label class="item_titulo" for="element_9">PEDIDO: </label>
@@ -171,43 +181,35 @@
                         <label for="element_8_3">Fiado</label>
 
                     </div>
-                <li class="radial_li">
-                    <label class="description">MOSTRAR: </label>
-                    <div class="radial_options">
-                        <label for="element_13_1">SI</label>
-                        <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
-                        <label for="element_13_2">NO</label>
-                        <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No" checked="checked" />
-                    </div>
-                </li>
-                <li class="radial_li">
-                    <label class="description">VENDEDOR: </label>
-                    <div class="radial_options">
-                        <label for="element_3_1">Brian</label>
+
+                <li class="registrar_opciones-titulo">
+                    <label class="registrar_titulo">VENDEDOR: </label>
+                    <div class="registrar_opciones">
                         <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian" checked="checked" />
-                        <label for="element_3_2">Sebastian</label>
+                        <label for="element_3_1">Brian</label>
                         <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
+                        <label for="element_3_2">Sebastian</label>
+
                     </div>
                 </li>
-                <li>
-                    <label class="description" for="element_4">FECHA DE INGRESO : </label>
+                <li class="registrar_fecha-titulo">
+                    <label class="registrar_titulo" for="element_4">FECHA: </label>
                     <div class="fecha">
-                        <span>
-                            <input id="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" required> /
-                            <label for="element_4_1">MM</label>
-                        </span>
-                        <span>
-                            <input id="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" required> /
-                            <label for="element_4_2">DD</label>
-                        </span>
-                        <span>
-                            <input id="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" required>
-                            <label for="element_4_3">YYYY</label>
-                        </span>
+
+                        <input id="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" required> /
+                        <label for="element_4_1">MM</label>
+
+                        <input id="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" required> /
+                        <label for="element_4_2">DD</label>
+
+
+                        <input id="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" required>
+                        <label for="element_4_3">YYYY</label>
+
                     </div>
 
                     <span id="calendar_4">
-                        <img id="cal_img_4" class="datepicker" src="total/js_calendar/calendar.gif" alt="Pick a date.">
+                        <img id="cal_img_4" class="datepicker" src="img/fecha.png" alt="Pick a date.">
                     </span>
 
                 </li>

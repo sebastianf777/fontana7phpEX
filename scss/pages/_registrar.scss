@@ -65,6 +65,7 @@
             @include flexRow;
             margin: 0 auto;
             align-items: center;
+
             .registrar_titulo {
                 text-align: center;
                 margin-right: 1vw;
@@ -98,6 +99,14 @@
                         border: 2px solid rgb(93, 68, 204);
                     }
                 }
+            }
+        }
+        .registrar_fecha-titulo{
+            @include flexRow;
+            margin: 0 auto;
+            align-items: center;
+            .registrar_titulo {
+                text-align: center;
             }
         }
 

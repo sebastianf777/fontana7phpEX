@@ -264,6 +264,15 @@ section {
 .registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones input:focus + label {
   border: 2px solid rgb(93, 68, 204);
 }
+.registrar_form .registrar_ul .registrar_fecha-titulo {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+}
+.registrar_form .registrar_ul .registrar_fecha-titulo .registrar_titulo {
+  text-align: center;
+}
 .registrar_form .registrar_ul div textarea {
   height: 1rem;
   resize: none;

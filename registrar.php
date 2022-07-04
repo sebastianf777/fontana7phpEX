@@ -140,9 +140,9 @@
                     <label class="registrar_titulo">MOSTRAR: </label>
                     <div class="registrar_opciones">
                         <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
-                        <label for="element_13_1">SI</label>
+                        <label class="mostrar" for="element_13_1">SI</label>
                         <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No" checked="checked" />
-                        <label for="element_13_2">NO</label>
+                        <label class="mostrar" for="element_13_2">NO</label>
 
                     </div>
                 </li>
@@ -192,7 +192,7 @@
 
                     </div>
                 </li>
-                <li class="registrar_fecha-titulo">
+                <li class="registrar_fecha-titulo-img">
                     <label class="registrar_titulo" for="element_4">FECHA: </label>
                     <div class="fecha">
 
@@ -208,16 +208,14 @@
 
                     </div>
 
-                    <span id="calendar_4">
-                        <img id="cal_img_4" class="datepicker" src="img/fecha.png" alt="Pick a date.">
-                    </span>
+                    <div id="calendar_4">
+                        <img src="img/fecha.png" alt="Pick a date.">
+                    </div>
 
                 </li>
 
-                <li class="buttons">
-                    <input type="hidden" name="form_id" value="18653" />
-
-                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+                <li class="registrar_submit">
+                    <input type="submit" name="submit" value="Submit" />
                 </li>
             </ul>
         </form>

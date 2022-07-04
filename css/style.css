@@ -172,7 +172,9 @@ section {
   }
 }
 .registrar_form {
-  background: white;
+  background: ghostwhite;
+  border: solid 1px;
+  box-shadow: 1px 1px;
   border-radius: 1rem;
   font-size: 0.7rem;
 }
@@ -204,11 +206,10 @@ section {
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 85%;
+  width: 80%;
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_titulo {
-  width: 20%;
+  width: 25%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -220,7 +221,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 15%;
+  width: 20%;
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_importe label {
   width: 27%;
@@ -231,12 +232,19 @@ section {
 .registrar_form .registrar_ul .registrar_opciones-titulo {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
   align-items: center;
 }
 .registrar_form .registrar_ul .registrar_opciones-titulo .registrar_titulo {
-  text-align: center;
-  margin-right: 1vw;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 20%;
+}
+.registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones {
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 .registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones label {
   display: inline-block;
@@ -248,9 +256,17 @@ section {
   text-transform: uppercase;
   user-select: none;
   cursor: pointer;
+  min-width: 1rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 1vw;
 }
 .registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones label:hover {
   background-color: #dfd;
+}
+.registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones .mostrar {
+  margin-right: 1rem;
 }
 .registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones input {
   opacity: 0;
@@ -264,14 +280,17 @@ section {
 .registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones input:focus + label {
   border: 2px solid rgb(93, 68, 204);
 }
-.registrar_form .registrar_ul .registrar_fecha-titulo {
+.registrar_form .registrar_ul .registrar_fecha-titulo-img {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   align-items: center;
 }
-.registrar_form .registrar_ul .registrar_fecha-titulo .registrar_titulo {
+.registrar_form .registrar_ul .registrar_fecha-titulo-img .registrar_titulo {
   text-align: center;
+}
+.registrar_form .registrar_ul .registrar_submit {
+  margin: 0 auto;
 }
 .registrar_form .registrar_ul div textarea {
   height: 1rem;

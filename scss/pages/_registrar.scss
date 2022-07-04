@@ -1,5 +1,7 @@
 .registrar_form {
-    background: white;
+    background: ghostwhite;
+    border: solid 1px;
+    box-shadow: 1px 1px;
     border-radius: 1rem;
     font-size: 0.7rem;
 
@@ -30,11 +32,10 @@
             .registrar_item {
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
-                width: 85%;
+                width: 80%;
 
                 .item_titulo {
-                    width: 20%;
+                    width: 25%;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -49,7 +50,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                width: 15%;
+                width: 20%;
 
                 label {
                     width: 27%;
@@ -63,15 +64,21 @@
 
         .registrar_opciones-titulo {
             @include flexRow;
-            margin: 0 auto;
+
             align-items: center;
 
             .registrar_titulo {
-                text-align: center;
-                margin-right: 1vw;
+                text-align: start;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 20%;
             }
 
             .registrar_opciones {
+                width: 80%;
+                @include flexCenter;
+
                 label {
                     display: inline-block;
                     background-color: #ddd;
@@ -82,32 +89,48 @@
                     text-transform: uppercase;
                     user-select: none;
                     cursor: pointer;
-                    &:hover{
+                    min-width: 1rem;
+                    text-align: center;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-right: 1vw;
+                  
+                    &:hover {
                         background-color: #dfd;
                     }
                 }
-
+                .mostrar{
+                    margin-right: 1rem;
+                }
                 input {
                     opacity: 0;
                     position: fixed;
                     width: 0;
-                    &:checked + label{
-                        background-color:rgb(255, 254, 187);
+
+                    &:checked+label {
+                        background-color: rgb(255, 254, 187);
                         border-color: rgb(93, 68, 204);
                     }
-                    &:focus + label{
+
+                    &:focus+label {
                         border: 2px solid rgb(93, 68, 204);
                     }
                 }
             }
         }
-        .registrar_fecha-titulo{
+
+        .registrar_fecha-titulo-img {
             @include flexRow;
             margin: 0 auto;
             align-items: center;
+
             .registrar_titulo {
                 text-align: center;
             }
+        }
+
+        .registrar_submit{
+            margin: 0 auto;
         }
 
         div textarea {

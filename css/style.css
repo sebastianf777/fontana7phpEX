@@ -45,6 +45,11 @@ section {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 600px) {
+  section {
+    padding-top: 0.7rem;
+  }
+}
 
 .navbar {
   width: 5rem;
@@ -178,11 +183,11 @@ section {
   border-radius: 1rem;
   font-size: 1rem;
   width: 73vw;
-  height: 73vh;
+  height: 93vh;
   max-width: 45vw;
 }
 .registrar_form .registrar_ul {
-  height: 100%;
+  height: 94%;
   list-style: none;
   margin: 0;
   padding: 1rem 2rem;
@@ -216,7 +221,7 @@ section {
   align-items: center;
   width: 80%;
 }
-.registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_titulo {
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_icono {
   width: 25%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -237,47 +242,51 @@ section {
 .registrar_form .registrar_ul .registrar_item-importe .registrar_importe input {
   width: 73%;
 }
-.registrar_form .registrar_ul .registrar_opciones-titulo {
+.registrar_form .registrar_ul .registrar_opciones-icono {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.registrar_form .registrar_ul .registrar_opciones-titulo .registrar_titulo {
+.registrar_form .registrar_ul .registrar_opciones-icono .registrar_icono {
   text-align: start;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 20%;
 }
-.registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones {
+.registrar_form .registrar_ul .registrar_opciones-icono .registrar_opciones {
   width: 80%;
   display: flex;
   justify-content: center;
 }
-.registrar_form .registrar_ul .registrar_opciones-titulo .registrar_opciones .mostrar {
+.registrar_form .registrar_ul .registrar_opciones-icono .registrar_opciones .mostrar {
   margin-right: 1rem;
 }
-.registrar_form .registrar_ul .registrar_fecha-titulo-img {
+.registrar_form .registrar_ul .registrar_fecha-icono-img {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   align-items: center;
 }
-.registrar_form .registrar_ul .registrar_fecha-titulo-img .registrar_titulo {
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_icono img {
+  width: 6vh;
+  margin-right: 1vh;
+}
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_fecha input {
   text-align: center;
 }
-.registrar_form .registrar_ul .registrar_fecha-titulo-img .registrar_img img {
-  width: 4vw;
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_img img {
+  width: 5vh;
   padding: 0.3vw;
   background: #ddd;
   border-radius: 2vw;
   margin-left: 1vw;
   border: rgb(93, 68, 204) solid 2px;
 }
-.registrar_form .registrar_ul .registrar_fecha-titulo-img .registrar_img img:hover {
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_img img:hover {
   background: #dfd;
 }
-.registrar_form .registrar_ul .registrar_fecha-titulo-img .registrar_img img:active {
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_img img:active {
   background: rgb(93, 68, 204);
 }
 .registrar_form .registrar_ul .registrar_submit {
@@ -290,7 +299,11 @@ section {
 @media only screen and (max-width: 600px) {
   .registrar_form {
     width: 90vw;
+    height: 83vh;
     max-width: none;
+  }
+  .registrar_form .registrar_ul li {
+    padding-bottom: 0.7rem;
   }
   .registrar_form .registrar_ul .registrar_item-importe .registrar_item {
     width: 75%;

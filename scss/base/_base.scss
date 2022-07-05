@@ -1,4 +1,4 @@
-body{
+body {
     color: blue;
     margin: 0;
     padding: 0;
@@ -6,19 +6,26 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
         width: 0.25rem;
     }
-    &::-webkit-scrollbar-track{
+
+    &::-webkit-scrollbar-track {
         background: #1e1e24;
     }
-    &::-webkit-scrollbar-thumb{
+
+    &::-webkit-scrollbar-thumb {
         background: #6649b8;
     }
 }
 
-section{
+section {
     margin: 0 auto;
     padding-top: 1rem;
     @include flexCenter;
+
+    @media only screen and (max-width: 600px) {
+        padding-top: 0.7rem;
+    }
 }

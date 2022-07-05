@@ -333,4 +333,16 @@ section {
   background-color: #dfd;
 }
 
+.deposito_tabla-titulo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5rem;
+}
+@media only screen and (max-width: 600px) {
+  .deposito_tabla-titulo {
+    margin: 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

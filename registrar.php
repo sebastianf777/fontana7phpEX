@@ -109,9 +109,17 @@
         <form class="registrar_form" method="post" action="registrar_formulas.php">
 
             <ul class="registrar_ul">
-                <li class="registrar_numero">
-                    <label for="element_1">N°: </label>
-                    <input id="element_1" name="element_1" type="text" maxlength="255" value="" />
+                <li class="registrar_numero-mostrar">
+                    <div class="registrar-numero">
+                        <label for="element_1">N°: </label>
+                        <input id="element_1" name="element_1" type="text" maxlength="255" value="" required/>
+                    </div>
+                    <div class="registrar_mostrar">
+                        <input id="con_numero" name="con_sin_numero" type="radio" maxlength="255" value="con_numero" checked="checked"/>
+                        <label for="con_numero">CON</label>
+                        <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero"  />
+                        <label for="sin_numero">SIN</label>
+                    </div>
                 </li>
 
                 <li class="registrar_item-importe">
@@ -194,7 +202,7 @@
                 </li>
                 <li class="registrar_fecha-titulo-img">
                     <label class="registrar_titulo" for="element_4">FECHA: </label>
-                    <div class="fecha">
+                    <div class="registrar_fecha">
 
                         <input id="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" required> /
                         <label for="element_4_1">MM</label>
@@ -208,8 +216,8 @@
 
                     </div>
 
-                    <div id="calendar_4">
-                        <img src="img/fecha.png" alt="Pick a date.">
+                    <div class="registrar_img" id="calendar_4">
+                        <img tabindex="1" src="img/fecha.png" alt="Pick a date.">
                     </div>
 
                 </li>

@@ -1,7 +1,22 @@
-const fecha = document.getElementById('calendar_4')
-const month = document.getElementById('element_4_1')
-const date = document.getElementById('element_4_2')
-const year = document.getElementById('element_4_3')
+const fecha = document.getElementById('calendar_4');
+const month = document.getElementById('element_4_1');
+const date = document.getElementById('element_4_2');
+const year = document.getElementById('element_4_3');
+const numero = document.getElementById('element_1');
+const sin_numero = document.getElementById('sin_numero');
+const mostrar_numero = document.querySelector('.registrar_mostrar')
+
+mostrar_numero.addEventListener('click', function () {
+  if(sin_numero.checked){
+    numero.required = false 
+  }else{
+    numero.required = true 
+  }
+}
+)
+
+
+
 const todayNew = new Date();
 let today;
 let todayFiltered;

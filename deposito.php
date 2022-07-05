@@ -140,68 +140,63 @@
     </header>
 
     <!-- TABLA VENTAS -->
-    <div class='deposito_tabla-titulo'>
-        <div class="deposito_titulo">
-            VENTAS MOSTRADOR - FONTANA VIAMONTE
-        </div>
-        <table class="deposito_tabla">
-            <thead>
-                <tr>
-                    <th>
-                        Nº
-                    </th>
-                    <th data-column='column2'>
-                        PRODUCTO
-                    </th>
-                    <th data-column='column3'>
-                        VENDEDOR
-                    </th>
-                    <th data-column='column4'>
-                        FECHA INGRESO
-                    </th>
-                    <th data-column='column5'>
-                        ID
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
+    <section>
+    
+            <table class="deposito_tabla">
+                <thead>
+                    <tr>
+                        <th>
+                            Nº
+                        </th>
+                        <th data-column='column2'>
+                            PRODUCTO
+                        </th>
+                        <th data-column='column3'>
+                            VENDEDOR
+                        </th>
+                        <th data-column='column4'>
+                            FECHA INGRESO
+                        </th>
+                        <th data-column='column5'>
+                            ID
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        require('conectar.php');
+                    ?>
+                    <?php
+                        $sql = "SELECT numero, UPPER(producto) AS ferremat, serie, fechaing, id from productos WHERE detallemateriales != '' 
+                        UNION
+                        SELECT numero, UPPER(ferreteria) AS ferremat, serie, fechaing, id from productos WHERE mostrar = 'Si' AND detalleferreteria != '' order by id DESC LIMIT 15 ";
+                        $result = mysqli_query($con, $sql);
+                        while ($crow = mysqli_fetch_assoc($result)) {
+                        ?>
+                    <tr>
+                        <td>
+                            <?php echo $crow['numero']; ?>
+                        </td>
+                        <td>
+                            <?php echo $crow['ferremat']; ?>
+                        </td>
+                        <td>
+                            <?php echo $crow['serie']; ?>
+                        </td>
+                        <td>
+                            <?php echo $crow['fechaing']; ?>
+                        </td>
+                        <td>
+                            <?php echo $crow['id']; ?>
+                        </td>
+                    </tr>
+                    <?php
+                                        }
+                                        ?>
+                </tbody>
+            </table>
 
-                <?php
-				require('conectar.php');
-                ?>
-                <?php
-				$sql = "SELECT numero, UPPER(producto) AS ferremat, serie, fechaing, id from productos WHERE detallemateriales != '' 
-				UNION
-				SELECT numero, UPPER(ferreteria) AS ferremat, serie, fechaing, id from productos WHERE mostrar = 'Si' AND detalleferreteria != '' order by id DESC LIMIT 15 ";
-				$result = mysqli_query($con, $sql);
-				while ($crow = mysqli_fetch_assoc($result)) {
-				?>
-                <tr>
-                    <td>
-                        <?php echo $crow['numero']; ?>
-                    </td>
-                    <td>
-
-                        <?php echo $crow['ferremat']; ?>
-                    </td>
-                    <td>
-                        <?php echo $crow['serie']; ?>
-                    </td>
-                    <td>
-                        <?php echo $crow['fechaing']; ?>
-                    </td>
-                    <td>
-                        <?php echo $crow['id']; ?>
-                    </td>
-                </tr>
-
-                <?php
-								}
-								?>
-
-            </tbody>
-        </table>
-    </div>
+    </section>
 </body>
 
 

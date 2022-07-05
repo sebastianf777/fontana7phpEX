@@ -23,3 +23,9 @@
     justify-content: center;
 }
 
+@mixin tabla_css{
+    background-color: $tabla_bg_primary;
+    border: solid 1px;
+    box-shadow: 1px 1px;
+    border-radius: 1rem;
+}

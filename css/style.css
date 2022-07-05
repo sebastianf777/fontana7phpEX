@@ -172,18 +172,22 @@ section {
   }
 }
 .registrar_form {
-  background: ghostwhite;
+  background-color: ghostwhite;
   border: solid 1px;
   box-shadow: 1px 1px;
   border-radius: 1rem;
-  font-size: 0.7rem;
+  font-size: 1rem;
+  width: 73vw;
+  height: 73vh;
+  max-width: 45vw;
 }
 .registrar_form .registrar_ul {
+  height: 100%;
   list-style: none;
   margin: 0;
   padding: 1rem 2rem;
+  justify-content: space-evenly;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 .registrar_form .registrar_ul li {
@@ -286,6 +290,7 @@ section {
 @media only screen and (max-width: 600px) {
   .registrar_form {
     width: 90vw;
+    max-width: none;
   }
   .registrar_form .registrar_ul .registrar_item-importe .registrar_item {
     width: 75%;
@@ -335,13 +340,20 @@ section {
 
 .deposito_tabla-titulo {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  margin-left: 5rem;
+  background-color: ghostwhite;
+  border: solid 1px;
+  box-shadow: 1px 1px;
+  border-radius: 1rem;
+  margin-left: 5.3rem;
+  padding: 1vw 2vh;
+  font-size: 2vw;
+  justify-content: space-evenly;
 }
 @media only screen and (max-width: 600px) {
   .deposito_tabla-titulo {
-    margin: 0;
+    margin: 1vw 2vh;
+    padding: 0;
   }
 }
 

@@ -1,7 +1,13 @@
 .deposito_tabla-titulo{
-    @include flexColumnCenter;
-    margin-left: 5rem;
+    @include flexColumn;
+    @include tabla_css;
+    margin-left: 5.3rem;
+    padding: 1vw 2vh;
+    font-size: 2vw;
+    justify-content: space-evenly;
+    
     @media only screen and (max-width: 600px) {
-        margin: 0;
+        margin: 1vw 2vh;
+        padding: 0;
     }
 }

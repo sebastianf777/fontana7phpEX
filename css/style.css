@@ -51,6 +51,15 @@ section {
   }
 }
 
+table {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
 .navbar {
   width: 5rem;
   height: 100vh;

@@ -27,7 +27,7 @@ if (isset($_GET['desconectar'])) {
 <!-- TERMINA HEAD -->
 <!-- EMPIEZA BODY -->
 
-<center>
+
 
 
     <body>
@@ -147,12 +147,16 @@ if (isset($_GET['desconectar'])) {
                 </ul>
             </nav>
         </header>
-        <!-- TABLA VENTAS -->
-        <a class="desconectar_boton" href="<?php echo $_SERVER['PHP_SELF']; ?>?desconectar=si">Desconectar</a>
-        <!-- <button type="submit" name="login" value="desconectar">Desconectar</button> -->
-        <div class="resumen_titulo-subpaginas-tablas">
-            <div class="resumen_titulo">
-                <h1 class="h1Logo">VENTAS MOSTRADOR - FONTANA VIAMONTE </h1>
+
+        
+        <div class="resumen_panel-subpaginas-tablas">
+            <div class="resumen_panel">
+                <div class="panel_usuario">
+                <a class="desconectar_boton" href="<?php echo $_SERVER['PHP_SELF']; ?>?desconectar=si">Desconectar</a>
+                </div>
+                <div class="panel_titulo">
+                    <h1 class="h1Logo">VENTAS MOSTRADOR - FONTANA VIAMONTE </h1>
+                </div>
             </div>
             <div class="resumen_subpaginas">
                 <h2 class="subpaginas_titulo">Resumenes de vendedores</h2>
@@ -170,18 +174,18 @@ if (isset($_GET['desconectar'])) {
                 </div>
             </div>
             <div class="resumen_tablas">
-                <table class="tabla_izq">
+                <table class="resumen_tablas_izquierda">
                     <thead>
-                        <tr class='row100 head'>
-                            <th class='ventas-totales-diarias-1'>
-                                <center class="numero">FECHA</center>
+                        <tr>
+                            <th>
+                                FECHA
                             </th>
-                            <th class='ventas-totales-diarias-2' data-column='column2'>
-                                <center class="producto">TOTAL TOTAL DIARIO CONTADO</center>
+                            <th>
+                                TOTAL TOTAL DIARIO CONTADO
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="tabla_alt">
+                    <tbody>
                         <?php
 								require('conectar.php');
 								?>
@@ -192,11 +196,11 @@ if (isset($_GET['desconectar'])) {
 								?>
                         <tr>
                             <td>
-                                <center><?php echo $crow['fechaing']; ?></center>
+                                <?php echo $crow['fechaing']; ?>
                             </td>
                             <td>
-                                <center>Materiales $<?php echo $crow['totalmat']; ?> - Ferreteria
-                                    $<?php echo $crow['totalfer']; ?></center>
+                                Materiales $<?php echo $crow['totalmat']; ?> - Ferreteria
+                                    $<?php echo $crow['totalfer']; ?>
                             </td>
                         </tr>
                         <?php
@@ -205,29 +209,29 @@ if (isset($_GET['desconectar'])) {
                     </tbody>
 
                     <thead>
-                        <tr class='row100 head'>
-                            <th class='ventas-totales-diarias-1'>
-                                <center class="numero">FECHA</center>
+                        <tr>
+                            <th>
+                                FECHA
                             </th>
-                            <th class='ventas-totales-diarias-2' data-column='column2'>
-                                <center class="producto">TOTAL TOTAL DIARIO DÉBITOS</center>
+                            <th>
+                                TOTAL TOTAL DIARIO DÉBITOS
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="tabla_alt">
+                    <tbody>
                         <?php
 								$sql = "SELECT SUM(detallemateriales) AS totaldebitomateriales, SUM(detalleferreteria) AS totaldebitoferreteria, fechaing from productos
 								WHERE pagotipo = 'debito' GROUP BY fechaing order by id DESC ";
 								$result = mysqli_query($con, $sql);
 								while ($crow = mysqli_fetch_assoc($result)) {
 								?>
-                        <tr class='row100'>
+                        <tr>
                             <td>
-                                <center><?php echo $crow['fechaing']; ?></center>
+                                <?php echo $crow['fechaing']; ?>
                             </td>
                             <td>
-                                <center>Materiales $<?php echo $crow['totaldebitomateriales']; ?> -
-                                    Ferreteria $<?php echo $crow['totaldebitoferreteria']; ?></center>
+                                Materiales $<?php echo $crow['totaldebitomateriales']; ?> -
+                                    Ferreteria $<?php echo $crow['totaldebitoferreteria']; ?>
                             </td>
                         </tr>
                         <?php
@@ -235,12 +239,12 @@ if (isset($_GET['desconectar'])) {
 								?>
                     </tbody>
                     <thead>
-                        <tr class='row100 head'>
-                            <th class='ventas-totales-diarias-1'>
-                                <center class="numero">FECHA</center>
+                        <tr>
+                            <th>
+                                FECHA
                             </th>
-                            <th class='ventas-totales-diarias-2' data-column='column2'>
-                                <center class="producto">TOTAL TOTAL DIARIO PEDIDOS</center>
+                            <th>
+                                TOTAL TOTAL DIARIO PEDIDOS
                             </th>
                         </tr>
                     </thead>
@@ -250,12 +254,12 @@ if (isset($_GET['desconectar'])) {
 								$result = mysqli_query($con, $sql);
 								while ($crow = mysqli_fetch_assoc($result)) {
 								?>
-                        <tr class='row100'>
+                        <tr>
                             <td>
-                                <center><?php echo $crow['fechaing']; ?></center>
+                                <?php echo $crow['fechaing']; ?>
                             </td>
                             <td>
-                                <center> $<?php echo $crow['totalpedidos']; ?></center>
+                                 $<?php echo $crow['totalpedidos']; ?>
                             </td>
                         </tr>
                         <?php
@@ -263,24 +267,24 @@ if (isset($_GET['desconectar'])) {
 								?>
                     </tbody>
                 </table>
-                <table class="resumenes" data-vertable='ver1'>
+                <table class="resumen_tablas_izquierda" data-vertable='ver1'>
 
                     <thead>
-                        <tr class='row100 head'>
-                            <th class='ventas-totales-diarias-1'>
-                                <center class="numero">FECHA</center>
+                        <tr>
+                            <th>
+                                FECHA
                             </th>
-                            <th class='ventas-totales-diarias-2' data-column='column2'>
-                                <center class="producto">TOTAL DEBITOS</center>
-                            </th>
-                            <th class='column200 column5' data-column='column3'>
-                                <center class="producto">-</center>
+                            <th>
+                                TOTAL DEBITOS
                             </th>
                             <th class='column200 column5' data-column='column3'>
-                                <center class="producto">-</center>
+                                -
                             </th>
                             <th class='column200 column5' data-column='column3'>
-                                <center class="producto">-</center>
+                                -
+                            </th>
+                            <th class='column200 column5' data-column='column3'>
+                                -
                             </th>
                         </tr>
                     </thead>
@@ -290,12 +294,12 @@ if (isset($_GET['desconectar'])) {
 								$result = mysqli_query($con, $sql);
 								while ($crow = mysqli_fetch_assoc($result)) {
 								?>
-                        <tr class='row100'>
+                        <tr>
                             <td>
-                                <center><?php echo $crow['fechaing']; ?></center>
+                                <?php echo $crow['fechaing']; ?>
                             </td>
                             <td>
-                                <center>
+                                
                                     <div>
                                         <div class="debitos_prod_fer">
                                             <?php echo $crow['producto']?>
@@ -306,7 +310,7 @@ if (isset($_GET['desconectar'])) {
                                             $<?php echo $crow['detalleferreteria'] ?>
                                         </div>
                                     </div>
-                                </center>
+                                
                             </td>
                         </tr>
                         <?php
@@ -314,21 +318,21 @@ if (isset($_GET['desconectar'])) {
 								?>
                     </tbody>
                     <thead>
-                        <tr class='row100 head'>
-                            <th class='ventas-totales-diarias-1'>
-                                <center class="numero">FECHA</center>
+                        <tr>
+                            <th>
+                                FECHA
                             </th>
-                            <th class='ventas-totales-diarias-2' data-column='column2'>
-                                <center class="producto">TOTAL PEDIDOS</center>
-                            </th>
-                            <th class='column200 column5' data-column='column3'>
-                                <center class="producto">Monto $</center>
+                            <th>
+                                TOTAL PEDIDOS
                             </th>
                             <th class='column200 column5' data-column='column3'>
-                                <center class="producto">-</center>
+                                Monto $
                             </th>
                             <th class='column200 column5' data-column='column3'>
-                                <center class="producto">-</center>
+                                -
+                            </th>
+                            <th class='column200 column5' data-column='column3'>
+                                -
                             </th>
                         </tr>
                     </thead>
@@ -338,15 +342,15 @@ if (isset($_GET['desconectar'])) {
 								$result = mysqli_query($con, $sql);
 								while ($crow = mysqli_fetch_assoc($result)) {
 								?>
-                        <tr class='row100'>
+                        <tr>
                             <td>
-                                <center><?php echo $crow['fechaing']; ?></center>
+                                <?php echo $crow['fechaing']; ?>
                             </td>
                             <td>
-                                <center><?php echo $crow['pedido']; ?></center>
+                                <?php echo $crow['pedido']; ?>
                             </td>
                             <td>
-                                <center> $<?php echo $crow['detallepedido']; ?></center>
+                                 $<?php echo $crow['detallepedido']; ?>
                             </td>
                         </tr>
                         <?php
@@ -355,22 +359,22 @@ if (isset($_GET['desconectar'])) {
                     </tbody>
 
                     <thead>
-                        <tr class='row100 head'>
-                            <th class='ventas-totales-diarias-1'>
-                                <center class="numero">FECHA</center>
+                        <tr>
+                            <th>
+                                FECHA
                             </th>
-                            <th class='ventas-totales-diarias-2' data-column='column2'>
-                                <center class="producto">TOTAL TOTAL DIARIO FIADOS y A CUENTAS DE CLIENTES
-                                </center>
-                            </th>
-                            <th class='column200 column5' data-column='column3'>
-                                <center class="producto">Cliente</center>
+                            <th>
+                                TOTAL TOTAL DIARIO FIADOS y A CUENTAS DE CLIENTES
+                                
                             </th>
                             <th class='column200 column5' data-column='column3'>
-                                <center class="producto">A Cuenta</center>
+                                Cliente
                             </th>
                             <th class='column200 column5' data-column='column3'>
-                                <center class="producto">Tipo de Pago</center>
+                                A Cuenta
+                            </th>
+                            <th class='column200 column5' data-column='column3'>
+                                Tipo de Pago
                             </th>
                         </tr>
                     </thead>
@@ -381,14 +385,14 @@ if (isset($_GET['desconectar'])) {
 								$result = mysqli_query($con, $sql);
 								while ($crow = mysqli_fetch_assoc($result)) {
 								?>
-                        <tr class='row100'>
+                        <tr>
                             <td>
-                                <center><?php echo $crow['fechaing']; ?></center>
-                                <center>ID <?php echo $crow['id']; ?></center>
-                                <center>Vendedor <?php echo $crow['serie']; ?></center>
+                                <?php echo $crow['fechaing']; ?>
+                                ID <?php echo $crow['id']; ?>
+                                Vendedor <?php echo $crow['serie']; ?>
                             </td>
                             <td>
-                                <center>
+                                
                                     <div>
                                         <div class="cliente_prod_fer">
                                             <?php echo $crow['producto']?>
@@ -399,16 +403,16 @@ if (isset($_GET['desconectar'])) {
                                             $<?php echo $crow['detalleferreteria'] ?>
                                         </div>
                                     </div>
-                                </center>
+                                
                             </td>
                             <td>
-                                <center><?php echo $crow['cliente']; ?></center>
+                                <?php echo $crow['cliente']; ?>
                             </td>
                             <td>
-                                <center><?php echo $crow['acuenta']; ?></center>
+                                <?php echo $crow['acuenta']; ?>
                             </td>
                             <td>
-                                <center><?php echo $crow['pagotipo']; ?></center>
+                                <?php echo $crow['pagotipo']; ?>
                             </td>
                         </tr>
                         <?php
@@ -419,7 +423,7 @@ if (isset($_GET['desconectar'])) {
             </div>
         </div>
     </body>
-</center>
+
 <script>
 </script>
 

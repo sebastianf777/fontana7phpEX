@@ -1,9 +1,31 @@
-.resumen_panel-subpaginas-tablas{
+.resumen_panel-subpaginas-tablas {
     @include flexColumnCenter;
-    .resumen_panel{
-    @include flexColumnCenter;
-    .panel_usuario{
-        @include flexRowCenter;
+    text-align: center;
+
+    .resumen_panel {
+        @include flexColumnCenter;
+
+        .panel_usuario {
+            @include flexRowCenter;
+        }
     }
+    .resumen_subpaginas{
+        h2{
+            margin: 1vh 0;
+        }
+    }
+    .resumen_tablas{
+        @include flexCenter;
+        flex-wrap: wrap;
+        .resumen_tablas_izquierda{
+        @include tabla_css;
+
+            max-width: 550px;
+        }
+        .resumen_tablas_derecha{
+        @include tabla_css;
+
+            max-width: 550px;
+        }
     }
 }

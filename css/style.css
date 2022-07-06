@@ -419,6 +419,7 @@ table, th, td {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 .resumen_panel-subpaginas-tablas .resumen_panel {
   display: flex;
@@ -429,6 +430,28 @@ table, th, td {
   display: flex;
   justify-content: center;
   flex-direction: row;
+}
+.resumen_panel-subpaginas-tablas .resumen_subpaginas h2 {
+  margin: 1vh 0;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda {
+  background-color: ghostwhite;
+  border: solid 1px;
+  box-shadow: 1px 1px;
+  border-radius: 1rem;
+  max-width: 550px;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
+  background-color: ghostwhite;
+  border: solid 1px;
+  box-shadow: 1px 1px;
+  border-radius: 1rem;
+  max-width: 550px;
 }
 
 .panel_usuario_desconectar {

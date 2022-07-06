@@ -145,19 +145,16 @@
             <table class="deposito_tabla">
                 <thead>
                     <tr>
-                        <th>
+                        <th class="deposito_numero">
                             Nº
                         </th>
-                        <th data-column='column2'>
+                        <th class="deposito_producto">
                             PRODUCTO
                         </th>
-                        <th data-column='column3'>
+                        <th class="deposito_vendedor">
                             VENDEDOR
                         </th>
-                        <th data-column='column4'>
-                            FECHA INGRESO
-                        </th>
-                        <th data-column='column5'>
+                        <th class="deposito_id">
                             ID
                         </th>
                     </tr>
@@ -167,24 +164,21 @@
                         require('conectar.php');
                     ?>
                     <?php
-                        $sql = "SELECT numero, UPPER(producto) AS ferremat, serie, fechaing, id from productos WHERE detallemateriales != '' 
+                        $sql = "SELECT numero, UPPER(producto) AS ferremat, serie, id from productos WHERE detallemateriales != '' 
                         UNION
-                        SELECT numero, UPPER(ferreteria) AS ferremat, serie, fechaing, id from productos WHERE mostrar = 'Si' AND detalleferreteria != '' order by id DESC LIMIT 15 ";
+                        SELECT numero, UPPER(ferreteria) AS ferremat, serie, id from productos WHERE mostrar = 'Si' AND detalleferreteria != '' order by id DESC LIMIT 30 ";
                         $result = mysqli_query($con, $sql);
                         while ($crow = mysqli_fetch_assoc($result)) {
                         ?>
                     <tr>
-                        <td>
+                        <td class="deposito_numero">
                             <?php echo $crow['numero']; ?>
                         </td>
-                        <td>
+                        <td class="deposito_ferremat">
                             <?php echo $crow['ferremat']; ?>
                         </td>
-                        <td>
+                        <td class="deposito_serie">
                             <?php echo $crow['serie']; ?>
-                        </td>
-                        <td>
-                            <?php echo $crow['fechaing']; ?>
                         </td>
                         <td>
                             <?php echo $crow['id']; ?>

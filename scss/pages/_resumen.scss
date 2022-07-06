@@ -1,0 +1,9 @@
+.resumen_panel-subpaginas-tablas{
+    @include flexColumnCenter;
+    .resumen_panel{
+    @include flexColumnCenter;
+    .panel_usuario{
+        @include flexRowCenter;
+    }
+    }
+}

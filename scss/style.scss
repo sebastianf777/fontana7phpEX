@@ -1,21 +1,23 @@
 //Abstracts
-@import "./abstracts/_variables";
-@import "./abstracts/_mixins";
+@import "./abstracts/_variables.scss";
+@import "./abstracts/_mixins.scss";
 //Base
-@import "./base/_reset";
-@import "./base/_base";
+@import "./base/_reset.scss";
+@import "./base/_base.scss";
 //Bootstrap
 @import "./vendors/_bootstrap.scss";
 //Layouts
-@import "./layout/_navbar";  
-@import "./layout/_header";  
-@import "./layout/_footer";
+@import "./layout/_navbar.scss";  
+@import "./layout/_header.scss";  
+@import "./layout/_footer.scss";
 //Paginas html
-@import "./pages/_index";
+@import "./pages/_index.scss";
 @import "./pages/_registrar.scss";
-@import "./pages/deposito"
-//Componentes
+@import "./pages/_deposito.scss";
+@import "./pages/_resumen.scss";
 
+//Componentes
+@import "./components/_buttons.scss";
 
 
 

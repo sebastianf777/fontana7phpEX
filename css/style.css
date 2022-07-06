@@ -415,13 +415,33 @@ table, th, td {
   }
 }
 
-table {
-  text-transform: uppercase;
-  text-align: center;
+.resumen_panel-subpaginas-tablas {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.resumen_panel-subpaginas-tablas .resumen_panel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.resumen_panel-subpaginas-tablas .resumen_panel .panel_usuario {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
-table, th, td {
-  border: 1px solid;
+.panel_usuario_desconectar {
+  background-color: #EEEEEE;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.panel_usuario_desconectar:hover {
+  background-color: #EB003B;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,13 +3,14 @@
     text-align: center;
 
     .resumen_panel {
-        @include flexColumnCenter;
+        @include flexRowCenter;
 
         .panel_usuario {
             @include flexRowCenter;
         }
     }
     .resumen_subpaginas{
+        @include flexRowCenter;
         h2{
             margin: 1vh 0;
         }
@@ -19,12 +20,12 @@
         flex-wrap: wrap;
         .resumen_tablas_izquierda{
         @include tabla_css;
-
+        padding: 5px;
             max-width: 550px;
         }
         .resumen_tablas_derecha{
         @include tabla_css;
-
+        padding: 5px;
             max-width: 550px;
         }
     }

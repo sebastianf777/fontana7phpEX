@@ -180,6 +180,61 @@ if (isset($_GET['desconectar'])) {
             </div>
             <div class="resumen_tablas">
                 <table class="resumen_tablas_izquierda">
+                <thead>
+                        <tr>
+                            <th>
+                                FECHA
+                            </th>
+                            <th>
+                                TOTAL TOTAL
+                                <br>
+                                DIARIO PEDIDOS
+                            </th>
+                            <th>
+                                $
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        require('conectar.php');
+                        ?>
+                        <?php
+                        $sql = "SELECT t1.fechaing, t1.total_pedidos_brian, t2.total_pedidos_sebastian
+                         FROM
+                         (SELECT fechaing, SUM(detallepedido) AS total_pedidos_brian 
+                         FROM productos WHERE detallepedido != 0 and serie = 'Brian' GROUP BY fechaing) t1 
+                         LEFT JOIN
+                         (SELECT fechaing, SUM(detallepedido) AS total_pedidos_sebastian 
+                         FROM productos WHERE detallepedido != 0 and serie = 'Sebastian' GROUP BY fechaing) t2
+                         ON (t1.fechaing = t2.fechaing)";
+               
+                        $result = mysqli_query($con, $sql);
+                        while ($crow = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <tr>
+                            <td>
+                                <?php echo $crow['fechaing']; ?>
+                            </td>
+                            <td>
+                                Brian:
+                                <br>
+                                Sebastian:
+                                <br>
+                                Total:
+                            </td>
+                            <td>
+                                $<?php echo $crow['total_pedidos_brian']; ?>
+                                <br>
+                                $<?php echo $crow['total_pedidos_sebastian']; ?>
+                                <br>
+                                $<?php echo $crow['total_pedidos_sebastian'] + $crow['total_pedidos_brian']; ?>
+                            </td>
+                        </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
                     <thead>
                         <tr>
                             <th>
@@ -196,9 +251,7 @@ if (isset($_GET['desconectar'])) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        require('conectar.php');
-                        ?>
+                        
                         <?php
                         $sql = "SELECT SUM(detallemateriales) AS totalmat,SUM(detalleferreteria) AS totalfer, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC ";
                         $result = mysqli_query($con, $sql);
@@ -264,56 +317,7 @@ if (isset($_GET['desconectar'])) {
                         }
                         ?>
                     </tbody>
-                    <thead>
-                        <tr>
-                            <th>
-                                FECHA
-                            </th>
-                            <th>
-                                TOTAL TOTAL
-                                <br>
-                                DIARIO PEDIDOS
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $sql = "SELECT t1.fechaing, t1.total_pedidos_brian, t2.total_pedidos_sebastian
-                         FROM
-                         (SELECT fechaing, SUM(detallepedido) AS total_pedidos_brian 
-                         FROM productos WHERE detallepedido != 0 and serie = 'Brian' GROUP BY fechaing) t1 
-                         LEFT JOIN
-                         (SELECT fechaing, SUM(detallepedido) AS total_pedidos_sebastian 
-                         FROM productos WHERE detallepedido != 0 and serie = 'Sebastian' GROUP BY fechaing) t2
-                         ON (t1.fechaing = t2.fechaing)";
-                        // $sql = "SELECT SUM(detallepedido) AS totalpedidos, fechaing, id from productos WHERE detallepedido != 0 and serie = 'Brian'
-                        // UNION
-                        // SELECT SUM(detallepedido) AS totalpedidos, fechaing, id from productos WHERE detallepedido != 0 and serie = 'Sebastian' 
-                        // UNION
-                        // SELECT SUM(detallepedido) AS totalpedidos, fechaing, id from productos WHERE detallepedido != 0
-                        // GROUP BY fechaing order by id DESC";
-                        $result = mysqli_query($con, $sql);
-                        while ($crow = mysqli_fetch_assoc($result)) {
-                        ?>
-                        <tr>
-                            <td>
-                                <?php echo $crow['fechaing']; ?>
-                            </td>
-                            <td>
-                                Brian:
-                                <br>
-                                Sebastian:
-                            </td>
-                            <td>
-                                $<?php echo $crow['total_pedidos_brian']; ?>
-                                <br>
-                                $<?php echo $crow['total_pedidos_sebastian']; ?>
-                            </td>
-                        </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
+                    
                 </table>
                 <table class="resumen_tablas_derecha">
                     <thead>

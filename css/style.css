@@ -421,22 +421,27 @@ table, th, td {
   flex-direction: column;
   text-align: center;
 }
-.resumen_panel-subpaginas-tablas .resumen_panel {
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.resumen_panel-subpaginas-tablas .resumen_panel .panel_usuario {
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.resumen_panel-subpaginas-tablas .resumen_subpaginas {
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.resumen_panel-subpaginas-tablas .resumen_subpaginas h2 {
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas h2 {
   margin: 1vh 0;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas {
@@ -445,14 +450,31 @@ table, th, td {
   flex-wrap: wrap;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda {
+  height: 85vh;
+  overflow: scroll;
   background-color: ghostwhite;
   border: solid 1px;
   box-shadow: 1px 1px;
   border-radius: 1rem;
+  margin-right: 1vw;
   padding: 5px;
   max-width: 550px;
 }
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_1 {
+  height: 33%;
+  overflow: scroll;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_2 {
+  height: 33%;
+  overflow: scroll;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_3 {
+  height: 33%;
+  overflow: scroll;
+}
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
+  height: 85vh;
+  overflow: scroll;
   background-color: ghostwhite;
   border: solid 1px;
   box-shadow: 1px 1px;

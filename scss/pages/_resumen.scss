@@ -2,30 +2,56 @@
     @include flexColumnCenter;
     text-align: center;
 
-    .resumen_panel {
+    .resumen_panel-subpaginas {
         @include flexRowCenter;
-
-        .panel_usuario {
+        
+        .resumen_panel {
             @include flexRowCenter;
+
+            .panel_usuario {
+                @include flexRowCenter;
+            }
+        }
+
+        .resumen_subpaginas {
+            @include flexRowCenter;
+
+            h2 {
+                margin: 1vh 0;
+            }
         }
     }
-    .resumen_subpaginas{
-        @include flexRowCenter;
-        h2{
-            margin: 1vh 0;
-        }
-    }
-    .resumen_tablas{
+
+    .resumen_tablas {
         @include flexCenter;
         flex-wrap: wrap;
-        .resumen_tablas_izquierda{
-        @include tabla_css;
-        padding: 5px;
+
+        .resumen_tablas_izquierda {
+            height: 85vh;
+            overflow: scroll;
+            @include tabla_css;
+            margin-right: 1vw;
+            padding: 5px;
             max-width: 550px;
+            .tablas_izquierda_1 {
+                height: 33%;
+                overflow: scroll;
+            }
+            .tablas_izquierda_2 {
+                height: 33%;
+                overflow: scroll;
+            }
+            .tablas_izquierda_3 {
+                height: 33%;
+                overflow: scroll;
+            }
         }
-        .resumen_tablas_derecha{
-        @include tabla_css;
-        padding: 5px;
+
+        .resumen_tablas_derecha {
+            height: 85vh;
+            overflow: scroll;
+            @include tabla_css;
+            padding: 5px;
             max-width: 550px;
         }
     }

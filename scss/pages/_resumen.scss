@@ -94,9 +94,10 @@
 
                 }
             }
-            .vendedores{
+            .vendedores_izquierda{
                 height: 50%;
             }
+
 
             @media only screen and (max-width: 900px) {
                 width: 63vw;
@@ -165,6 +166,9 @@
                     @include scroll_bar_1;
 
                 }
+            }
+            .vendedores_derecha{
+                height: 100%;
             }
             @media only screen and (max-width: 900px) {
                 margin-top: 2vw;

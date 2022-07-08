@@ -537,6 +537,9 @@ table, th, td {
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_3 .tabla_3_cuerpo::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .vendedores {
+  height: 50%;
+}
 @media only screen and (max-width: 900px) {
   .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda {
     width: 63vw;

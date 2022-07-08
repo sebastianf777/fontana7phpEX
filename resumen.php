@@ -182,7 +182,7 @@ if (isset($_GET['desconectar'])) {
             </div>
             <div class="resumen_tablas">
                 <div class="resumen_tablas_izquierda">
-                    <div class="tablas_izquierda_1 ">
+                    <div class="vendedores tablas_izquierda_1 ">
                         <table class='tabla_1_head'>
                             <thead>
                                 <tr>
@@ -244,7 +244,7 @@ if (isset($_GET['desconectar'])) {
                             </table>
                         </div>
                     </div>
-                    <div class="tablas_izquierda_2">
+                    <div class="vendedores tablas_izquierda_2">
                         <table class='tabla_2_head'>
                             <thead>
                                 <tr>

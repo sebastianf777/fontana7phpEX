@@ -1,6 +1,7 @@
 .resumen_panel-subpaginas-tablas {
     @include flexColumnCenter;
     text-align: center;
+    margin: 0 10vw;
 
     .resumen_panel-subpaginas {
         @include flexRowCenter;
@@ -33,7 +34,7 @@
             @include tabla_css;
             margin-right: 1vw;
             padding: 5px;
-            max-width: 550px;
+            width: 26vw;
 
             .tablas_izquierda_1 {
                 height: 33%;
@@ -43,9 +44,11 @@
                 table {
                     width: 100%;
                 }
-                .tabla_1_head{
+
+                .tabla_1_head {
                     padding-right: 0.25rem;
                 }
+
                 .tabla_1_cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
@@ -61,9 +64,11 @@
                 table {
                     width: 100%;
                 }
-                .tabla_2_head{
+
+                .tabla_2_head {
                     padding-right: 0.25rem;
                 }
+
                 .tabla_2_cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
@@ -78,9 +83,11 @@
                 table {
                     width: 100%;
                 }
-                .tabla_3_head{
+
+                .tabla_3_head {
                     padding-right: 0.25rem;
                 }
+
                 .tabla_3_cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
@@ -88,13 +95,16 @@
                 }
             }
 
+            @media only screen and (max-width: 900px) {
+                width: 63vw;
+                margin: 0;
+            }
         }
 
         .resumen_tablas_derecha {
             height: 85vh;
             @include tabla_css;
             padding: 5px;
-            max-width: 550px;
 
             .tablas_derecha_1 {
                 height: 33%;
@@ -104,9 +114,11 @@
                 table {
                     width: 100%;
                 }
-                .tabla_1_head{
+
+                .tabla_1_head {
                     padding-right: 0.25rem;
                 }
+
                 .tabla_1_cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
@@ -121,9 +133,11 @@
                 table {
                     width: 100%;
                 }
-                .tabla_2_head{
+
+                .tabla_2_head {
                     padding-right: 0.25rem;
                 }
+
                 .tabla_2_cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
@@ -138,23 +152,35 @@
                 table {
                     width: 100%;
                 }
-                .tabla_3_head{
+
+                .tabla_3_head {
                     padding-right: 0.25rem;
                 }
+
                 .tabla_3_cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
 
                 }
             }
+            @media only screen and (max-width: 900px) {
+                margin-top: 2vw;
+                width: 63vw;
+            }
         }
 
     }
 
 }
+
 .th-td_fecha_derecha {
     width: 20%;
 }
-.th-td_mid_derecha{
-    width: 65%;
+
+.th-td_mid_derecha {
+    width: 60%;
+}
+
+.th-td_importe {
+    width: 20%;
 }

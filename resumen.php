@@ -186,15 +186,15 @@ if (isset($_GET['desconectar'])) {
                         <table class='tabla_1_head'>
                             <thead>
                                 <tr>
-                                    <th>
+                                    <th class='th-td_fecha_derecha'>
                                         FECHA
                                     </th>
-                                    <th>
+                                    <th class='th-td_mid_derecha'>
                                         TOTAL TOTAL
                                         <br>
                                         DIARIO PEDIDOS
                                     </th>
-                                    <th>
+                                    <th class='th-td_importe'>
                                         $
                                     </th>
                                 </tr>
@@ -219,17 +219,17 @@ if (isset($_GET['desconectar'])) {
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
                                     <tr>
-                                        <td>
+                                        <td class='th-td_fecha_derecha'>
                                             <?php echo $crow['fechaing']; ?>
                                         </td>
-                                        <td>
+                                        <td class='th-td_mid_derecha'>
                                             Brian:
                                             <br>
                                             Sebastian:
                                             <br>
                                             Total:
                                         </td>
-                                        <td>
+                                        <td class='th-td_importe'>
                                             $<?php echo $crow['total_pedidos_brian']; ?>
                                             <br>
                                             $<?php echo $crow['total_pedidos_sebastian']; ?>
@@ -248,15 +248,15 @@ if (isset($_GET['desconectar'])) {
                         <table class='tabla_2_head'>
                             <thead>
                                 <tr>
-                                    <th>
+                                    <th class='th-td_fecha_derecha'>
                                         FECHA
                                     </th>
-                                    <th>
+                                    <th class='th-td_mid_derecha'>
                                         TOTAL TOTAL
                                         <br>
                                         DIARIO CONTADO
                                     </th>
-                                    <th>
+                                    <th class='th-td_importe'>
                                         $
                                     </th>
                                 </tr>
@@ -271,15 +271,15 @@ if (isset($_GET['desconectar'])) {
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
                                     <tr>
-                                        <td>
+                                        <td class='th-td_fecha_derecha'>
                                             <?php echo $crow['fechaing']; ?>
                                         </td>
-                                        <td>
+                                        <td class='th-td_mid_derecha'>
                                             Materiales
                                             <br>
                                             Ferreteria
                                         </td>
-                                        <td>
+                                        <td class='th-td_importe'>
                                             $ <?php echo $crow['totalmat']; ?>
                                             <br>
                                             $ <?php echo $crow['totalfer']; ?>
@@ -296,15 +296,15 @@ if (isset($_GET['desconectar'])) {
                         <table class='tabla_3_head'>
                             <thead>
                                 <tr>
-                                    <th>
+                                    <th class='th-td_fecha_derecha'>
                                         FECHA
                                     </th>
-                                    <th>
+                                    <th class='th-td_mid_derecha'>
                                         TOTAL TOTAL
                                         <br>
                                         DIARIO DÉBITOS
                                     </th>
-                                    <th>
+                                    <th class='th-td_importe'>
                                         $
                                     </th>
                                 </tr>
@@ -320,15 +320,15 @@ if (isset($_GET['desconectar'])) {
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
                                     <tr>
-                                        <td>
+                                        <td class='th-td_fecha_derecha'>
                                             <?php echo $crow['fechaing']; ?>
                                         </td>
-                                        <td>
+                                        <td class='th-td_mid_derecha'>
                                             Materiales
                                             <br>
                                             Ferreteria
                                         </td>
-                                        <td>
+                                        <td class='th-td_importe'>
                                             $ <?php echo $crow['totaldebitomateriales']; ?>
                                             <br>
                                             $ <?php echo $crow['totaldebitoferreteria']; ?>
@@ -353,7 +353,7 @@ if (isset($_GET['desconectar'])) {
                                     <th class='th-td_mid_derecha'>
                                         TOTAL DEBITOS
                                     </th>
-                                    <th>
+                                    <th class='th-td_importe'>
                                         $
                                     </th>
                                 </tr>
@@ -375,7 +375,7 @@ if (isset($_GET['desconectar'])) {
                                             <br>
                                             <?php echo $crow['ferreteria'] ?>
                                         </td>
-                                        <td>
+                                        <td class='th-td_importe'>
                                             $<?php echo $crow['detallemateriales'] ?>
                                             <br>
                                             $<?php echo $crow['detalleferreteria'] ?>
@@ -398,7 +398,7 @@ if (isset($_GET['desconectar'])) {
                                     <th class='th-td_mid_derecha'>
                                         TOTAL PEDIDOS
                                     </th>
-                                    <th class='column200 column5' data-column='column3'>
+                                    <th class='th-td_importe'>
                                         Monto $
                                     </th>
                                 </tr>
@@ -417,7 +417,7 @@ if (isset($_GET['desconectar'])) {
                                         <td class='th-td_mid_derecha'>
                                             <?php echo $crow['pedido']; ?>
                                         </td>
-                                        <td>
+                                        <td class='th-td_importe'>
                                             $<?php echo $crow['detallepedido']; ?>
                                         </td>
                                     </tr>
@@ -438,7 +438,7 @@ if (isset($_GET['desconectar'])) {
                                     <th class='th-td_mid_derecha'>
                                         TOTAL DIARIO CLIENTES
                                     </th>
-                                    <th class='column200 column5' data-column='column3'>
+                                    <th class='th-td_importe'>
                                         Cliente
                                     </th>
                                 </tr>
@@ -476,7 +476,7 @@ if (isset($_GET['desconectar'])) {
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td class='th-td_importe'>
                                             <?php echo $crow['acuenta']; ?>
                                             <?php echo $crow['pagotipo']; ?>
                                         </td>

@@ -425,6 +425,11 @@ table, th, td {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  background-color: ghostwhite;
+  border: solid 1px;
+  box-shadow: 1px 1px;
+  border-radius: 1rem;
+  margin-bottom: 2vh;
 }
 .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel {
   display: flex;
@@ -451,7 +456,6 @@ table, th, td {
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda {
   height: 85vh;
-  overflow: scroll;
   background-color: ghostwhite;
   border: solid 1px;
   box-shadow: 1px 1px;
@@ -462,14 +466,35 @@ table, th, td {
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_1 {
   height: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_1 table {
+  width: 100%;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_1 table .tabla_1_cuerpo {
   overflow: scroll;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_2 {
   height: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_2 table {
+  width: 100%;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_2 .tabla_2_cuerpo {
   overflow: scroll;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_3 {
   height: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_3 table {
+  width: 100%;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda .tablas_izquierda_3 .tabla_3_cuerpo {
   overflow: scroll;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
@@ -485,7 +510,7 @@ table, th, td {
 
 .panel_usuario_desconectar {
   background-color: #EEEEEE;
-  padding: 8px 20px;
+  padding: 5px 10px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;

@@ -4,7 +4,8 @@
 
     .resumen_panel-subpaginas {
         @include flexRowCenter;
-        
+        @include tabla_css;
+        margin-bottom: 2vh;
         .resumen_panel {
             @include flexRowCenter;
 
@@ -28,22 +29,40 @@
 
         .resumen_tablas_izquierda {
             height: 85vh;
-            overflow: scroll;
             @include tabla_css;
             margin-right: 1vw;
             padding: 5px;
             max-width: 550px;
             .tablas_izquierda_1 {
                 height: 33%;
-                overflow: scroll;
+                
+                @include flexColumn;
+            table{
+                width: 100%;
+                .tabla_1_cuerpo{
+                    overflow: scroll;
+                }
+            }
             }
             .tablas_izquierda_2 {
                 height: 33%;
-                overflow: scroll;
+                @include flexColumn;
+                table{
+                    width: 100%;
+                }
+                .tabla_2_cuerpo{
+                    overflow: scroll;
+                }
             }
             .tablas_izquierda_3 {
                 height: 33%;
-                overflow: scroll;
+                @include flexColumn;
+                table{
+                    width: 100%;
+                }
+                .tabla_3_cuerpo{
+                    overflow: scroll;
+                }
             }
         }
 

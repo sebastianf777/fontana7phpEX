@@ -29,3 +29,18 @@
     box-shadow: 1px 1px;
     border-radius: 1rem;
 }
+
+@mixin scroll_bar_1{
+    &::-webkit-scrollbar {
+        width: 0.25rem;
+        height: 0.25rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #1e1e24;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #6649b8;
+    }
+}

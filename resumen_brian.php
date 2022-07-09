@@ -172,11 +172,11 @@ if (isset($_GET['desconectar'])) {
                     </div>
                 </div>
                 <div class="resumen_subpaginas">
-                    <div class="subpaginas_titulo">Resumenes de vendedores</div>
+                    <div class="subpaginas_titulo">Otros resumenes</div>
                     <div class="subpaginas_botones">
                         <button>
-                            <a href="/resumen_brian.php">
-                                Brian
+                            <a href="/resumen.php">
+                                Resumenes Totales
                             </a>
                         </button>
                         <button>

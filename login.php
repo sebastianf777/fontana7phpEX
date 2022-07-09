@@ -1,30 +1,34 @@
 <?php
  
- include('config.php');
+ include('conectar.php');
  session_start();
   
  if (isset($_POST['login'])) {
   
      $username = $_POST['username'];
      $password = $_POST['password'];
+     $query = mysqli_query($con, "SELECT * FROM users WHERE username = '$username'");
+    //  $query = $connection->prepare("SELECT * FROM users WHERE USERNAME=:username");
+
   
-     $query = $connection->prepare("SELECT * FROM users WHERE USERNAME=:username");
-     $query->bindParam("username", $username, PDO::PARAM_STR);
-     $query->execute();
-  
-     $result = $query->fetch(PDO::FETCH_ASSOC);
-  
-     if (!$result) {
-         echo '<p class="error">Username password combination is wrong!</p>';
-     } else {
-         if (password_verify($password, $result['password'])) {
-             $_SESSION['user_id'] = $result['id'];
+     if (mysqli_num_rows($query) > 0) {
+        $row = mysqli_fetch_assoc($query);
+        $usuario_db_pass = $row['password'];
+        $verifico_password =password_verify($_POST['password'], $usuario_db_pass);
+        //  echo '<p class="error">Username password combination is wrong!</p>';
+        if ( $verifico_password === TRUE) {
+            //  $_SESSION['user_id'] = $result['id'];
+            session_regenerate_id(true);
+
+            $_SESSION['user_id'] = $username;
              header("refresh:5;url=resumen.php");                  
              echo '<p class="success">Felicidades, estás logueado! Redireccionando...</p>';
              exit();
          } else {
              echo '<p class="error">Username password combination is wrong!</p>';
          }
+     } else {
+         echo "Password o email incorrectos.";
      }
  }
   

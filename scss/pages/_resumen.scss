@@ -186,7 +186,20 @@
 .label-fecha-checbox_td {
     height: 14vh;
     align-items: center;
-
+    input{
+        opacity: 0;
+        position: fixed;
+        width: 0;
+    
+        &:checked+label {
+            background-color: $button_bg_secondary;
+            border-color: $button_border_primary;
+        }
+    
+        &:focus+label {
+            border: 2px solid $button_border_secondary;
+        }
+    }
     label {
         display: block;
         height: 100%;
@@ -195,20 +208,7 @@
             @include flexColumnCenter;
             height: 100%;
 
-            input {
-                opacity: 0;
-                position: fixed;
-                width: 0;
-
-                &:checked {
-                    background-color: $button_bg_secondary;
-                    border-color: $button_border_primary;
-                }
-
-                &:focus {
-                    border: 2px solid $button_border_secondary;
-                }
-            }
+             
         }
     }
 }

@@ -197,7 +197,7 @@ if (isset($_GET['desconectar'])) {
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
-                                        <tr id='filas_resumenes' class='row100 '>
+                                        <tr id='filas_resumenes'>
                                             <td class='th-td_fecha_derecha'>
                                                 <?php echo $crow['fechaing']; ?>
                                             </td>
@@ -308,15 +308,21 @@ if (isset($_GET['desconectar'])) {
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
-                                        <tr class='row100'>
+                                        <tr>
 
 
-                                            <td>
-                                                <center class="fecha_resumenes"><input type="checkbox"><?php echo $crow['fechaing']; ?>
+                                            <td class='th-td_fecha_derecha label-fecha-checbox_td'>
+                                                <label for="checkbox-td">
+                                                    <div class="fecha-checbox_td">
+                                                        <input id="checkbox-td" type="checkbox">
+                                                        <div class="fecha-td"><?php echo $crow['fechaing']; ?></div>
+                                                    </div>
+                                                </label>
+
                                             </td>
 
 
-                                            <td>
+                                            <td class='th-td_mid_derecha'>
 
                                                 <div class="materiales_precios">
                                                     <div class="materiales">
@@ -353,15 +359,12 @@ if (isset($_GET['desconectar'])) {
                                                 </div>
 
                                             </td>
-                                            <td>
+                                            <td class='th-td_importe'>
                                                 <?php echo $crow['pagotipo']; ?>
-
-                                            </td>
-                                            <td>
-                                                <?php echo $crow['id']; ?>
-                                            </td>
-                                            <td>
-                                                <?php echo $crow['numero']; ?>
+                                                <br>
+                                                Id:<?php echo $crow['id']; ?>
+                                                <br>
+                                                N°<?php echo $crow['numero']; ?>
                                             </td>
                                         </tr>
                                     <?php

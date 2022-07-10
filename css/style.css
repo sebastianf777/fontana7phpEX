@@ -21,7 +21,7 @@ h1 {
 }
 
 body {
-  color: blue;
+  color: #3434fc;
   margin: 0;
   padding: 0;
   background: url(/img/fondo1.webp);
@@ -287,13 +287,13 @@ table, th, td {
 .registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_img img {
   width: 5vh;
   padding: 0.3vw;
-  background: #ddd;
+  background: #ff8601;
   border-radius: 2vw;
   margin-left: 1vw;
   border: rgb(93, 68, 204) solid 2px;
 }
 .registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_img img:hover {
-  background: #dfd;
+  background: #f9f140;
 }
 .registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_img img:active {
   background: rgb(93, 68, 204);
@@ -330,7 +330,7 @@ table, th, td {
 }
 .registrar_opciones input:checked + label,
 .registrar_mostrar input:checked + label {
-  background-color: #dfd;
+  background-color: #f9f140;
   border-color: rgb(93, 68, 204);
 }
 .registrar_opciones input:focus + label,
@@ -341,7 +341,7 @@ table, th, td {
 .registrar_opciones label,
 .registrar_mostrar label {
   display: inline-block;
-  background-color: #ddd;
+  background-color: #ff8601;
   padding: 1vh 0.7vw;
   font-size: 0.7rem;
   border: 2px solid #444;
@@ -357,7 +357,7 @@ table, th, td {
 }
 .registrar_opciones label:hover,
 .registrar_mostrar label:hover {
-  background-color: #dfd;
+  background-color: #f9f140;
 }
 
 .deposito_tabla {
@@ -445,14 +445,46 @@ table, th, td {
   flex-direction: row;
   align-items: center;
 }
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario .panel_usuario_nombre {
+  margin-right: 0.5vw;
+  text-shadow: 1px 1px 2px #3434fc;
+  cursor: default;
+}
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario .panel_usuario_nombre .titulo {
+  color: black;
+  text-shadow: 1px 1px 2px black;
+}
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario .panel_usuario_desconectar {
+  margin-right: 0.5vw;
+}
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_titulo {
+  text-shadow: 1px 1px 2px black;
+  cursor: default;
+}
+@media only screen and (min-width: 901px) {
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel {
+    margin-right: 0.5vw;
+  }
+}
 .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas {
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas h2 {
-  margin: 1vh 0;
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas .subpaginas_titulo {
+  margin-right: 0.3vw;
+  text-shadow: black 1px 1px 3px;
+  color: black;
+  cursor: default;
+}
+@media only screen and (max-width: 900px) {
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas {
+    margin-top: 1vh;
+  }
+}
+.resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas .subpaginas_botones .botones_1 {
+  margin-right: 0.5vw;
 }
 @media only screen and (max-width: 900px) {
   .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas {
@@ -655,7 +687,7 @@ table, th, td {
   width: 0;
 }
 .label-fecha-checbox_td input:checked + label {
-  background-color: #dfd;
+  background-color: #f9f140;
   border-color: rgb(93, 68, 204);
 }
 .label-fecha-checbox_td input:focus + label {
@@ -684,17 +716,33 @@ table, th, td {
   width: 20%;
 }
 
-.panel_usuario_desconectar {
+.button_1 {
   background-color: #EEEEEE;
   padding: 5px 10px;
   text-decoration: none;
   font-weight: bold;
+  border: solid;
   border-radius: 5px;
   cursor: pointer;
 }
-.panel_usuario_desconectar:hover {
+.button_1:hover {
   background-color: #EB003B;
   color: #FFFFFF;
+}
+
+.button_2 {
+  background-color: #ff8601;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border: solid;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button_2:hover {
+  color: #6b6bcb;
+  background-color: #f9f140;
 }
 
 /*# sourceMappingURL=style.css.map */

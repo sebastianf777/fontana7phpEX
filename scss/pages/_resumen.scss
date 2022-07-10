@@ -9,12 +9,39 @@
         margin: 0 auto 2vh;
         padding: 10px 5px;
         flex-wrap: wrap;
+
         .resumen_panel {
             @include flexRowCenter;
 
             .panel_usuario {
                 @include flexRowCenter;
                 align-items: center;
+
+                .panel_usuario_nombre {
+                    margin-right: 0.5vw;
+                    text-shadow: 1px 1px 2px $color_primary;
+                    cursor: default;
+
+                    .titulo {
+                        color: $color_terciary;
+                        text-shadow: 1px 1px 2px $color_terciary;
+
+                    }
+                }
+
+                .panel_usuario_desconectar {
+                    margin-right: 0.5vw;
+                }
+            }
+
+            .panel_titulo {
+                text-shadow: 1px 1px 2px $color_terciary;
+                cursor: default;
+            }
+
+            @media only screen and (min-width: 901px) {
+                margin-right: 0.5vw;
+
             }
         }
 
@@ -22,10 +49,26 @@
             align-items: center;
             @include flexRowCenter;
 
-            h2 {
-                margin: 1vh 0;
+            .subpaginas_titulo {
+                margin-right: 0.3vw;
+                text-shadow: black 1px 1px 3px;
+                color: black;
+                cursor: default;
+            }
+
+            @media only screen and (max-width: 900px) {
+                margin-top: 1vh;
+
+            }
+
+            .subpaginas_botones {
+                .botones_1 {
+                    margin-right: 0.5vw;
+
+                }
             }
         }
+
         @media only screen and (max-width: 900px) {
             width: 63vw;
 
@@ -193,20 +236,22 @@
 .label-fecha-checbox_td {
     height: 14vh;
     align-items: center;
-    input{
+
+    input {
         opacity: 0;
         position: fixed;
         width: 0;
-    
+
         &:checked+label {
             background-color: $button_bg_secondary;
             border-color: $button_border_primary;
         }
-    
+
         &:focus+label {
             border: 2px solid $button_border_secondary;
         }
     }
+
     label {
         display: block;
         height: 100%;
@@ -215,7 +260,7 @@
             @include flexColumnCenter;
             height: 100%;
 
-             
+
         }
     }
 }

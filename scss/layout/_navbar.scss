@@ -2,7 +2,7 @@
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background-color: $bg_primary;
+    background-color: $navbar_bg_primary;
     transition: width 200ms ease;
 
     .navbar-nav {
@@ -60,7 +60,7 @@
                 &:hover {
                     filter: grayscale(0%) opacity(1);
                     transition: $transition-speed-1;
-                    background: $bg_secondary;
+                    background: $navbar_bg_secondary;
 
                     img {
                         filter: invert(1);

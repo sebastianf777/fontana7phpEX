@@ -229,6 +229,9 @@
             }
         }
 
+        thead{
+            background-color: $bg_primary;
+        }
     }
 
 }
@@ -277,3 +280,8 @@
 .th-td_importe {
     width: 20%;
 }
+
+.resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd), .tabla_2_cuerpo table tbody tr:nth-last-child(odd), .tabla_3_cuerpo table tbody tr:nth-last-child(odd) {
+    background-color: #e4c895;
+  }
+  

@@ -187,7 +187,7 @@ if (isset($_GET['desconectar'])) {
                 </div>
             </div>
             <div class="resumen_tablas">
-                <div class="resumen_tablas_izquierda">
+                <div class="resumenes resumen_tablas_izquierda">
                     <div class="vendedores_izquierda tablas_izquierda_1">
                         <table class='tabla_1_head'>
                             <thead>
@@ -219,7 +219,7 @@ if (isset($_GET['desconectar'])) {
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
-                                    <tr id='filas_resumenes'>
+                                    <tr>
                                         <td class='th-td_fecha_derecha'>
                                             <?php echo $crow['fechaing']; ?>
                                         </td>

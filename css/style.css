@@ -676,6 +676,9 @@ table, th, td {
     width: 63vw;
   }
 }
+.resumen_panel-subpaginas-tablas .resumen_tablas thead {
+  background-color: #ff8a02;
+}
 
 .label-fecha-checbox_td {
   height: 14vh;
@@ -714,6 +717,10 @@ table, th, td {
 
 .th-td_importe {
   width: 20%;
+}
+
+.resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd), .tabla_2_cuerpo table tbody tr:nth-last-child(odd), .tabla_3_cuerpo table tbody tr:nth-last-child(odd) {
+  background-color: #e4c895;
 }
 
 .button_1 {

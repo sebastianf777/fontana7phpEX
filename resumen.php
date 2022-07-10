@@ -155,7 +155,7 @@ if (isset($_GET['desconectar'])) {
                 <div class="resumen_panel">
                     <div class="panel_usuario">
                         <div class="panel_usuario_nombre">
-                            Usuario:
+                            Usuario: <?php echo $_SESSION['user_id']; ?>
                         </div>
                         <a class="panel_usuario_desconectar"
                             href="<?php echo $_SERVER['PHP_SELF']; ?>?desconectar=si">Desconectar</a>

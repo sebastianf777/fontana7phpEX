@@ -671,6 +671,9 @@ table, th, td {
   height: 100%;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tr_color {
+  background-color: #fff934;
+}
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tr_color_2 {
   background-color: #ff8a02;
 }
 @media only screen and (max-width: 900px) {

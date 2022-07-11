@@ -3,26 +3,30 @@ function saveFunction(){
     let checked = {};
 for (let i = 0; i < checkboxes.length; i += 1) {
 if (checkboxes[i].checked) {
-    localStorage.setItem(checkboxes[i].name, checkboxes[i].value)
+    // localStorage.setItem(checkboxes[i].name, checkboxes[i].value)
     checked[checkboxes[i].name] = checkboxes[i].value;
 }
 // <-- no need for else, because we simply override
 }
 localStorage.setItem('checked_boxes', JSON.stringify(checked)); // <-- localStorage can only store `String` values
 }
+// let checkboxElements = {};
+// let checkboxElements = JSON.parse(localStorage.getItem('checked_boxes')) || {};
+// let arrayChecboxElements = Object.entries(checkboxElements);
 
-function restoreCheckboxes (checkboxElements) {
-    var checkboxStates = localStorage.getItem('checked_boxes'),
-        i;
+(function restoreCheckboxes () {
+    let checkboxes = document.querySelectorAll('.fecha_checkbox'); // <-- select the checkboxes
+    let checkboxStates = localStorage.getItem('checked_boxes');
+    //    let i;
     if (checkboxStates) {
-      checkboxStates = JSON.parse(checkboxStates); // <-- parse string to object
-      for (i = 0; i < checkboxElements.length; i += 1) {
-        if (checkboxStates.hasOwnProperty(checkboxElements[i].name)) {
-          checkboxElements[i].checked = true;
+       checkboxStates = JSON.parse(checkboxStates); // <-- parse string to object
+      for (let i = 0; i < checkboxes.length; i += 1) {
+          if (checkboxStates.hasOwnProperty(checkboxes[i].name)) {
+          checkboxes[i].checked = true;
         }
       }
     }
-  }
+  })();
 // $( document ).ready(function() {
     
 // });
@@ -49,8 +53,7 @@ $( window ).on( "load", function() {
 
     }else{
         if (tiene_color_2_el_anterior == true && $( element ).text() == fecha_vendedores_texto) {
-        console.log('te lo cambie yo')
-        console.log($( element ).text())
+
 
         $( element ).parents('.tr_fecha-label-checkbox').toggleClass("tr_color_2 tr_color");
         }

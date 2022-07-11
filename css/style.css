@@ -670,6 +670,9 @@ table, th, td {
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .vendedores_derecha {
   height: 100%;
 }
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tr_color {
+  background-color: #ff8a02;
+}
 @media only screen and (max-width: 900px) {
   .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
     margin-top: 2vw;

@@ -330,7 +330,7 @@ if (isset($_GET['desconectar'])) {
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
-                                    <tr>
+                                    <tr class="tr_fecha-label-checkbox">
 
 
                                         <td class='th-td_fecha_derecha label-fecha-checbox_td'>
@@ -338,7 +338,7 @@ if (isset($_GET['desconectar'])) {
                                             <label for="<?php echo $crow['id']; ?>">
                                                 <div class="fecha-checbox_td">
 
-                                                    <div class="fecha-td"><?php echo $crow['fechaing']; ?></div>
+                                                    <div class="fecha-td fecha_vendedores"><?php echo $crow['fechaing']; ?></div>
                                                     
                                                 </div>
                                             </label>
@@ -406,7 +406,7 @@ if (isset($_GET['desconectar'])) {
     </section>
 
 
-    <script src="total/js/resumenes.js"></script>
+    <script src="js/resumenes.js"></script>
 </body>
 
 <a href="<?php echo $_SERVER['PHP_SELF']; ?>?desconectar=si">Desconectar</a>

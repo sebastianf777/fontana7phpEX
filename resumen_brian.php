@@ -334,7 +334,7 @@ if (isset($_GET['desconectar'])) {
 
 
                                         <td class='th-td_fecha_derecha label-fecha-checbox_td'>
-                                        <input id="<?php echo $crow['id']; ?>" type="checkbox">
+                                        <input onclick="saveFunction()" class="fecha_checkbox" id="<?php echo $crow['id']; ?>" type="checkbox" name="<?php echo $crow['id']; ?>" value="<?php echo $crow['id']; ?>">
                                             <label for="<?php echo $crow['id']; ?>">
                                                 <div class="fecha-checbox_td">
 

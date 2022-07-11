@@ -14,7 +14,7 @@ $( window ).on( "load", function() {
 
 
     fecha_vendedores.each(function () {
-    console.log(fecha_vendedores_texto + '1' );
+
     
     // if ($( this ).parents('.tr_fecha-label-checkbox').hasClass('tr_color_2') = true) {
     //     tiene_color_1 = false;
@@ -26,24 +26,19 @@ $( window ).on( "load", function() {
 
     }else if ($( this ).text() != fecha_vendedores_texto){
         fecha_vendedores_texto = $( this ).text();
-        console.log(fecha_vendedores_texto + '2' );
-        console.log($( this ).text() + '3' );
-if (tiene_color_2_el_anterior == true) {
-    $( this ).parents('.tr_fecha-label-checkbox').toggleClass("tr_color_2 tr_color")
-    tiene_color_2_el_anterior = false;
-
-}else{
-    $( this ).parents('.tr_fecha-label-checkbox').toggleClass("tr_color tr_color_2")
-    tiene_color_2_el_anterior = true;
-}
         
-        // $( this ).parents('.tr_fecha-label-checkbox')
+       if (tiene_color_2_el_anterior == true) {
+         tiene_color_2_el_anterior = false;}else{
+      $( this ).parents('.tr_fecha-label-checkbox').toggleClass("tr_color tr_color_2")
+      tiene_color_2_el_anterior = true;
+     }
+
     }else{
-        if (tiene_color_2_el_anterior == true) {
+        if (tiene_color_2_el_anterior == true && $( this ).text() == fecha_vendedores_texto) {
         console.log('te lo cambie yo')
+        console.log($( this ).text())
 
         $( this ).parents('.tr_fecha-label-checkbox').toggleClass("tr_color_2 tr_color");
-        tiene_color_2_el_anterior = false
         }
     }
 });

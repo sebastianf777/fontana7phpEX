@@ -14,7 +14,7 @@ if (isset($_GET['desconectar'])) {
 ?>
 <!DOCTYPE html>
 
-<html>
+<html lang='en'>
 
 <head>
     <meta charset="UTF-8">
@@ -406,7 +406,7 @@ if (isset($_GET['desconectar'])) {
     </section>
 
 
-    <script src="js/resumenes.js"></script>
+    <script src="/js/resumenes.js"></script>
 </body>
 
 <a href="<?php echo $_SERVER['PHP_SELF']; ?>?desconectar=si">Desconectar</a>

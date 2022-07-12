@@ -1,39 +1,60 @@
 // DOM Elements
-const changeButton = document.getElementById('change');
-const darkButton = document.getElementById('dark');
-const lightButton = document.getElementById('light');
-const solarButton = document.getElementById('solar');
-const body = document.body;
 const header = document.getElementById('header');
+const body = document.body;
+const change_button = document.getElementById('change');
+const img_change = document.getElementById('img_change')
+// const darkButton = document.getElementById('dark');
+// const lightButton = document.getElementById('light');
+// const solarButton = document.getElementById('solar');
 
 
 // // Apply the cached theme on reload
 
-const theme = localStorage.getItem('theme');
-const isSolar = localStorage.getItem('isSolar');
+let theme = localStorage.getItem('theme');
+let darkmode = true;
+// const isSolar = localStorage.getItem('isSolar');
 
 if (theme) {
-  header.classList.add(theme);
-  isSolar && header.classList.add('solar');
+  if (theme == 'light') {
+  body.classList.replace('dark', 'light');
+  darkmode = false;
+  }else{
+  darkmode = true;
+  }
 }
 
 // Button Event Handlers
+change_button.addEventListener('click', function () {
+  if (darkmode == true) {
+    body.classList.replace('dark', 'light');
+    localStorage.setItem('theme', 'light');
+    darkmode = false;
+    img_change.src = 'img/night_mode.png';
+    img_change.alt = 'modo nocturno logo';
+    
+    }else {
+    body.classList.replace('light', 'dark');
+    localStorage.setItem('theme', 'dark');
+    darkmode = true;
+    img_change.src = 'img/sunny_mode.png';
+    img_change.alt = 'modo diurno logo';
+    }
+})
+// change_button.onclick = () => {
+//   body.classList.replace('dark', 'light');
 
-changeButton.onclick = () => {
-  header.classList.replace('dark', 'light');
-
-  localStorage.setItem('theme', 'light');
-};
+//   localStorage.setItem('theme', 'light');
+// };
 // darkButton.onclick = () => {
-//   header.classList.replace('light', 'dark');
+//   body.classList.replace('light', 'dark');
 //   localStorage.setItem('theme', 'dark');
 // };
 
-lightButton.onclick = () => {
-  header.classList.replace('dark', 'light');
+// lightButton.onclick = () => {
+//   header.classList.replace('dark', 'light');
 
-  localStorage.setItem('theme', 'light');
-};
+//   localStorage.setItem('theme', 'light');
+// };
 
 // solarButton.onclick = () => {
 

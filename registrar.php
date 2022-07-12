@@ -12,9 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="dark">
 
-    <header id="header" class="dark">
+    <header  >
         <nav class="navbar" >
             <ul class="navbar-nav">
                 <li class="logo">
@@ -123,7 +123,7 @@
                 </li>
                 <li class="nav-item">
                     <a id="change" class="nav-link" href="#about">
-                        <img src="img/night_mode.png" alt="modo nocturno logo">
+                        <img id="img_change" src="img/sunny_mode.png" alt="modo diurno logo">
                         <span class="link-text">About</span></a>
                 </li>
             </ul>

@@ -31,6 +31,7 @@
                     transform: rotate(0deg);
                     transition: $transition-speed-2;
                 }
+
                 .link-text {
                     display: none;
 
@@ -42,8 +43,9 @@
             width: 100%;
 
             .nav-link {
-                filter: grayscale(100%) opacity(0.7);
+                filter: var(--filter-nav-link-nav);
                 transition: $transition-speed-1;
+
                 img {
                     margin: 0 1rem;
                     height: 3rem;
@@ -58,35 +60,51 @@
                 }
 
                 &:hover {
-                    filter: grayscale(0%) opacity(1);
+                    filter: var(--filter-nav-link-nav-hover);
                     transition: $transition-speed-1;
                     background: var(--bg-nav-2);
 
                     img {
-                        filter: invert(1);
+                        filter: var(--filter-img-nav);
                     }
                 }
             }
         }
 
+        .logo .nav-link,
+        .nav-item .nav-link {
+            .link-text {
+                color: var(--color-nav);
+            }
+            &:hover {
+                .link-text {
+                    color: var(--color-nav-2);
+                }
+
+                img {
+                    filter: var(--filter-img-nav);
+                }
+            }
+        }
 
     }
 
-    .nav-link{
+    .nav-link {
         display: flex;
         align-items: center;
         height: 5rem;
-        color: $text_primary;
+        color: var(--color-nav);
         text-decoration: none;
-        
+
     }
 
     @media only screen and (min-width: 601px) {
         &:hover {
             width: 16rem;
 
-            .nav-item .nav-link .link-text, .logo .nav-link .link-text{
-                
+            .nav-item .nav-link .link-text,
+            .logo .nav-link .link-text {
+
                 filter: invert(1);
                 display: block;
                 animation-name: change-display;
@@ -95,9 +113,9 @@
             }
 
             .logo .nav-link svg {
-                    transform: rotate(-360deg);
-                }
-            
+                transform: rotate(-360deg);
+            }
+
 
         }
 
@@ -120,10 +138,10 @@
             .nav-item .nav-link {
                 height: 4rem;
 
-                .link-text {
+                // .link-text {
 
-                    filter: invert(1);
-                }
+                //     filter: invert(1);
+                // }
             }
 
         }
@@ -139,7 +157,8 @@
             .nav-item {
                 .nav-link {
                     justify-content: center;
-                    img{
+
+                    img {
                         margin: auto;
                     }
                 }
@@ -148,61 +167,17 @@
     }
 }
 
-.light {
 
-    --bg-nav: #9f9fce;
-    --bg-nav-2: #6d6d86;
-    // --bg: var(--gray0);
-    // --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
-    // --bg-dropdown: var(--gray0);
-    // --text: var(--gray6);
-    // --border-color: var(--blue);
-    // --bg-solar: var(--yellow);
-}
-  
+@keyframes change-display {
+    from {
+        visibility: hidden;
+    }
 
-.dark {
-    --bg-nav: #23232e;
-  --bg-nav-2: #141418;
-    // --bg: var(--gray5);
-    // --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
-    // --bg-dropdown: var(--gray6);
-    // --text: var(--gray0);
-    // --border-color: var(--purple);
-    // --bg-solar: var(--blue);
-}
+    50% {
+        visibility: hidden;
+    }
 
-.solar {
-    --gray0: #fbffd4;
-    --gray1: #f7f8d0;
-    --gray2: #b6f880;
-    --gray3: #5ec72d;
-    --gray4: #3ea565;
-    --gray5: #005368;
-    --gray6: #003d4c;
-}
-
-
-#dark::before {
-    background: #2a2e35;
-}
-
-#light::before {
-    background: #ffffff;
-}
-
-#solar::before {
-    background: var(--bg-solar);
-}
-
-@keyframes change-display{
-from {
-    visibility: hidden;
-}
-50% {
-    visibility: hidden;
-}
-to {
-    visibility: visible;
-}
+    to {
+        visibility: visible;
+    }
 }

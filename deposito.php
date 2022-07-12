@@ -21,10 +21,10 @@
 <!-- TERMINA HEAD -->
 <!-- EMPIEZA BODY -->
 
-<body>
+<body class="dark">
     <!-- NAV BAR -->
-    <header>
-        <nav class="navbar">
+    <header  >
+        <nav class="navbar" >
             <ul class="navbar-nav">
                 <li class="logo">
                     <a href="" class="nav-link">
@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a id="deposito_link" class="nav-link" href="deposito.php">
+                    <a class="nav-link" href="deposito.php">
                         <img src="img/deposito.png" alt="deposito logo">
                         <span class="link-text">Depósito</span>
                     </a>
@@ -131,9 +131,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">
-                        <img src="img/night_mode.png" alt="modo nocturno logo">
-                        <span class="link-text">About</span></a>
+                    <a id="change" class="nav-link" href="#about">
+                        <img id="img_change" src="img/sunny_mode.png" alt="modo diurno logo">
+                        <span class="link-text">Cambiar Modo</span></a>
                 </li>
             </ul>
         </nav>
@@ -190,5 +190,6 @@
                 </tbody>
             </table>
     </section>
+    <script src="/js/main.js"></script>
 </body>
 </html>

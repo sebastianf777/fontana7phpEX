@@ -33,12 +33,12 @@ if (isset($_GET['desconectar'])) {
 
 
 
-<body>
+<body class="dark">
 
     <!-- NAV BAR -->
 
-    <header>
-        <nav class="navbar">
+    <header  >
+        <nav class="navbar" >
             <ul class="navbar-nav">
                 <li class="logo">
                     <a href="" class="nav-link">
@@ -145,9 +145,9 @@ if (isset($_GET['desconectar'])) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">
-                        <img src="img/night_mode.png" alt="modo nocturno logo">
-                        <span class="link-text">About</span></a>
+                    <a id="change" class="nav-link" href="#about">
+                        <img id="img_change" src="img/sunny_mode.png" alt="modo diurno logo">
+                        <span class="link-text">Cambiar Modo</span></a>
                 </li>
             </ul>
         </nav>
@@ -405,7 +405,7 @@ if (isset($_GET['desconectar'])) {
         </div>
     </section>
 
-
+    <script src="/js/main.js"></script>
     <script src="/js/resumenes.js"></script>
 </body>
 

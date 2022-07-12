@@ -1,5 +1,4 @@
 // DOM Elements
-const header = document.getElementById('header');
 const body = document.body;
 const change_button = document.getElementById('change');
 const img_change = document.getElementById('img_change')

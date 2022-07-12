@@ -21,15 +21,18 @@ if (isset($_POST['login'])) {
             session_regenerate_id(true);
 
             $_SESSION['user_id'] = $username;
-            sleep(3);
-            header("refresh:5;url=resumen.php");
-            echo '<p class="success">Felicidades, estás logueado! Redireccionando...</p>';
+            // sleep(3);
+            header("Location: resumen.php");
+            // header("refresh:5;url=resumen.php");
+            // echo '<p class="success">Felicidades, estás logueado! Redireccionando...</p>';
             exit();
         } else {
-            echo '<p class="error">Username password combination is wrong!</p>';
+            echo '<p id="error_login">Username password combination is wrong!</p>';
+            sleep(3);
         }
     } else {
-        echo "Password o email incorrectos.";
+        echo '<p id="error_login">Password o email incorrectos.</p>';
+        sleep(3);
     }
 }
 
@@ -65,10 +68,10 @@ if (isset($_POST['login'])) {
 
             <div class="inset">
                 <p>
-                    <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Usuario" required>
+                    <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Usuario">
                 </p>
                 <p>
-                    <input type="password" name="password" placeholder="Código de Acceso" required>
+                    <input type="password" name="password" placeholder="Código de Acceso">
                 </p>
             </div>
 

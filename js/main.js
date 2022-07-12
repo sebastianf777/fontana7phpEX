@@ -1,5 +1,5 @@
 // DOM Elements
-
+const changeButton = document.getElementById('change');
 const darkButton = document.getElementById('dark');
 const lightButton = document.getElementById('light');
 const solarButton = document.getElementById('solar');
@@ -19,16 +19,21 @@ if (theme) {
 
 // Button Event Handlers
 
-darkButton.onclick = () => {
-  header.classList.replace('light', 'dark');
-  localStorage.setItem('theme', 'dark');
+changeButton.onclick = () => {
+  header.classList.replace('dark', 'light');
+
+  localStorage.setItem('theme', 'light');
 };
-
-// lightButton.onclick = () => {
-//   header.classList.replace('dark', 'light');
-
-//   localStorage.setItem('theme', 'light');
+// darkButton.onclick = () => {
+//   header.classList.replace('light', 'dark');
+//   localStorage.setItem('theme', 'dark');
 // };
+
+lightButton.onclick = () => {
+  header.classList.replace('dark', 'light');
+
+  localStorage.setItem('theme', 'light');
+};
 
 // solarButton.onclick = () => {
 

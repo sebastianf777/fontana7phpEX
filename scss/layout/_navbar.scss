@@ -2,7 +2,7 @@
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background-color: $navbar_bg_primary;
+    background-color: var(--bg-nav);
     transition: width 200ms ease;
 
     .navbar-nav {
@@ -60,7 +60,7 @@
                 &:hover {
                     filter: grayscale(0%) opacity(1);
                     transition: $transition-speed-1;
-                    background: $navbar_bg_secondary;
+                    background: var(--bg-nav-2);
 
                     img {
                         filter: invert(1);
@@ -149,22 +149,27 @@
 }
 
 .light {
-    --bg: var(--gray0);
-    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
-    --bg-dropdown: var(--gray0);
-    --text: var(--gray6);
-    --border-color: var(--blue);
-    --bg-solar: var(--yellow);
+
+    --bg-nav: #9f9fce;
+    --bg-nav-2: #6d6d86;
+    // --bg: var(--gray0);
+    // --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+    // --bg-dropdown: var(--gray0);
+    // --text: var(--gray6);
+    // --border-color: var(--blue);
+    // --bg-solar: var(--yellow);
 }
   
 
 .dark {
-    --bg: var(--gray5);
-    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
-    --bg-dropdown: var(--gray6);
-    --text: var(--gray0);
-    --border-color: var(--purple);
-    --bg-solar: var(--blue);
+    --bg-nav: #23232e;
+  --bg-nav-2: #141418;
+    // --bg: var(--gray5);
+    // --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+    // --bg-dropdown: var(--gray6);
+    // --text: var(--gray0);
+    // --border-color: var(--purple);
+    // --bg-solar: var(--blue);
 }
 
 .solar {

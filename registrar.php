@@ -122,7 +122,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a id="dark" class="nav-link" href="#about">
+                    <a id="change" class="nav-link" href="#about">
                         <img src="img/night_mode.png" alt="modo nocturno logo">
                         <span class="link-text">About</span></a>
                 </li>

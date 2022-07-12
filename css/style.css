@@ -3,6 +3,8 @@
   font-family: "Open Sans";
   padding: 0;
   margin: 0;
+  --bg-nav: #23232e;
+  --bg-nav-2: #141418;
 }
 
 html {
@@ -64,7 +66,7 @@ table, th, td {
   width: 5rem;
   height: 100vh;
   position: fixed;
-  background-color: #23232e;
+  background-color: var(--bg-nav);
   transition: width 200ms ease;
 }
 .navbar .navbar-nav {
@@ -116,7 +118,7 @@ table, th, td {
 .navbar .navbar-nav .nav-item .nav-link:hover {
   filter: grayscale(0%) opacity(1);
   transition: 600ms;
-  background: #141418;
+  background: var(--bg-nav-2);
 }
 .navbar .navbar-nav .nav-item .nav-link:hover img {
   filter: invert(1);
@@ -175,21 +177,13 @@ table, th, td {
 }
 
 .light {
-  --bg: var(--gray0);
-  --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
-  --bg-dropdown: var(--gray0);
-  --text: var(--gray6);
-  --border-color: var(--blue);
-  --bg-solar: var(--yellow);
+  --bg-nav: #9f9fce;
+  --bg-nav-2: #6d6d86;
 }
 
 .dark {
-  --bg: var(--gray5);
-  --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
-  --bg-dropdown: var(--gray6);
-  --text: var(--gray0);
-  --border-color: var(--purple);
-  --bg-solar: var(--blue);
+  --bg-nav: #23232e;
+  --bg-nav-2: #141418;
 }
 
 .solar {

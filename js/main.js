@@ -18,6 +18,8 @@ if (theme) {
   if (theme == 'light') {
   body.classList.replace('dark', 'light');
   darkmode = false;
+  img_change.src = 'img/night_mode.png';
+  img_change.alt = 'modo nocturno logo';
   }else{
   darkmode = true;
   }

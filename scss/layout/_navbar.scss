@@ -63,10 +63,6 @@
                     filter: var(--filter-nav-link-nav-hover);
                     transition: $transition-speed-1;
                     background: var(--bg-nav-2);
-
-                    img {
-                        filter: var(--filter-img-nav);
-                    }
                 }
             }
         }
@@ -76,13 +72,16 @@
             .link-text {
                 color: var(--color-nav);
             }
+            img {
+                filter: var(--filter-img-nav);
+            }
             &:hover {
                 .link-text {
                     color: var(--color-nav-2);
                 }
 
                 img {
-                    filter: var(--filter-img-nav);
+                    filter: var(--filter-img-nav-hover);
                 }
             }
         }

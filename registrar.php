@@ -124,7 +124,7 @@
                 <li class="nav-item">
                     <a id="change" class="nav-link" href="#about">
                         <img id="img_change" src="img/sunny_mode.png" alt="modo diurno logo">
-                        <span class="link-text">About</span></a>
+                        <span class="link-text">Cambiar Modo</span></a>
                 </li>
             </ul>
         </nav>

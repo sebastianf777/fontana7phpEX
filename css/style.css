@@ -696,8 +696,9 @@ table, th, td {
   width: 0;
 }
 .label-fecha-checbox_td input:checked + label {
-  background-color: #f9f140;
+  background-color: #6b6bcb;
   border-color: rgb(93, 68, 204);
+  color: #f9f140;
 }
 .label-fecha-checbox_td input:focus + label {
   border: 2px solid rgb(93, 68, 204);
@@ -705,6 +706,7 @@ table, th, td {
 .label-fecha-checbox_td label {
   display: block;
   height: 100%;
+  cursor: pointer;
 }
 .label-fecha-checbox_td label .fecha-checbox_td {
   display: flex;

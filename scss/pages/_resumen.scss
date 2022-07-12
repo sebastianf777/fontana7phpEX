@@ -253,8 +253,9 @@
         width: 0;
 
         &:checked+label {
-            background-color: $button_bg_secondary;
+            background-color: $color_secondary;
             border-color: $button_border_primary;
+            color: $button_bg_secondary;
         }
 
         &:focus+label {
@@ -265,6 +266,7 @@
     label {
         display: block;
         height: 100%;
+        cursor: pointer;
 
         .fecha-checbox_td {
             @include flexColumnCenter;

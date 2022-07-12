@@ -14,8 +14,8 @@
 
 <body>
 
-    <header>
-        <nav class="navbar">
+    <header id="header" class="dark">
+        <nav class="navbar" >
             <ul class="navbar-nav">
                 <li class="logo">
                     <a href="" class="nav-link">
@@ -122,7 +122,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">
+                    <a id="dark" class="nav-link" href="#about">
                         <img src="img/night_mode.png" alt="modo nocturno logo">
                         <span class="link-text">About</span></a>
                 </li>
@@ -258,7 +258,7 @@
         </form>
 
     </section>
-    
+    <script src="/js/main.js"></script>
     <script src="/js/registrar.js"></script>
 </body>
 

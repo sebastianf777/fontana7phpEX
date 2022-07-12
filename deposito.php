@@ -13,7 +13,7 @@
     <script>
     $(document).ready(function() {
         setInterval(function() {
-            $("#btn").click();
+            location.reload();
         }, 7000);
     });
     </script>
@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="deposito.php">
+                    <a id="deposito_link" class="nav-link" href="deposito.php">
                         <img src="img/deposito.png" alt="deposito logo">
                         <span class="link-text">Depósito</span>
                     </a>

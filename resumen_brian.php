@@ -168,7 +168,7 @@ if (isset($_GET['desconectar'])) {
                             href="<?php echo $_SERVER['PHP_SELF']; ?>?desconectar=si">Desconectar</a>
                     </div>
                     <div class="panel_titulo">
-                        <h1>Resumenes Totales </h1>
+                        <h1>Resumen Brian</h1>
                     </div>
                 </div>
                 <div class="resumen_subpaginas">

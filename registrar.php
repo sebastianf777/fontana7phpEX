@@ -8,6 +8,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <title>-formulario Fontana Viamonte</title>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -256,7 +258,7 @@
         </form>
 
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <script src="/js/registrar.js"></script>
 </body>
 

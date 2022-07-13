@@ -6,6 +6,8 @@ const numero = document.getElementById('element_1');
 const sin_numero = document.getElementById('sin_numero');
 const mostrar_numero = document.querySelector('.registrar_mostrar')
 
+//Función mostrar Número 
+
 mostrar_numero.addEventListener('click', function () {
   if(sin_numero.checked){
     numero.required = false 
@@ -15,7 +17,7 @@ mostrar_numero.addEventListener('click', function () {
 }
 )
 
-
+//Función poner fecha de hoy
 
 const todayNew = new Date();
 let today;
@@ -25,11 +27,9 @@ let registrar_input = document.querySelectorAll(".registrar_input_text");
 registrar_input.forEach(element => {
   element.oninput = function () {
     element.style.height = "";
-    /* textarea.style.height = Math.min(textarea.scrollHeight, 300) + "px"; */
     element.style.height = element.scrollHeight + "px"
   };
 })
-
 
 function formatDate(date, format) {
     const map = {
@@ -41,22 +41,13 @@ function formatDate(date, format) {
 
     return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
 }
-function clickThis() {
-    month.value = formatDate(todayNew, 'mm');
-    date.value = formatDate(todayNew, 'dd');
-    year.value = formatDate(todayNew, 'yy');
+function ponerFecha() {
+  month.value = formatDate(todayNew, 'mm');
+  date.value = formatDate(todayNew, 'dd');
+  year.value = formatDate(todayNew, 'yy');
 }
+fecha.addEventListener("click", ponerFecha())
 
-fecha.onclick = clickThis;
-
-fecha.addEventListener('click', function () {
- 
-
-    setTimeout(() => {
-        today = [...document.querySelectorAll('.today')];
-        todayFiltered = today.filter(a => a.textContent.includes("Today"))
-        for (let i = 0; i < todayFiltered.length; i++) {
-            todayFiltered[i].onclick = clickThis;
-          }
-    }, 1000);
-})
+window.onload = function () {
+  ponerFecha()
+}

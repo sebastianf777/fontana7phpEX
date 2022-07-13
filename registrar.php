@@ -1,3 +1,9 @@
+<?php
+session_start();
+$secret=md5(uniqid(rand(), true));
+$_SESSION['FORM_SECRET'] = $secret;
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -252,6 +258,7 @@
                 </li>
 
                 <li class="registrar_submit">
+                <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET'];?>" />
                     <input type="submit" name="submit" value="Submit" />
                 </li>
             </ul>

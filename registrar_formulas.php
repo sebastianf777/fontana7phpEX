@@ -2,7 +2,16 @@
 //include connection
 include("conectar.php");
 
-if(isset($_POST['submit']))
+session_start();
+
+//Retrieve the value of the hidden field
+$form_secret = isset($_POST["form_secret"])?$_POST["form_secret"]:'';
+
+
+if(isset($_SESSION["FORM_SECRET"])) {
+    if(strcasecmp($form_secret, $_SESSION["FORM_SECRET"]) === 0) {
+        /*Put your form submission code here after processing the form data, unset the secret key from the session*/
+        if(isset($_POST['submit']))
 {
 
 $numero = $_POST['element_1'];
@@ -23,30 +32,26 @@ $stmt = $con->prepare("INSERT INTO productos ( numero, producto, detallematerial
 $stmt->bind_param('issssssssssss', $numero, $producto, $detallemateriales, $fechaing, $serie, $ferreteria, $detalleferreteria, $pagotipo, $pedido, $detallepedido, $cliente, $acuenta, $mostrar );
 
 $stmt->execute();
+if ($stmt->error){
+    echo '<script type="text/javascript">'; 
+    echo 'alert("ERROR! REVISAR SI FALTA ALGUN DATO");'; 
+    echo 'window.location = "registrar.php";';
+    echo '</script>';
+        }  else{
+            echo '<script type="text/javascript">'; 
+            echo 'alert("REGISTRO DE DATOS CORRECTO");'; 
+            echo 'window.location = "registrar.php";';
+            echo '</script>';
+            }
 } 
-// if ($conn-> query($stmt) === TRUE)
-// {
-//     echo "The New Inserted Id is:" .$conn-> insert_id;
-// }
-// else
-// {
-//     echo "Not Inserted";
-// }
-
-if ($stmt->error)
-	{
-echo '<script type="text/javascript">'; 
-echo 'alert("ERROR! REVISAR SI FALTA ALGUN DATO");'; 
-echo 'window.location = "registrar.php";';
-echo '</script>';
+        unset($_SESSION["FORM_SECRET"]);
+    }else {
+        //Invalid secret key
     }
-    else
-    {
-echo '<script type="text/javascript">'; 
-echo 'alert("REGISTRO DE DATOS CORRECTO");'; 
-echo 'window.location = "registrar.php";';
-echo '</script>';
-    }
+} else {
+	//Secret key missing
+	echo "Form data has already been processed!";
+}
 
 $stmt->close();
-?>  
+?>

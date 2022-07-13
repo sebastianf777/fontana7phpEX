@@ -223,7 +223,7 @@
 
                 <li class="registrar_opciones-icono">
                     <label class="registrar_icono">VENDEDOR: </label>
-                    <div class="registrar_opciones">
+                    <div id="vendedor_opciones" class="registrar_opciones">
                         <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian"
                             checked="checked" />
                         <label for="element_3_1">Brian</label>

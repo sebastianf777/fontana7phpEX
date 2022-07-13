@@ -4,7 +4,11 @@ const date = document.getElementById('element_4_2');
 const year = document.getElementById('element_4_3');
 const numero = document.getElementById('element_1');
 const sin_numero = document.getElementById('sin_numero');
-const mostrar_numero = document.querySelector('.registrar_mostrar')
+const mostrar_numero = document.querySelector('.registrar_mostrar'); 
+const vendedor_opciones = document.getElementById('vendedor_opciones');
+let vendedor_brian = document.getElementById("element_3_1");
+let vendedor_sebastian = document.getElementById("element_3_2");
+let vendedor_opcion = localStorage.getItem("vendedor");
 
 //Función mostrar Número 
 
@@ -48,6 +52,27 @@ function ponerFecha() {
 }
 fecha.addEventListener("click", ponerFecha())
 
+//Guardar última opción vendedor
+
+vendedor_opciones.addEventListener("click", function () {
+  if (vendedor_sebastian.checked === true) {
+    localStorage.setItem("vendedor", "sebastian");
+    console.log("hi")
+  }else{
+    localStorage.setItem("vendedor", "brian");
+  }
+})
+
+function ponerOpcionVendedor() {
+  if (vendedor_opcion == "sebastian") {
+    vendedor_brian.checked = false;
+    vendedor_sebastian.checked = true;
+  }
+}
+
+//Usar funciones al iniciar
+
 window.onload = function () {
-  ponerFecha()
+  ponerFecha();
+  ponerOpcionVendedor();
 }

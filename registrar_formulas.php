@@ -50,7 +50,10 @@ if ($stmt->error){
     }
 } else {
 	//Secret key missing
-	echo "Form data has already been processed!";
+    echo '<script type="text/javascript">'; 
+    echo 'alert("ERROR DUPLICADO! - el duplicado no se cargó");'; 
+    echo 'window.location = "registrar.php";';
+    echo '</script>';
 }
 
 $stmt->close();

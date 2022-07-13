@@ -7,7 +7,6 @@
         @include flexRowCenter;
         @include tabla_css;
         margin: 0 auto 2vh;
-        padding: 10px 5px;
         flex-wrap: wrap;
 
         .resumen_panel {
@@ -16,7 +15,8 @@
             .panel_usuario {
                 @include flexRowCenter;
                 align-items: center;
-
+                border-right: inset grey 0.5px;
+                padding: 10px 5px;
                 .panel_usuario_nombre {
                     margin-right: 0.5vw;
                     text-shadow: 1px 1px 2px $color_primary;
@@ -37,6 +37,7 @@
             .panel_titulo {
                 text-shadow: 1px 1px 2px $color_terciary;
                 cursor: default;
+                padding: 10px 5px;
             }
 
             @media only screen and (min-width: 901px) {
@@ -56,22 +57,11 @@
                 cursor: default;
             }
 
-            @media only screen and (max-width: 900px) {
-                margin-top: 1vh;
-
-            }
-
             .subpaginas_botones {
-                .botones_1 {
+                a {
                     margin-right: 0.5vw;
-
                 }
             }
-        }
-
-        @media only screen and (max-width: 900px) {
-            width: 63vw;
-
         }
     }
 
@@ -84,65 +74,23 @@
             @include tabla_css;
             margin-right: 1vw;
             padding: 5px;
-            width: 26vw;
+            width: 33vw;
 
-            .tablas_izquierda_1 {
-                height: 33%;
-
-                @include flexColumn;
-
-                table {
-                    width: 100%;
-                }
-
-                .tabla_1_head {
-                    padding-right: 0.25rem;
-                }
-
-                .tabla_1_cuerpo {
-                    overflow: scroll;
-                    @include scroll_bar_1;
-
-                }
-
-            }
-
-            .tablas_izquierda_2 {
+            .tablas_izquierda_1, .tablas_izquierda_2, .tablas_izquierda_3 {
                 height: 33%;
                 @include flexColumn;
 
                 table {
                     width: 100%;
-                }
-
-                .tabla_2_head {
                     padding-right: 0.25rem;
                 }
 
-                .tabla_2_cuerpo {
+                div {
                     overflow: scroll;
                     @include scroll_bar_1;
 
                 }
-            }
 
-            .tablas_izquierda_3 {
-                height: 33%;
-                @include flexColumn;
-
-                table {
-                    width: 100%;
-                }
-
-                .tabla_3_head {
-                    padding-right: 0.25rem;
-                }
-
-                .tabla_3_cuerpo {
-                    overflow: scroll;
-                    @include scroll_bar_1;
-
-                }
             }
 
             .vendedores_izquierda {
@@ -243,6 +191,15 @@
 
 }
 
+@media only screen and (max-width: 900px) {
+    .resumen_panel-subpaginas{
+        width: 63vw;
+        .resumen_subpaginas{
+            margin-top: 1vh;
+        }    
+    }
+
+}
 .label-fecha-checbox_td {
     height: 14vh;
     align-items: center;

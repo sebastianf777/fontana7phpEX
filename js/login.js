@@ -1,21 +1,30 @@
 
 
 $(document).ready(function() {
+    const user_input = $('user_input');
+    const pw_input = $('user_password');
 
-    
-$('#go').click(function AnimacionCargando() {
-let error_login = document.getElementById('error_login');
     if (error_login != undefined) {
         document.getElementById("litheader").className = "";
         document.getElementById("go").className = "denied";
         document.getElementById("go").value = "Access Denied";
         error_login.parentNode.removeChild(error_login);
-    }else{
+    }
+    
+$('#go').click(function AnimacionCargando() {
+    if (user_input.text() != '' || pw_input.text() != '') {
         document.getElementById("litheader").className = "poweron";
         document.getElementById("go").className = "";
         document.getElementById("go").value = "Inicializando...";
     }
-        
+let error_login = document.getElementById('error_login');
+
+    if (error_login != undefined) {
+        document.getElementById("litheader").className = "";
+        document.getElementById("go").className = "denied";
+        document.getElementById("go").value = "Access Denied";
+        error_login.parentNode.removeChild(error_login);
+    }
 })
 
     //$("input:text:visible:first").focus();

@@ -19,16 +19,14 @@ if (isset($_POST['login'])) {
         if ($verifico_password === TRUE) {
             //  $_SESSION['user_id'] = $result['id'];
             session_regenerate_id(true);
-
             $_SESSION['user_id'] = $username;
-            // sleep(3);
+            sleep(3);
             header("Location: resumen.php");
             // header("refresh:5;url=resumen.php");
             // echo '<p class="success">Felicidades, estás logueado! Redireccionando...</p>';
             exit();
         } else {
             echo '<p id="error_login">Username password combination is wrong!</p>';
-            sleep(3);
         }
     } else {
         echo '<p id="error_login">Password o email incorrectos.</p>';
@@ -68,10 +66,10 @@ if (isset($_POST['login'])) {
 
             <div class="inset">
                 <p>
-                    <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Usuario">
+                    <input id="user_input" type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Usuario" required>
                 </p>
                 <p>
-                    <input type="password" name="password" placeholder="Código de Acceso">
+                    <input id="user_password" type="password" name="password" placeholder="Código de Acceso" required>
                 </p>
             </div>
 

@@ -76,7 +76,7 @@ if (isset($_POST['login'])) {
             <p class="p-container">
                 <!-- <button type="submit" name="login" value="login">Log In</button> -->
 
-                <input type="submit" name="login" id="go" value="Authorize">
+                <input type="submit" name="login" id="go" value="Autorizar">
             </p>
         </form>
         <div class="background-wrap">

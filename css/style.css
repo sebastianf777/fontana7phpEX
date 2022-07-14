@@ -678,6 +678,7 @@ td {
   .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
     margin-top: 2vw;
     max-width: none;
+    max-width: 450px;
   }
   .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
     width: 63vw;

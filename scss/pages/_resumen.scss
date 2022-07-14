@@ -11,12 +11,14 @@
 
         .resumen_panel {
             @include flexRowCenter;
+            margin-right: 0.5vw;
 
             .panel_usuario {
                 @include flexRowCenter;
                 align-items: center;
                 border-right: inset grey 0.5px;
                 padding: 10px 5px;
+
                 .panel_usuario_nombre {
                     margin-right: 0.5vw;
                     text-shadow: 1px 1px 2px $color_primary;
@@ -40,10 +42,7 @@
                 padding: 10px 5px;
             }
 
-            @media only screen and (min-width: 901px) {
-                margin-right: 0.5vw;
 
-            }
         }
 
         .resumen_subpaginas {
@@ -75,8 +74,11 @@
             margin-right: 1vw;
             padding: 5px;
             width: 33vw;
+            max-width: 450px;
 
-            .tablas_izquierda_1, .tablas_izquierda_2, .tablas_izquierda_3 {
+            .tablas_izquierda_1,
+            .tablas_izquierda_2,
+            .tablas_izquierda_3 {
                 height: 33%;
                 @include flexColumn;
 
@@ -85,7 +87,7 @@
                     padding-right: 0.25rem;
                 }
 
-                div {
+                .cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
 
@@ -97,94 +99,45 @@
                 height: 50%;
             }
 
-
-            @media only screen and (max-width: 900px) {
-                width: 63vw;
-                margin: 0;
-            }
         }
 
         .resumen_tablas_derecha {
             height: 85vh;
             @include tabla_css;
             padding: 5px;
+            max-width: 39vw;
 
-            .tablas_derecha_1 {
-                height: 33%;
-
-                @include flexColumn;
-
-                table {
-                    width: 100%;
-                }
-
-                .tabla_1_head {
-                    padding-right: 0.25rem;
-                }
-
-                .tabla_1_cuerpo {
-                    overflow: scroll;
-                    @include scroll_bar_1;
-                }
-
-            }
-
-            .tablas_derecha_2 {
+            .tablas_derecha_1, .tablas_derecha_2, .tablas_derecha_3 {
                 height: 33%;
                 @include flexColumn;
 
                 table {
                     width: 100%;
-                }
-
-                .tabla_2_head {
                     padding-right: 0.25rem;
                 }
 
-                .tabla_2_cuerpo {
+                .cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
-
-                }
-            }
-
-            .tablas_derecha_3 {
-                height: 33%;
-                @include flexColumn;
-
-                table {
-                    width: 100%;
                 }
 
-                .tabla_3_head {
-                    padding-right: 0.25rem;
-                }
-
-                .tabla_3_cuerpo {
-                    overflow: scroll;
-                    @include scroll_bar_1;
-
-                }
             }
 
             .vendedores_derecha {
                 height: 100%;
             }
 
-            .tr_color{
+            .tr_color {
                 background-color: $bg_secondary;
             }
-            .tr_color_2{
+
+            .tr_color_2 {
                 background-color: $bg_primary;
             }
 
-            @media only screen and (max-width: 900px) {
-                margin-top: 2vw;
-                width: 63vw;
-            }
         }
 
-        thead{
+        thead {
             background-color: $bg_primary;
         }
     }
@@ -192,14 +145,69 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .resumen_panel-subpaginas{
-        width: 63vw;
-        .resumen_subpaginas{
-            margin-top: 1vh;
-        }    
+    .resumen_panel-subpaginas-tablas {
+        .resumen_panel-subpaginas {
+            width: 63vw;
+
+            .resumen_panel {
+                margin: 0;
+            }
+
+            .resumen_subpaginas {
+                margin-top: 1vh;
+            }
+        }
+
+        .resumen_tablas {
+            .resumen_tablas_izquierda {
+                margin: 0;
+            }
+            .resumen_tablas_derecha{
+                margin-top: 2vw;
+                max-width: none;
+            }
+            .resumen_tablas_izquierda, .resumen_tablas_derecha{
+                width: 63vw;
+                min-width: 420px;
+            }
+        }
+
     }
 
 }
+
+@media only screen and (max-width: 600px) {
+    .resumen_panel-subpaginas-tablas {
+        // .resumen_panel-subpaginas {
+        //     width: 63vw;
+
+        //     .resumen_panel {
+        //         margin: 0;
+        //     }
+
+        //     .resumen_subpaginas {
+        //         margin-top: 1vh;
+        //     }
+        // }
+
+        .resumen_tablas {
+            // .resumen_tablas_izquierda {
+            // }
+            .resumen_tablas_derecha{
+                margin-top: 2vw;
+                max-width: none;
+            }
+            .resumen_tablas_izquierda, .resumen_tablas_derecha{
+                width: 63vw;
+                width: 90vw;
+                min-width: auto;
+            }
+        }
+
+    }
+
+}
+
 .label-fecha-checbox_td {
     height: 14vh;
     align-items: center;
@@ -247,7 +255,8 @@
     width: 20%;
 }
 
-.resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd), .tabla_2_cuerpo table tbody tr:nth-last-child(odd), .tabla_3_cuerpo table tbody tr:nth-last-child(odd) {
+.resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),
+.tabla_2_cuerpo table tbody tr:nth-last-child(odd),
+.tabla_3_cuerpo table tbody tr:nth-last-child(odd) {
     background-color: #e4c895;
-  }
-  
+}

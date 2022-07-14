@@ -200,7 +200,7 @@ if (isset($_GET['desconectar'])) {
                                 </tr>
                             </thead>
                         </table>
-                        <div class="tabla_1_cuerpo">
+                        <div class="tabla_1_cuerpo cuerpo">
                             <table>
                                 <tbody>
                                     <?php
@@ -262,7 +262,7 @@ if (isset($_GET['desconectar'])) {
                                 </tr>
                             </thead>
                         </table>
-                        <div class="tabla_2_cuerpo">
+                        <div class="tabla_2_cuerpo cuerpo">
                             <table>
                                 <tbody>
                                     <?php
@@ -310,7 +310,7 @@ if (isset($_GET['desconectar'])) {
                                 </tr>
                             </thead>
                         </table>
-                        <div class="tabla_3_cuerpo">
+                        <div class="tabla_3_cuerpo cuerpo">
                             <table>
                                 <tbody>
                                     <?php
@@ -359,7 +359,7 @@ if (isset($_GET['desconectar'])) {
                                 </tr>
                             </thead>
                         </table>
-                        <div class="tabla_1_cuerpo">
+                        <div class="tabla_1_cuerpo cuerpo">
                             <table>
                                 <tbody>
                                     <?php
@@ -404,7 +404,7 @@ if (isset($_GET['desconectar'])) {
                                 </tr>
                             </thead>
                         </table>
-                        <div class="tabla_2_cuerpo">
+                        <div class="tabla_2_cuerpo cuerpo">
                             <table>
                                 <tbody>
                                     <?php
@@ -444,7 +444,7 @@ if (isset($_GET['desconectar'])) {
                                 </tr>
                             </thead>
                         </table>
-                        <div class="tabla_3_cuerpo">
+                        <div class="tabla_3_cuerpo cuerpo">
                             <table>
                                 <tbody>
                                     <?php

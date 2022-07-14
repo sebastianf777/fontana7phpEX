@@ -617,26 +617,38 @@ td {
   padding: 5px;
   max-width: 39vw;
 }
-.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 {
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 {
   height: 33%;
   display: flex;
   flex-direction: column;
 }
-.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 table, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 table, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 table {
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 table,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 table,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 table {
   width: 100%;
   padding-right: 0.25rem;
 }
-.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo {
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo {
   overflow: scroll;
 }
-.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo::-webkit-scrollbar, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo::-webkit-scrollbar, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo::-webkit-scrollbar {
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo::-webkit-scrollbar,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo::-webkit-scrollbar,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo::-webkit-scrollbar {
   width: 0.25rem;
   height: 0.25rem;
 }
-.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo::-webkit-scrollbar-track, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo::-webkit-scrollbar-track, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo::-webkit-scrollbar-track {
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo::-webkit-scrollbar-track,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo::-webkit-scrollbar-track,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo::-webkit-scrollbar-track {
   background: #1e1e24;
 }
-.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo::-webkit-scrollbar-thumb, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo::-webkit-scrollbar-thumb, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo::-webkit-scrollbar-thumb {
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo::-webkit-scrollbar-thumb,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo::-webkit-scrollbar-thumb,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .vendedores_derecha {
@@ -669,18 +681,26 @@ td {
     margin-top: 2vw;
     max-width: none;
   }
-  .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
+  .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
     width: 63vw;
     min-width: 420px;
   }
 }
 @media only screen and (max-width: 600px) {
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas {
+    width: 93vw;
+  }
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel {
+    flex-direction: column;
+  }
   .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
     margin-top: 2vw;
     max-width: none;
     max-width: 450px;
   }
-  .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda, .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
+  .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_izquierda,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
     width: 63vw;
     width: 90vw;
     min-width: auto;

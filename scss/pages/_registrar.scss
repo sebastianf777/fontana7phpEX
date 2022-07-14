@@ -99,13 +99,15 @@
             margin: 0 auto;
             align-items: center;
 
-            .registrar_icono img{
+            .registrar_icono img {
                 width: 6vh;
                 margin-right: 1vh;
             }
-            .registrar_fecha input{
+
+            .registrar_fecha input {
                 text-align: center;
             }
+
             .registrar_img {
                 img {
                     width: 5vh;
@@ -126,6 +128,15 @@
                     }
                 }
             }
+
+            .registrar_fecha {
+
+                #element_4_2,
+                #element_4_1 {
+                    width: 2vw;
+                }
+            }
+
         }
 
         .registrar_submit {
@@ -145,17 +156,33 @@
         max-width: none;
 
         .registrar_ul {
-            
-            li{
+
+            li {
                 padding-bottom: 0.7rem;
             }
+
             .registrar_item-importe {
                 .registrar_item {
                     width: 75%;
                 }
-    
+
                 .registrar_importe {
                     width: 25%;
+                }
+            }
+
+            .registrar_fecha-icono-img {
+                .registrar_fecha {
+
+                    #element_4_2,
+                    #element_4_1 {
+                        width: 5vw;
+                    }
+
+                    #element_4_3 {
+                        width: 7vw;
+                        min-width: 30px;
+                    }
                 }
             }
         }

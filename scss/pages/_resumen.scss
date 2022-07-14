@@ -47,6 +47,7 @@
 
         .resumen_subpaginas {
             align-items: center;
+            min-height: 48px;
             @include flexRowCenter;
 
             .subpaginas_titulo {

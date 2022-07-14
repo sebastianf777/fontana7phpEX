@@ -361,6 +361,10 @@ td {
 .registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_img img:active {
   background: rgb(93, 68, 204);
 }
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_fecha #element_4_2,
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_fecha #element_4_1 {
+  width: 2vw;
+}
 .registrar_form .registrar_ul .registrar_submit {
   margin: 0 auto;
 }
@@ -382,6 +386,14 @@ td {
   }
   .registrar_form .registrar_ul .registrar_item-importe .registrar_importe {
     width: 25%;
+  }
+  .registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_fecha #element_4_2,
+.registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_fecha #element_4_1 {
+    width: 5vw;
+  }
+  .registrar_form .registrar_ul .registrar_fecha-icono-img .registrar_fecha #element_4_3 {
+    width: 7vw;
+    min-width: 30px;
   }
 }
 
@@ -529,6 +541,7 @@ td {
 }
 .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas {
   align-items: center;
+  min-height: 48px;
   display: flex;
   justify-content: center;
   flex-direction: row;

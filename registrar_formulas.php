@@ -38,6 +38,7 @@ if ($stmt->error){
     echo 'window.location = "registrar.php";';
     echo '</script>';
         }  else{
+            sleep(3);
             echo '<script type="text/javascript">'; 
             echo 'alert("REGISTRO DE DATOS CORRECTO");'; 
             echo 'window.location = "registrar.php";';

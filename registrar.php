@@ -259,7 +259,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                 <li class="registrar_submit">
                 <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET'];?>" />
-                    <input type="submit" name="submit" value="Submit" />
+                    <input id="registrar_submit" type="submit" name="submit" value="Submit" />
                 </li>
             </ul>
         </form>

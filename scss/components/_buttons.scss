@@ -1,14 +1,17 @@
 .button_1{
     background-color: #EEEEEE;
+    color: #EB003B;
     padding: 5px 10px;
     text-decoration:none;
     font-weight:bold;
-    border: solid;
+    border: #1212a0 2px solid;
     border-radius:5px;
     cursor:pointer;
     &:hover{
-        background-color:#EB003B;
+    background-color:#EB003B;
     color: #FFFFFF;
+    border: 2px groove $tabla_bg_primary;
+
     }
 }
 
@@ -17,12 +20,12 @@
     padding: 5px 10px;
     text-decoration:none;
     font-weight:bold;
-    border: solid;
+    border: #1212a0 2px solid;
     border-radius:5px;
     text-decoration: none;
     cursor:pointer;
     &:hover{
-        color: $color_secondary;
-        background-color:$button_bg_secondary;
+        color: white;
+        border: 2px groove $tabla_bg_primary;
     }
 }

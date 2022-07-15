@@ -224,28 +224,28 @@ if (isset($_GET['desconectar'])) {
                                             <?php echo $crow['fechaing']; ?>
                                         </td>
                                         <td class='th-td_mid_derecha'>
-                                            <div class="materiales">
-                                                <div class="material_tipo_1">Materiales:</div>
-                                                <div class="material_tipo_2">Ferreteria:</div>
-                                                <div class="material_tipo_3">Pedidos:</div>
-                                                <div class="material_tipo_4">A cuenta:</div>
-                                                <div class="material_tipo_4">Total:</div>
-                                            </div>
+                                            <ul class="items">
+                                                <li class="item_tipo_1">Materiales:</li>
+                                                <li class="item_tipo_2">Ferreteria:</li>
+                                                <li class="item_tipo_3">Pedidos:</li>
+                                                <li class="item_tipo_4">A cuenta:</li>
+                                                <li class="item_tipo_4">Total:</li>
+                                            </ul>
                                         </td>
                                         <td class='th-td_importe'>
-                                            <div class="precios">
-                                                <div class="precio_tipo_1">$ <?php echo $crow['totalmat']; ?>
-                                                </div>
-                                                <div class="precio_tipo_2">$ <?php echo $crow['totalfer']; ?>
-                                                </div>
-                                                <div class="precio_tipo_3">$
-                                                    <?php echo $crow['totalpedidos']; ?></div>
-                                                <div class="precio_tipo_4">$
-                                                    <?php echo $crow['totalacuenta']; ?></div>
-                                                <div class="precio_tipo_4">$
+                                            <ul class="importes">
+                                                <li class="importe_tipo_1">$ <?php echo $crow['totalmat']; ?>
+                                                </li>
+                                                <li class="importe_tipo_2">$ <?php echo $crow['totalfer']; ?>
+                                                </li>
+                                                <li class="importe_tipo_3">$
+                                                    <?php echo $crow['totalpedidos']; ?></li>
+                                                <li class="importe_tipo_4">$
+                                                    <?php echo $crow['totalacuenta']; ?></li>
+                                                <li class="importe_tipo_4">$
                                                     <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </td>
                                     </tr>
                                     <?php
@@ -281,7 +281,7 @@ if (isset($_GET['desconectar'])) {
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
-                                    <tr class='row100'>
+                                    <tr>
                                         <td class='th-td_fecha_derecha'>
                                             <?php echo $crow['fechaing']; ?>
                                         </td>
@@ -289,7 +289,7 @@ if (isset($_GET['desconectar'])) {
                                             <?php echo $crow['pedido']; ?>
                                         </td>
                                         <td class='th-td_importe'>
-                                            <div class="precios">
+                                            <div class="importes">
                                                 $ <?php echo $crow['detallepedido']; ?>
                                             </div>
                                         </td>
@@ -348,36 +348,36 @@ if (isset($_GET['desconectar'])) {
 
                                         <td class='th-td_mid_derecha'>
 
-                                            <div class="materiales_precios">
-                                                <div class="materiales">
-                                                    <div class="material_tipo_1">Materiales:</div>
+                                            <div class="materiales_importes">
+                                                <div class="items">
+                                                    <div class="item_tipo_1">Materiales:</div>
                                                 </div>
                                                 <div class="detalles">
                                                     <?php echo $crow['producto']; ?>
                                                 </div>
-                                                <div class="precios">
+                                                <div class="importes">
                                                     $ <?php echo $crow['detallemateriales']; ?>
                                                 </div>
                                             </div>
-                                            <div class="materiales_precios">
-                                                <div class="materiales">
-                                                    <div class="material_tipo_2">Ferreteria:</div>
+                                            <div class="items_importes">
+                                                <div class="items">
+                                                    <div class="item_tipo_2">Ferreteria:</div>
                                                 </div>
                                                 <div class="detalles">
                                                     <?php echo $crow['ferreteria']; ?>
                                                 </div>
-                                                <div class="precios">
+                                                <div class="importes">
                                                     $ <?php echo $crow['detalleferreteria']; ?>
                                                 </div>
                                             </div>
-                                            <div class="materiales_precios">
-                                                <div class="materiales">
-                                                    <div class="material_tipo_3">Pedidos:</div>
+                                            <div class="items_importes">
+                                                <div class="items">
+                                                    <div class="item_tipo_3">Pedidos:</div>
                                                 </div>
                                                 <div class="detalles">
                                                     <?php echo $crow['pedido']; ?>
                                                 </div>
-                                                <div class="precios">
+                                                <div class="importes">
                                                     $ <?php echo $crow['detallepedido']; ?>
                                                 </div>
                                             </div>

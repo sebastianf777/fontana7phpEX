@@ -1,3 +1,5 @@
+//PARA TODOS LOS RESUMENES
+
 .resumen_panel-subpaginas-tablas {
     @include flexColumnCenter;
     text-align: center;
@@ -237,6 +239,38 @@
 
 }
 
+.items, .importes{
+    text-align: initial;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),
+.tabla_2_cuerpo table tbody tr:nth-last-child(odd),
+.tabla_3_cuerpo table tbody tr:nth-last-child(odd) {
+    background-color: #e4c895;
+}
+
+.th-td_fecha_derecha {
+    width: 20%;
+
+}
+
+.th-td_mid_derecha {
+    width: 60%;
+}
+
+.th-td_importe {
+    width: 20%;
+}
+
+//PARA RESUMENES BRIAN - SEBASTIAN
+
 .label-fecha-checbox_td {
     height: 14vh;
     align-items: center;
@@ -271,28 +305,7 @@
     }
 }
 
-.th-td_fecha_derecha {
-    width: 20%;
 
-}
 
-.th-td_mid_derecha {
-    width: 60%;
-}
 
-.th-td_importe {
-    width: 20%;
-}
 
-.resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),
-.tabla_2_cuerpo table tbody tr:nth-last-child(odd),
-.tabla_3_cuerpo table tbody tr:nth-last-child(odd) {
-    background-color: #e4c895;
-}
-
-// text-align: initial;
-//     display: flex;
-//     margin: 0 auto;
-//     flex-direction: column;
-//     width: fit-content;
-//     justify-content: center;

@@ -346,14 +346,25 @@ if (isset($_GET['desconectar'])) {
                                                 <?php echo $crow['fechaing']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                Materiales
-                                                <br>
-                                                Ferreteria
+                                                <ul class="items">
+                                                    <li class="item_tipo_1">Materiales:</li>
+                                                    <li class="item_tipo_2">Ferreteria:</li>
+                                                </ul>
                                             </td>
                                             <td class='th-td_importe'>
                                                 <ul class="importes">
-                                                    <li class="importe_tipo_1">$ <?php echo $crow['totaldebitomateriales']; ?></li>
-                                                    <li class="importe_tipo_2">$ <?php echo $crow['totaldebitoferreteria']; ?></li>
+                                                    <li class="importe_tipo_1 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe">
+                                                            <?php echo $crow['totaldebitomateriales']; ?>
+                                                        </div>
+                                                    </li>
+                                                    <li class="importe_tipo_2 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe">
+                                                            <?php echo $crow['totaldebitoferreteria']; ?>
+                                                        </div>
+                                                    </li>
                                                 </ul>
                                             </td>
                                         </tr>

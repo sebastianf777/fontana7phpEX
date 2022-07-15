@@ -1,6 +1,6 @@
 const user_input = document.getElementById('user_input');
 const pw_input =  document.getElementById('user_password');
-
+let error_login;
 $(document).ready(function() {
 
     function acceso_denegado() {

@@ -10,7 +10,6 @@ if (isset($_POST['login'])) {
     $query = mysqli_query($con, "SELECT * FROM users WHERE username = '$username'");
     //  $query = $connection->prepare("SELECT * FROM users WHERE USERNAME=:username");
 
-
     if (mysqli_num_rows($query) > 0) {
         $row = mysqli_fetch_assoc($query);
         $usuario_db_pass = $row['password'];

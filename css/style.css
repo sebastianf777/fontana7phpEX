@@ -756,8 +756,20 @@ td {
 }
 
 .importes {
+  width: 100%;
+}
+.importes .importe-signo {
   display: flex;
   flex-direction: row;
+}
+.importes .importe-signo .signo {
+  width: 30%;
+  text-align: center;
+}
+.importes .importe-signo .importe {
+  width: 70%;
+  padding-right: 5%;
+  text-align: end;
 }
 
 .resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),

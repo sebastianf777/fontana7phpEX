@@ -209,19 +209,19 @@ if (isset($_GET['desconectar'])) {
                                             </td>
                                             <td class='th-td_importe'>
                                                 <ul class="importes">
-                                                    <li class="importe_tipo_1">
+                                                    <li class="importe_tipo_1 importe-signo">
                                                         <div class="signo">$</div>
                                                         <div class="importe"><?php echo $crow['total_pedidos_sebastian']; ?></div>
                                                     </li>
-                                                    <li class="importe_tipo_2">
+                                                    <li class="importe_tipo_2 importe-signo">
                                                         <div class="signo">$</div>
                                                         <div class="importe"><?php echo $crow['total_pedidos_brian']; ?>
                                                         </div>
                                                     </li>
-                                                    <li class="importe_tipo_5">
+                                                    <li class="importe_tipo_5 importe-signo">
                                                         <div class="signo">$</div>
                                                         <div class="importe"><?php echo $crow['total_pedidos_sebastian'] + $crow['total_pedidos_brian']; ?>
-                                                    </div>
+                                                        </div>
                                                     </li>
                                                 </ul>
                                             </td>
@@ -274,16 +274,35 @@ if (isset($_GET['desconectar'])) {
                                             </td>
                                             <td class='th-td_importe'>
                                                 <ul class="importes">
-                                                    <li class="importe_tipo_1">$ <?php echo $crow['totalmat']; ?>
+                                                    <li class="importe_tipo_1 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo $crow['totalmat']; ?>
+                                                        </div>
                                                     </li>
-                                                    <li class="importe_tipo_2">$ <?php echo $crow['totalfer']; ?>
+                                                    <li class="importe_tipo_2 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo $crow['totalfer']; ?>
+                                                        </div>
                                                     </li>
-                                                    <li class="importe_tipo_3">$
-                                                        <?php echo $crow['totalpedidos']; ?></li>
-                                                    <li class="importe_tipo_4">$
-                                                        <?php echo $crow['totalacuenta']; ?></li>
-                                                    <li class="importe_tipo_4">$
-                                                        <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
+                                                    <li class="importe_tipo_3 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo $crow['totalpedidos']; ?>
+                                                        </div>
+                                                    </li>
+                                                    <li class="importe_tipo_4 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo $crow['totalacuenta']; ?>
+                                                        </div>
+                                                    </li>
+                                                    <li class="importe_tipo_4 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
+                                                        </div>
                                                     </li>
                                                 </ul>
                                             </td>

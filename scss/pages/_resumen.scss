@@ -251,8 +251,20 @@
 }
 
 .importes{
-    @include flexRow;
-    //revisar de agregar o eliminar cosas aca
+    width: 100%;
+    .importe-signo{
+        @include flexRow;
+        .signo{
+            width: 30%;
+        text-align: center;
+
+        }
+        .importe{
+            width: 70%;
+            padding-right: 5%;
+            text-align: end;
+        }
+    }
 }
 
 .resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),

@@ -691,6 +691,7 @@ td {
   .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas {
     width: 80vw;
     min-width: 260px;
+    padding-bottom: 6px;
   }
   .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel {
     flex-direction: column;
@@ -701,6 +702,9 @@ td {
   .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario {
     padding: 10px 0px 7px;
     border: none;
+  }
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario .panel_usuario_nombre {
+    margin-right: 1.5vw;
   }
   .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas .subpaginas_botones {
     display: flex;

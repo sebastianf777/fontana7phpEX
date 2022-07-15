@@ -187,6 +187,7 @@
         .resumen_panel-subpaginas {
             width: 80vw;
             min-width: 260px;
+            padding-bottom: 6px;
             .resumen_panel {
                 flex-direction: column;
                 .panel_titulo{
@@ -195,6 +196,9 @@
                 .panel_usuario{
                     padding: 10px 0px 7px;
                     border: none;
+                    .panel_usuario_nombre{
+                        margin-right: 1.5vw;
+                    }
                 }
             }
 

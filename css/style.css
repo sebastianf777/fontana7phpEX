@@ -689,10 +689,27 @@ td {
 }
 @media only screen and (max-width: 600px) {
   .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas {
-    width: 93vw;
+    width: 80vw;
+    min-width: 260px;
   }
   .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel {
     flex-direction: column;
+  }
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_titulo {
+    padding: 0;
+  }
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario {
+    padding: 10px 0px 7px;
+    border: none;
+  }
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas .subpaginas_botones {
+    display: flex;
+  }
+  .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_subpaginas .subpaginas_botones a {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    margin-right: 2vw;
   }
   .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha {
     margin-top: 2vw;

@@ -185,15 +185,30 @@
 @media only screen and (max-width: 600px) {
     .resumen_panel-subpaginas-tablas {
         .resumen_panel-subpaginas {
-            width: 93vw;
-
+            width: 80vw;
+            min-width: 260px;
             .resumen_panel {
                 flex-direction: column;
+                .panel_titulo{
+                    padding: 0;
+                }
+                .panel_usuario{
+                    padding: 10px 0px 7px;
+                    border: none;
+                }
             }
 
-            //     .resumen_subpaginas {
-            //         margin-top: 1vh;
-            //     }
+          .resumen_subpaginas {
+                .subpaginas_botones{
+                    display: flex;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        padding: 3px;
+                        margin-right: 2vw;
+                    }
+                }
+              }
         }
 
         .resumen_tablas {

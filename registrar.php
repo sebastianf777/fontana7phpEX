@@ -235,7 +235,6 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label for="element_3_1">Brian</label>
                         <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
                         <label for="element_3_2">Sebastian</label>
-
                     </div>
                 </li>
                 <li class="registrar_fecha-icono-img">

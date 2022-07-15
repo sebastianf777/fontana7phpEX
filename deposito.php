@@ -11,11 +11,11 @@
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-    $(document).ready(function() {
-        setInterval(function() {
-            location.reload();
-        }, 7000);
-    });
+    // $(document).ready(function() {
+    //     setInterval(function() {
+    //         location.reload();
+    //     }, 7000);
+    // });
     </script>
 </head>
 <!-- TERMINA HEAD -->

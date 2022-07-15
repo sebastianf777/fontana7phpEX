@@ -478,6 +478,23 @@ td {
 .deposito_tabla tbody tr:nth-child(even) {
   background-color: #e4c895;
 }
+@media only screen and (max-width: 900px) {
+  .deposito_tabla tbody {
+    color: black;
+  }
+  .deposito_tabla tbody tr .deposito_numero {
+    font-size: 5vw;
+  }
+  .deposito_tabla tbody tr .deposito_ferremat {
+    font-size: 5vw;
+  }
+  .deposito_tabla tbody tr .deposito_serie {
+    font-size: 2.5vw;
+  }
+  .deposito_tabla tbody tr:nth-child(even) {
+    background-color: #e4c895;
+  }
+}
 @media only screen and (max-width: 600px) {
   .deposito_tabla {
     justify-content: unset;

@@ -808,7 +808,7 @@ td {
   padding: 5px 10px;
   text-decoration: none;
   font-weight: bold;
-  border: #1212a0 2px solid;
+  border: #3434fc 2px solid;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -823,14 +823,16 @@ td {
   padding: 5px 10px;
   text-decoration: none;
   font-weight: bold;
-  border: #1212a0 2px solid;
+  border: #3434fc 2px solid;
   border-radius: 5px;
   text-decoration: none;
+  color: #3434fc;
   cursor: pointer;
 }
 .button_2:hover {
   color: white;
   border: 2px groove ghostwhite;
+  background-color: #3434fc;
 }
 
 /*# sourceMappingURL=style.css.map */

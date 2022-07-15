@@ -229,7 +229,7 @@ if (isset($_GET['desconectar'])) {
                                                 <li class="item_tipo_2">Ferreteria:</li>
                                                 <li class="item_tipo_3">Pedidos:</li>
                                                 <li class="item_tipo_4">A cuenta:</li>
-                                                <li class="item_tipo_4">Total:</li>
+                                                <li class="item_tipo_5">Total:</li>
                                             </ul>
                                         </td>
                                         <td class='th-td_importe'>
@@ -242,7 +242,7 @@ if (isset($_GET['desconectar'])) {
                                                     <?php echo $crow['totalpedidos']; ?></li>
                                                 <li class="importe_tipo_4">$
                                                     <?php echo $crow['totalacuenta']; ?></li>
-                                                <li class="importe_tipo_4">$
+                                                <li class="importe_tipo_5">$
                                                     <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
                                                 </li>
                                             </ul>

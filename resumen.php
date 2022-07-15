@@ -223,18 +223,19 @@ if (isset($_GET['desconectar'])) {
                                             <?php echo $crow['fechaing']; ?>
                                         </td>
                                         <td class='th-td_mid_derecha'>
-                                            Brian:
-                                            <br>
-                                            Sebastian:
-                                            <br>
-                                            Total:
+                                        <ul class="items">
+                                                <li class="item_tipo_1">Sebastian:</li>
+                                                <li class="item_tipo_2">Brian:</li>
+                                                <li class="item_tipo_5">Total:</li>
+                                            </ul>
+                                           
                                         </td>
                                         <td class='th-td_importe'>
-                                            $<?php echo $crow['total_pedidos_brian']; ?>
-                                            <br>
-                                            $<?php echo $crow['total_pedidos_sebastian']; ?>
-                                            <br>
-                                            $<?php echo $crow['total_pedidos_sebastian'] + $crow['total_pedidos_brian']; ?>
+                                        <ul class="importes">
+                                            <li class="importe_tipo_1">$<?php echo $crow['total_pedidos_sebastian']; ?></li>
+                                            <li class="importe_tipo_2">$<?php echo $crow['total_pedidos_brian']; ?></li>
+                                            <li class="importe_tipo_5">$<?php echo $crow['total_pedidos_sebastian'] + $crow['total_pedidos_brian']; ?></li>
+                                        </ul>
                                         </td>
                                     </tr>
                                     <?php
@@ -266,7 +267,7 @@ if (isset($_GET['desconectar'])) {
                             <table>
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT SUM(detallemateriales) AS totalmat,SUM(detalleferreteria) AS totalfer, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC ";
+                                    $sql = "SELECT SUM(detallemateriales) AS totalmat, SUM(detalleferreteria) AS totalfer, SUM(acuenta) AS totalacuenta, SUM(detallepedido) AS totalpedidos, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC ";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -275,14 +276,28 @@ if (isset($_GET['desconectar'])) {
                                             <?php echo $crow['fechaing']; ?>
                                         </td>
                                         <td class='th-td_mid_derecha'>
-                                            Materiales
-                                            <br>
-                                            Ferreteria
+                                        <ul class="items">
+                                                <li class="item_tipo_1">Materiales:</li>
+                                                <li class="item_tipo_2">Ferreteria:</li>
+                                                <li class="item_tipo_3">Pedidos:</li>
+                                                <li class="item_tipo_4">A cuenta:</li>
+                                                <li class="item_tipo_4">Total:</li>
+                                            </ul>
                                         </td>
                                         <td class='th-td_importe'>
-                                            $ <?php echo $crow['totalmat']; ?>
-                                            <br>
-                                            $ <?php echo $crow['totalfer']; ?>
+                                        <ul class="importes">
+                                                <li class="importe_tipo_1">$ <?php echo $crow['totalmat']; ?>
+                                                </li>
+                                                <li class="importe_tipo_2">$ <?php echo $crow['totalfer']; ?>
+                                                </li>
+                                                <li class="importe_tipo_3">$
+                                                    <?php echo $crow['totalpedidos']; ?></li>
+                                                <li class="importe_tipo_4">$
+                                                    <?php echo $crow['totalacuenta']; ?></li>
+                                                <li class="importe_tipo_4">$
+                                                    <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
+                                                </li>
+                                            </ul>
                                         </td>
                                     </tr>
                                     <?php
@@ -329,9 +344,10 @@ if (isset($_GET['desconectar'])) {
                                             Ferreteria
                                         </td>
                                         <td class='th-td_importe'>
-                                            $ <?php echo $crow['totaldebitomateriales']; ?>
-                                            <br>
-                                            $ <?php echo $crow['totaldebitoferreteria']; ?>
+                                        <ul class="importes">
+                                            <li class="importe_tipo_1">$ <?php echo $crow['totaldebitomateriales']; ?></li>
+                                            <li class="importe_tipo_2">$ <?php echo $crow['totaldebitoferreteria']; ?></li>
+                                        </ul>
                                         </td>
                                     </tr>
                                     <?php

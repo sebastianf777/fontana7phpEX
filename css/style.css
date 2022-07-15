@@ -755,6 +755,11 @@ td {
   padding: 0;
 }
 
+.importes {
+  display: flex;
+  flex-direction: row;
+}
+
 .resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),
 .tabla_2_cuerpo table tbody tr:nth-last-child(odd),
 .tabla_3_cuerpo table tbody tr:nth-last-child(odd) {

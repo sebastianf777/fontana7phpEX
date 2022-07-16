@@ -93,6 +93,7 @@
                 .cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
+                    margin-right: -0.25rem;
 
                 }
 
@@ -123,6 +124,7 @@
 
                 .cuerpo {
                     overflow: scroll;
+                    margin-right: -0.25rem;
                     @include scroll_bar_1;
                     table tbody tr td ul {
                         list-style: none;
@@ -137,11 +139,11 @@
             }
 
             .tr_color {
-                background-color: $bg_secondary;
+                background-color: none;
             }
 
             .tr_color_2 {
-                background-color: $bg_primary;
+                background-color: $bg_primary_b;
             }
 
         }

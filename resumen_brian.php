@@ -296,11 +296,22 @@ if (isset($_GET['desconectar'])) {
                                                 <?php echo $crow['fechaing']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                <?php echo $crow['pedido']; ?>
+                                                <div class="items_venta_dia items">
+                                                <div class="ventas_dia">
+                                                    <div class="item">
+                                                                <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                            </div>
+                                                    <div class="detalle"><?php echo $crow['pedido']; ?>
+                                                </div>
+                                            </div>
+                                            </div>
                                             </td>
                                             <td class='th-td_importe'>
                                                 <div class="importes">
-                                                    $ <?php echo $crow['detallepedido']; ?>
+                                                    <div class="importe-signo">
+                                                        <div class="signo">$</div> 
+                                                        <div class="importe"><?php echo $crow['detallepedido']; ?></div>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -322,7 +333,9 @@ if (isset($_GET['desconectar'])) {
                                         FECHA
                                     </th>
                                     <th class='th-td_mid_derecha'>
-                                        VENTAS DEL DÍA
+                                        CADA VENTA
+                                        <br>
+                                        DE CADA DÍA
                                     </th>
                                     <th class='th-td_importe'>
                                         $

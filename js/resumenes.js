@@ -32,7 +32,8 @@ $( window ).on( "load", function() {
           }
         }
       })();
-    let fecha_vendedores = $(".fecha_vendedores").filter((i, v) => parseInt($(v).text().substr(9, 10), 10) % 2)
+    let fecha_vendedores = $(".fecha_vendedores");
+    // let fecha_vendedores = $(".fecha_vendedores").filter((i, v) => parseInt($(v).text().substr(9, 10), 10) % 2);
     fecha_vendedores.parents('.tr_fecha-label-checkbox').addClass("tr_color");
     let fecha_vendedores_texto;
     let tiene_color_2_el_anterior = false;

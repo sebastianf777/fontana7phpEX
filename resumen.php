@@ -243,7 +243,7 @@ if (isset($_GET['desconectar'])) {
                                     <th class='th-td_mid_derecha'>
                                         TOTAL TOTAL
                                         <br>
-                                        DIARIO CONTADO
+                                        DIARIO DÉBITOS
                                     </th>
                                     <th class='th-td_importe'>
                                         $
@@ -253,6 +253,68 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_2_cuerpo cuerpo">
                             <table>
+                            <tbody>
+                                    <?php
+                                    $sql = "SELECT SUM(detallemateriales) AS totaldebitomateriales, SUM(detalleferreteria) AS totaldebitoferreteria, fechaing from productos
+                                                        WHERE pagotipo = 'debito' GROUP BY fechaing order by id DESC ";
+                                    $result = mysqli_query($con, $sql);
+                                    while ($crow = mysqli_fetch_assoc($result)) {
+                                    ?>
+                                        <tr>
+                                            <td class='th-td_fecha_derecha'>
+                                                <?php echo $crow['fechaing']; ?>
+                                            </td>
+                                            <td class='th-td_mid_derecha'>
+                                                <ul class="items">
+                                                    <li class="item_tipo_1">Materiales:</li>
+                                                    <li class="item_tipo_2">Ferreteria:</li>
+                                                </ul>
+                                            </td>
+                                            <td class='th-td_importe'>
+                                                <ul class="importes">
+                                                    <li class="importe_tipo_1 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe">
+                                                            <?php echo $crow['totaldebitomateriales']; ?>
+                                                        </div>
+                                                    </li>
+                                                    <li class="importe_tipo_2 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe">
+                                                            <?php echo $crow['totaldebitoferreteria']; ?>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tablas_izquierda_3">
+                        <table class='tabla_3_head'>
+                            <thead>
+                                <tr>
+                                    <th class='th-td_fecha_derecha'>
+                                        FECHA
+                                    </th>
+                                    <th class='th-td_mid_derecha'>
+                                        TOTAL TOTAL
+                                        <br>
+                                        DIARIO CONTADO
+                                    </th>
+                                    <th class='th-td_importe'>
+                                        $
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="tabla_3_cuerpo cuerpo">
+                            <table>
+                                
                                 <tbody>
                                     <?php
                                     $sql = "SELECT SUM(detallemateriales) AS totalmat, SUM(detalleferreteria) AS totalfer, SUM(acuenta) AS totalacuenta, SUM(detallepedido) AS totalpedidos, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC ";
@@ -314,67 +376,6 @@ if (isset($_GET['desconectar'])) {
                             </table>
                         </div>
                     </div>
-                    <div class="tablas_izquierda_3">
-                        <table class='tabla_3_head'>
-                            <thead>
-                                <tr>
-                                    <th class='th-td_fecha_derecha'>
-                                        FECHA
-                                    </th>
-                                    <th class='th-td_mid_derecha'>
-                                        TOTAL TOTAL
-                                        <br>
-                                        DIARIO DÉBITOS
-                                    </th>
-                                    <th class='th-td_importe'>
-                                        $
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                        <div class="tabla_3_cuerpo cuerpo">
-                            <table>
-                                <tbody>
-                                    <?php
-                                    $sql = "SELECT SUM(detallemateriales) AS totaldebitomateriales, SUM(detalleferreteria) AS totaldebitoferreteria, fechaing from productos
-                                                        WHERE pagotipo = 'debito' GROUP BY fechaing order by id DESC ";
-                                    $result = mysqli_query($con, $sql);
-                                    while ($crow = mysqli_fetch_assoc($result)) {
-                                    ?>
-                                        <tr>
-                                            <td class='th-td_fecha_derecha'>
-                                                <?php echo $crow['fechaing']; ?>
-                                            </td>
-                                            <td class='th-td_mid_derecha'>
-                                                <ul class="items">
-                                                    <li class="item_tipo_1">Materiales:</li>
-                                                    <li class="item_tipo_2">Ferreteria:</li>
-                                                </ul>
-                                            </td>
-                                            <td class='th-td_importe'>
-                                                <ul class="importes">
-                                                    <li class="importe_tipo_1 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class="importe">
-                                                            <?php echo $crow['totaldebitomateriales']; ?>
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_2 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class="importe">
-                                                            <?php echo $crow['totaldebitoferreteria']; ?>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </div>
                 <div class="resumenes resumen_tablas_derecha">
                     <div class="tablas_derecha_1">
@@ -385,7 +386,7 @@ if (isset($_GET['desconectar'])) {
                                         FECHA
                                     </th>
                                     <th class='th-td_mid_derecha'>
-                                        TOTAL DEBITOS
+                                        TOTAL PEDIDOS
                                     </th>
                                     <th class='th-td_importe'>
                                         $
@@ -395,7 +396,47 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_1_cuerpo cuerpo">
                             <table>
-                                <tbody>
+                            <tbody>
+                                    <?php
+                                    $sql = "SELECT pedido, detallepedido, fechaing from productos WHERE detallepedido != 0  order by id DESC ";
+                                    $result = mysqli_query($con, $sql);
+                                    while ($crow = mysqli_fetch_assoc($result)) {
+                                    ?>
+                                        <tr>
+                                            <td class='th-td_fecha_derecha'><?php echo $crow['fechaing']; ?></td>
+                                            <td class='th-td_mid_derecha'>
+                                                <?php echo $crow['pedido']; ?>
+                                            </td>
+                                            <td class='th-td_importe'>
+                                                $<?php echo $crow['detallepedido']; ?>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tablas_derecha_2">
+                        <table class='tabla_2_head'>
+                            <thead>
+                                <tr>
+                                    <th class='th-td_fecha_derecha'>
+                                        FECHA
+                                    </th>
+                                    <th class='th-td_mid_derecha'>
+                                        TOTAL DIARIO DEBITOS
+                                    </th>
+                                    <th class='th-td_importe'>
+                                        Monto $
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="tabla_2_cuerpo cuerpo">
+                            <table>
+                            <tbody>
                                     <?php
                                     $sql = "SELECT detallemateriales, detalleferreteria, producto, ferreteria, fechaing from productos WHERE pagotipo = 'debito' order by id DESC ";
                                     $result = mysqli_query($con, $sql);
@@ -419,46 +460,7 @@ if (isset($_GET['desconectar'])) {
                                     }
                                     ?>
                                 </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="tablas_derecha_2">
-                        <table class='tabla_2_head'>
-                            <thead>
-                                <tr>
-                                    <th class='th-td_fecha_derecha'>
-                                        FECHA
-                                    </th>
-                                    <th class='th-td_mid_derecha'>
-                                        TOTAL PEDIDOS
-                                    </th>
-                                    <th class='th-td_importe'>
-                                        Monto $
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                        <div class="tabla_2_cuerpo cuerpo">
-                            <table>
-                                <tbody>
-                                    <?php
-                                    $sql = "SELECT pedido, detallepedido, fechaing from productos WHERE detallepedido != 0  order by id DESC ";
-                                    $result = mysqli_query($con, $sql);
-                                    while ($crow = mysqli_fetch_assoc($result)) {
-                                    ?>
-                                        <tr>
-                                            <td class='th-td_fecha_derecha'><?php echo $crow['fechaing']; ?></td>
-                                            <td class='th-td_mid_derecha'>
-                                                <?php echo $crow['pedido']; ?>
-                                            </td>
-                                            <td class='th-td_importe'>
-                                                $<?php echo $crow['detallepedido']; ?>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
+                                
                             </table>
                         </div>
                     </div>
@@ -480,6 +482,8 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_3_cuerpo cuerpo">
                             <table>
+                                
+                                
                                 <tbody>
                                     <?php
                                     $sql = "SELECT id, producto, serie, ferreteria, detallemateriales, detalleferreteria, cliente, acuenta, fechaing, pagotipo

@@ -4,7 +4,7 @@
     padding: 5px 10px;
     text-decoration: none;
     font-weight: bold;
-    border: $color_primary 2px solid;
+    border: $color_fourth 2px solid;
     border-radius: 5px;
     cursor: pointer;
 
@@ -17,14 +17,14 @@
 }
 
 .button_2 {
-    background-color: $color_primary;
+    background-color: $button_bg_primary;
     padding: 5px 10px;
     text-decoration: none;
     font-weight: bold;
     border: $color_fourth 2px solid;
     border-radius: 5px;
     text-decoration: none;
-    color: $button_bg_primary;
+    color: $color_primary ;
     cursor: pointer;
 
     &:hover {

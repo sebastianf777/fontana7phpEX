@@ -124,6 +124,10 @@
                 .cuerpo {
                     overflow: scroll;
                     @include scroll_bar_1;
+                    table tbody tr td ul {
+                        list-style: none;
+                        padding: 0;
+                    }
                 }
 
             }
@@ -239,6 +243,10 @@
 
 }
 
+// .ventas_dia{
+
+// }
+
 .items, .importes{
     text-align: initial;
     display: flex;
@@ -309,16 +317,16 @@
     }
 
     label {
-        display: block;
+        @include flexColumn;
         height: 100%;
         cursor: pointer;
 
-        .fecha-checbox_td {
-            @include flexColumnCenter;
-            height: 100%;
+        // .fecha-checbox_td {
+        //     @include flexColumnCenter;
+        //     height: 100%;
 
 
-        }
+        // }
     }
 }
 

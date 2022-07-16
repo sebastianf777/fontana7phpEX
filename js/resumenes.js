@@ -10,27 +10,28 @@ if (checkboxes[i].checked) {
 }
 localStorage.setItem('checked_boxes', JSON.stringify(checked)); // <-- localStorage can only store `String` values
 }
-// let checkboxElements = {};
-// let checkboxElements = JSON.parse(localStorage.getItem('checked_boxes')) || {};
-// let arrayChecboxElements = Object.entries(checkboxElements);
-
-(function restoreCheckboxes () {
-    let checkboxes = document.querySelectorAll('.fecha_checkbox'); // <-- select the checkboxes
-    let checkboxStates = localStorage.getItem('checked_boxes');
-    //    let i;
-    if (checkboxStates) {
-       checkboxStates = JSON.parse(checkboxStates); // <-- parse string to object
-      for (let i = 0; i < checkboxes.length; i += 1) {
-          if (checkboxStates.hasOwnProperty(checkboxes[i].name)) {
-          checkboxes[i].checked = true;
-        }
-      }
-    }
-  })();
 // $( document ).ready(function() {
     
 // });
 $( window ).on( "load", function() {
+  
+    // let checkboxElements = {};
+    // let checkboxElements = JSON.parse(localStorage.getItem('checked_boxes')) || {};
+    // let arrayChecboxElements = Object.entries(checkboxElements);
+    
+    (function restoreCheckboxes () {
+        let checkboxes = document.querySelectorAll('.fecha_checkbox'); // <-- select the checkboxes
+        let checkboxStates = localStorage.getItem('checked_boxes');
+
+        if (checkboxStates) {
+           checkboxStates = JSON.parse(checkboxStates); // <-- parse string to object
+          for (let i = 0; i < checkboxes.length; i += 1) {
+              if (checkboxStates.hasOwnProperty(checkboxes[i].name)) {
+              checkboxes[i].checked = true;
+            }
+          }
+        }
+      })();
     let fecha_vendedores = $(".fecha_vendedores").filter((i, v) => parseInt($(v).text().substr(9, 10), 10) % 2)
     fecha_vendedores.parents('.tr_fecha-label-checkbox').addClass("tr_color");
     let fecha_vendedores_texto;

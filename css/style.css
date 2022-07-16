@@ -668,6 +668,12 @@ td {
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1 .cuerpo table tbody tr td ul,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2 .cuerpo table tbody tr td ul,
+.resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_3 .cuerpo table tbody tr td ul {
+  list-style: none;
+  padding: 0;
+}
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .vendedores_derecha {
   height: 100%;
 }
@@ -808,15 +814,10 @@ td {
   border: 2px solid rgb(93, 68, 204);
 }
 .label-fecha-checbox_td label {
-  display: block;
-  height: 100%;
-  cursor: pointer;
-}
-.label-fecha-checbox_td label .fecha-checbox_td {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   height: 100%;
+  cursor: pointer;
 }
 
 .button_1 {

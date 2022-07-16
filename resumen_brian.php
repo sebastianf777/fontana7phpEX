@@ -338,19 +338,30 @@ if (isset($_GET['desconectar'])) {
                                             </td>
 
 
-                                            <td class='th-td_mid_derecha ventas_dia'>
+                                            <td class='th-td_mid_derecha'>
 
-                                                <ul class="items">
-                                                    <li class="item_tipo_1">Materiales: </li>
-                                                    <li class="item_tipo_2">Ferreteria: </li>
-                                                    <li class="item_tipo_3">Pedidos:</li>
-                                                    <li class="item_tipo_4">A cuenta:</li>
-                                                </ul>
-                                                <ul class="items">
-                                                    <li class="item_tipo_1">Materiales: <?php echo $crow['producto']; ?></li>
-                                                    <li class="item_tipo_2">Ferreteria: <?php echo $crow['ferreteria']; ?></li>
-                                                    <li class="item_tipo_3">Pedidos: <?php echo $crow['pedido']; ?></li>
-                                                    <li class="item_tipo_4">A cuenta: <?php echo $crow['cliente']; ?></li>
+                                                <ul class="items_venta_dia items">
+                                                    <li class="item_tipo_1 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/materiales.png" alt="materiales imagen">
+                                                        </div> 
+                                                        <div class="detalle"><?php echo $crow['producto']; ?></div>
+                                                    </li>
+                                                    <li class="item_tipo_2 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                        </div> 
+                                                        <div class="detalle"><?php echo $crow['ferreteria']; ?></div>
+                                                    </li>
+                                                    <li class="item_tipo_3 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/pedidos.png" alt="pedidos imagen"></div> 
+                                                        <div class="detalle"><?php echo $crow['pedido']; ?></div>
+                                                    </li>
+                                                    <li class="item_tipo_4 ventas_dia">
+                                                        <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div> 
+                                                        <div class="detalle"><?php echo $crow['cliente']; ?></div>
+                                                    </li>
                                                 </ul>
                                                 
 

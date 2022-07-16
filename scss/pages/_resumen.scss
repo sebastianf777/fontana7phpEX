@@ -243,9 +243,6 @@
 
 }
 
-// .ventas_dia{
-
-// }
 
 .items, .importes{
     text-align: initial;
@@ -271,6 +268,25 @@
             width: 70%;
             padding-right: 5%;
             text-align: end;
+        }
+    }
+}
+
+.items_venta_dia{
+    width: 100%;
+    .ventas_dia{
+        @include flexRow;
+        .item{
+            width: 15px;
+            margin-left: 1vw;
+            img{
+                width: 100%;
+            }
+        }
+        .detalle{
+            width: 60%;
+            margin-left: 1vw;
+
         }
     }
 }

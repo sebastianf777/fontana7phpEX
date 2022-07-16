@@ -778,6 +778,25 @@ td {
   text-align: end;
 }
 
+.items_venta_dia {
+  width: 100%;
+}
+.items_venta_dia .ventas_dia {
+  display: flex;
+  flex-direction: row;
+}
+.items_venta_dia .ventas_dia .item {
+  width: 15px;
+  margin-left: 1vw;
+}
+.items_venta_dia .ventas_dia .item img {
+  width: 100%;
+}
+.items_venta_dia .ventas_dia .detalle {
+  width: 60%;
+  margin-left: 1vw;
+}
+
 .resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),
 .tabla_2_cuerpo table tbody tr:nth-last-child(odd),
 .tabla_3_cuerpo table tbody tr:nth-last-child(odd) {

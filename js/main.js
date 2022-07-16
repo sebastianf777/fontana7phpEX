@@ -5,7 +5,7 @@ const img_change = document.getElementById('img_change')
 
 // // Apply the cached theme on reload
 
-let theme = localStorage.getItem('theme');
+const theme = localStorage.getItem('theme');
 let darkmode = true;
 
 if (theme) {

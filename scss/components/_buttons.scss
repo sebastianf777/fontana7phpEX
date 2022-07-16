@@ -1,34 +1,36 @@
-.button_1{
+.button_1 {
     background-color: #EEEEEE;
     color: #EB003B;
     padding: 5px 10px;
-    text-decoration:none;
-    font-weight:bold;
+    text-decoration: none;
+    font-weight: bold;
     border: $color_primary 2px solid;
-    border-radius:5px;
-    cursor:pointer;
-    &:hover{
-    background-color:#EB003B;
-    color: #FFFFFF;
-    border: 2px groove $tabla_bg_primary;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #EB003B;
+        color: #FFFFFF;
+        border: 2px groove $tabla_bg_primary;
 
     }
 }
 
-.button_2{
-    background-color: $button_bg_primary;
-    padding: 5px 10px;
-    text-decoration:none;
-    font-weight:bold;
-    border: $color_primary 2px solid;
-    border-radius:5px;
-    text-decoration: none;
-    color: $color_primary;
-    cursor:pointer;
-    &:hover{
-        color: white;
-        border: 2px groove $tabla_bg_primary;
+.button_2 {
     background-color: $color_primary;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: $color_fourth 2px solid;
+    border-radius: 5px;
+    text-decoration: none;
+    color: $button_bg_primary;
+    cursor: pointer;
+
+    &:hover {
+        color: $color_primary_ex;
+        border: 2px groove $tabla_bg_primary;
+        background: $color_secondary_ex;
 
     }
 }

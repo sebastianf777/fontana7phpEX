@@ -63,7 +63,7 @@ h1 {
 }
 
 body {
-  color: #3434fc;
+  color: #2525e4;
   margin: 0;
   padding: 0;
   background: url(/img/fondo1.webp);
@@ -541,7 +541,7 @@ td {
 }
 .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario .panel_usuario_nombre {
   margin-right: 0.5vw;
-  text-shadow: 1px 1px 2px #3434fc;
+  text-shadow: 1px 1px 2px #1a1a93;
   cursor: default;
 }
 .resumen_panel-subpaginas-tablas .resumen_panel-subpaginas .resumen_panel .panel_usuario .panel_usuario_nombre .titulo {
@@ -793,8 +793,9 @@ td {
   width: 100%;
 }
 .items_venta_dia .ventas_dia .detalle {
-  width: 60%;
+  width: 90%;
   margin-left: 1vw;
+  line-break: anywhere;
 }
 
 .resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),
@@ -825,7 +826,7 @@ td {
   width: 0;
 }
 .label-fecha-checbox_td input:checked + label {
-  background-color: #6b6bcb;
+  background-color: #f9f140;
   border-color: rgb(93, 68, 204);
   color: #f9f140;
 }
@@ -845,7 +846,7 @@ td {
   padding: 5px 10px;
   text-decoration: none;
   font-weight: bold;
-  border: #3434fc 2px solid;
+  border: #1a1a93 2px solid;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -856,20 +857,20 @@ td {
 }
 
 .button_2 {
-  background-color: #ff8601;
+  background-color: #1a1a93;
   padding: 5px 10px;
   text-decoration: none;
   font-weight: bold;
-  border: #3434fc 2px solid;
+  border: rgb(203, 201, 201) 2px solid;
   border-radius: 5px;
   text-decoration: none;
-  color: #3434fc;
+  color: #ff8601;
   cursor: pointer;
 }
 .button_2:hover {
-  color: white;
+  color: #2525e4;
   border: 2px groove ghostwhite;
-  background-color: #3434fc;
+  background: linear-gradient(0deg, #ff8a02 30%, rgb(255, 252, 6) 100%);
 }
 
 /*# sourceMappingURL=style.css.map */

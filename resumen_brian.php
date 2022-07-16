@@ -23,7 +23,7 @@ if (isset($_GET['desconectar'])) {
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <title>-registros Fontana Viamonte </title>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
@@ -201,26 +201,59 @@ if (isset($_GET['desconectar'])) {
                                                 <?php echo $crow['fechaing']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                <ul class="items">
-                                                    <li class="item_tipo_1">Materiales:</li>
-                                                    <li class="item_tipo_2">Ferreteria:</li>
-                                                    <li class="item_tipo_3">Pedidos:</li>
-                                                    <li class="item_tipo_4">A cuenta:</li>
-                                                    <li class="item_tipo_5">Total:</li>
+                                                <ul class="items_venta_dia items">
+                                                    <li class="item_tipo_1 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/materiales.png" alt="materiales imagen">
+                                                        </div>
+                                                        <div class="detalle">Materiales:</div>
+                                                    </li>
+                                                    <li class="item_tipo_2 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                        </div>
+                                                        <div class="detalle">Ferreteria:</div>
+                                                    </li>
+                                                    <li class="item_tipo_3 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                        </div>
+                                                        <div class="detalle">Pedidos:</div>
+                                                    </li>
+                                                    <li class="item_tipo_4 ventas_dia">
+                                                        <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div>
+                                                        <div class="detalle">A cuenta:</div>
+                                                    </li>
+                                                    <li class="item_tipo_5 ventas_dia">
+                                                        <div class="item"><img src="/img/total.png" alt="acuenta imagen"></div>
+                                                        <div class="detalle">Total:</div>
+                                                    </li>
                                                 </ul>
                                             </td>
                                             <td class='th-td_importe'>
                                                 <ul class="importes">
-                                                    <li class="importe_tipo_1">$ <?php echo $crow['totalmat']; ?>
+                                                    <li class="importe_tipo_1 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe"><?php echo $crow['totalmat']; ?></div>
                                                     </li>
-                                                    <li class="importe_tipo_2">$ <?php echo $crow['totalfer']; ?>
+                                                    <li class="importe_tipo_2 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe"><?php echo $crow['totalfer']; ?></div>
                                                     </li>
-                                                    <li class="importe_tipo_3">$
-                                                        <?php echo $crow['totalpedidos']; ?></li>
-                                                    <li class="importe_tipo_4">$
-                                                        <?php echo $crow['totalacuenta']; ?></li>
-                                                    <li class="importe_tipo_5">$
-                                                        <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
+                                                    <li class="importe_tipo_3 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe"><?php echo $crow['totalpedidos']; ?>
+                                                    </div>
+                                                    </li>
+                                                    <li class="importe_tipo_4 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe">
+                                                            <?php echo $crow['totalacuenta']; ?>
+                                                        </div>
+                                                    </li>
+                                                    <li class="importe_tipo_5 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe"><?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?></div>
                                                     </li>
                                                 </ul>
                                             </td>
@@ -320,19 +353,19 @@ if (isset($_GET['desconectar'])) {
 
                                                         </li>
                                                         <li>
-                                                        <?php echo $crow['pagotipo']; ?>
-                                                    <br>
+                                                            <?php echo $crow['pagotipo']; ?>
+                                                            <br>
                                                         </li>
                                                         <li>
-                                                        Id:<?php echo $crow['id']; ?>
+                                                            Id:<?php echo $crow['id']; ?>
                                                         </li>
                                                         <li>
-                                                        N°<?php echo $crow['numero']; ?>
+                                                            N°<?php echo $crow['numero']; ?>
                                                         </li>
                                                     </ul>
 
-                                                    
-                        
+
+
                                                 </label>
 
                                             </td>
@@ -344,26 +377,31 @@ if (isset($_GET['desconectar'])) {
                                                     <li class="item_tipo_1 ventas_dia">
                                                         <div class="item">
                                                             <img src="/img/materiales.png" alt="materiales imagen">
-                                                        </div> 
+                                                        </div>
                                                         <div class="detalle"><?php echo $crow['producto']; ?></div>
                                                     </li>
                                                     <li class="item_tipo_2 ventas_dia">
                                                         <div class="item">
                                                             <img src="/img/ferreteria.png" alt="ferreteria img">
-                                                        </div> 
+                                                        </div>
                                                         <div class="detalle"><?php echo $crow['ferreteria']; ?></div>
                                                     </li>
                                                     <li class="item_tipo_3 ventas_dia">
                                                         <div class="item">
-                                                            <img src="/img/pedidos.png" alt="pedidos imagen"></div> 
+                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                        </div>
                                                         <div class="detalle"><?php echo $crow['pedido']; ?></div>
                                                     </li>
                                                     <li class="item_tipo_4 ventas_dia">
-                                                        <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div> 
+                                                        <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div>
                                                         <div class="detalle"><?php echo $crow['cliente']; ?></div>
                                                     </li>
+                                                    <li class="item_tipo_5 ventas_dia">
+                                                        <div class="item"><img src="/img/total.png" alt="acuenta imagen"></div>
+                                                        <div class="detalle"></div>
+                                                    </li>
                                                 </ul>
-                                                
+
 
                                             </td>
                                             <td class='th-td_importe'>
@@ -392,6 +430,12 @@ if (isset($_GET['desconectar'])) {
                                                             <?php echo $crow['acuenta']; ?>
                                                         </div>
                                                     </li>
+                                                    <li class="importe_tipo_5 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo intval($crow['detallemateriales']) + intval($crow['detalleferreteria']) + intval($crow['detallepedido']) + intval($crow['acuenta']); ?>
+                                                        </div>
+                                                    </li>
                                                 </ul>
 
                                             </td>
@@ -410,8 +454,8 @@ if (isset($_GET['desconectar'])) {
         </div>
     </section>
 
-    <!-- <script src="/js/main.js"></script> -->
-    <!-- <script src="/js/resumenes.js"></script> -->
+    <script src="/js/main.js"></script>
+    <script src="/js/resumenes.js"></script>
 </body>
 
 <a href="<?php echo $_SERVER['PHP_SELF']; ?>?desconectar=si">Desconectar</a>

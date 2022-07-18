@@ -14,19 +14,19 @@ if(isset($_SESSION["FORM_SECRET"])) {
         if(isset($_POST['submit']))
 {
 
-$numero = $_POST['element_1'];
-$producto = $_POST['element_2'];
-$serie = $_POST['element_3'];
-$fechaing = $_POST['element_4_3']."-".$_POST['element_4_1']."-".$_POST['element_4_2'];
-$detallemateriales = $_POST['element_5'];
-$ferreteria = $_POST['element_6'];
-$detalleferreteria = $_POST['element_7'];
-$pagotipo = $_POST['element_8'];
-$pedido = $_POST['element_9'];
-$detallepedido = $_POST['element_10'];
-$cliente = $_POST['element_11'];
-$acuenta = $_POST['element_12'];
-$mostrar = $_POST['element_13'];
+$numero = mysqli_real_escape_string($conn, $_POST['element_1']);
+$producto = mysqli_real_escape_string($conn, $_POST['element_2']);
+$serie = mysqli_real_escape_string($conn, $_POST['element_3']);
+$fechaing = mysqli_real_escape_string($conn, $_POST['element_4_3']."-".$_POST['element_4_1']."-".$_POST['element_4_2']);
+$detallemateriales = mysqli_real_escape_string($conn, $_POST['element_5']);
+$ferreteria = mysqli_real_escape_string($conn, $_POST['element_6']);
+$detalleferreteria = mysqli_real_escape_string($conn, $_POST['element_7']);
+$pagotipo = mysqli_real_escape_string($conn, $_POST['element_8']);
+$pedido = mysqli_real_escape_string($conn, $_POST['element_9']);
+$detallepedido = mysqli_real_escape_string($conn, $_POST['element_10']);
+$cliente = mysqli_real_escape_string($conn, $_POST['element_11']);
+$acuenta = mysqli_real_escape_string($conn, $_POST['element_12']);
+$mostrar = mysqli_real_escape_string($conn, $_POST['element_13']);
 
 $stmt = $con->prepare("INSERT INTO productos ( numero, producto, detallemateriales, fechaing, serie, ferreteria, detalleferreteria, pagotipo, pedido, detallepedido, cliente, acuenta, mostrar ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param('issssssssssss', $numero, $producto, $detallemateriales, $fechaing, $serie, $ferreteria, $detalleferreteria, $pagotipo, $pedido, $detallepedido, $cliente, $acuenta, $mostrar );

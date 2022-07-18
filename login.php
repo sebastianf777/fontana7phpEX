@@ -2,7 +2,6 @@
 
 include('conectar.php');
 session_start();
-
 if (isset($_POST['login'])) {
 
     $username = $_POST['username'];
@@ -20,7 +19,16 @@ if (isset($_POST['login'])) {
             session_regenerate_id(true);
             $_SESSION['user_id'] = $username;
             sleep(3);
-            header("Location: resumen.php");
+            switch($_GET['referrer']){
+                case 'resumen':
+                    header("Location: resumen.php");
+                break;
+                case 'registrar':
+                    header("Location: registrar.php");
+                break;
+                default:
+                    header("Location: index.php");
+             }
             // header("refresh:5;url=resumen.php");
             // echo '<p class="success">Felicidades, estás logueado! Redireccionando...</p>';
             exit();

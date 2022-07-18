@@ -1,7 +1,18 @@
 <?php
 session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php?referrer=registrar');
+    exit;
+}
+if (isset($_GET['desconectar'])) {
+    session_destroy();
+    header("refresh:5;url=login.php");
+    echo ("<span style='color:green;'>Haz sido desconectado correctamente. Redireccionando...</span>");
+    exit;
+}
 $secret=md5(uniqid(rand(), true));
 $_SESSION['FORM_SECRET'] = $secret;
+
 ?>
 
 <!DOCTYPE html>

@@ -294,6 +294,23 @@
             line-break: anywhere;
         }
     }
+
+}
+
+.item_tipo_1, .importe_tipo_1{
+    color: red;
+}
+.item_tipo_2, .importe_tipo_2{
+    color: #2525e4;;
+}
+.item_tipo_3, .importe_tipo_3{
+    color: rgb(93, 68, 204);
+}
+.item_tipo_4, .importe_tipo_4{
+    color: #a35801;
+}
+.item_tipo_5, .importe_tipo_5{
+    color:#12181b;
 }
 
 .resumenes div .tabla_1_cuerpo table tbody tr:nth-last-child(odd),

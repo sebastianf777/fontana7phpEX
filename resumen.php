@@ -228,7 +228,7 @@ if (isset($_GET['desconectar'])) {
                                             <td class='th-td_importe'>
                                                 <ul class="importes">
                                                     <li class="importe_tipo_3 importe-signo">
-                                                        <div class="signo"> </div>
+                                                        <div class="signo">-</div>
                                                         <div class="importe">
                                                         </div>
                                                     </li>

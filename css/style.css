@@ -634,6 +634,7 @@ td {
   border-radius: 1rem;
   padding: 5px;
   max-width: 39vw;
+  min-width: 433px;
 }
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_1,
 .resumen_panel-subpaginas-tablas .resumen_tablas .resumen_tablas_derecha .tablas_derecha_2,
@@ -779,6 +780,9 @@ td {
   padding-right: 5%;
   text-align: end;
 }
+.importes .importe-signo .pagotipo {
+  font-size: 14px;
+}
 
 .items_venta_dia {
   width: 100%;
@@ -788,7 +792,7 @@ td {
   flex-direction: row;
 }
 .items_venta_dia .ventas_dia .item {
-  width: 15px;
+  width: 20px;
   margin-left: 1vw;
 }
 .items_venta_dia .ventas_dia .item img {

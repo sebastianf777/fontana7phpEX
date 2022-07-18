@@ -234,16 +234,18 @@ if (isset($_GET['desconectar'])) {
                                                 <ul class="importes">
                                                     <li class="importe_tipo_1 importe-signo">
                                                         <div class="signo">$</div>
-                                                        <div class="importe"><?php echo $crow['totalmat']; ?></div>
+                                                        <div class="importe"><?php echo $crow['totalmat']; ?>
+                                                        </div>
                                                     </li>
                                                     <li class="importe_tipo_2 importe-signo">
                                                         <div class="signo">$</div>
-                                                        <div class="importe"><?php echo $crow['totalfer']; ?></div>
+                                                        <div class="importe"><?php echo $crow['totalfer']; ?>
+                                                        </div>
                                                     </li>
                                                     <li class="importe_tipo_3 importe-signo">
                                                         <div class="signo">$</div>
                                                         <div class="importe"><?php echo $crow['totalpedidos']; ?>
-                                                    </div>
+                                                        </div>
                                                     </li>
                                                     <li class="importe_tipo_4 importe-signo">
                                                         <div class="signo">$</div>
@@ -297,19 +299,19 @@ if (isset($_GET['desconectar'])) {
                                             </td>
                                             <td class='th-td_mid_derecha'>
                                                 <div class="items_venta_dia items">
-                                                <div class="ventas_dia">
-                                                    <div class="item">
-                                                                <img src="/img/pedidos.png" alt="pedidos imagen">
-                                                            </div>
-                                                    <div class="detalle"><?php echo $crow['pedido']; ?>
+                                                    <div class="ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                        </div>
+                                                        <div class="detalle"><?php echo $crow['pedido']; ?>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            </div>
                                             </td>
                                             <td class='th-td_importe'>
                                                 <div class="importes">
                                                     <div class="importe-signo">
-                                                        <div class="signo">$</div> 
+                                                        <div class="signo">$</div>
                                                         <div class="importe"><?php echo $crow['detallepedido']; ?></div>
                                                     </div>
                                                 </div>

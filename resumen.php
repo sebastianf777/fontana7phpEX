@@ -149,7 +149,6 @@ if (isset($_GET['desconectar'])) {
                             Brian
                         </a>
 
-
                         <a class="button_2" href="/resumen_sebastian.php">
                             Sebastian
                         </a>
@@ -200,15 +199,39 @@ if (isset($_GET['desconectar'])) {
                                                 <?php echo $crow['fechaing']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                <ul class="items">
-                                                    <li class="item_tipo_1">Sebastian:</li>
-                                                    <li class="item_tipo_2">Brian:</li>
-                                                    <li class="item_tipo_5">Total:</li>
+                                                <ul class="items_venta_dia items">
+                                                    <li class="item_tipo_3 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/vendedor.png" alt="vendedor img">
+                                                        </div>
+                                                        <div class="detalle">Vendedores:</div>
+                                                    </li>
+                                                    <li class="item_tipo_1 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                        </div>
+                                                        <div class="detalle">Sebastian:</div>
+                                                    </li>
+                                                    <li class="item_tipo_2 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/pedidos.png" alt="pedidos img">
+                                                        </div>
+                                                        <div class="detalle">Brian:</div>
+                                                    </li>
+                                                    <li class="item_tipo_5 ventas_dia">
+                                                        <div class="item"><img src="/img/total.png" alt="acuenta imagen"></div>
+                                                        <div class="detalle">Total:</div>
+                                                    </li>
                                                 </ul>
 
                                             </td>
                                             <td class='th-td_importe'>
                                                 <ul class="importes">
+                                                    <li class="importe_tipo_3 importe-signo">
+                                                        <div class="signo"> </div>
+                                                        <div class="importe">
+                                                        </div>
+                                                    </li>
                                                     <li class="importe_tipo_1 importe-signo">
                                                         <div class="signo">$</div>
                                                         <div class="importe"><?php echo $crow['total_pedidos_sebastian']; ?></div>
@@ -560,28 +583,48 @@ if (isset($_GET['desconectar'])) {
                                             <td class='th-td_fecha_derecha'>
                                                 <?php echo $crow['fechaing']; ?>
                                                 <br>
-                                                ID <?php echo $crow['id']; ?>
+
                                                 <br>
-                                                Vendedor:
-                                                <br>
-                                                <?php echo $crow['serie']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                <div>
-                                                    <div class="cliente_prod_fer">
-                                                        <?php echo $crow['producto'] ?>
-                                                        $<?php echo $crow['detallemateriales'] ?>
-                                                    </div>
-                                                    <div class="cliente_detalles">
-                                                        <?php echo $crow['cliente']; ?>
-                                                        <?php echo $crow['ferreteria'] ?>
-                                                        $<?php echo $crow['detalleferreteria'] ?>
-                                                    </div>
-                                                </div>
+                                                <ul class="items_venta_dia items">
+                                                    <li class="item_tipo_3 ventas_dia">
+                                                        <div class="item"><img src="/img/vendedor.png" alt="vendedor imagen"></div>
+                                                        <div class="detalle"><?php echo $crow['serie']; ?></div>
+                                                    </li>
+                                                    <li class="item_tipo_4 ventas_dia">
+                                                        <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div>
+                                                        <div class="detalle"><?php echo $crow['cliente']; ?></div>
+                                                    </li>
+                                                    <li class="item_tipo_1 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/materiales.png" alt="materiales imagen">
+                                                        </div>
+                                                        <div class="detalle"><?php echo $crow['producto']; ?></div>
+                                                    </li>
+                                                    <li class="item_tipo_2 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                        </div>
+                                                        <div class="detalle"><?php echo $crow['ferreteria']; ?></div>
+                                                    </li>
+                                                </ul>
                                             </td>
                                             <td class='th-td_importe'>
-                                                <?php echo $crow['acuenta']; ?>
-                                                <?php echo $crow['pagotipo']; ?>
+                                                <ul class="importes">
+                                                    <li class="importe_tipo_5 importe-signo">
+                                                        <div class="pagotipo importe"><?php echo $crow['pagotipo']; ?>
+                                                        </div>
+                                                    </li>
+                                                    <li class="importe_tipo_4 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe"><?php echo $crow['acuenta']; ?></div>
+                                                    </li>
+                                                    <li class="importe_tipo_2 importe-signo">
+                                                        <div class="signo">ID</div>
+                                                        <div class="importe"><?php echo $crow['id']; ?></div>
+                                                    </li>
+                                                </ul>
                                             </td>
                                         </tr>
                                     <?php

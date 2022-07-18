@@ -253,7 +253,7 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_2_cuerpo cuerpo">
                             <table>
-                            <tbody>
+                                <tbody>
                                     <?php
                                     $sql = "SELECT SUM(detallemateriales) AS totaldebitomateriales, SUM(detalleferreteria) AS totaldebitoferreteria, fechaing from productos
                                                         WHERE pagotipo = 'debito' GROUP BY fechaing order by id DESC ";
@@ -265,9 +265,19 @@ if (isset($_GET['desconectar'])) {
                                                 <?php echo $crow['fechaing']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                <ul class="items">
-                                                    <li class="item_tipo_1">Materiales:</li>
-                                                    <li class="item_tipo_2">Ferreteria:</li>
+                                                <ul class="items_venta_dia items">
+                                                    <li class="item_tipo_1 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/materiales.png" alt="materiales imagen">
+                                                        </div>
+                                                        <div class="detalle">Materiales:</div>
+                                                    </li>
+                                                    <li class="item_tipo_2 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                        </div>
+                                                        <div class="detalle">Ferreteria:</div>
+                                                    </li>
                                                 </ul>
                                             </td>
                                             <td class='th-td_importe'>
@@ -314,7 +324,7 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_3_cuerpo cuerpo">
                             <table>
-                                
+
                                 <tbody>
                                     <?php
                                     $sql = "SELECT SUM(detallemateriales) AS totalmat, SUM(detalleferreteria) AS totalfer, SUM(acuenta) AS totalacuenta, SUM(detallepedido) AS totalpedidos, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC ";
@@ -326,12 +336,35 @@ if (isset($_GET['desconectar'])) {
                                                 <?php echo $crow['fechaing']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                <ul class="items">
-                                                    <li class="item_tipo_1">Materiales:</li>
-                                                    <li class="item_tipo_2">Ferreteria:</li>
-                                                    <li class="item_tipo_3">Pedidos:</li>
-                                                    <li class="item_tipo_4">A cuenta:</li>
-                                                    <li class="item_tipo_4">Total:</li>
+                                                <ul class="items_venta_dia items">
+                                                    <li class="item_tipo_1 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/materiales.png" alt="materiales imagen">
+                                                        </div>
+                                                        <div class="detalle">Materiales:</div>
+                                                    </li>
+                                                    <li class="item_tipo_2 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                        </div>
+                                                        <div class="detalle">Ferreteria:</div>
+                                                    </li>
+                                                    <li class="item_tipo_3 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                        </div>
+                                                        <div class="detalle">Pedidos:</div>
+                                                    </li>
+                                                    <li class="item_tipo_4 ventas_dia">
+                                                        <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div>
+                                                        <div class="detalle">A cuenta:</div>
+                                                    </li>
+                                                    <li class="item_tipo_5 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/total.png" alt="acuenta imagen">
+                                                        </div>
+                                                        <div class="detalle">Total:</div>
+                                                    </li>
                                                 </ul>
                                             </td>
                                             <td class='th-td_importe'>
@@ -396,7 +429,7 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_1_cuerpo cuerpo">
                             <table>
-                            <tbody>
+                                <tbody>
                                     <?php
                                     $sql = "SELECT pedido, detallepedido, fechaing from productos WHERE detallepedido != 0  order by id DESC ";
                                     $result = mysqli_query($con, $sql);
@@ -405,10 +438,21 @@ if (isset($_GET['desconectar'])) {
                                         <tr>
                                             <td class='th-td_fecha_derecha'><?php echo $crow['fechaing']; ?></td>
                                             <td class='th-td_mid_derecha'>
-                                                <?php echo $crow['pedido']; ?>
+                                                <div class="items_venta_dia items">
+                                                    <div class="ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                        </div>
+                                                        <div class="detalle"><?php echo $crow['pedido']; ?>
+                                                        </div>
                                             </td>
                                             <td class='th-td_importe'>
-                                                $<?php echo $crow['detallepedido']; ?>
+                                                <div class="importes">
+                                                    <div class="importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class="importe"><?php echo $crow['detallepedido']; ?></div>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php
@@ -436,7 +480,7 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_2_cuerpo cuerpo">
                             <table>
-                            <tbody>
+                                <tbody>
                                     <?php
                                     $sql = "SELECT detallemateriales, detalleferreteria, producto, ferreteria, fechaing from productos WHERE pagotipo = 'debito' order by id DESC ";
                                     $result = mysqli_query($con, $sql);
@@ -446,21 +490,42 @@ if (isset($_GET['desconectar'])) {
                                             <td class='th-td_fecha_derecha'><?php echo $crow['fechaing']; ?>
                                             </td>
                                             <td class='th-td_mid_derecha'>
-                                                <?php echo $crow['producto'] ?>
-                                                <br>
-                                                <?php echo $crow['ferreteria'] ?>
+                                                <ul class="items_venta_dia items">
+                                                    <li class="item_tipo_1 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/materiales.png" alt="materiales imagen">
+                                                        </div>
+                                                        <div class="detalle"><?php echo $crow['producto']; ?></div>
+                                                    </li>
+                                                    <li class="item_tipo_2 ventas_dia">
+                                                        <div class="item">
+                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                        </div>
+                                                        <div class="detalle"><?php echo $crow['ferreteria']; ?></div>
+                                                    </li>
+                                                </ul>
                                             </td>
                                             <td class='th-td_importe'>
-                                                $<?php echo $crow['detallemateriales'] ?>
-                                                <br>
-                                                $<?php echo $crow['detalleferreteria'] ?>
+                                                <ul class="importes">
+                                                    <li class="importe_tipo_1 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo $crow['detallemateriales']; ?>
+                                                        </div>
+                                                    </li>
+                                                    <li class="importe_tipo_2 importe-signo">
+                                                        <div class="signo">$</div>
+                                                        <div class='importe'>
+                                                            <?php echo $crow['detalleferreteria']; ?>
+                                                        </div>
+                                                </ul>
                                             </td>
                                         </tr>
                                     <?php
                                     }
                                     ?>
                                 </tbody>
-                                
+
                             </table>
                         </div>
                     </div>
@@ -482,8 +547,8 @@ if (isset($_GET['desconectar'])) {
                         </table>
                         <div class="tabla_3_cuerpo cuerpo">
                             <table>
-                                
-                                
+
+
                                 <tbody>
                                     <?php
                                     $sql = "SELECT id, producto, serie, ferreteria, detallemateriales, detalleferreteria, cliente, acuenta, fechaing, pagotipo

@@ -834,7 +834,7 @@ td {
 .label-fecha-checbox_td input:checked + label {
   background-color: #f9f140;
   border-color: rgb(93, 68, 204);
-  color: #f9f140;
+  color: #2525e4;
 }
 .label-fecha-checbox_td input:focus + label {
   border: 2px solid rgb(93, 68, 204);

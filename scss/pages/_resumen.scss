@@ -329,7 +329,7 @@
         &:checked+label {
             background-color: $color_secondary;
             border-color: $button_border_primary;
-            color: $button_bg_secondary;
+            color: $color_primary_ex;
         }
 
         &:focus+label {

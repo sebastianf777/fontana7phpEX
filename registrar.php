@@ -166,7 +166,12 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                 <li class="registrar_item-importe">
                     <div class="registrar_item">
-                        <label class="item_icono" for="element_2">MATERIALES:</label>
+                        <div class="item_icono" for="element_2">
+                        <img src="/img/materiales.png" alt="materiales imagen">
+                        </div>
+                        <!-- <div class="cantidad">
+                            <input type="number">
+                        </div> -->
                         <textarea id="element_2" name="element_2" class="registrar_input_text" type="text"
                             maxlength="255" value=""></textarea>
                     </div>
@@ -177,7 +182,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
                 <li class="registrar_item-importe">
                     <div class="registrar_item">
-                        <label class="item_icono" for="element_6">FERRETERIA: </label>
+                        <label class="item_icono" for="element_6">
+                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                        </label>
                         <textarea id="element_6" name="element_6" class="registrar_input_text" type="text"
                             maxlength="255" value=""></textarea>
                     </div>
@@ -198,10 +205,13 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="mostrar" for="element_13_2">NO</label>
 
                     </div>
+                    
                 </li>
                 <li class="registrar_item-importe">
                     <div class="registrar_item">
-                        <label class="item_icono" for="element_9">PEDIDO: </label>
+                        <label class="item_icono" for="element_9">
+                        <img src="/img/pedidos.png" alt="pedidos imagen">
+                        </label>
                         <textarea id="element_9" name="element_9" class="registrar_input_text" type="text"
                             maxlength="255" value=""></textarea>
                     </div>
@@ -214,7 +224,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <li class="registrar_item-importe">
 
                     <div class="registrar_item">
-                        <label class="item_icono" for="element_11">CLIENTE: </label>
+                        <label class="item_icono" for="element_11">
+                        <img src="/img/acuenta.png" alt="acuenta imagen">
+                        </label>
                         <textarea id="element_11" name="element_11" class="registrar_input_text" type="text"
                             maxlength="255" value=""></textarea>
                     </div>
@@ -239,7 +251,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
 
                 <li class="registrar_opciones-icono">
-                    <label class="registrar_icono">VENDEDOR: </label>
+                    <label class="registrar_icono">
+                        <img src="/img/vendedor.png" alt="vendedor img">
+                     </label>
                     <div id="vendedor_opciones" class="registrar_opciones">
                         <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian"
                             checked="checked" />

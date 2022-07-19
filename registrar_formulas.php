@@ -28,6 +28,8 @@ $cliente = mysqli_real_escape_string($conn, $_POST['element_11']);
 $acuenta = mysqli_real_escape_string($conn, $_POST['element_12']);
 $mostrar = mysqli_real_escape_string($conn, $_POST['element_13']);
 
+
+
 $stmt = $con->prepare("INSERT INTO productos ( numero, producto, detallemateriales, fechaing, serie, ferreteria, detalleferreteria, pagotipo, pedido, detallepedido, cliente, acuenta, mostrar ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param('issssssssssss', $numero, $producto, $detallemateriales, $fechaing, $serie, $ferreteria, $detalleferreteria, $pagotipo, $pedido, $detallepedido, $cliente, $acuenta, $mostrar );
 

@@ -44,6 +44,9 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
+                    img{
+                        width: 30px;
+                    }
                 }
 
                 textarea {
@@ -156,7 +159,7 @@
         max-width: none;
 
         .registrar_ul {
-
+            padding: 1rem 1rem;
             li {
                 padding-bottom: 0.7rem;
             }
@@ -164,6 +167,12 @@
             .registrar_item-importe {
                 .registrar_item {
                     width: 75%;
+                    .item_icono {
+                        width: 20%;
+                        img{
+                            width: 20px;
+                        }
+                    }
                 }
 
                 .registrar_importe {

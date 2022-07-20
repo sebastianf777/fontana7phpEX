@@ -390,6 +390,9 @@ td {
   .registrar_form .registrar_ul .registrar_item-importe .registrar_item {
     width: 75%;
   }
+  .registrar_form .registrar_ul .registrar_item-importe .registrar_item .cantidad {
+    width: 10%;
+  }
   .registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_icono {
     width: 20%;
   }

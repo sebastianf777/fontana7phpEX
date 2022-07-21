@@ -30,53 +30,29 @@ $acuenta = mysqli_real_escape_string($conn, $_POST['element_12']);
 $mostrar = mysqli_real_escape_string($conn, $_POST['element_13']);
 
 
-$arr = array();
+// $arr = array();
 $count_mat_array = count($_POST['count_mat']);
+$count_fet_array = count($_POST['count_fet']);
+
 $numero = mysqli_real_escape_string($conn, $_POST['element_1']);
 
 
-$query = "INSERT INTO productos (producto, detallemateriales) VALUES (?, ?)";
+$query = "INSERT INTO productos ( numero, producto, detallemateriales, fechaing, serie, ferreteria, detalleferreteria, pagotipo, pedido, detallepedido, cliente, acuenta, mostrar ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-// ON DUPLICATE KEY UPDATE
-// INVOICE_NUMBER  = VALUES(INVOICE_NUMBER),
-// DATE                = VALUES(DATE),
-// HOURS               = VALUES(HOURS),
-// RATE                = VALUES(RATE),
-// DATE_TOTAL      = VALUES(DATE_TOTAL)
-// $queries = new array();
-// for(i = 0; i < $length; i++) {
-//     $queries[] = "INSERT INTO `contact_person` SET customer_id='131',
-//                  cp_name='" . $yourarray['name'][i] . "',
-//                  cp_phone='" . $yourarray['number'][i] . "',
-//                  cp_email='" . $yourarray['email'][i] " . "'";
-// }
 
-//                  cp_email='" . $yourarray['email'][i] " . "'";
-// $queries = array();
 $producto = $detallemateriales = '';
 $stmt = $con->prepare($query);
-$stmt->bind_param('is', $producto, $detallemateriales );
+
+$stmt->bind_param('issssssssssss', $numero, $producto, $detallemateriales, $fechaing, $serie, $ferreteria, $detalleferreteria, $pagotipo, $pedido, $detallepedido, $cliente, $acuenta, $mostrar );
+
 for($i=0; $i < $count_mat_array; $i++) {
     $producto = mysqli_real_escape_string($conn, $_POST['element_2'][$i]);
     $detallemateriales = mysqli_real_escape_string($conn, $_POST['element_5'][$i]);
     echo $producto;
     $stmt->execute();
     }
-// foreach ($_POST['date'] as $i => $value) {
-//     $invNum     = $_POST['invNum'];
-//     $date           = $_POST['date'][$i];
-//     $hours      = $_POST['hours'][$i];
-//     $rate           = $_POST['rate'][$i];
-//     $dateTotal  = $_POST['dateTotal'][$i];
-//     $stmt->execute();
-// }
 
-$stmt2 = $con->prepare("INSERT INTO productos ( numero, producto, detallemateriales, fechaing, serie, ferreteria, detalleferreteria, pagotipo, pedido, detallepedido, cliente, acuenta, mostrar ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt2->bind_param('issssssssssss', $numero, $producto, $detallemateriales, $fechaing, $serie, $ferreteria, $detalleferreteria, $pagotipo, $pedido, $detallepedido, $cliente, $acuenta, $mostrar );
-
-
-$stmt2->execute();
-if ($stmt2->error || $stmt->error){
+if ($stmt->error){
     echo '<script type="text/javascript">'; 
     echo 'alert("ERROR! REVISAR SI FALTA ALGUN DATO");'; 
     echo 'window.location = "registrar.php";';
@@ -105,5 +81,4 @@ if ($stmt2->error || $stmt->error){
     echo '</script>';
 }
 $stmt->close();
-$stmt2->close();
 ?>

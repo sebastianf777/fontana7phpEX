@@ -192,9 +192,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
                         </label>
-                        <!-- <div class="cantidad">
-                            <input type="number" name="count_fer">
-                        </div> -->
+                        <div class="cantidad">
+                            <input type="number" name="count_fer[]">
+                        </div>
                         <textarea id="element_6" name="element_6" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
 

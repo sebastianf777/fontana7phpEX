@@ -195,12 +195,12 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <div class="cantidad">
                             <input type="number" name="count_fer[]">
                         </div>
-                        <textarea id="element_6" name="element_6" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                        <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
 
                     <div class="registrar_importe">
                         <label for="element_7">$</label>
-                        <input id="element_7" name="element_7" type="number" maxlength="255" value="" step=".01" />
+                        <input id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
                     </div>
 
                 </li>

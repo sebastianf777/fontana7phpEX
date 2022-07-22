@@ -7,6 +7,10 @@ const sin_numero = document.getElementById('sin_numero');
 const mostrar_numero = document.querySelector('.registrar_mostrar'); 
 const vendedor_opciones = document.getElementById('vendedor_opciones');
 const materiales_textarea = document.getElementById("element_2");
+const agregar_item = document.querySelectorAll(".agregar_mat");
+const mat_li = document.querySelector(".mat_li");
+const mat_new = mat_li.cloneNode(true);
+
 let ferreteria_textarea = document.getElementById("element_6");
 let pedidos_textarea = document.getElementById("element_9");
 let cliente_textarea = document.getElementById("element_11");
@@ -96,3 +100,11 @@ window.onload = function () {
   ponerFecha();
   ponerOpcionVendedor();
 }
+
+//Agregar item
+
+agregar_item.forEach(element => {
+  element.addEventListener("click", () => {
+    console.log("HI");
+    mat_li.parentNode.insertBefore(mat_new, mat_li.nextSibling);
+  })})

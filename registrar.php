@@ -141,37 +141,8 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                 </li>
                 <!-- MATERIALES -->
-                <li class="registrar_item-importe">
-                    <div class="registrar_item">
-                        <div class="item_icono" for="element_2">
-                            <img src="/img/materiales.png" alt="materiales imagen">
-                        </div>
-                        <div class="cantidad">
-                            <input type="number" name="count_mat[]">
-                        </div>
-                        <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                    </div>
-                    <div class="registrar_importe">
-                        <label for="element_5">$</label>
-                        <input id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
-                    </div>
-                </li>
-                <li class="registrar_item-importe">
-                    <div class="registrar_item">
-                        <div class="item_icono" for="element_2">
-                            <img src="/img/materiales.png" alt="materiales imagen">
-                        </div>
-                        <div class="cantidad">
-                            <input type="number" name="count_mat[]">
-                        </div>
-                        <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                    </div>
-                    <div class="registrar_importe">
-                        <label for="element_5">$</label>
-                        <input id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
-                    </div>
-                </li>
-                <li class="registrar_item-importe">
+                
+                <li class="registrar_item-importe mat_li">
                     <div class="registrar_item">
                         <div class="item_icono" for="element_2">
                             <img src="/img/materiales.png" alt="materiales imagen">
@@ -182,8 +153,8 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <button type="button" class="modo">
                             X
                         </button>
-                        <button type="button" class="agregar">
-                            X
+                        <button type="button" class="agregar_mat">
+                           +
                         </button>
                         <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>

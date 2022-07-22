@@ -179,6 +179,12 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <div class="cantidad">
                             <input type="number" name="count_mat[]">
                         </div>
+                        <button type="button" class="modo">
+                            X
+                        </button>
+                        <button type="button" class="agregar">
+                            X
+                        </button>
                         <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                     </div>
                     <div class="registrar_importe">

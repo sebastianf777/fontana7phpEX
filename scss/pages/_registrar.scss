@@ -40,13 +40,37 @@
                 width: 80%;
 
                 .item_icono {
-                    width: 25%;
+                    width: 30px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    img{
+                    margin-right: 5px;
+
+                    img {
                         width: 30px;
                     }
+                }
+
+                .cantidad {
+                    width: 30px;
+                    display: flex;
+                    margin-right: 5px;
+
+                    input {
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                .modo{
+                    width: 30px;
+                    margin-right: 5px;
+
+                }
+                .agregar{
+                    width: 30px;
+                    margin-right: 5px;
+
                 }
 
                 textarea {
@@ -160,6 +184,7 @@
 
         .registrar_ul {
             padding: 1rem 1rem;
+
             li {
                 padding-bottom: 0.7rem;
             }
@@ -167,12 +192,15 @@
             .registrar_item-importe {
                 .registrar_item {
                     width: 75%;
-                    .cantidad{
+
+                    .cantidad {
                         width: 10%;
                     }
+
                     .item_icono {
                         width: 20%;
-                        img{
+
+                        img {
                             width: 20px;
                         }
                     }

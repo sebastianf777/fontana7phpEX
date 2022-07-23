@@ -10,6 +10,9 @@ const materiales_textarea = document.getElementById("element_2");
 const agregar_item = document.querySelectorAll(".agregar_mat");
 const mat_li = document.querySelector(".mat_li");
 const fer_li = document.querySelector(".fer_li");
+const mat_first = document.querySelector(".mat_first");
+const fer_first = document.querySelector(".fer_first");
+
 let mat_new = mat_li.cloneNode(true);
 let mat_fer = fer_li.cloneNode(true);
 
@@ -22,7 +25,12 @@ let vendedor_brian = document.getElementById("element_3_1");
 let vendedor_sebastian = document.getElementById("element_3_2");
 let vendedor_opcion = localStorage.getItem("vendedor");
 
-//Función mostrar Número 
+let textarea_manual = document.querySelector('#element_2');
+let select_auto = document.querySelector('#select_element_2');
+let cantidad = document.querySelector('.cantidad');
+let modo_manual = true;
+let sibling;
+//Función mostrar Número
 
 mostrar_numero.addEventListener('click', function () {
   if (sin_numero.checked) {
@@ -98,16 +106,53 @@ registrar_submit.onclick = function () {
 
 //Agregar item
 const agregarFuncionMat = () => {
-mat_new = mat_li.cloneNode(true);
-  mat_li.parentNode.insertBefore(mat_new, mat_li.nextSibling);
-mat_new.classList.remove('mat_li');
+  mat_new = mat_li.cloneNode(true);
+  mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
+  mat_new.classList.remove('mat_li');
 }
 const agregarFuncionFer = () => {
   fer_new = fer_li.cloneNode(true);
-    fer_li.parentNode.insertBefore(fer_new, fer_li.nextSibling);
+  fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
   fer_new.classList.remove('fer_li');
+}
+
+//Cambiar modo
+function conseguirSibling (elem, selector) {
+
+	// Get the next sibling element
+sibling = elem.nextElementSibling;
+
+	// If the sibling matches our selector, use it
+	// If not, jump to the next sibling and continue the loop
+	while (sibling) {
+		if (sibling.matches(selector)) {
+      return sibling
+    };
+		sibling = sibling.nextElementSibling
+	}
+
+};
+function cambiarModo(){
+  if (modo_manual == true) {
+    modo_manual = false;
+    console.log(cantidad);
+    conseguirSibling(cantidad, '#element_2')
+    sibling.setAttribute('name', '')
+    conseguirSibling(cantidad, '#select_element_2')
+    sibling.setAttribute('name', 'element_2[]')
+
+    // textarea_manual.nextElementSibling.setAttribute('name', '')
+    // select_auto.nextElementSibling.setAttribute('name', 'element_2[]')
+  }else{
+    modo_manual = true;
+    conseguirSibling(cantidad, '#select_element_2')
+    sibling.setAttribute('name', '')
+    conseguirSibling(cantidad, '#element_2')
+    sibling.setAttribute('name', 'element_2[]')
+    // select_auto.setAttribute('name', '')
+    // textarea_manual.nextElementSibling.setAttribute('name', 'element_2[]')
   }
-  
+}
 
 //Usar funciones al iniciar
 

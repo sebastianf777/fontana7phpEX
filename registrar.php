@@ -142,7 +142,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
                 <!-- MATERIALES -->
 
-                <li class="registrar_item-importe">
+                <li class="registrar_item-importe mat_first">
                     <div class="registrar_item">
 
                         <div class="item_icono" for="element_2">
@@ -151,42 +151,34 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <button type="button" class="agregar_mat" onclick='agregarFuncionMat()'>
                             +
                         </button>
-                        <button type="button" class="modo">
+                        <button type="button" class="modo" onclick='cambiarModo()'>
                             X
                         </button>
                         <div class="cantidad">
                             <input type="number" name="count_mat[]">
                         </div>
                         <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                    </div>
-                    <div class="registrar_importe">
-                        <label for="element_5">$</label>
-                        <input id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
-                    </div>
-                </li>
-                <li class="registrar_item-importe mat_li">
-                    <div class="registrar_item">
 
-                        <div class="item_icono" for="element_2">
-                            <img src="/img/materiales.png" alt="materiales imagen">
-                        </div>
-                        <div class="agregar_mat">
-                        </div>
-                        <button type="button" class="modo">
-                            X
-                        </button>
-                        <div class="cantidad">
-                            <input type="number" name="count_mat[]">
-                        </div>
-                        <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                        <select id="select_element_2" name="element_2[]">
+                            <optgroup label="Cementos">
+                                <option value="cemento">Cemento</option>
+                                <option value="saab">Saab</option>
+                            </optgroup>
+                            <optgroup label="German Cars">
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </optgroup>
+                        </select>
+
                     </div>
                     <div class="registrar_importe">
                         <label for="element_5">$</label>
                         <input id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
                     </div>
                 </li>
+
                 <!-- FERRETERIA -->
-                <li class="registrar_item-importe">
+                <li class="registrar_item-importe fer_first">
                     <div class="registrar_item">
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
@@ -209,28 +201,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
 
                 </li>
-                <li class="registrar_item-importe fer_li">
-                    <div class="registrar_item">
-                        <label class="item_icono" for="element_6">
-                            <img src="/img/ferreteria.png" alt="ferreteria img">
-                        </label>
-                        <div type="button" class="agregar_fer">
-                        </div>
-                        <button type="button" class="modo">
-                            X
-                        </button>
-                        <div class="cantidad">
-                            <input type="number" name="count_fer[]">
-                        </div>
-                        <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                    </div>
 
-                    <div class="registrar_importe">
-                        <label for="element_7">$</label>
-                        <input id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
-                    </div>
-
-                </li>
                 <li class="registrar_opciones-icono">
                     <label class="registrar_icono">MOSTRAR: </label>
                     <div class="registrar_opciones">
@@ -317,6 +288,63 @@ $_SESSION['FORM_SECRET'] = $secret;
         </form>
 
     </section>
+
+    <!-- COPIAS EN BLANCO -->
+    <div class="hidden_copies">
+        <li class="registrar_item-importe mat_li">
+            <div class="registrar_item">
+
+                <div class="item_icono" for="element_2">
+                    <img src="/img/materiales.png" alt="materiales imagen">
+                </div>
+                <div class="agregar_mat">
+                </div>
+                <button type="button" class="modo" onclick='cambiarModo()'>
+                    X
+                </button>
+                <div class="cantidad">
+                    <input type="number" name="count_mat[]">
+                </div>
+                <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                <select id="select_element_2" name="element_2[]">
+                            <optgroup label="Cementos">
+                                <option value="cemento">Cemento</option>
+                                <option value="saab">Saab</option>
+                            </optgroup>
+                            <optgroup label="German Cars">
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </optgroup>
+                        </select>
+            </div>
+            <div class="registrar_importe">
+                <label for="element_5">$</label>
+                <input id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
+            </div>
+        </li>
+        <li class="registrar_item-importe fer_li">
+            <div class="registrar_item">
+                <label class="item_icono" for="element_6">
+                    <img src="/img/ferreteria.png" alt="ferreteria img">
+                </label>
+                <div type="button" class="agregar_fer">
+                </div>
+                <button type="button" class="modo">
+                    X
+                </button>
+                <div class="cantidad">
+                    <input type="number" name="count_fer[]">
+                </div>
+                <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+            </div>
+
+            <div class="registrar_importe">
+                <label for="element_7">$</label>
+                <input id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
+            </div>
+
+        </li>
+    </div>
     <script src="/js/main.js"></script>
     <script src="/js/registrar.js"></script>
 </body>

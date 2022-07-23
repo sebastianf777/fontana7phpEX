@@ -2,7 +2,6 @@
     @include tabla_css;
     font-size: 1rem;
     width: 73vw;
-    height: 93vh;
     max-width: 45vw;
 
     .registrar_ul {
@@ -92,6 +91,9 @@
                     width: 73%;
                 }
             }
+        }
+        .mat_li{
+            display: none
         }
 
         .registrar_opciones-icono {

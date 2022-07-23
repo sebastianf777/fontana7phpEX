@@ -7,11 +7,14 @@ const sin_numero = document.getElementById('sin_numero');
 const mostrar_numero = document.querySelector('.registrar_mostrar');
 const vendedor_opciones = document.getElementById('vendedor_opciones');
 const materiales_textarea = document.getElementById("element_2");
+
 const agregar_item = document.querySelectorAll(".agregar_mat");
 const mat_li = document.querySelector(".mat_li");
 const fer_li = document.querySelector(".fer_li");
 const mat_first = document.querySelector(".mat_first");
 const fer_first = document.querySelector(".fer_first");
+
+
 
 let mat_new = mat_li.cloneNode(true);
 let mat_fer = fer_li.cloneNode(true);
@@ -29,6 +32,7 @@ let textarea_manual = document.querySelector('#element_2');
 let select_auto = document.querySelector('#select_element_2');
 let cantidad = document.querySelector('.cantidad');
 let modo_manual = true;
+let boton_modo = document.querySelectorAll('.modo');;
 let sibling;
 //Función mostrar Número
 
@@ -109,14 +113,18 @@ const agregarFuncionMat = () => {
   mat_new = mat_li.cloneNode(true);
   mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
   mat_new.classList.remove('mat_li');
+  boton_modo = document.querySelectorAll('.modo');
+  funcionModo();
 }
 const agregarFuncionFer = () => {
   fer_new = fer_li.cloneNode(true);
   fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
   fer_new.classList.remove('fer_li');
+
 }
 
 //Cambiar modo
+
 function conseguirSibling (elem, selector) {
 
 	// Get the next sibling element
@@ -128,36 +136,59 @@ sibling = elem.nextElementSibling;
 		if (sibling.matches(selector)) {
       return sibling
     };
-		sibling = sibling.nextElementSibling
+		sibling = sibling.nextElementSibling;
+  console.log(sibling)
+
 	}
 
 };
-function cambiarModo(){
-  if (modo_manual == true) {
-    modo_manual = false;
-    console.log(cantidad);
-    conseguirSibling(cantidad, '#element_2')
-    sibling.setAttribute('name', '')
-    conseguirSibling(cantidad, '#select_element_2')
-    sibling.setAttribute('name', 'element_2[]')
-
-    // textarea_manual.nextElementSibling.setAttribute('name', '')
-    // select_auto.nextElementSibling.setAttribute('name', 'element_2[]')
-  }else{
-    modo_manual = true;
-    conseguirSibling(cantidad, '#select_element_2')
-    sibling.setAttribute('name', '')
-    conseguirSibling(cantidad, '#element_2')
-    sibling.setAttribute('name', 'element_2[]')
-    // select_auto.setAttribute('name', '')
-    // textarea_manual.nextElementSibling.setAttribute('name', 'element_2[]')
-  }
+function funcionModo() {
+  boton_modo.forEach(element => {
+    element.addEventListener('click', function (e) {
+  
+        // if (modo_manual == true) {
+        //   modo_manual = false;
+        //   console.log(e.target);
+          conseguirSibling(e.target, '#element_2')
+          if (sibling.getAttribute('name') == '') {
+          sibling.setAttribute('name', 'element_2[]')
+          }else{
+          sibling.setAttribute('name', '')
+          }
+          conseguirSibling(e.target, '#select_element_2')
+          if (sibling.getAttribute('name') == '') {
+          sibling.setAttribute('name', 'element_2[]')
+          } else {
+          sibling.setAttribute('name', '')
+          }
+          // sibling.setAttribute('name', '')
+          // sibling.setAttribute('name', 'element_2[]')
+      
+          // textarea_manual.nextElementSibling.setAttribute('name', '')
+          // select_auto.nextElementSibling.setAttribute('name', 'element_2[]')
+        // }else{
+          // modo_manual = true;
+          // conseguirSibling(e.target, '#select_element_2')
+          // sibling.setAttribute('name', '')
+          // conseguirSibling(e.target, '#element_2')
+          // sibling.setAttribute('name', 'element_2[]')
+          // select_auto.setAttribute('name', '')
+          // textarea_manual.nextElementSibling.setAttribute('name', 'element_2[]')
+        // }
+  
+    })
+  });
 }
+
+
+
+
 
 //Usar funciones al iniciar
 
 window.onload = function () {
   ponerFecha();
   ponerOpcionVendedor();
+  funcionModo();
 }
 

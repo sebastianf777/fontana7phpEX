@@ -151,7 +151,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <button type="button" class="agregar_mat" onclick='agregarFuncionMat()'>
                             +
                         </button>
-                        <button type="button" class="modo" onclick='cambiarModo()'>
+                        <button type="button" class="modo">
                             X
                         </button>
                         <div class="cantidad">
@@ -159,7 +159,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </div>
                         <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
 
-                        <select id="select_element_2" name="element_2[]">
+                        <select id="select_element_2" name="">
                             <optgroup label="Cementos">
                                 <option value="cemento">Cemento</option>
                                 <option value="saab">Saab</option>
@@ -299,14 +299,14 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </div>
                 <div class="agregar_mat">
                 </div>
-                <button type="button" class="modo" onclick='cambiarModo()'>
+                <button type="button" class="modo" >
                     X
                 </button>
                 <div class="cantidad">
                     <input type="number" name="count_mat[]">
                 </div>
                 <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                <select id="select_element_2" name="element_2[]">
+                <select id="select_element_2" name="">
                             <optgroup label="Cementos">
                                 <option value="cemento">Cemento</option>
                                 <option value="saab">Saab</option>

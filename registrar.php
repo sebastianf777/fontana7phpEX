@@ -144,14 +144,13 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                 <li class="registrar_item-importe">
                     <div class="registrar_item">
-                        
+
                         <div class="item_icono" for="element_2">
                             <img src="/img/materiales.png" alt="materiales imagen">
                         </div>
-                        <button type="button" class="agregar_mat" onclick='agregarFuncion()'>
+                        <button type="button" class="agregar_mat" onclick='agregarFuncionMat()'>
                             +
                         </button>
-                        
                         <button type="button" class="modo">
                             X
                         </button>
@@ -167,13 +166,12 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
                 <li class="registrar_item-importe mat_li">
                     <div class="registrar_item">
-                        
+
                         <div class="item_icono" for="element_2">
                             <img src="/img/materiales.png" alt="materiales imagen">
                         </div>
                         <div class="agregar_mat">
                         </div>
-                        
                         <button type="button" class="modo">
                             X
                         </button>
@@ -193,6 +191,34 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
                         </label>
+                        <button type="button" class="agregar_fer" onclick='agregarFuncionFer()'>
+                            +
+                        </button>
+                        <button type="button" class="modo">
+                            X
+                        </button>
+                        <div class="cantidad">
+                            <input type="number" name="count_fer[]">
+                        </div>
+                        <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                    </div>
+
+                    <div class="registrar_importe">
+                        <label for="element_7">$</label>
+                        <input id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
+                    </div>
+
+                </li>
+                <li class="registrar_item-importe fer_li">
+                    <div class="registrar_item">
+                        <label class="item_icono" for="element_6">
+                            <img src="/img/ferreteria.png" alt="ferreteria img">
+                        </label>
+                        <div type="button" class="agregar_fer">
+                        </div>
+                        <button type="button" class="modo">
+                            X
+                        </button>
                         <div class="cantidad">
                             <input type="number" name="count_fer[]">
                         </div>

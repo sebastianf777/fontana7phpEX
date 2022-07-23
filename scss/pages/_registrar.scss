@@ -59,14 +59,25 @@
                         width: 100%;
                         padding: 0;
                         margin: 0;
+
+                    }
+
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        margin: 0;
                     }
                 }
-                .modo{
+
+                .modo {
                     width: 30px;
                     margin-right: 5px;
 
                 }
-                .agregar_mat{
+
+                .agregar_mat, .agregar_fer {
                     width: 30px;
                     margin-right: 5px;
 
@@ -92,7 +103,8 @@
                 }
             }
         }
-        .mat_li{
+
+        .mat_li, .fer_li {
             display: none
         }
 

@@ -9,7 +9,9 @@ const vendedor_opciones = document.getElementById('vendedor_opciones');
 const materiales_textarea = document.getElementById("element_2");
 const agregar_item = document.querySelectorAll(".agregar_mat");
 const mat_li = document.querySelector(".mat_li");
+const fer_li = document.querySelector(".fer_li");
 let mat_new = mat_li.cloneNode(true);
+let mat_fer = fer_li.cloneNode(true);
 
 let ferreteria_textarea = document.getElementById("element_6");
 let pedidos_textarea = document.getElementById("element_9");
@@ -95,11 +97,17 @@ registrar_submit.onclick = function () {
 }
 
 //Agregar item
-const agregarFuncion = () => {
+const agregarFuncionMat = () => {
 mat_new = mat_li.cloneNode(true);
   mat_li.parentNode.insertBefore(mat_new, mat_li.nextSibling);
 mat_new.classList.remove('mat_li');
 }
+const agregarFuncionFer = () => {
+  fer_new = fer_li.cloneNode(true);
+    fer_li.parentNode.insertBefore(fer_new, fer_li.nextSibling);
+  fer_new.classList.remove('fer_li');
+  }
+  
 
 //Usar funciones al iniciar
 

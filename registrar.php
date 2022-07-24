@@ -151,7 +151,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <button type="button" class="agregar_mat" onclick='agregarFuncionMat()'>
                             +
                         </button>
-                        <button type="button" class="modo">
+                        <button type="button" class="modo_mat">
                             X
                         </button>
                         <div class="cantidad">
@@ -186,13 +186,20 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <button type="button" class="agregar_fer" onclick='agregarFuncionFer()'>
                             +
                         </button>
-                        <button type="button" class="modo">
+                        <button type="button" class="modo_fer">
                             X
                         </button>
                         <div class="cantidad">
                             <input type="number" name="count_fer[]">
                         </div>
                         <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                        <select id="select_element_6" name="">
+                            <option value="Ferreteria">Ferreteria</option>
+                            <option value="PP/PVC">PP/PVC</option>
+                            <option value="Electricidad">Electricidad</option>
+                            <option value="Sanitarios">Sanitarios</option>
+                            <option value="Pinturería">Pinturería</option>
+                        </select>
                     </div>
 
                     <div class="registrar_importe">
@@ -299,7 +306,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </div>
                 <div class="agregar_mat">
                 </div>
-                <button type="button" class="modo" >
+                <button type="button" class="modo_mat">
                     X
                 </button>
                 <div class="cantidad">
@@ -307,15 +314,15 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </div>
                 <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                 <select id="select_element_2" name="">
-                            <optgroup label="Cementos">
-                                <option value="cemento">Cemento</option>
-                                <option value="saab">Saab</option>
-                            </optgroup>
-                            <optgroup label="German Cars">
-                                <option value="mercedes">Mercedes</option>
-                                <option value="audi">Audi</option>
-                            </optgroup>
-                        </select>
+                    <optgroup label="Cementos">
+                        <option value="cemento">Cemento</option>
+                        <option value="saab">Saab</option>
+                    </optgroup>
+                    <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                </select>
             </div>
             <div class="registrar_importe">
                 <label for="element_5">$</label>
@@ -329,13 +336,20 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </label>
                 <div type="button" class="agregar_fer">
                 </div>
-                <button type="button" class="modo">
+                <button type="button" class="modo_fer">
                     X
                 </button>
                 <div class="cantidad">
                     <input type="number" name="count_fer[]">
                 </div>
                 <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
+                <select id="select_element_6" name="">
+                    <option value="Ferreteria">Ferreteria</option>
+                    <option value="PP/PVC">PP/PVC</option>
+                    <option value="Electricidad">Electricidad</option>
+                    <option value="Sanitarios">Sanitarios</option>
+                    <option value="Pinturería">Pinturería</option>
+                </select>
             </div>
 
             <div class="registrar_importe">

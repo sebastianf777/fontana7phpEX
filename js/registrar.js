@@ -32,7 +32,8 @@ let textarea_manual = document.querySelector('#element_2');
 let select_auto = document.querySelector('#select_element_2');
 let cantidad = document.querySelector('.cantidad');
 let modo_manual = true;
-let boton_modo = document.querySelectorAll('.modo');;
+let boton_modo_mat = document.querySelectorAll('.modo_mat');;
+let boton_modo_fer = document.querySelectorAll('.modo_fer');;
 let sibling;
 //Función mostrar Número
 
@@ -113,14 +114,15 @@ const agregarFuncionMat = () => {
   mat_new = mat_li.cloneNode(true);
   mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
   mat_new.classList.remove('mat_li');
-  boton_modo = document.querySelectorAll('.modo');
-  funcionModo();
+  boton_modo_mat = document.querySelectorAll('.modo_mat');
+  funcionModoMat();
 }
 const agregarFuncionFer = () => {
   fer_new = fer_li.cloneNode(true);
   fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
   fer_new.classList.remove('fer_li');
-
+  boton_modo_fer = document.querySelectorAll('.modo_fer');
+  funcionModoFer();
 }
 
 //Cambiar modo
@@ -144,49 +146,63 @@ function conseguirSibling(elem, selector) {
   }
 
 };
-function funcionModo() {
-  boton_modo.forEach(element => {
-    
+function funcionModoMat() {
+  boton_modo_mat.forEach(element => {
+
     if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_modo') == false) {
       element.classList.add('tiene_funcion_modo');
       element.addEventListener('click', function (e) {
         e.preventDefault();
-       // if (modo_manual == true) {
-       //   modo_manual = false;
-       //   console.log(e.target);
-       conseguirSibling(e.target, '#element_2');
-       console.log(sibling.getAttribute('name'));
-       if (sibling.getAttribute('name') == '') {
-         sibling.setAttribute('name', 'element_2[]')
-       } else {
-         console.log(sibling.getAttribute('name'));
- 
-         sibling.setAttribute('name', '')
-       }
-       conseguirSibling(e.target, '#select_element_2')
-       if (sibling.getAttribute('name') == '') {
-         sibling.setAttribute('name', 'element_2[]')
-       } else {
-         sibling.setAttribute('name', '')
-       }
-       // sibling.setAttribute('name', '')
-       // sibling.setAttribute('name', 'element_2[]')
- 
-       // textarea_manual.nextElementSibling.setAttribute('name', '')
-       // select_auto.nextElementSibling.setAttribute('name', 'element_2[]')
-       // }else{
-       // modo_manual = true;
-       // conseguirSibling(e.target, '#select_element_2')
-       // sibling.setAttribute('name', '')
-       // conseguirSibling(e.target, '#element_2')
-       // sibling.setAttribute('name', 'element_2[]')
-       // select_auto.setAttribute('name', '')
-       // textarea_manual.nextElementSibling.setAttribute('name', 'element_2[]')
-       // }
- 
-     })
+
+        conseguirSibling(e.target, '#element_2');
+        console.log(sibling.getAttribute('name'));
+        if (sibling.getAttribute('name') == '') {
+          sibling.setAttribute('name', 'element_2[]')
+        } else {
+          console.log(sibling.getAttribute('name'));
+
+          sibling.setAttribute('name', '')
+        }
+        conseguirSibling(e.target, '#select_element_2')
+        if (sibling.getAttribute('name') == '') {
+          sibling.setAttribute('name', 'element_2[]')
+        } else {
+          sibling.setAttribute('name', '')
+        }
+
+      })
     }
-    
+
+  });
+}
+
+function funcionModoFer() {
+  boton_modo_fer.forEach(element => {
+
+    if (element.parentElement.parentElement.classList.contains('fer_li') == false && element.classList.contains('tiene_funcion_modo') == false) {
+      element.classList.add('tiene_funcion_modo');
+      element.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        conseguirSibling(e.target, '#element_6');
+        console.log(sibling.getAttribute('name'));
+        if (sibling.getAttribute('name') == '') {
+          sibling.setAttribute('name', 'element_6[]')
+        } else {
+          console.log(sibling.getAttribute('name'));
+
+          sibling.setAttribute('name', '')
+        }
+        conseguirSibling(e.target, '#select_element_6')
+        if (sibling.getAttribute('name') == '') {
+          sibling.setAttribute('name', 'element_6[]')
+        } else {
+          sibling.setAttribute('name', '')
+        }
+
+      })
+    }
+
   });
 }
 
@@ -199,6 +215,7 @@ function funcionModo() {
 window.onload = function () {
   ponerFecha();
   ponerOpcionVendedor();
- funcionModo();
+  funcionModoMat();
+  funcionModoFer();
 }
 

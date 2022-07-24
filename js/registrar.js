@@ -125,58 +125,68 @@ const agregarFuncionFer = () => {
 
 //Cambiar modo
 
-function conseguirSibling (elem, selector) {
+function conseguirSibling(elem, selector) {
 
-	// Get the next sibling element
-sibling = elem.nextElementSibling;
+  // Get the next sibling element
+  sibling = elem.nextElementSibling;
 
-	// If the sibling matches our selector, use it
-	// If not, jump to the next sibling and continue the loop
-	while (sibling) {
-		if (sibling.matches(selector)) {
+  // If the sibling matches our selector, use it
+  // If not, jump to the next sibling and continue the loop
+  while (sibling) {
+    if (sibling.matches(selector)) {
+
+
       return sibling
-    };
-		sibling = sibling.nextElementSibling;
-  console.log(sibling)
 
-	}
+    };
+    sibling = sibling.nextElementSibling;
+
+  }
 
 };
 function funcionModo() {
   boton_modo.forEach(element => {
-    element.addEventListener('click', function (e) {
-  
-        // if (modo_manual == true) {
-        //   modo_manual = false;
-        //   console.log(e.target);
-          conseguirSibling(e.target, '#element_2')
-          if (sibling.getAttribute('name') == '') {
-          sibling.setAttribute('name', 'element_2[]')
-          }else{
-          sibling.setAttribute('name', '')
-          }
-          conseguirSibling(e.target, '#select_element_2')
-          if (sibling.getAttribute('name') == '') {
-          sibling.setAttribute('name', 'element_2[]')
-          } else {
-          sibling.setAttribute('name', '')
-          }
-          // sibling.setAttribute('name', '')
-          // sibling.setAttribute('name', 'element_2[]')
-      
-          // textarea_manual.nextElementSibling.setAttribute('name', '')
-          // select_auto.nextElementSibling.setAttribute('name', 'element_2[]')
-        // }else{
-          // modo_manual = true;
-          // conseguirSibling(e.target, '#select_element_2')
-          // sibling.setAttribute('name', '')
-          // conseguirSibling(e.target, '#element_2')
-          // sibling.setAttribute('name', 'element_2[]')
-          // select_auto.setAttribute('name', '')
-          // textarea_manual.nextElementSibling.setAttribute('name', 'element_2[]')
-        // }
-  
-    })
+    
+    if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_modo') == false) {
+      element.classList.add('tiene_funcion_modo');
+      element.addEventListener('click', function (e) {
+        e.preventDefault();
+       // if (modo_manual == true) {
+       //   modo_manual = false;
+       //   console.log(e.target);
+       conseguirSibling(e.target, '#element_2');
+       console.log(sibling.getAttribute('name'));
+       if (sibling.getAttribute('name') == '') {
+         sibling.setAttribute('name', 'element_2[]')
+       } else {
+         console.log(sibling.getAttribute('name'));
+ 
+         sibling.setAttribute('name', '')
+       }
+       conseguirSibling(e.target, '#select_element_2')
+       if (sibling.getAttribute('name') == '') {
+         sibling.setAttribute('name', 'element_2[]')
+       } else {
+         sibling.setAttribute('name', '')
+       }
+       // sibling.setAttribute('name', '')
+       // sibling.setAttribute('name', 'element_2[]')
+ 
+       // textarea_manual.nextElementSibling.setAttribute('name', '')
+       // select_auto.nextElementSibling.setAttribute('name', 'element_2[]')
+       // }else{
+       // modo_manual = true;
+       // conseguirSibling(e.target, '#select_element_2')
+       // sibling.setAttribute('name', '')
+       // conseguirSibling(e.target, '#element_2')
+       // sibling.setAttribute('name', 'element_2[]')
+       // select_auto.setAttribute('name', '')
+       // textarea_manual.nextElementSibling.setAttribute('name', 'element_2[]')
+       // }
+ 
+     })
+    }
+    
   });
 }
 
@@ -189,6 +199,6 @@ function funcionModo() {
 window.onload = function () {
   ponerFecha();
   ponerOpcionVendedor();
-  funcionModo();
+ funcionModo();
 }
 

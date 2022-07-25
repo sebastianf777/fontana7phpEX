@@ -40,9 +40,6 @@
 
                 .item_icono {
                     width: 30px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
                     margin-right: 5px;
 
                     img {
@@ -71,22 +68,26 @@
                     }
                 }
 
-                .modo {
-                    width: 30px;
+                .modo_mat,
+                .modo_fer {
+                    width: 20px;
+                    padding: 0;
                     margin-right: 5px;
 
                 }
 
-                .agregar_mat, .agregar_fer {
-                    width: 30px;
+                .agregar_mat,
+                .agregar_fer {
+                    width: 20px;
+                    padding: 0;
                     margin-right: 5px;
 
                 }
 
-                textarea {
-                    width: 65%;
-                }
-                .ocultar_modo{
+                // textarea {
+                //     width: 65%;
+                // }
+                .ocultar_modo {
                     display: none;
                 }
             }
@@ -107,7 +108,8 @@
             }
         }
 
-        .mat_li, .fer_li {
+        .mat_li,
+        .fer_li {
             display: none
         }
 
@@ -118,9 +120,6 @@
 
             .registrar_icono {
                 text-align: start;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
                 width: 20%;
             }
 
@@ -194,13 +193,19 @@
 
     }
 
+    @media only screen and (max-width: 900px) {
+        .registrar_ul {
+            padding: 1rem 1rem;
+        }
+    }
+
     @media only screen and (max-width: 600px) {
         width: 90vw;
         height: 83vh;
         max-width: none;
 
         .registrar_ul {
-            padding: 1rem 1rem;
+            padding: 1rem 0.5rem;
 
             li {
                 padding-bottom: 0.7rem;
@@ -215,10 +220,10 @@
                     }
 
                     .item_icono {
-                        width: 20%;
+                        width: auto;
 
                         img {
-                            width: 20px;
+                            width: 15px;
                         }
                     }
                 }

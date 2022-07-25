@@ -294,9 +294,6 @@ td {
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_icono {
   width: 30px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   margin-right: 5px;
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_icono img {
@@ -319,16 +316,17 @@ td {
   appearance: none;
   margin: 0;
 }
-.registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo {
-  width: 30px;
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_mat,
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_fer {
+  width: 20px;
+  padding: 0;
   margin-right: 5px;
 }
-.registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_mat, .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer {
-  width: 30px;
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_mat,
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer {
+  width: 20px;
+  padding: 0;
   margin-right: 5px;
-}
-.registrar_form .registrar_ul .registrar_item-importe .registrar_item textarea {
-  width: 65%;
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item .ocultar_modo {
   display: none;
@@ -345,7 +343,8 @@ td {
 .registrar_form .registrar_ul .registrar_item-importe .registrar_importe input {
   width: 73%;
 }
-.registrar_form .registrar_ul .mat_li, .registrar_form .registrar_ul .fer_li {
+.registrar_form .registrar_ul .mat_li,
+.registrar_form .registrar_ul .fer_li {
   display: none;
 }
 .registrar_form .registrar_ul .registrar_opciones-icono {
@@ -355,9 +354,6 @@ td {
 }
 .registrar_form .registrar_ul .registrar_opciones-icono .registrar_icono {
   text-align: start;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   width: 20%;
 }
 .registrar_form .registrar_ul .registrar_opciones-icono .registrar_opciones {
@@ -406,6 +402,11 @@ td {
   height: 1rem;
   resize: none;
 }
+@media only screen and (max-width: 900px) {
+  .registrar_form .registrar_ul {
+    padding: 1rem 1rem;
+  }
+}
 @media only screen and (max-width: 600px) {
   .registrar_form {
     width: 90vw;
@@ -413,7 +414,7 @@ td {
     max-width: none;
   }
   .registrar_form .registrar_ul {
-    padding: 1rem 1rem;
+    padding: 1rem 0.5rem;
   }
   .registrar_form .registrar_ul li {
     padding-bottom: 0.7rem;
@@ -425,10 +426,10 @@ td {
     width: 10%;
   }
   .registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_icono {
-    width: 20%;
+    width: auto;
   }
   .registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_icono img {
-    width: 20px;
+    width: 15px;
   }
   .registrar_form .registrar_ul .registrar_item-importe .registrar_importe {
     width: 25%;

@@ -347,6 +347,10 @@ td {
 .registrar_form .registrar_ul .fer_li {
   display: none;
 }
+.registrar_form .registrar_ul .total_li {
+  display: flex;
+  justify-content: end;
+}
 .registrar_form .registrar_ul .registrar_opciones-icono {
   display: flex;
   flex-direction: row;
@@ -480,6 +484,10 @@ td {
 .registrar_opciones label:hover,
 .registrar_mostrar label:hover {
   background-color: #f9f140;
+}
+
+.hidden_copies {
+  display: none;
 }
 
 .deposito_tabla {

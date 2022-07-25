@@ -172,6 +172,9 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                     </div>
                     <div class="registrar_importe">
+                    <div class="precio_unitario">
+                        <input type="text">
+                    </div>
                         <label for="element_5">$</label>
                         <input id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
                     </div>
@@ -201,14 +204,20 @@ $_SESSION['FORM_SECRET'] = $secret;
                             <option value="Pinturería">Pinturería</option>
                         </select>
                     </div>
-
+                    
                     <div class="registrar_importe">
+                    <div class="precio_unitario">
+                        <input type="text">
+                    </div>
                         <label for="element_7">$</label>
                         <input id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
                     </div>
 
                 </li>
-
+                <li class="total_li">
+                    <div class="signo">$</div>
+                    <div class="total_suma"></div>
+                </li>
                 <li class="registrar_opciones-icono">
                     <label class="registrar_icono">MOSTRAR: </label>
                     <div class="registrar_opciones">

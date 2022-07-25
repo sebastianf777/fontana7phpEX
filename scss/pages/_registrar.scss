@@ -112,6 +112,10 @@
         .fer_li {
             display: none
         }
+        .total_li{
+            display: flex;
+            justify-content: end;
+        }
 
         .registrar_opciones-icono {
             @include flexRow;
@@ -290,4 +294,8 @@
         background-color: $button_bg_secondary;
     }
 
+}
+
+.hidden_copies{
+    display: none;
 }

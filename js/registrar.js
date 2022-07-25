@@ -158,16 +158,21 @@ function funcionModoMat() {
         console.log(sibling.getAttribute('name'));
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_2[]')
+          sibling.classList.toggle('ocultar_modo')
         } else {
           console.log(sibling.getAttribute('name'));
-
+          sibling.classList.add('ocultar_modo')
           sibling.setAttribute('name', '')
         }
         conseguirSibling(e.target, '#select_element_2')
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_2[]')
+          sibling.classList.toggle('ocultar_modo')
+          
         } else {
-          sibling.setAttribute('name', '')
+          sibling.setAttribute('name', '');
+          sibling.classList.add('ocultar_modo')
+
         }
 
       })
@@ -188,16 +193,23 @@ function funcionModoFer() {
         console.log(sibling.getAttribute('name'));
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_6[]')
+          sibling.classList.toggle('ocultar_modo')
+
         } else {
           console.log(sibling.getAttribute('name'));
-
           sibling.setAttribute('name', '')
+          sibling.classList.add('ocultar_modo')
+
         }
         conseguirSibling(e.target, '#select_element_6')
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_6[]')
+          sibling.classList.toggle('ocultar_modo')
+
         } else {
           sibling.setAttribute('name', '')
+          sibling.classList.add('ocultar_modo')
+
         }
 
       })

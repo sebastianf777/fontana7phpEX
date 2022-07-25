@@ -330,6 +330,9 @@ td {
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item textarea {
   width: 65%;
 }
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item .ocultar_modo {
+  display: none;
+}
 .registrar_form .registrar_ul .registrar_item-importe .registrar_importe {
   display: flex;
   align-items: center;

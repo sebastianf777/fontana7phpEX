@@ -159,7 +159,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </div>
                         <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
 
-                        <select id="select_element_2" name="">
+                        <select id="select_element_2" name="" class="ocultar_modo">
                             <optgroup label="Cementos">
                                 <option value="cemento">Cemento</option>
                                 <option value="saab">Saab</option>
@@ -193,7 +193,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                             <input type="number" name="count_fer[]">
                         </div>
                         <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                        <select id="select_element_6" name="">
+                        <select id="select_element_6" name="" class="ocultar_modo">
                             <option value="Ferreteria">Ferreteria</option>
                             <option value="PP/PVC">PP/PVC</option>
                             <option value="Electricidad">Electricidad</option>
@@ -313,7 +313,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <input type="number" name="count_mat[]">
                 </div>
                 <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                <select id="select_element_2" name="">
+                <select id="select_element_2" name="" class="ocultar_modo">
                     <optgroup label="Cementos">
                         <option value="cemento">Cemento</option>
                         <option value="saab">Saab</option>
@@ -343,7 +343,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <input type="number" name="count_fer[]">
                 </div>
                 <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                <select id="select_element_6" name="">
+                <select id="select_element_6" name="" class="ocultar_modo">
                     <option value="Ferreteria">Ferreteria</option>
                     <option value="PP/PVC">PP/PVC</option>
                     <option value="Electricidad">Electricidad</option>

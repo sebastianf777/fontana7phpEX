@@ -38,6 +38,9 @@ let sibling;
 let precio_multiplicado = document.querySelectorAll('precio_multiplicado');
 let cantidad = document.querySelectorAll('.cantidad');
 let cada_uno = document.querySelectorAll('.cada_uno');
+let cantidad_cifra;
+let cada_uno_cifra;
+let total_multiplicado;
 //Función mostrar Número
 
 mostrar_numero.addEventListener('click', function () {
@@ -144,6 +147,7 @@ function conseguirSibling(elem, selector) {
   }
 };
 
+
 //Multiplicar cantidad x unidad
 
 
@@ -154,6 +158,14 @@ function funcionMultiplicar() {
       element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
+        cada_uno = this.value;
+        console.log(cantidad_cifra);
+        cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
+        console.log(cantidad_cifra);
+        total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
+        console.log(total_multiplicado);
+
+
       })
 
     }
@@ -258,5 +270,6 @@ window.onload = function () {
   ponerOpcionVendedor();
   funcionModoMat();
   funcionModoFer();
+  funcionMultiplicar();
 }
 

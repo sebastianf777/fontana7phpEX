@@ -121,14 +121,20 @@ const agregarFuncionMat = () => {
   mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
   mat_new.classList.remove('mat_li');
   boton_modo_mat = document.querySelectorAll('.modo_mat');
+  cantidad = document.querySelectorAll('.cantidad');
+  cada_uno = document.querySelectorAll('.cada_uno');
   funcionModoMat();
+  funcionMultiplicar();
 }
 const agregarFuncionFer = () => {
   fer_new = fer_li.cloneNode(true);
   fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
   fer_new.classList.remove('fer_li');
   boton_modo_fer = document.querySelectorAll('.modo_fer');
+  cantidad = document.querySelectorAll('.cantidad');
+  cada_uno = document.querySelectorAll('.cada_uno');
   funcionModoFer();
+  funcionMultiplicar();
 }
 
 
@@ -153,7 +159,8 @@ function conseguirSibling(elem, selector) {
 
 function funcionMultiplicar() {
   cada_uno.forEach(element => {
-    if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false) {
+    if ((element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false)
+      || element.parentElement.parentElement.classList.contains('fer_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false) {
 
       element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
@@ -166,7 +173,7 @@ function funcionMultiplicar() {
       })
 
     }
-    
+
   });
   cantidad.forEach(element => {
     if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false) {
@@ -178,11 +185,11 @@ function funcionMultiplicar() {
         cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value;
         console.log(cada_uno);
         total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
-        
+
       })
 
-  
-      }
+
+    }
   });
 }
 
@@ -212,7 +219,7 @@ function funcionModoMat() {
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_2[]')
           sibling.classList.toggle('ocultar_modo')
-          
+
         } else {
           sibling.setAttribute('name', '');
           sibling.classList.add('ocultar_modo')

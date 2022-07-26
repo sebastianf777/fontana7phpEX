@@ -159,10 +159,9 @@ function conseguirSibling(elem, selector) {
 
 function funcionMultiplicar() {
   cada_uno.forEach(element => {
-    if ((element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false)
-      || (element.parentElement.parentElement.classList.contains('fer_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false)) {
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false ) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
 
-      element.classList.add('tiene_funcion_multiplicar');
+      // element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
         cada_uno = e.target.value;
@@ -176,8 +175,7 @@ function funcionMultiplicar() {
 
   });
   cantidad.forEach(element => {
-    if ((element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false)
-      || (element.parentElement.parentElement.classList.contains('fer_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false))  {
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false ) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)){
       element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();

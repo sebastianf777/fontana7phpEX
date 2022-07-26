@@ -337,14 +337,17 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </select>
             </div>
             <div class="registrar_importe">
-                <div class="precio_unitario">
+          
                     <label for="cada_uno">$</label>
-                    <input name="cada_uno" type="text">
-                </div>
+                    <input class="cada_uno" name="cada_uno" type="text">
+          
                 <label for="element_5">$</label>
                 <input class="precio_multiplicado" id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
             </div>
         </li>
+
+        <!-- COPIA FERRETERIA -->
+        
         <li class="registrar_item-importe fer_li">
             <div class="registrar_item">
                 <label class="item_icono" for="element_6">
@@ -369,10 +372,10 @@ $_SESSION['FORM_SECRET'] = $secret;
             </div>
 
             <div class="registrar_importe">
-                <div class="precio_unitario">
+               
                     <label for="cada_uno">$</label>
-                    <input name="cada_uno" type="text">
-                </div>
+                    <input class="cada_uno" name="cada_uno" type="text">
+       
                 <label for="element_7">$</label>
                 <input class="precio_multiplicado" id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
             </div>

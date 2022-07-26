@@ -158,12 +158,9 @@ function funcionMultiplicar() {
       element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
-        cada_uno = this.value;
-        console.log(cantidad_cifra);
+        cada_uno = e.target.value;
         cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
-        console.log(cantidad_cifra);
         total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
-        console.log(total_multiplicado);
 
 
       })
@@ -176,6 +173,12 @@ function funcionMultiplicar() {
       element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
+        cantidad_cifra = e.target.value;
+        console.log(cantidad_cifra);
+        cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value;
+        console.log(cada_uno);
+        total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
+        
       })
 
   

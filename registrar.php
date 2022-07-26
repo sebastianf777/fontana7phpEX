@@ -175,7 +175,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="registrar_importe">
                         <!-- <div class="precio_unitario"> -->
                             <label for="cada_uno">$</label>
-                            <input name="cada_uno" type="text" class="cada_uno">
+                            <input name="cada_uno" type="number" class="cada_uno">
                         <!-- </div> -->
                         <label for="element_5">$</label>
                         <input id="element_5" name="element_5[]" class="precio_multiplicado" type="number" maxlength="255" value="" step=".01" />

@@ -174,8 +174,8 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="registrar_importe">
                         <!-- <div class="precio_unitario"> -->
-                            <label for="cada_uno">$</label>
-                            <input name="cada_uno" type="number" class="cada_uno">
+                        <label for="cada_uno">$</label>
+                        <input name="cada_uno" type="number" class="cada_uno">
                         <!-- </div> -->
                         <label for="element_5">$</label>
                         <input id="element_5" name="element_5[]" class="precio_multiplicado" type="number" maxlength="255" value="" step=".01" />
@@ -310,7 +310,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
     <!-- COPIAS EN BLANCO -->
     <div class="hidden_copies">
-        <li class="registrar_item-importe mat_li">
+        <li class="registrar_item-importe mat_li copia">
             <div class="registrar_item">
 
                 <div class="item_icono" for="element_2">
@@ -337,18 +337,18 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </select>
             </div>
             <div class="registrar_importe">
-          
-                    <label for="cada_uno">$</label>
-                    <input class="cada_uno" name="cada_uno" type="text">
-          
+
+                <label for="cada_uno">$</label>
+                <input class="cada_uno" name="cada_uno" type="text">
+
                 <label for="element_5">$</label>
                 <input class="precio_multiplicado" id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
             </div>
         </li>
 
         <!-- COPIA FERRETERIA -->
-        
-        <li class="registrar_item-importe fer_li">
+
+        <li class="registrar_item-importe fer_li copia">
             <div class="registrar_item">
                 <label class="item_icono" for="element_6">
                     <img src="/img/ferreteria.png" alt="ferreteria img">
@@ -372,10 +372,10 @@ $_SESSION['FORM_SECRET'] = $secret;
             </div>
 
             <div class="registrar_importe">
-               
-                    <label for="cada_uno">$</label>
-                    <input class="cada_uno" name="cada_uno" type="text">
-       
+
+                <label for="cada_uno">$</label>
+                <input class="cada_uno" name="cada_uno" type="text">
+
                 <label for="element_7">$</label>
                 <input class="precio_multiplicado" id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
             </div>

@@ -309,13 +309,6 @@ td {
   padding: 0;
   margin: 0;
 }
-.registrar_form .registrar_ul .registrar_item-importe .registrar_item .cantidad input[type=number]::-webkit-inner-spin-button,
-.registrar_form .registrar_ul .registrar_item-importe .registrar_item .cantidad input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-}
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_mat,
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_fer {
   width: 20px;
@@ -338,10 +331,15 @@ td {
   width: 20%;
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_importe label {
-  width: 27%;
+  width: auto;
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_importe input {
-  width: 73%;
+  width: 90%;
+}
+.registrar_form .registrar_ul .registrar_item-importe .registrar_importe .precio_unitario {
+  display: flex;
+  width: 100%;
+  margin-right: 5px;
 }
 .registrar_form .registrar_ul .mat_li,
 .registrar_form .registrar_ul .fer_li {
@@ -484,6 +482,14 @@ td {
 .registrar_opciones label:hover,
 .registrar_mostrar label:hover {
   background-color: #f9f140;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .hidden_copies {

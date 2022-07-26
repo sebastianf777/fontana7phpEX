@@ -30,11 +30,14 @@ let vendedor_opcion = localStorage.getItem("vendedor");
 
 let textarea_manual = document.querySelector('#element_2');
 let select_auto = document.querySelector('#select_element_2');
-let cantidad = document.querySelector('.cantidad');
 let modo_manual = true;
 let boton_modo_mat = document.querySelectorAll('.modo_mat');;
 let boton_modo_fer = document.querySelectorAll('.modo_fer');;
 let sibling;
+
+let precio_multiplicado = document.querySelectorAll('precio_multiplicado');
+let cantidad = document.querySelectorAll('.cantidad');
+let cada_uno = document.querySelectorAll('.cada_uno');
 //Función mostrar Número
 
 mostrar_numero.addEventListener('click', function () {
@@ -125,27 +128,53 @@ const agregarFuncionFer = () => {
   funcionModoFer();
 }
 
-//Cambiar modo
+
+//Conseguir Sibling
 
 function conseguirSibling(elem, selector) {
-
   // Get the next sibling element
   sibling = elem.nextElementSibling;
-
   // If the sibling matches our selector, use it
   // If not, jump to the next sibling and continue the loop
   while (sibling) {
     if (sibling.matches(selector)) {
-
-
       return sibling
-
     };
     sibling = sibling.nextElementSibling;
-
   }
-
 };
+
+//Multiplicar cantidad x unidad
+
+
+function funcionMultiplicar() {
+  cada_uno.forEach(element => {
+    if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false) {
+
+      element.classList.add('tiene_funcion_multiplicar');
+      element.addEventListener('focusout', function (e) {
+        e.preventDefault();
+      })
+
+    }
+    
+  });
+  cantidad.forEach(element => {
+    if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_multiplicar') == false) {
+      element.classList.add('tiene_funcion_multiplicar');
+      element.addEventListener('focusout', function (e) {
+        e.preventDefault();
+      })
+
+  
+      }
+  });
+}
+
+//Cambiar modo
+
+
+
 function funcionModoMat() {
   boton_modo_mat.forEach(element => {
 

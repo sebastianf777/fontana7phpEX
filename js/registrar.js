@@ -35,12 +35,14 @@ let boton_modo_mat = document.querySelectorAll('.modo_mat');;
 let boton_modo_fer = document.querySelectorAll('.modo_fer');;
 let sibling;
 
-let precio_multiplicado = document.querySelectorAll('precio_multiplicado');
+const total_suma = document.querySelector('.total_suma');
+let precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
 let cantidad = document.querySelectorAll('.cantidad');
 let cada_uno = document.querySelectorAll('.cada_uno');
 let cantidad_cifra;
 let cada_uno_cifra;
 let total_multiplicado;
+let sum = 0;
 //Función mostrar Número
 
 mostrar_numero.addEventListener('click', function () {
@@ -154,12 +156,42 @@ function conseguirSibling(elem, selector) {
 };
 
 
+//Sumar Total
+
+function sumarTotal() {
+ sum = 0;
+  for (let i = 0; i <= precio_multiplicado.length; i++) {
+    // const innerSum = Array.from(`precio_multiplicado${i}`).reduce(
+    //   (acc, el) => acc + Number.parseFloat(el.value),
+    //   0
+    // );
+    if (precio_multiplicado[i]) {
+      sum += Number(precio_multiplicado[i].value);
+      console.log(precio_multiplicado[i].value);
+    }
+
+    // sum.push(innerSum);
+    // let studentSum = 0;
+    // Array.from(precio_multiplicado).forEach(function() {
+    //     sum += parseFloat(this.textContent); 
+    //     console.log(this.textContent)
+    // });
+    // sum.push(studentSum)
+
+  }
+  total_suma.textContent = sum;
+
+}
+
+
+
+
 //Multiplicar cantidad x unidad
 
 
 function funcionMultiplicar() {
   cada_uno.forEach(element => {
-    if (((element.parentElement.parentElement.classList.contains('mat_li') == false ) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
 
       // element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
@@ -167,15 +199,16 @@ function funcionMultiplicar() {
         cada_uno = e.target.value;
         cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
         total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
-
-
+        sumarTotal();
+        // sum += total_multiplicado;
+        // total_suma.textContent = sum;
       })
 
     }
 
   });
   cantidad.forEach(element => {
-    if (((element.parentElement.parentElement.classList.contains('mat_li') == false ) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)){
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
       element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
@@ -184,6 +217,10 @@ function funcionMultiplicar() {
         cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value;
         console.log(cada_uno);
         total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
+        sumarTotal();
+
+        // sum += total_multiplicado;
+        // total_suma.textContent = sum;
 
       })
 

@@ -59,7 +59,7 @@
 
                     }
 
-                    
+
                 }
 
                 .modo_mat,
@@ -99,13 +99,15 @@
                 input {
                     width: 90%;
                 }
-                .precio_unitario{
+
+                .precio_unitario {
                     display: flex;
                     width: 100%;
                     margin-right: 5px;
                 }
+
                 // #element_7{
-                    
+
                 //     width: 90%;
                 // }
             }
@@ -115,7 +117,8 @@
         .fer_li {
             display: none
         }
-        .total_li{
+
+        .total_li {
             display: flex;
             justify-content: end;
         }
@@ -196,6 +199,10 @@
         div textarea {
             height: 1rem;
             resize: none;
+            margin: 0 2vw;
+            width: -moz-available;          /* WebKit-based browsers will ignore this. */
+            width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+            width: fill-available;
         }
 
     }
@@ -300,13 +307,13 @@
 }
 
 input[type=number]::-webkit-inner-spin-button,
-                    input[type=number]::-webkit-outer-spin-button {
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        appearance: none;
-                        margin: 0;
-                    }
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
 
-.hidden_copies{
+.hidden_copies {
     display: none;
 }

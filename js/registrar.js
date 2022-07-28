@@ -160,15 +160,16 @@ function conseguirSibling(elem, selector) {
 
 function sumarTotal() {
  sum = 0;
-  for (let i = 0; i <= precio_multiplicado.length; i++) {
+  for (let i = 0; i < precio_multiplicado.length; i++) {
     // const innerSum = Array.from(`precio_multiplicado${i}`).reduce(
     //   (acc, el) => acc + Number.parseFloat(el.value),
     //   0
     // );
-    if (precio_multiplicado[i]) {
+
+    // if (precio_multiplicado[i]) {
       sum += Number(precio_multiplicado[i].value);
       console.log(precio_multiplicado[i].value);
-    }
+    // }
 
     // sum.push(innerSum);
     // let studentSum = 0;

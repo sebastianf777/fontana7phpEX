@@ -408,6 +408,13 @@ td {
   width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
   width: fill-available;
 }
+.registrar_form .registrar_ul div select {
+  height: 1.5rem;
+  margin: 0 2vw;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
 @media only screen and (max-width: 900px) {
   .registrar_form .registrar_ul {
     padding: 1rem 1rem;

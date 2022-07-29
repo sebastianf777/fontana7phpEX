@@ -125,6 +125,7 @@ const agregarFuncionMat = () => {
   boton_modo_mat = document.querySelectorAll('.modo_mat');
   cantidad = document.querySelectorAll('.cantidad');
   cada_uno = document.querySelectorAll('.cada_uno');
+  precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
   funcionModoMat();
   funcionMultiplicar();
 }
@@ -135,6 +136,7 @@ const agregarFuncionFer = () => {
   boton_modo_fer = document.querySelectorAll('.modo_fer');
   cantidad = document.querySelectorAll('.cantidad');
   cada_uno = document.querySelectorAll('.cada_uno');
+  precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
   funcionModoFer();
   funcionMultiplicar();
 }
@@ -193,8 +195,8 @@ function sumarTotal() {
 function funcionMultiplicar() {
   cada_uno.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
-
-      // element.classList.add('tiene_funcion_multiplicar');
+console.log('hi')
+      element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
         cada_uno = e.target.value;

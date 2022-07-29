@@ -327,12 +327,34 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
                 <select id="select_element_2" name="" class="ocultar_modo">
                     <optgroup label="Cementos">
-                        <option value="cemento">Cemento</option>
-                        <option value="saab">Saab</option>
+                        <option value="Cemento">Cemento</option>
+                        <option value="Plasticor">Plasticor</option>
+                        <option value="Cal">Cal</option>
+                        <option value="Yeso">Yeso</option>
                     </optgroup>
-                    <optgroup label="German Cars">
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
+                    <optgroup label="Finos">
+                        <option value="Stuko">Stuko</option>
+                        <option value="Stuko-Exterior">Stuko-Exterior</option>
+                        <option value="Weber-fino">Weber-fino</option>
+                        <option value="Fintuc-fino">Fintuc-fino</option>
+                    </optgroup>
+                    <optgroup label="Pegamentos">
+                        <option value="Klaukol">Klaukol</option>
+                        <option value="Klaukol-porcelanato">Klaukol-porcelanato</option>
+                        <option value="Construkor">Construkor</option>
+                        <option value="Weber-pegamento">Weber-pegamento</option>
+                        <option value="Fintuc-pegamento">Fintuc-pegamento</option>
+                    </optgroup>
+                    <optgroup label="Hierros">
+                        <option value="Hierro-del-6-torsionado">Hierro-del-6-torsionado</option>
+                        <option value="Hierro-del-8-torsionado">Hierro-del-8-torsionado</option>
+                        <option value="Hierro-del-10-torsionado">Hierro-del-10-torsionado</option>
+                        <option value="Hierro-del-12-torsionado">Hierro-del-12-torsionado</option>
+                        <option value="Hierro-del-6-liso">Hierro-del-6-liso</option>
+                        <option value="Hierro-del-8-liso">Hierro-del-8-liso</option>
+                        <option value="Hierro-del-10-liso">Hierro-del-10-liso</option>
+                        <option value="Hierro-del-12-liso">Hierro-del-12-liso</option>
+                        <option value="Alambre-de-fardo">kg de Alambre-de-fardo</option>
                     </optgroup>
                 </select>
             </div>

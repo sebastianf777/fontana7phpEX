@@ -224,6 +224,8 @@ $_SESSION['FORM_SECRET'] = $secret;
                             <option value="Electricidad">Electricidad</option>
                             <option value="Sanitarios">Sanitarios</option>
                             <option value="Pinturería">Pinturería</option>
+                            <option value="Fraccionados">Fraccionados</option>
+
                         </select>
                     </div>
 
@@ -410,6 +412,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <option value="Electricidad">Electricidad</option>
                     <option value="Sanitarios">Sanitarios</option>
                     <option value="Pinturería">Pinturería</option>
+                    <option value="Fraccionados">Fraccionados</option>
                 </select>
             </div>
 

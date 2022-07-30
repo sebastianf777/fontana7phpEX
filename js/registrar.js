@@ -163,23 +163,9 @@ function conseguirSibling(elem, selector) {
 function sumarTotal() {
  sum = 0;
   for (let i = 0; i < precio_multiplicado.length; i++) {
-    // const innerSum = Array.from(`precio_multiplicado${i}`).reduce(
-    //   (acc, el) => acc + Number.parseFloat(el.value),
-    //   0
-    // );
-
-    // if (precio_multiplicado[i]) {
+  
       sum += Number(precio_multiplicado[i].value);
       console.log(precio_multiplicado[i].value);
-    // }
-
-    // sum.push(innerSum);
-    // let studentSum = 0;
-    // Array.from(precio_multiplicado).forEach(function() {
-    //     sum += parseFloat(this.textContent); 
-    //     console.log(this.textContent)
-    // });
-    // sum.push(studentSum)
 
   }
   total_suma.textContent = sum;
@@ -201,7 +187,9 @@ console.log('hi')
         e.preventDefault();
         cada_uno = e.target.value;
         cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
-        total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
+        total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado');
+        cantidad_cifra == "" || cantidad_cifra == 0 ? total_multiplicado.value = cada_uno : total_multiplicado.value = (cantidad_cifra * cada_uno);
+
         sumarTotal();
         // sum += total_multiplicado;
         // total_suma.textContent = sum;
@@ -216,10 +204,10 @@ console.log('hi')
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
         cantidad_cifra = e.target.value;
-        console.log(cantidad_cifra);
         cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value;
-        console.log(cada_uno);
-        total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);
+        e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);;
+
+
         sumarTotal();
 
         // sum += total_multiplicado;

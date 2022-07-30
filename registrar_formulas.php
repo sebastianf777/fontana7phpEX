@@ -42,7 +42,7 @@ $stmt = $con->prepare($query);
 
 $stmt->bind_param('issssssssssss', $numero, $producto, $detallemateriales, $fechaing, $serie, $ferreteria, $detalleferreteria, $pagotipo, $pedido, $detallepedido, $cliente, $acuenta, $mostrar );
 
- ($count_mat >= $count_fer) ? $bigger_count = $count_mat : $bigger_array = $count_fet ;
+ ($count_mat >= $count_fer) ? $bigger_count = $count_mat : $bigger_count = $count_fer ;
 
 for($i=0; $i < $bigger_count; $i++) {
     array_key_exists($i, array_keys((array)$cantidad_rows_mat)) ? $producto = mysqli_real_escape_string($conn, $_POST['element_2'][$i]) : $producto = '';
@@ -63,11 +63,12 @@ if ($stmt->error){
             // echo $producto;
             // echo $ferreteria;
             // echo $count_mat_array;
-            // sleep(3);
+         
             echo '<script type="text/javascript">'; 
             echo 'alert("REGISTRO DE DATOS CORRECTO");'; 
             echo 'window.location = "registrar.php";';
             echo '</script>';
+            sleep(3);
             }
 } 
         unset($_SESSION["FORM_SECRET"]);

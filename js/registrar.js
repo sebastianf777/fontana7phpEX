@@ -128,6 +128,7 @@ const agregarFuncionMat = () => {
   precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
   funcionModoMat();
   funcionMultiplicar();
+  funcionSumar();
 }
 const agregarFuncionFer = () => {
   fer_new = fer_li.cloneNode(true);
@@ -139,6 +140,7 @@ const agregarFuncionFer = () => {
   precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
   funcionModoFer();
   funcionMultiplicar();
+  funcionSumar();
 }
 
 
@@ -158,7 +160,7 @@ function conseguirSibling(elem, selector) {
 };
 
 
-//Sumar Total
+//Sumar Total y funcion Sumar
 
 function sumarTotal() {
  sum = 0;
@@ -172,8 +174,17 @@ function sumarTotal() {
 
 }
 
-
-
+function funcionSumar() {
+  
+precio_multiplicado.forEach(element => {
+  if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_sumar') == false)) {
+    element.classList.add('tiene_funcion_sumar');
+  element.addEventListener('focusout', function (e) {
+    sumarTotal();
+  })
+}
+});
+}
 
 //Multiplicar cantidad x unidad
 
@@ -181,7 +192,7 @@ function sumarTotal() {
 function funcionMultiplicar() {
   cada_uno.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
-console.log('hi')
+
       element.classList.add('tiene_funcion_multiplicar');
       element.addEventListener('focusout', function (e) {
         e.preventDefault();
@@ -308,5 +319,6 @@ window.onload = function () {
   funcionModoMat();
   funcionModoFer();
   funcionMultiplicar();
+  funcionSumar();
 }
 

@@ -68,7 +68,7 @@ if ($stmt->error){
             echo 'alert("REGISTRO DE DATOS CORRECTO");'; 
             echo 'window.location = "registrar.php";';
             echo '</script>';
-            sleep(3);
+            // sleep(3);
             }
 } 
         unset($_SESSION["FORM_SECRET"]);

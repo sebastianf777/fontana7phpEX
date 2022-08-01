@@ -56,10 +56,15 @@ if ($stmt->error){
     echo '</script>';
         }  else{
 
-            echo '<script type="text/javascript">'; 
-            echo 'alert("REGISTRO DE DATOS CORRECTO");'; 
-            echo 'window.location = "registrar.php";';
-            echo '</script>';
+            // echo '<script type="text/javascript">'; 
+            // // echo 'alert("REGISTRO DE DATOS CORRECTO");'
+            // // echo `localStorage.setItem("estado_registro", "true")`;
+            // echo "$.ajax({";
+            // echo `url: "/file.php"`;
+            // echo `type: "post",`;
+            // echo `data: { name: localStorage.setItem('estado_registro', 'true')}})`;
+            // echo 'window.location = "registrar.php";';
+            // echo '</script>';
 
             }
 } 

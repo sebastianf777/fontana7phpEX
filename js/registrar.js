@@ -43,6 +43,18 @@ let cantidad_cifra;
 let cada_uno_cifra;
 let total_multiplicado;
 let sum = 0;
+let registro = localStorage.getItem("estado_registro");
+
+//Función checkeo registro
+
+function checkeoRegistro() {
+  console.log(registro);
+
+  if (registro) {
+    registro == true ? alert("Registro exitoso") : "";
+  }
+}
+
 //Función mostrar Número
 
 mostrar_numero.addEventListener('click', function () {
@@ -320,5 +332,6 @@ window.onload = function () {
   funcionModoFer();
   funcionMultiplicar();
   funcionSumar();
+  checkeoRegistro();
 }
 

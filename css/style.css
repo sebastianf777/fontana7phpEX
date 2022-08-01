@@ -474,7 +474,8 @@ td {
 }
 
 .registrar_opciones label,
-.registrar_mostrar label {
+.registrar_mostrar label,
+#registrar_submit {
   display: inline-block;
   background-color: #ff8601;
   padding: 1vh 0.7vw;
@@ -491,7 +492,8 @@ td {
   margin-left: 1vw;
 }
 .registrar_opciones label:hover,
-.registrar_mostrar label:hover {
+.registrar_mostrar label:hover,
+#registrar_submit:hover {
   background-color: #f9f140;
 }
 

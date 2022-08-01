@@ -290,7 +290,8 @@
 }
 
 .registrar_opciones label,
-.registrar_mostrar label {
+.registrar_mostrar label,
+#registrar_submit  {
 
     display: inline-block;
     background-color: $button_bg_primary;

@@ -14,12 +14,6 @@ if(isset($_SESSION["FORM_SECRET"])) {
     if(isset($_POST['submit']))
 {
 
-
-// for($i=0; $i < $count_fer_array; $i++) {
-// $ferreteria = mysqli_real_escape_string($conn, $_POST['element_6']);
-// $detalleferreteria = mysqli_real_escape_string($conn, $_POST['element_7']);
-// }
-
 $serie = mysqli_real_escape_string($conn, $_POST['element_3']);
 $fechaing = mysqli_real_escape_string($conn, $_POST['element_4_3']."-".$_POST['element_4_1']."-".$_POST['element_4_2']);
 $pagotipo = mysqli_real_escape_string($conn, $_POST['element_8']);
@@ -59,16 +53,12 @@ if ($stmt->error){
     echo 'window.location = "registrar.php";';
     echo '</script>';
         }  else{
-            // echo $count_mat_array;
-            // echo $producto;
-            // echo $ferreteria;
-            // echo $count_mat_array;
-         
+
             echo '<script type="text/javascript">'; 
             echo 'alert("REGISTRO DE DATOS CORRECTO");'; 
             echo 'window.location = "registrar.php";';
             echo '</script>';
-            // sleep(3);
+
             }
 } 
         unset($_SESSION["FORM_SECRET"]);

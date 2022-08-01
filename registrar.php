@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+if (isset($_SESSION['registro']) == 'Success') {
+    unset($_SESSION['registro']);
+    echo '<script type="text/javascript">';
+    echo 'let registro_exitoso = true;';
+    echo '</script>';
+}
+
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php?referrer=registrar');
     exit;
@@ -196,7 +204,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="registrar_importe">
                         <label for="cada_uno">$</label>
-                        <input class="cada_uno" name="cada_uno" type="number" >
+                        <input class="cada_uno" name="cada_uno" type="number">
                         <label for="element_5">$</label>
                         <input id="element_5" name="element_5[]" class="precio_multiplicado" type="number" maxlength="255" value="" step=".01" />
                     </div>

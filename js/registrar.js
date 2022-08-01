@@ -43,16 +43,14 @@ let cantidad_cifra;
 let cada_uno_cifra;
 let total_multiplicado;
 let sum = 0;
-let registro = localStorage.getItem("estado_registro");
+
 
 //Función checkeo registro
 
 function checkeoRegistro() {
-  console.log(registro);
 
-  if (registro) {
-    registro == true ? alert("Registro exitoso") : "";
-  }
+ typeof registro_exitoso === 'undefined' ? '' : alert("REGISTRO DE DATOS EXITOSO");
+
 }
 
 //Función mostrar Número

@@ -56,10 +56,7 @@
                         width: 100%;
                         padding: 0;
                         margin: 0;
-
                     }
-
-
                 }
 
                 .modo_mat,
@@ -78,11 +75,19 @@
 
                 }
 
-                // textarea {
-                //     width: 65%;
-                // }
                 .ocultar_modo {
                     display: none;
+                }
+                textarea {
+                    height: 1rem;
+                    resize: none;
+                    margin: 0 2vw;
+                    width: inherit;
+                }
+                select{
+                    height: 1.5rem;
+                    margin: 0 2vw;
+                    width: inherit;
                 }
             }
 
@@ -106,10 +111,6 @@
                     margin-right: 5px;
                 }
 
-                // #element_7{
-
-                //     width: 90%;
-                // }
             }
         }
 
@@ -196,21 +197,6 @@
             margin: 0 auto;
         }
 
-        div textarea {
-            height: 1rem;
-            resize: none;
-            margin: 0 2vw;
-            width: -moz-available;          /* WebKit-based browsers will ignore this. */
-            width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-            width: fill-available;
-        }
-        div select{
-            height: 1.5rem;
-            margin: 0 2vw;
-            width: -moz-available;          /* WebKit-based browsers will ignore this. */
-            width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-            width: fill-available;
-        }
 
     }
 

@@ -324,6 +324,17 @@ td {
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item .ocultar_modo {
   display: none;
 }
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item textarea {
+  height: 1rem;
+  resize: none;
+  margin: 0 2vw;
+  width: inherit;
+}
+.registrar_form .registrar_ul .registrar_item-importe .registrar_item select {
+  height: 1.5rem;
+  margin: 0 2vw;
+  width: inherit;
+}
 .registrar_form .registrar_ul .registrar_item-importe .registrar_importe {
   display: flex;
   align-items: center;
@@ -399,21 +410,6 @@ td {
 }
 .registrar_form .registrar_ul .registrar_submit {
   margin: 0 auto;
-}
-.registrar_form .registrar_ul div textarea {
-  height: 1rem;
-  resize: none;
-  margin: 0 2vw;
-  width: -moz-available; /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
-}
-.registrar_form .registrar_ul div select {
-  height: 1.5rem;
-  margin: 0 2vw;
-  width: -moz-available; /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
 }
 @media only screen and (max-width: 900px) {
   .registrar_form .registrar_ul {

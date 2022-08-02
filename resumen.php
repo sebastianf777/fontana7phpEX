@@ -191,7 +191,8 @@ if (isset($_GET['desconectar'])) {
                                      LEFT JOIN
                                      (SELECT fechaing, SUM(detallepedido) AS total_pedidos_sebastian
                                      FROM productos WHERE detallepedido != 0 and serie = 'Sebastian' GROUP BY fechaing) t2
-                                     ON (t1.fechaing = t2.fechaing)";
+                                     ON (t1.fechaing = t2.fechaing)
+                                     LIMIT 200";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -280,7 +281,7 @@ if (isset($_GET['desconectar'])) {
                                 <tbody>
                                     <?php
                                     $sql = "SELECT SUM(detallemateriales) AS totaldebitomateriales, SUM(detalleferreteria) AS totaldebitoferreteria, fechaing from productos
-                                                        WHERE pagotipo = 'debito' GROUP BY fechaing order by id DESC ";
+                                                        WHERE pagotipo = 'debito' GROUP BY fechaing order by id DESC LIMIT 200";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -351,7 +352,7 @@ if (isset($_GET['desconectar'])) {
 
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT SUM(detallemateriales) AS totalmat, SUM(detalleferreteria) AS totalfer, SUM(acuenta) AS totalacuenta, SUM(detallepedido) AS totalpedidos, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC ";
+                                    $sql = "SELECT SUM(detallemateriales) AS totalmat, SUM(detalleferreteria) AS totalfer, SUM(acuenta) AS totalacuenta, SUM(detallepedido) AS totalpedidos, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC LIMIT 30";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -455,7 +456,7 @@ if (isset($_GET['desconectar'])) {
                             <table>
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT pedido, detallepedido, fechaing from productos WHERE detallepedido != 0  order by id DESC ";
+                                    $sql = "SELECT pedido, detallepedido, fechaing from productos WHERE detallepedido != 0  order by id DESC LIMIT 200";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -506,7 +507,7 @@ if (isset($_GET['desconectar'])) {
                             <table>
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT detallemateriales, detalleferreteria, producto, ferreteria, fechaing from productos WHERE pagotipo = 'debito' order by id DESC ";
+                                    $sql = "SELECT detallemateriales, detalleferreteria, producto, ferreteria, fechaing from productos WHERE pagotipo = 'debito' order by id DESC LIMIT 200";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -576,7 +577,7 @@ if (isset($_GET['desconectar'])) {
                                 <tbody>
                                     <?php
                                     $sql = "SELECT id, producto, serie, ferreteria, detallemateriales, detalleferreteria, cliente, acuenta, fechaing, pagotipo
-                                    FROM productos WHERE cliente != '' order by id DESC ";
+                                    FROM productos WHERE cliente != '' order by id DESC LIMIT 200";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>

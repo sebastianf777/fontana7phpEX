@@ -192,7 +192,7 @@ if (isset($_GET['desconectar'])) {
 
                                     <?php
                                     $sql = "SELECT SUM(acuenta) AS totalacuenta, SUM(detalleferreteria) AS totalfer, SUM(detallemateriales) AS totalmat, SUM(detallepedido) AS totalpedidos, fechaing 
-								FROM productos WHERE serie = 'Sebastian' and pagotipo = 'contado' GROUP BY fechaing order by id DESC ";
+								    FROM productos WHERE serie = 'Sebastian' and pagotipo = 'contado' GROUP BY fechaing order by id DESC Limit 30";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -289,7 +289,7 @@ if (isset($_GET['desconectar'])) {
                             <table>
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT pedido, detallepedido,producto, detallemateriales, ferreteria, detalleferreteria, fechaing from productos WHERE detallepedido != '' AND serie = 'Sebastian' order by id DESC ";
+                                    $sql = "SELECT pedido, detallepedido,producto, detallemateriales, ferreteria, detalleferreteria, fechaing from productos WHERE detallepedido != '' AND serie = 'Sebastian' order by id DESC LIMIT 100";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -350,8 +350,8 @@ if (isset($_GET['desconectar'])) {
                                 <tbody>
 
                                     <?php
-                                    $sql = "SELECT fechaing, ferreteria, detalleferreteria, acuenta, pedido, detallepedido, cliente, producto, detallemateriales, pagotipo, id, numero 
-								from productos WHERE serie = 'Sebastian' order by id DESC ";
+                                    $sql = "SELECT fechaing, ferreteria, detalleferreteria, acuenta, pedido, detallepedido, cliente, producto, detallemateriales, pagotipo, id, numero, count_mat, count_fer 
+								from productos WHERE serie = 'Sebastian' order by id DESC LIMIT 300";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -393,13 +393,13 @@ if (isset($_GET['desconectar'])) {
                                                         <div class="item">
                                                             <img src="/img/materiales.png" alt="materiales imagen">
                                                         </div>
-                                                        <div class="detalle"><?php echo $crow['producto']; ?></div>
+                                                        <div class="detalle"><?php echo $crow['count_mat']; ?> <?php echo $crow['producto']; ?></div>
                                                     </li>
                                                     <li class="item_tipo_2 ventas_dia">
                                                         <div class="item">
                                                             <img src="/img/ferreteria.png" alt="ferreteria img">
                                                         </div>
-                                                        <div class="detalle"><?php echo $crow['ferreteria']; ?></div>
+                                                        <div class="detalle"><?php echo $crow['count_fer']; ?> <?php echo $crow['ferreteria']; ?></div>
                                                     </li>
                                                     <li class="item_tipo_3 ventas_dia">
                                                         <div class="item">

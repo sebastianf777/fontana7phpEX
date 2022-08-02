@@ -507,7 +507,7 @@ if (isset($_GET['desconectar'])) {
                             <table>
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT detallemateriales, detalleferreteria, producto, ferreteria, fechaing from productos WHERE pagotipo = 'debito' order by id DESC LIMIT 200";
+                                    $sql = "SELECT detallemateriales, detalleferreteria, producto, ferreteria, count_mat, count_fer, fechaing from productos WHERE pagotipo = 'debito' order by id DESC LIMIT 200";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
                                     ?>
@@ -520,13 +520,13 @@ if (isset($_GET['desconectar'])) {
                                                         <div class="item">
                                                             <img src="/img/materiales.png" alt="materiales imagen">
                                                         </div>
-                                                        <div class="detalle"><?php echo $crow['producto']; ?></div>
+                                                        <div class="detalle"><?php echo $crow['count_mat']; ?> <?php echo $crow['producto']; ?></div>
                                                     </li>
                                                     <li class="item_tipo_2 ventas_dia">
                                                         <div class="item">
                                                             <img src="/img/ferreteria.png" alt="ferreteria img">
                                                         </div>
-                                                        <div class="detalle"><?php echo $crow['ferreteria']; ?></div>
+                                                        <div class="detalle"><?php echo $crow['count_fer']; ?> <?php echo $crow['ferreteria']; ?></div>
                                                     </li>
                                                 </ul>
                                             </td>
@@ -576,7 +576,7 @@ if (isset($_GET['desconectar'])) {
 
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT id, producto, serie, ferreteria, detallemateriales, detalleferreteria, cliente, acuenta, fechaing, pagotipo
+                                    $sql = "SELECT id, producto, serie, ferreteria, detallemateriales, detalleferreteria, cliente, acuenta, count_mat, count_fer, fechaing, pagotipo
                                     FROM productos WHERE cliente != '' order by id DESC LIMIT 200";
                                     $result = mysqli_query($con, $sql);
                                     while ($crow = mysqli_fetch_assoc($result)) {
@@ -602,13 +602,13 @@ if (isset($_GET['desconectar'])) {
                                                         <div class="item">
                                                             <img src="/img/materiales.png" alt="materiales imagen">
                                                         </div>
-                                                        <div class="detalle"><?php echo $crow['producto']; ?></div>
+                                                        <div class="detalle"><?php echo $crow['count_mat']; ?> <?php echo $crow['producto']; ?></div>
                                                     </li>
                                                     <li class="item_tipo_2 ventas_dia">
                                                         <div class="item">
                                                             <img src="/img/ferreteria.png" alt="ferreteria img">
                                                         </div>
-                                                        <div class="detalle"><?php echo $crow['ferreteria']; ?></div>
+                                                        <div class="detalle"><?php echo $crow['count_fer']; ?> <?php echo $crow['ferreteria']; ?></div>
                                                     </li>
                                                 </ul>
                                             </td>

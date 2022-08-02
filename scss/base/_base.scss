@@ -2,10 +2,10 @@ body {
     color: $color_primary_ex;
     margin: 0;
     padding: 0;
-    background: url(/img/fondo1.webp);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(/img/fondo1.webp), url(/img/fondo2.webp);
+    background-repeat: no-repeat, repeat;
+    background-size: cover, cover;
+    background-position: 0 0, 0 603px;
 
     &::-webkit-scrollbar {
         width: 0.25rem;
@@ -40,13 +40,4 @@ table,
 th,
 td {
     border: 1px solid;
-}
-
-@media only screen and (max-width: 900px) {
-    body {
-        background-image: url(/img/fondo1.webp), url(/img/fondo2.webp);
-        background-repeat: no-repeat, repeat;
-        background-size: cover, cover;
-        background-position: 0 0, 0 603px;
-    }
 }

@@ -5,7 +5,7 @@
     max-width: 45vw;
 
     .registrar_ul {
-        height: 94%;
+        // height: 94%;
         list-style: none;
         margin: 0;
         padding: 1rem 2rem;
@@ -79,10 +79,12 @@
                     display: none;
                 }
                 textarea {
-                    height: 1rem;
+                    height: 1.5rem;
                     resize: none;
                     margin: 0 2vw;
                     width: inherit;
+                    overflow: hidden;
+                    padding: 0;
                 }
                 select{
                     height: 1.5rem;
@@ -132,6 +134,9 @@
             .registrar_icono {
                 text-align: start;
                 width: 20%;
+                img{
+                    width: 28px;
+                }
             }
 
             .registrar_opciones {
@@ -208,7 +213,7 @@
 
     @media only screen and (max-width: 600px) {
         width: 90vw;
-        height: 83vh;
+        margin-bottom: 75px;
         max-width: none;
 
         .registrar_ul {
@@ -222,9 +227,9 @@
                 .registrar_item {
                     width: 75%;
 
-                    .cantidad {
-                        width: 10%;
-                    }
+                    // .cantidad {
+                    //     width: auto;
+                    // }
 
                     .item_icono {
                         width: auto;
@@ -239,8 +244,11 @@
                     width: 25%;
                 }
             }
-
+            .registrar_opciones-icono .registrar_icono img{
+                width: 20px;
+            }
             .registrar_fecha-icono-img {
+                
                 .registrar_fecha {
 
                     #element_4_2,

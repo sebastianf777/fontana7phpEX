@@ -181,6 +181,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                                 <option value="Stuko-Exterior">Stuko-Exterior</option>
                                 <option value="Weber-fino">Weber-fino</option>
                                 <option value="Fintuc-fino">Fintuc-fino</option>
+                                <option value="Plaster-fino">Plaster-fino</option>
                             </optgroup>
                             <optgroup label="Pegamentos">
                                 <option value="Klaukol">Klaukol</option>
@@ -188,6 +189,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                                 <option value="Construkor">Construkor</option>
                                 <option value="Weber-pegamento">Weber-pegamento</option>
                                 <option value="Fintuc-pegamento">Fintuc-pegamento</option>
+                                <option value="Plaster-pegamento">Plaster-pegamento</option>
                             </optgroup>
                             <optgroup label="Hierros">
                                 <option value="Hierro-del-6-torsionado">Hierro-del-6-torsionado</option>
@@ -367,6 +369,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <option value="Stuko-Exterior">Stuko-Exterior</option>
                         <option value="Weber-fino">Weber-fino</option>
                         <option value="Fintuc-fino">Fintuc-fino</option>
+                        <option value="Plaster-fino">Plaster-fino</option>
                     </optgroup>
                     <optgroup label="Pegamentos">
                         <option value="Klaukol">Klaukol</option>
@@ -374,6 +377,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <option value="Construkor">Construkor</option>
                         <option value="Weber-pegamento">Weber-pegamento</option>
                         <option value="Fintuc-pegamento">Fintuc-pegamento</option>
+                        <option value="Plaster-pegamento">Plaster-pegamento</option>
                     </optgroup>
                     <optgroup label="Hierros">
                         <option value="Hierro-del-6-torsionado">Hierro-del-6-torsionado</option>

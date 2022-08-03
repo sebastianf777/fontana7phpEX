@@ -12,7 +12,7 @@ while ($crow = mysqli_fetch_assoc($result)) {
 
 ?>
 
-<option id='".$id."' value='".$material."'>".$material."</option>";
+<option id='<?php echo $crow['id']; ?>' value='<?php echo $crow['material']; ?>'><?php echo $crow['material']; ?></option>";
 <?php
 }
 ?>

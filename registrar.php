@@ -38,9 +38,9 @@ $_SESSION['FORM_SECRET'] = $secret;
     <script>
         $(document).ready(function() {
        
-    setInterval(function () {
+    // setInterval(function () {
         get_data()
-    }, 1000);
+    // }, 1000);
     function get_data() {
         jQuery.ajax({
             type: "GET",
@@ -51,8 +51,7 @@ $_SESSION['FORM_SECRET'] = $secret;
             // complete(): function() {
             // },
             success: function(data){
-        
-                $("selecet_element_2").html(data);
+                $("#select_element_2").html(data);
             }
         });
     }

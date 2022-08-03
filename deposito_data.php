@@ -25,7 +25,6 @@ $result = mysqli_query($con, $sql);
 while ($crow = mysqli_fetch_assoc($result)) {
 ?>
 
-    <tbody>
         <tr >
             <td class="deposito_numero">
                 <?php echo $crow['numero']; ?>
@@ -41,7 +40,6 @@ while ($crow = mysqli_fetch_assoc($result)) {
                 <?php echo $crow['id']; ?>
             </td>
         </tr>
-    </tbody>
 <?php
 }
 ?>

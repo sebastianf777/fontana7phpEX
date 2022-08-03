@@ -12,10 +12,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            setInterval(function() {
-                location.reload();
-            }, 7000);
+       
+    setInterval(function () {
+        get_data()
+    }, 1000);
+    function get_data() {
+        jQuery.ajax({
+            type: "GET",
+            url: "deposito_data.php",
+            data: "",
+            beforeSend: function(){
+            },
+            // complete(): function() {
+            // },
+            success: function(data){
+     
+                $("table").html(data);
+            }
         });
+    }
+    });
     </script>
 </head>
 <!-- TERMINA HEAD -->
@@ -121,52 +137,7 @@
     <section>
 
         <table class="deposito_tabla">
-            <thead>
-                <tr>
-                    <th class="deposito_numero">
-                        Nº
-                    </th>
-                    <th class="deposito_producto">
-                        PRODUCTO
-                    </th>
-                    <th class="deposito_vendedor">
-                        VENDEDOR
-                    </th>
-                    <th class="deposito_id">
-                        ID
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                require('conectar.php');
-                ?>
-                <?php
-                $sql = "SELECT numero, UPPER(producto) AS ferremat, count_mat AS cantidad, serie, id from productos WHERE detallemateriales != '' 
-                        UNION
-                        SELECT numero, UPPER(ferreteria) AS ferremat, count_fer AS cantidad, serie, id from productos WHERE mostrar = 'Si' AND detalleferreteria != '' order by id DESC LIMIT 30 ";
-                $result = mysqli_query($con, $sql);
-                while ($crow = mysqli_fetch_assoc($result)) {
-                ?>
-                    <tr>
-                        <td class="deposito_numero">
-                            <?php echo $crow['numero']; ?>
-                        </td>
-                        <td class="deposito_ferremat">
-                            <?php echo $crow['cantidad']; ?>
-                            <?php echo $crow['ferremat']; ?>
-                        </td>
-                        <td class="deposito_serie">
-                            <?php echo $crow['serie']; ?>
-                        </td>
-                        <td>
-                            <?php echo $crow['id']; ?>
-                        </td>
-                    </tr>
-                <?php
-                }
-                ?>
-            </tbody>
+            
         </table>
     </section>
     <script src="/js/main.js"></script>

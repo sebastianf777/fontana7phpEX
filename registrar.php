@@ -51,7 +51,7 @@ $_SESSION['FORM_SECRET'] = $secret;
             // complete(): function() {
             // },
             success: function(data){
-                $("#select_element_2").html(data);
+                $(".select_materiales").html(data);
             }
         });
     }
@@ -191,7 +191,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
 
 
-                        <select id="select_element_2" name="" class="ocultar_modo">
+                        <select id="select_element_2" name="" class="ocultar_modo select_materiales">
 
                             <!-- <optgroup label="Cementos">
                                 <option value="Cemento">Cemento</option>
@@ -380,8 +380,8 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <input type="number" name="count_mat[]">
                 </div>
                 <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                <select id="select_element_2" name="" class="ocultar_modo">
-                    <optgroup label="Cementos">
+                <select id="select_element_2" name="" class="ocultar_modo select_materiales">
+                    <!-- <optgroup label="Cementos">
                         <option value="Cemento">Cemento</option>
                         <option value="Plasticor">Plasticor</option>
                         <option value="Cal">Cal</option>
@@ -412,7 +412,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <option value="Hierro-del-10-liso">Hierro-del-10-liso</option>
                         <option value="Hierro-del-12-liso">Hierro-del-12-liso</option>
                         <option value="Alambre-de-fardo">Alambre-de-fardo x kg</option>
-                    </optgroup>
+                    </optgroup> -->
                 </select>
             </div>
             <div class="registrar_importe">

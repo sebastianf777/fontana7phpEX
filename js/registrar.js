@@ -44,6 +44,7 @@ let cada_uno_cifra;
 let total_multiplicado;
 let sum = 0;
 
+let select_materiales = document.querySelectorAll('.select_materiales');
 
 //Función checkeo registro
 
@@ -168,6 +169,22 @@ function conseguirSibling(elem, selector) {
     sibling = sibling.nextElementSibling;
   }
 };
+
+
+//Precio automático
+
+function precioAuto() {
+  select_materiales.forEach(element => {
+  if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('..tiene_funcion_precio_auto') == false)) {
+    element.classList.add('.tiene_funcion_precio_auto');
+    element.onfocus = (e) =>{
+      const [option] = e.target.selectedOptions;
+      cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio;
+
+    }
+  }
+  });
+}
 
 
 //Sumar Total y funcion Sumar
@@ -331,5 +348,6 @@ window.onload = function () {
   funcionMultiplicar();
   funcionSumar();
   checkeoRegistro();
+  precioAuto();
 }
 

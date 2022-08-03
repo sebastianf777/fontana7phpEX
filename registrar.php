@@ -35,6 +35,29 @@ $_SESSION['FORM_SECRET'] = $secret;
     <title>-formulario Fontana Viamonte</title>
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+       
+    setInterval(function () {
+        get_data()
+    }, 1000);
+    function get_data() {
+        jQuery.ajax({
+            type: "GET",
+            url: "preciosV_data_A.php",
+            data: "",
+            beforeSend: function(){
+            },
+            // complete(): function() {
+            // },
+            success: function(data){
+        
+                $("selecet_element_2").html(data);
+            }
+        });
+    }
+    });
+    </script>
 </head>
 
 <body class="dark">
@@ -170,7 +193,8 @@ $_SESSION['FORM_SECRET'] = $secret;
 
 
                         <select id="select_element_2" name="" class="ocultar_modo">
-                            <optgroup label="Cementos">
+
+                            <!-- <optgroup label="Cementos">
                                 <option value="Cemento">Cemento</option>
                                 <option value="Plasticor">Plasticor</option>
                                 <option value="Cal">Cal</option>
@@ -201,7 +225,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                                 <option value="Hierro-del-10-liso">Hierro-del-10-liso</option>
                                 <option value="Hierro-del-12-liso">Hierro-del-12-liso</option>
                                 <option value="Alambre-de-fardo">Alambre-de-fardo x kg</option>
-                            </optgroup>
+                            </optgroup> -->
                         </select>
                     </div>
                     <div class="registrar_importe">

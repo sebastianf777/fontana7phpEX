@@ -75,7 +75,7 @@ if (isset($_SESSION["FORM_SECRET"])) {
 $stmt->close();
 ?>
 
-<html>
+<!-- <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -87,4 +87,4 @@ $stmt->close();
 <body>
 </body>
 
-</html>
+</html> -->

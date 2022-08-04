@@ -44,7 +44,7 @@ $_SESSION['FORM_SECRET'] = $secret;
     function get_data() {
         jQuery.ajax({
             type: "GET",
-            url: "preciosV_data_A.php",
+            url: "precios_data.php",
             data: "",
             beforeSend: function(){
             },

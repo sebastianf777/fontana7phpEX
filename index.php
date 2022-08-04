@@ -1,3 +1,27 @@
+<?php
+session_start();
+
+if (isset($_SESSION['registro_index']) == 'Success') {
+	unset($_SESSION['registro_index']);
+	echo '<script type="text/javascript">';
+	echo 'let registro_exitoso = true;';
+	echo '</script>';
+}
+
+if (!isset($_SESSION['user_id'])) {
+	header('Location: login.php?referrer=index');
+	exit;
+}
+if (isset($_GET['desconectar'])) {
+	session_destroy();
+	header("refresh:5;url=login.php");
+	echo ("<span style='color:green;'>Haz sido desconectado correctamente. Redireccionando...</span>");
+	exit;
+}
+$secret = md5(uniqid(rand(), true));
+$_SESSION['FORM_SECRET'] = $secret;
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,12 +34,34 @@
 	<link rel="stylesheet" href="/css/style.css">
 	<title>-inicio Fontana Viamonte</title>
 	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
+		$(document).ready(function() {
+
+			// setInterval(function () {
+			get_data()
+			// }, 1000);
+			function get_data() {
+				jQuery.ajax({
+					type: "GET",
+					url: "precios_data.php",
+					data: "",
+					beforeSend: function() {},
+					// complete(): function() {
+					// },
+					success: function(data) {
+						$(".select_materiales").html(data);
+					}
+				});
+			}
+		});
+	</script>
+	<!-- <script>
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
 		// Then we set the value in the --vh custom property to the root of the document
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	</script>
+	</script> -->
 </head>
 
 <!-- BODY -->
@@ -121,8 +167,39 @@
 	<section class="index">
 		<h1>CONTROL VIAMONTE</h1>
 	</section>
+	<section>
+		<div class="tablas_index">
+			<div class="registrar_precios">
+				<form class="registrar_form" method="post" action="index_formulas.php">
+					<ul class="registrar_ul">
+						<!-- <li class="item-cemento">
+				<label for="cemento">Cemento</label>
 
-    <script src="/js/main.js"></script>
+					<input name="cemento" type="text">
+					
+				</li> -->
+						<li>
+							<select id="select_element_2" name="id" class="select_materiales">
+								<div class="precio">
+									<label for="precio">$</label>
+									<input class="precio" name="precio" type="number">
+								</div>
+						</li>
+						<li class="registrar_submit">
+							<input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
+							<input id="registrar_submit" type="submit" name="submit" value="Submit" />
+
+						</li>
+					</ul>
+
+				</form>
+			</div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</section>
+	<script src="/js/main.js"></script>
 
 </body>
 

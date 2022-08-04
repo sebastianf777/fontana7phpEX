@@ -240,6 +240,14 @@ td {
     visibility: visible;
   }
 }
+.tablas_index {
+  display: flex;
+  justify-content: center;
+}
+.tablas_index .registrar_precios .registrar_form {
+  width: auto;
+}
+
 .registrar_form {
   background-color: ghostwhite;
   border: solid 1px;

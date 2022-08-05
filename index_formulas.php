@@ -13,10 +13,10 @@ if (isset($_SESSION["FORM_SECRET"])) {
         /*Put your form submission code here after processing the form data, unset the secret key from the session*/
         if (isset($_POST['submit'])) {
 
-            $id = mysqli_real_escape_string($conn, $_POST['id']);
-            $precio = mysqli_real_escape_string($conn, $_POST['precio']);
+            $id = mysqli_real_escape_string($conn, $_POST['id_index']);
+            $precio = mysqli_real_escape_string($conn, $_POST['precio_index']);
 
-            $query = "UPDATE precios_viamonte SET precio=precio WHERE id=id";
+            $query = "UPDATE precios_viamonte SET precio = precio_index WHERE id = id_index";
 
             $stmt = $con->prepare($query);
 

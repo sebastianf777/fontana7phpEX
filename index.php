@@ -179,10 +179,10 @@ $_SESSION['FORM_SECRET'] = $secret;
 					
 				</li> -->
 						<li>
-							<select id="select_element_2" name="id" class="select_materiales">
+							<select id="select_element_2" name="id_index" class="select_materiales">
 								<div class="precio">
 									<label for="precio">$</label>
-									<input class="precio" name="precio" type="number">
+									<input class="precio" name="precio_index" type="number">
 								</div>
 						</li>
 						<li class="registrar_submit">

@@ -15,14 +15,15 @@ if (isset($_SESSION["FORM_SECRET"])) {
 
             $id = mysqli_real_escape_string($conn, $_POST['id_index']);
             $precio = mysqli_real_escape_string($conn, $_POST['precio_index']);
-
-            $query = "UPDATE precios_viamonte SET precio = precio_index WHERE id = id_index";
+            
+            // $query = "SELECT precio, id FROM precios_viamonte;";
+            $query= "UPDATE precios_viamonte SET precio = ? WHERE id = ?;";
 
             $stmt = $con->prepare($query);
 
-            $stmt->bind_param('is', $id, $precio);
+            $stmt->bind_param('is', $precio, $id);
 
-
+            $stmt->execute();
 
             if ($stmt->error) {
                 echo '<script type="text/javascript">';
@@ -30,11 +31,13 @@ if (isset($_SESSION["FORM_SECRET"])) {
                 echo 'window.location = "registrar.php";';
                 echo '</script>';
             } else {
-
-                $_SESSION['registro'] = 'Success';
-                echo '<script type="text/javascript">';
-                echo 'window.location = "index.php";';
-                echo '</script>';
+                echo $precio;
+                echo $id;
+                // $_SESSION['registro'] = 'Success';
+                // echo '<script type="text/javascript">';
+                // echo 'window.location = "index.php";';
+                // echo '</script>';
+                
             }
         }
         unset($_SESSION["FORM_SECRET"]);

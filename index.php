@@ -41,6 +41,9 @@ $_SESSION['FORM_SECRET'] = $secret;
             // setInterval(function () {
             get_data()
             // }, 1000);
+            //  setTimeout(function () {
+            //     get_data()
+            // }, 1000);
             function get_data() {
                 jQuery.ajax({
                     type: "GET",
@@ -163,19 +166,21 @@ $_SESSION['FORM_SECRET'] = $secret;
     </header>
 
     <!-- BOTONES DIRECTO A ENLACES -->
+<section>
+<h1>CONTROL VIAMONTE</h1>
 
-    <section class="index">
-        <h1>CONTROL VIAMONTE</h1>
-    </section>
-    <section>
-        <div class="tablas_index">
-            <div class="registrar_precios">
-                <form class="registrar_form" method="post" action="index_formulas.php">
+</section>
+    <section class="index index_forms">
+    <section class="forms_izq">
+   
+
+
+            <div class="form_precioNuevo">
+                <form class="form_index" method="post" action="index_formulas.php">
                     <ul class="registrar_ul">
                         <li class="registrar_submit">
                             <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
                             <input id="registrar_submit" type="submit" name="submit" value="Submit" />
-
                         </li>
                         <li>
                             <select id="select_element_2" name="id_index" class="select_materiales">
@@ -184,12 +189,33 @@ $_SESSION['FORM_SECRET'] = $secret;
                                     <input class="precio" name="precio_index" type="number">
                                 </div>
                         </li>
-
                     </ul>
-
                 </form>
             </div>
-            <div class="mostrar_precios">
+            <div class="form_nuevoItem">
+                <form class="form_index" method="post" action="index_nuevoItem_formulas.php">
+                    <ul class="registrar_ul">
+                        <li>
+                            <input class="precio" name="id_nuevoItem_index" type="text" placeholder="id">
+                        </li>
+                        <li>
+                            <input class="material" name="material_nuevoItem_index" type="text" placeholder="Material">
+                        </li>
+                        <li>
+                            <input class="precio" name="precio_nuevoItem_index" type="number" placeholder="precio">
+                        </li>
+                        <li class="registrar_submit">
+                            <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
+                            <input id="registrar_submit" type="submit" name="submit" value="Submit" />
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            
+
+    </section>
+    <aside class="forms_der">
+    <div class="form_datos">
                 <table>
                     <thead>
                         <tr>
@@ -232,10 +258,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </tbody>
                 </table>
             </div>
-            <div></div>
-            <div></div>
-        </div>
+    </aside>
     </section>
+
     <script src="/js/main.js"></script>
 
 </body>

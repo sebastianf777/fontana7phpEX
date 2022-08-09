@@ -240,12 +240,34 @@ td {
     visibility: visible;
   }
 }
-.tablas_index {
+.index_forms {
+  display: flex;
+  flex-wrap: wrap;
+}
+.index_forms .forms_izq {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.index_forms .forms_izq div .form_index {
+  background-color: ghostwhite;
+  border: solid 1px;
+  box-shadow: 1px 1px;
+  border-radius: 1rem;
+}
+.index_forms .forms_izq div .form_index ul {
+  list-style-type: none;
+}
+.index_forms .forms_der {
   display: flex;
   justify-content: center;
 }
-.tablas_index .registrar_precios .registrar_form {
-  width: auto;
+.index_forms .forms_der .form_datos {
+  background-color: ghostwhite;
+  border: solid 1px;
+  box-shadow: 1px 1px;
+  border-radius: 1rem;
 }
 
 .registrar_form {

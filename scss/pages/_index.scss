@@ -1,6 +1,28 @@
-.tablas_index{
-    @include flexCenter;
-    .registrar_precios .registrar_form{
-        width: auto;
+.index_forms {
+    display: flex;
+    flex-wrap: wrap;
+    .forms_izq {
+        margin: 0;
+        @include flexColumnCenter;
+
+        div .form_index {
+            @include tabla_css;
+
+            ul {
+                list-style-type: none;
+            }
+        }
+
+    }
+
+    .forms_der {
+
+        @include flexCenter;
+
+        .form_datos {
+            @include tabla_css;
+
+        }
+
     }
 }

@@ -177,11 +177,12 @@ function precioAuto() {
   select_materiales.forEach(element => {
   if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('..tiene_funcion_precio_auto') == false)) {
     element.classList.add('.tiene_funcion_precio_auto');
-    element.onfocus = (e) =>{
+    element.addEventListener('focusin', function (e) {
       const [option] = e.target.selectedOptions;
       cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio;
 
     }
+    )
   }
   });
 }

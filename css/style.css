@@ -258,7 +258,15 @@ td {
   border-radius: 1rem;
 }
 .index_forms .forms_izq div .form_index ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
   list-style-type: none;
+}
+.index_forms .forms_izq div .form_index ul li {
+  display: flex;
+  justify-content: center;
 }
 .index_forms .forms_der {
   display: flex;

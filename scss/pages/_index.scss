@@ -1,6 +1,7 @@
 .index_forms {
     display: flex;
     flex-wrap: wrap;
+
     .forms_izq {
         padding: 0;
         margin: 0;
@@ -10,7 +11,13 @@
             @include tabla_css;
 
             ul {
+                @include flexColumnCenter;
+                padding: 0;
                 list-style-type: none;
+
+                li {
+                    @include flexCenter;
+                }
             }
         }
 

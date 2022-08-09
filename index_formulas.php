@@ -33,10 +33,7 @@ if (isset($_SESSION["FORM_SECRET"])) {
             } else {
                 echo $precio;
                 echo $id;
-                // $_SESSION['registro'] = 'Success';
-                // echo '<script type="text/javascript">';
-                // echo 'window.location = "index.php";';
-                // echo '</script>';
+
                 
             }
         }

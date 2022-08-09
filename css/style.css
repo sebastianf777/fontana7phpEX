@@ -277,8 +277,8 @@ td {
   border: solid 1px;
   box-shadow: 1px 1px;
   border-radius: 1rem;
+  padding: 7px;
 }
-
 .registrar_form {
   background-color: ghostwhite;
   border: solid 1px;

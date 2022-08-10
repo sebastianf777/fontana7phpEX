@@ -269,6 +269,7 @@ td {
   justify-content: center;
 }
 .index_forms .forms_der {
+  margin-left: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -279,6 +280,12 @@ td {
   border-radius: 1rem;
   padding: 7px;
 }
+@media only screen and (min-width: 601px) {
+  .index_forms {
+    margin: 0 1rem 0 6rem;
+  }
+}
+
 .registrar_form {
   background-color: ghostwhite;
   border: solid 1px;

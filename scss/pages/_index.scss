@@ -24,7 +24,7 @@
     }
 
     .forms_der {
-
+        margin-left: 1rem;
         @include flexCenter;
 
         .form_datos {
@@ -33,7 +33,7 @@
         }
 
     }
-    @media only screen and (max-width: 600px) {
-        
+    @media only screen and (min-width: 601px) {
+        margin: 0 1rem 0 6rem;
         }
 }

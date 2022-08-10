@@ -193,6 +193,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </form>
             </div>
             <div class="form_nuevoItem">
+                <h3>
+                    Nuevo Item
+                </h3>
                 <form class="form_index" method="post" action="index_nuevoItem_formulas.php">
                     <ul class="registrar_ul">
                         <li>

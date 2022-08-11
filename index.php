@@ -53,6 +53,24 @@ $_SESSION['FORM_SECRET'] = $secret;
                     // complete(): function() {
                     // },
                     success: function(data) {
+                        $(".editar_materiales").html(data);
+                    }
+                });
+            }
+            get_editarPreciosData()
+            // }, 1000);
+            //  setTimeout(function () {
+            //     get_data()
+            // }, 1000);
+            function get_editarPreciosData() {
+                jQuery.ajax({
+                    type: "GET",
+                    url: "index_editarPrecios_data.php",
+                    data: "",
+                    beforeSend: function() {},
+                    // complete(): function() {
+                    // },
+                    success: function(data) {
                         $(".select_materiales").html(data);
                     }
                 });
@@ -227,7 +245,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <form class="form_nuevoItem" method="post" action="index_editarItem_formulas.php">
                     <ul class="registrar_ul">
                         <li>
-                            <select id="select_element_2" name="id_index" class="select_materiales">
+                            <select id="select_element_2" name="id_index" class="editar_materiales">
                             </select>
                         </li>
                         <li>

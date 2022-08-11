@@ -16,7 +16,6 @@ if (isset($_SESSION["FORM_SECRET"])) {
             $id = mysqli_real_escape_string($conn, $_POST['id_index']);
             $precio = mysqli_real_escape_string($conn, $_POST['precio_index']);
             
-            // $query = "SELECT precio, id FROM precios_viamonte;";
             $query= "UPDATE precios_viamonte SET precio = ? WHERE id = ?;";
 
             $stmt = $con->prepare($query);

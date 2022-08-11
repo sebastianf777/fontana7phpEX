@@ -251,20 +251,33 @@ td {
   justify-content: center;
   flex-direction: column;
 }
-.index_forms .forms_izq div .form_index {
+.index_forms .forms_izq .forms_index {
+  text-align: center;
+  padding: 0px 1.3rem;
+  margin-bottom: 1rem;
   background-color: ghostwhite;
   border: solid 1px;
   box-shadow: 1px 1px;
   border-radius: 1rem;
 }
-.index_forms .forms_izq div .form_index ul {
+.index_forms .forms_izq .forms_index form ul {
+  list-style-type: none;
+  padding: 0;
+}
+.index_forms .forms_izq .forms_index form ul #registrar_submit {
+  margin: 1rem 0 0 0;
+}
+.index_forms .forms_izq .forms_index .form_cambiarPrecio ul .cambiarPrecio_li {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0;
-  list-style-type: none;
 }
-.index_forms .forms_izq div .form_index ul li {
+.index_forms .forms_izq .forms_index .form_nuevoItem ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.index_forms .forms_izq .forms_index .form_nuevoItem ul li {
   display: flex;
   justify-content: center;
 }

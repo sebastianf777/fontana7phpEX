@@ -13,25 +13,23 @@ if (isset($_SESSION["FORM_SECRET"])) {
         /*Put your form submission code here after processing the form data, unset the secret key from the session*/
         if (isset($_POST['submit'])) {
 
-            $id = mysqli_real_escape_string($conn, $_POST['id_editarItem']);
+            $id = mysqli_real_escape_string($conn, $_POST['id_delete']);
 
-            $idNuevo = mysqli_real_escape_string($conn, $_POST['id_editarItem_index']);
-            $material = mysqli_real_escape_string($conn, $_POST['material_editarItem_index']);
-            $precio = mysqli_real_escape_string($conn, $_POST['precio_editarItem_index']);
-
-            $query= "UPDATE precios_viamonte SET id = LOWER('$idNuevo'), material = LOWER('$material'), precio = LOWER('$precio') WHERE id = '$id';";
+            $query= "DELETE FROM precios_viamonte WHERE id = '$id';";
 
             $stmt = $con->prepare($query);
+
+            // $stmt->bind_param('i', $id);
 
             $stmt->execute();
 
             if ($stmt->error) {
                 echo '<script type="text/javascript">';
                 echo 'alert("ERROR! REVISAR SI FALTA ALGUN DATO");';
-                echo 'window.location = "index.php";';
+                echo 'window.location = "registrar.php";';
                 echo '</script>';
             } else {
-            
+             
                 echo '<script type="text/javascript">';
                 echo 'alert("REGISTRO CORRECTO");';
                 echo 'window.location = "index.php";';

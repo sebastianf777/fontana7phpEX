@@ -53,36 +53,14 @@ $_SESSION['FORM_SECRET'] = $secret;
                     // complete(): function() {
                     // },
                     success: function(data) {
-                        $(".editar_materiales").html(data);
-                    }
-                });
-            }
-            get_editarPreciosData()
-            // }, 1000);
-            //  setTimeout(function () {
-            //     get_data()
-            // }, 1000);
-            function get_editarPreciosData() {
-                jQuery.ajax({
-                    type: "GET",
-                    url: "index_editarPrecios_data.php",
-                    data: "",
-                    beforeSend: function() {},
-                    // complete(): function() {
-                    // },
-                    success: function(data) {
                         $(".select_materiales").html(data);
                     }
                 });
             }
+            
         });
     </script>
-    <!-- <script>
-		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		let vh = window.innerHeight * 0.01;
-		// Then we set the value in the --vh custom property to the root of the document
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	</script> -->
+
 </head>
 
 <!-- BODY -->
@@ -190,9 +168,6 @@ $_SESSION['FORM_SECRET'] = $secret;
     </section>
     <section class="index index_forms">
         <section class="forms_izq">
-
-
-
             <div class="forms_index">
                 <h3>
                     Cambiar Precio
@@ -256,7 +231,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </li>
                         <li>
                             <select id="select_element_2" 
-                            name="id_editarItem" class="editar_materiales">
+                            name="id_editarItem" class="select_materiales">
                             </select>
                         </li>
                         <li class="registrar_submit">
@@ -267,7 +242,25 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </ul>
                 </form>
             </div>
+            <div class="forms_index">
+                <h3>
+                    Eliminar Item
+                </h3>
+                <form class="form_eliminarItem" method="post" action="index_eliminarItem_formulas.php">
+                    <ul class="registrar_ul">
 
+                        <li class="cambiarPrecio_li">
+                            <select id="select_element_2" name="id_delete" class="select_materiales">
+                            </select>
+
+                        </li>
+                        <li class="registrar_submit">
+                            <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
+                            <input id="registrar_submit" type="submit" name="submit" value="Submit" />
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </section>
         <aside class="forms_der">
             <div class="form_datos">

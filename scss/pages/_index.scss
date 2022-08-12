@@ -20,9 +20,9 @@
                 }
                 }
             }
-            .form_cambiarPrecio{
+            .form_cambiarPrecio, .form_eliminarItem{
                 ul{
-                    .cambiarPrecio_li{
+                    li{
                         @include flexColumnCenter;
 
                     }
@@ -50,6 +50,10 @@
         .form_datos {
             @include tabla_css;
             padding: 7px;
+            table{
+        text-transform: initial;
+
+            }            
         }
 
     }

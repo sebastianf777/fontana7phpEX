@@ -18,7 +18,7 @@ if (isset($_SESSION["FORM_SECRET"])) {
             $precio = mysqli_real_escape_string($conn, $_POST['precio_nuevoItem_index']);
             
             // $query = "SELECT precio, id FROM precios_viamonte;";
-            $query= "INSERT INTO precios_viamonte (precio, id, material) VALUES (?,?,?);";
+            $query= "INSERT INTO precios_viamonte (precio, id, material) VALUES (LOWER(?),LOWER(?),LOWER(?));";
 
             $stmt = $con->prepare($query);
 

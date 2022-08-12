@@ -267,7 +267,7 @@ td {
 .index_forms .forms_izq .forms_index form ul #registrar_submit {
   margin: 1rem 0 0 0;
 }
-.index_forms .forms_izq .forms_index .form_cambiarPrecio ul .cambiarPrecio_li {
+.index_forms .forms_izq .forms_index .form_cambiarPrecio ul li, .index_forms .forms_izq .forms_index .form_eliminarItem ul li {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -292,6 +292,9 @@ td {
   box-shadow: 1px 1px;
   border-radius: 1rem;
   padding: 7px;
+}
+.index_forms .forms_der .form_datos table {
+  text-transform: initial;
 }
 @media only screen and (min-width: 601px) {
   .index_forms {

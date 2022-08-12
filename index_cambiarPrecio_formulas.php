@@ -30,10 +30,10 @@ if (isset($_SESSION["FORM_SECRET"])) {
                 echo 'window.location = "registrar.php";';
                 echo '</script>';
             } else {
-                echo $precio;
-                echo $id;
-
-                
+                echo '<script type="text/javascript">';
+                echo 'alert("REGISTRO CORRECTO");';
+                echo 'window.location = "index.php";';
+                echo '</script>';
             }
         }
         unset($_SESSION["FORM_SECRET"]);

@@ -244,10 +244,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </h3>
                 <form class="form_nuevoItem" method="post" action="index_editarItem_formulas.php">
                     <ul class="registrar_ul">
-                        <li>
-                            <select id="select_element_2" name="id_index" class="editar_materiales">
-                            </select>
-                        </li>
+                        
                         <li>
                             <input class="precio" name="id_editarItem_index" type="text" placeholder="id">
                         </li>
@@ -257,10 +254,16 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <li>
                             <input class="precio" name="precio_editarItem_index" type="number" placeholder="precio">
                         </li>
+                        <li>
+                            <select id="select_element_2" 
+                            name="id_editarItem" class="editar_materiales">
+                            </select>
+                        </li>
                         <li class="registrar_submit">
                             <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
                             <input id="registrar_submit" type="submit" name="submit" value="Submit" />
                         </li>
+                        
                     </ul>
                 </form>
             </div>

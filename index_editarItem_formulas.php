@@ -13,16 +13,16 @@ if (isset($_SESSION["FORM_SECRET"])) {
         /*Put your form submission code here after processing the form data, unset the secret key from the session*/
         if (isset($_POST['submit'])) {
 
-            $id = mysqli_real_escape_string($conn, $_POST['id_index']);
+            $id = mysqli_real_escape_string($conn, $_POST['id_editarItem']);
+            echo $id;
+
             $idNuevo = mysqli_real_escape_string($conn, $_POST['id_editarItem_index']);
             $material = mysqli_real_escape_string($conn, $_POST['material_editarItem_index']);
             $precio = mysqli_real_escape_string($conn, $_POST['precio_editarItem_index']);
-            
-            $query= "UPDATE precios_viamonte SET id = ?, material = ?, precio = ? WHERE id = ?;";
+
+            $query= "UPDATE precios_viamonte SET id = '$idNuevo', material = '$material', precio = '$precio' WHERE id = '$id';";
 
             $stmt = $con->prepare($query);
-
-            $stmt->bind_param('isss', $idNuevo, $material, $precio, $id);
 
             $stmt->execute();
 
@@ -32,6 +32,7 @@ if (isset($_SESSION["FORM_SECRET"])) {
                 echo 'window.location = "index.php";';
                 echo '</script>';
             } else {
+                // echo $id;
                 echo '<script type="text/javascript">';
                 echo 'alert("REGISTRO CORRECTO");';
                 echo 'window.location = "index.php";';

@@ -216,7 +216,6 @@ precio_multiplicado.forEach(element => {
 
 //Multiplicar cantidad x unidad
 
-
 function funcionMultiplicar() {
   cada_uno.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {

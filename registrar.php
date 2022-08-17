@@ -37,25 +37,24 @@ $_SESSION['FORM_SECRET'] = $secret;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-       
-    // setInterval(function () {
-        get_data()
-    // }, 1000);
-    function get_data() {
-        jQuery.ajax({
-            type: "GET",
-            url: "precios_data_registrar.php",
-            data: "",
-            beforeSend: function(){
-            },
-            // complete(): function() {
-            // },
-            success: function(data){
-                $(".select_materiales").html(data);
+
+            // setInterval(function () {
+            get_data()
+            // }, 1000);
+            function get_data() {
+                jQuery.ajax({
+                    type: "GET",
+                    url: "precios_data_registrar.php",
+                    data: "",
+                    beforeSend: function() {},
+                    // complete(): function() {
+                    // },
+                    success: function(data) {
+                        $(".select_materiales").html(data);
+                    }
+                });
             }
         });
-    }
-    });
     </script>
 </head>
 
@@ -161,7 +160,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <li class="registrar_numero-mostrar">
                     <div class="registrar-numero">
                         <label for="element_1">N°: </label>
-                        <input id="element_1" name="element_1" type="text" maxlength="255" value="" required placeholder="X"/>
+                        <input id="element_1" name="element_1" type="text" maxlength="255" value="" required placeholder="X" />
                     </div>
                     <div class="registrar_mostrar">
                         <input id="con_numero" name="con_sin_numero" type="radio" maxlength="255" value="con_numero" checked="checked" />
@@ -187,10 +186,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <div class="cantidad">
                             <input type="number" name="count_mat[]" placeholder="C">
                         </div>
-                        <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
+                        <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
 
 
-                        <select id="select_element_2" name="" class="ocultar_modo select_materiales">
+                        <select id="select_element_2" name="element_2[]" class=" select_materiales">
 
                         </select>
                     </div>
@@ -198,7 +197,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label for="cada_uno">$</label>
                         <input class="cada_uno" name="cada_uno" type="number" placeholder="C/U">
                         <label for="element_5">$</label>
-                        <input id="element_5" name="element_5[]" class="precio_multiplicado" type="number" maxlength="255" value="" step=".01" placeholder="--"/>
+                        <input id="element_5" name="element_5[]" class="precio_multiplicado" type="number" maxlength="255" value="" step=".01" placeholder="--" />
                     </div>
                 </li>
 
@@ -217,8 +216,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <div class="cantidad">
                             <input type="number" name="count_fer[]" placeholder="C">
                         </div>
-                        <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="FERRETERIA - MODO MANUAL"></textarea>
-                        <select id="select_element_6" name="" class="ocultar_modo">
+                        <textarea id="element_6" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="FERRETERIA - MODO MANUAL"></textarea>
+                        <select id="select_element_6" name="element_6[]" class="">
+                            <option value="">Elegir opción</option>
                             <option value="Ferreteria">Ferreteria</option>
                             <option value="PP/PVC">PP/PVC</option>
                             <option value="Electricidad">Electricidad</option>
@@ -235,7 +235,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <input name="cada_uno" class="cada_uno" type="number" placeholder="C/U">
 
                         <label for="element_7">$</label>
-                        <input id="element_7" name="element_7[]" type="number" maxlength="255" class="precio_multiplicado" value="" step=".01" placeholder="--"/>
+                        <input id="element_7" name="element_7[]" type="number" maxlength="255" class="precio_multiplicado" value="" step=".01" placeholder="--" />
                     </div>
 
                 </li>
@@ -263,7 +263,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="registrar_importe">
                         <label for="element_10">$</label>
-                        <input id="element_10" name="element_10" type="number" maxlength="255" value="" step=".01" placeholder="TOTAL"/>
+                        <input id="element_10" name="element_10" type="number" maxlength="255" value="" step=".01" placeholder="TOTAL" />
                     </div>
                 </li>
 
@@ -277,7 +277,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="registrar_importe">
                         <label for="element_12">$</label>
-                        <input id="element_12" name="element_12" type="number" maxlength="255" value="" step=".01" placeholder="A CUENTA"/>
+                        <input id="element_12" name="element_12" type="number" maxlength="255" value="" step=".01" placeholder="A CUENTA" />
                     </div>
 
                 <li class="registrar_opciones-icono">
@@ -338,48 +338,17 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <div class="item_icono" for="element_2">
                     <img src="/img/materiales.png" alt="materiales imagen">
                 </div>
-                <div class="agregar_mat">
-                </div>
+                <button type="button" class="eliminar_boton">
+                    -
+                </button>
                 <button type="button" class="modo_mat">
                     M
                 </button>
                 <div class="cantidad">
                     <input type="number" name="count_mat[]">
                 </div>
-                <textarea id="element_2" name="element_2[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                <select id="select_element_2" name="" class="ocultar_modo select_materiales">
-                    <!-- <optgroup label="Cementos">
-                        <option value="Cemento">Cemento</option>
-                        <option value="Plasticor">Plasticor</option>
-                        <option value="Cal">Cal</option>
-                        <option value="Yeso">Yeso</option>
-                    </optgroup>
-                    <optgroup label="Finos">
-                        <option value="Stuko">Stuko</option>
-                        <option value="Stuko-Exterior">Stuko-Exterior</option>
-                        <option value="Weber-fino">Weber-fino</option>
-                        <option value="Fintuc-fino">Fintuc-fino</option>
-                        <option value="Plaster-fino">Plaster-fino</option>
-                    </optgroup>
-                    <optgroup label="Pegamentos">
-                        <option value="Klaukol">Klaukol</option>
-                        <option value="Klaukol-porcelanato">Klaukol-porcelanato</option>
-                        <option value="Construkor">Construkor</option>
-                        <option value="Weber-pegamento">Weber-pegamento</option>
-                        <option value="Fintuc-pegamento">Fintuc-pegamento</option>
-                        <option value="Plaster-pegamento">Plaster-pegamento</option>
-                    </optgroup>
-                    <optgroup label="Hierros">
-                        <option value="Hierro-del-6-torsionado">Hierro-del-6-torsionado</option>
-                        <option value="Hierro-del-8-torsionado">Hierro-del-8-torsionado</option>
-                        <option value="Hierro-del-10-torsionado">Hierro-del-10-torsionado</option>
-                        <option value="Hierro-del-12-torsionado">Hierro-del-12-torsionado</option>
-                        <option value="Hierro-del-6-liso">Hierro-del-6-liso</option>
-                        <option value="Hierro-del-8-liso">Hierro-del-8-liso</option>
-                        <option value="Hierro-del-10-liso">Hierro-del-10-liso</option>
-                        <option value="Hierro-del-12-liso">Hierro-del-12-liso</option>
-                        <option value="Alambre-de-fardo">Alambre-de-fardo x kg</option>
-                    </optgroup> -->
+                <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value=""></textarea>
+                <select id="select_element_2" name="element_2[]" class="select_materiales">
                 </select>
             </div>
             <div class="registrar_importe">
@@ -399,8 +368,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <label class="item_icono" for="element_6">
                     <img src="/img/ferreteria.png" alt="ferreteria img">
                 </label>
-                <div type="button" class="agregar_fer">
-                </div>
+                <button type="button" class="eliminar_boton">
+                    -
+                </button>
                 <button type="button" class="modo_fer">
                     M
                 </button>

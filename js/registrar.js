@@ -137,9 +137,13 @@ const agregarFuncionMat = () => {
   cantidad = document.querySelectorAll('.cantidad');
   cada_uno = document.querySelectorAll('.cada_uno');
   precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
+  select_materiales = document.querySelectorAll('.select_materiales');
+
   funcionModoMat();
   funcionMultiplicar();
   funcionSumar();
+  precioAuto();
+
 }
 const agregarFuncionFer = () => {
   fer_new = fer_li.cloneNode(true);
@@ -149,9 +153,11 @@ const agregarFuncionFer = () => {
   cantidad = document.querySelectorAll('.cantidad');
   cada_uno = document.querySelectorAll('.cada_uno');
   precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
+
   funcionModoFer();
   funcionMultiplicar();
   funcionSumar();
+
 }
 
 

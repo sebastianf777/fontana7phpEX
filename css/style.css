@@ -98,6 +98,10 @@ table {
   text-align: center;
 }
 
+input {
+  text-align: center;
+}
+
 table,
 th,
 td {
@@ -384,6 +388,10 @@ td {
   width: inherit;
   overflow: hidden;
   padding: 0;
+  text-align: center;
+  line-height: 1.4rem;
+  padding: 0 0.3rem;
+  font-size: 1rem;
 }
 .registrar_form .registrar_ul .registrar_item-importe .registrar_item select {
   height: 1.5rem;

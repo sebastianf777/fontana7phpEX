@@ -52,7 +52,7 @@ let sum2 = 0;
 
 function checkeoRegistro() {
 
- typeof registro_exitoso === 'undefined' ? '' : alert("REGISTRO DE DATOS EXITOSO");
+  typeof registro_exitoso === 'undefined' ? '' : alert("REGISTRO DE DATOS EXITOSO");
 
 }
 
@@ -168,7 +168,7 @@ const eliminarItem = () => {
   eliminar_boton = document.querySelectorAll('.eliminar_boton');
 
   eliminar_boton.forEach(element => {
-    if (((element.parentElement.parentElement.classList.contains('.mat_li') == false) || (element.parentElement.parentElement.classList.contains('.fer_li')== false)) && element.classList.contains('.tiene_funcion_eliminarItem') == false) {
+    if (((element.parentElement.parentElement.classList.contains('.mat_li') == false) || (element.parentElement.parentElement.classList.contains('.fer_li') == false)) && element.classList.contains('.tiene_funcion_eliminarItem') == false) {
 
       element.classList.add('tiene_funcion_eliminarItem');
       element.addEventListener('click', function (e) {
@@ -177,7 +177,9 @@ const eliminarItem = () => {
         e.target.closest('li').classList.add("eliminar_item");
         delete_item = document.querySelector(".eliminar_item");
         if (delete_item != null) {
-        delete_item.parentElement.removeChild(delete_item); 
+          total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado').value = 0;
+          sumarTotal();
+          delete_item.parentElement.removeChild(delete_item);
         }
 
       })
@@ -207,15 +209,15 @@ function conseguirSibling(elem, selector) {
 
 function precioAuto() {
   select_materiales.forEach(element => {
-  if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li'))) && element.classList.contains('..tiene_funcion_precio_auto') == false) {
-    element.classList.add('.tiene_funcion_precio_auto');
-    element.addEventListener('focusout', function (e) {
-      const [option] = e.target.selectedOptions;
-      cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio;
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li'))) && element.classList.contains('..tiene_funcion_precio_auto') == false) {
+      element.classList.add('.tiene_funcion_precio_auto');
+      element.addEventListener('focusout', function (e) {
+        const [option] = e.target.selectedOptions;
+        cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio;
 
+      }
+      )
     }
-    )
-  }
   });
 }
 
@@ -223,10 +225,10 @@ function precioAuto() {
 //Sumar Total y funcion Sumar
 
 function sumarTotal() {
- sum = 0;
+  sum = 0;
   for (let i = 0; i < precio_multiplicado.length; i++) {
-  
-      sum += Number(precio_multiplicado[i].value);
+
+    sum += Number(precio_multiplicado[i].value);
 
   }
   total_suma.textContent = sum;
@@ -234,15 +236,15 @@ function sumarTotal() {
 }
 
 function funcionSumar() {
-  
-precio_multiplicado.forEach(element => {
-  if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_sumar') == false)) {
-    element.classList.add('tiene_funcion_sumar');
-  element.addEventListener('focusout', function (e) {
-    sumarTotal();
-  })
-}
-});
+
+  precio_multiplicado.forEach(element => {
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_sumar') == false)) {
+      element.classList.add('tiene_funcion_sumar');
+      element.addEventListener('focusout', function (e) {
+        sumarTotal();
+      })
+    }
+  });
 }
 
 //Multiplicar cantidad x unidad

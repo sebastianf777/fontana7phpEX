@@ -46,6 +46,7 @@ let sum = 0;
 
 let select_materiales = document.querySelectorAll('.select_materiales');
 let eliminar_boton = document.querySelectorAll('.eliminar_boton');
+let delete_item;
 let sum2 = 0;
 //Función checkeo registro
 
@@ -167,18 +168,17 @@ const eliminarItem = () => {
   eliminar_boton = document.querySelectorAll('.eliminar_boton');
 
   eliminar_boton.forEach(element => {
-    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li'))) && element.classList.contains('tiene_funcion_eliminarItem') == false) {
+    if (((element.parentElement.parentElement.classList.contains('.mat_li') == false) || (element.parentElement.parentElement.classList.contains('.fer_li')== false)) && element.classList.contains('.tiene_funcion_eliminarItem') == false) {
 
       element.classList.add('tiene_funcion_eliminarItem');
       element.addEventListener('click', function (e) {
-        sum2++;
-        console.log(sum2);
+
         e.preventDefault();
         e.target.closest('li').classList.add("eliminar_item");
-        const delete_item = document.querySelector(".eliminar_item");
-        console.log(delete_item)
-        delete_item.parentElement.removeChild(delete_item);
-        console.log(delete_item)
+        delete_item = document.querySelector(".eliminar_item");
+        if (delete_item != null) {
+        delete_item.parentElement.removeChild(delete_item); 
+        }
 
       })
 

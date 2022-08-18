@@ -36,8 +36,13 @@ table {
 
 }
 
-input{
+input, select, textarea{
     text-align: center;
+    text-transform: uppercase;
+}
+option{
+    text-align: start;
+    padding: 0 0.3rem;
 }
 
 table,

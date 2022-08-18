@@ -218,7 +218,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </div>
                         <textarea id="element_6" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="FERRETERIA - MODO MANUAL"></textarea>
                         <select id="select_element_6" name="element_6[]" class="">
-                            <option value="">Elegir opción</option>
+                            <option value="">Elegir-opción</option>
                             <option value="Ferreteria">Ferreteria</option>
                             <option value="PP/PVC">PP/PVC</option>
                             <option value="Electricidad">Electricidad</option>
@@ -345,19 +345,19 @@ $_SESSION['FORM_SECRET'] = $secret;
                     M
                 </button>
                 <div class="cantidad">
-                    <input type="number" name="count_mat[]">
+                    <input type="number" name="count_mat[]" placeholder="C">
                 </div>
-                <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value=""></textarea>
+                <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
                 <select id="select_element_2" name="element_2[]" class="select_materiales">
                 </select>
             </div>
             <div class="registrar_importe">
 
                 <label for="cada_uno">$</label>
-                <input class="cada_uno" name="cada_uno" type="number">
+                <input class="cada_uno" name="cada_uno" type="number" placeholder="C/U">
 
                 <label for="element_5">$</label>
-                <input class="precio_multiplicado" id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" />
+                <input class="precio_multiplicado" id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" placeholder="--"/>
             </div>
         </li>
 
@@ -375,10 +375,11 @@ $_SESSION['FORM_SECRET'] = $secret;
                     M
                 </button>
                 <div class="cantidad">
-                    <input type="number" name="count_fer[]">
+                    <input type="number" name="count_fer[]" placeholder="C">
                 </div>
-                <textarea id="element_6" name="element_6[]" class="registrar_input_text" type="text" maxlength="255" value=""></textarea>
-                <select id="select_element_6" name="" class="ocultar_modo">
+                <textarea id="element_6" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="FERRETERIA - MODO MANUAL"></textarea>
+                <select id="select_element_6" name="element_6[]" class="">
+                    <option value="">Elegir-opción</option>
                     <option value="Ferreteria">Ferreteria</option>
                     <option value="PP/PVC">PP/PVC</option>
                     <option value="Electricidad">Electricidad</option>
@@ -391,10 +392,10 @@ $_SESSION['FORM_SECRET'] = $secret;
             <div class="registrar_importe">
 
                 <label for="cada_uno">$</label>
-                <input class="cada_uno" name="cada_uno" type="number">
+                <input class="cada_uno" name="cada_uno" type="number" placeholder="C/U">
 
                 <label for="element_7">$</label>
-                <input class="precio_multiplicado" id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" />
+                <input class="precio_multiplicado" id="element_7" name="element_7[]" type="number" maxlength="255" value="" step=".01" placeholder="--" />
             </div>
 
         </li>

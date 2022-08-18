@@ -158,33 +158,38 @@ if (isset($_GET['desconectar'])) {
                 </div>
             </div>
             <div class="resumen_tablas">
-                <div class="resumenes resumen_tablas_izquierda">
-                    <div class="tablas_izquierda_1 ">
-                        <table class='tabla_1_head'>
-                            <thead>
-                                <tr>
-                                    <th class='th-td_fecha_derecha'>
-                                        FECHA
-                                    </th>
-                                    <th class='th-td_mid_derecha'>
-                                        TOTAL TOTAL
-                                        <br>
-                                        DIARIO PEDIDOS
-                                    </th>
-                                    <th class='th-td_importe'>
-                                        $
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                        <div class="tabla_1_cuerpo cuerpo">
-                            <table>
-                                <tbody>
-                                    <?php
-                                    require('conectar.php');
-                                    ?>
-                                    <?php
-                                    $sql = "SELECT t1.fechaing, t1.total_pedidos_brian, t2.total_pedidos_sebastian
+                <?php
+                require('conectar.php');
+                ?>
+                <?php
+
+                if ($_SESSION['user_id'] != 'brian') { ?>
+
+                    <div class="resumenes resumen_tablas_izquierda">
+                        <div class="tablas_izquierda_1 ">
+                            <table class='tabla_1_head'>
+                                <thead>
+                                    <tr>
+                                        <th class='th-td_fecha_derecha'>
+                                            FECHA
+                                        </th>
+                                        <th class='th-td_mid_derecha'>
+                                            TOTAL TOTAL
+                                            <br>
+                                            DIARIO PEDIDOS
+                                        </th>
+                                        <th class='th-td_importe'>
+                                            $
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="tabla_1_cuerpo cuerpo">
+                                <table>
+                                    <tbody>
+
+                                        <?php
+                                        $sql = "SELECT t1.fechaing, t1.total_pedidos_brian, t2.total_pedidos_sebastian
                                      FROM
                                      (SELECT fechaing, SUM(detallepedido) AS total_pedidos_brian
                                      FROM productos WHERE detallepedido != 0 and serie = 'Brian' GROUP BY fechaing) t1
@@ -193,248 +198,249 @@ if (isset($_GET['desconectar'])) {
                                      FROM productos WHERE detallepedido != 0 and serie = 'Sebastian' GROUP BY fechaing) t2
                                      ON (t1.fechaing = t2.fechaing)
                                      LIMIT 200";
-                                    $result = mysqli_query($con, $sql);
-                                    while ($crow = mysqli_fetch_assoc($result)) {
-                                    ?>
-                                        <tr>
-                                            <td class='th-td_fecha_derecha'>
-                                                <?php echo $crow['fechaing']; ?>
-                                            </td>
-                                            <td class='th-td_mid_derecha'>
-                                                <ul class="items_venta_dia items">
-                                                    <li class="item_tipo_3 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/vendedor.png" alt="vendedor img">
-                                                        </div>
-                                                        <div class="detalle">Vendedores:</div>
-                                                    </li>
-                                                    <li class="item_tipo_1 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
-                                                        </div>
-                                                        <div class="detalle">Sebastian:</div>
-                                                    </li>
-                                                    <li class="item_tipo_2 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/pedidos.png" alt="pedidos img">
-                                                        </div>
-                                                        <div class="detalle">Brian:</div>
-                                                    </li>
-                                                    <li class="item_tipo_5 ventas_dia">
-                                                        <div class="item"><img src="/img/total.png" alt="acuenta imagen"></div>
-                                                        <div class="detalle">Total:</div>
-                                                    </li>
-                                                </ul>
+                                        $result = mysqli_query($con, $sql);
+                                        while ($crow = mysqli_fetch_assoc($result)) {
+                                        ?>
+                                            <tr>
+                                                <td class='th-td_fecha_derecha'>
+                                                    <?php echo $crow['fechaing']; ?>
+                                                </td>
+                                                <td class='th-td_mid_derecha'>
+                                                    <ul class="items_venta_dia items">
+                                                        <li class="item_tipo_3 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/vendedor.png" alt="vendedor img">
+                                                            </div>
+                                                            <div class="detalle">Vendedores:</div>
+                                                        </li>
+                                                        <li class="item_tipo_1 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                            </div>
+                                                            <div class="detalle">Sebastian:</div>
+                                                        </li>
+                                                        <li class="item_tipo_2 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/pedidos.png" alt="pedidos img">
+                                                            </div>
+                                                            <div class="detalle">Brian:</div>
+                                                        </li>
+                                                        <li class="item_tipo_5 ventas_dia">
+                                                            <div class="item"><img src="/img/total.png" alt="acuenta imagen"></div>
+                                                            <div class="detalle">Total:</div>
+                                                        </li>
+                                                    </ul>
 
-                                            </td>
-                                            <td class='th-td_importe'>
-                                                <ul class="importes">
-                                                    <li class="importe_tipo_3 importe-signo">
-                                                        <div class="signo">-</div>
-                                                        <div class="importe">
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_1 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class="importe"><?php echo $crow['total_pedidos_sebastian']; ?></div>
-                                                    </li>
-                                                    <li class="importe_tipo_2 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class="importe"><?php echo $crow['total_pedidos_brian']; ?>
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_5 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class="importe"><?php echo $crow['total_pedidos_sebastian'] + $crow['total_pedidos_brian']; ?>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
+                                                </td>
+                                                <td class='th-td_importe'>
+                                                    <ul class="importes">
+                                                        <li class="importe_tipo_3 importe-signo">
+                                                            <div class="signo">-</div>
+                                                            <div class="importe">
+                                                            </div>
+                                                        </li>
+                                                        <li class="importe_tipo_1 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class="importe"><?php echo $crow['total_pedidos_sebastian']; ?></div>
+                                                        </li>
+                                                        <li class="importe_tipo_2 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class="importe"><?php echo $crow['total_pedidos_brian']; ?>
+                                                            </div>
+                                                        </li>
+                                                        <li class="importe_tipo_5 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class="importe"><?php echo $crow['total_pedidos_sebastian'] + $crow['total_pedidos_brian']; ?>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tablas_izquierda_2">
-                        <table class='tabla_2_head'>
-                            <thead>
-                                <tr>
-                                    <th class='th-td_fecha_derecha'>
-                                        FECHA
-                                    </th>
-                                    <th class='th-td_mid_derecha'>
-                                        TOTAL TOTAL
-                                        <br>
-                                        DIARIO DÉBITOS
-                                    </th>
-                                    <th class='th-td_importe'>
-                                        $
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                        <div class="tabla_2_cuerpo cuerpo">
-                            <table>
-                                <tbody>
-                                    <?php
-                                    $sql = "SELECT SUM(detallemateriales) AS totaldebitomateriales, SUM(detalleferreteria) AS totaldebitoferreteria, fechaing from productos
+                        <div class="tablas_izquierda_2">
+                            <table class='tabla_2_head'>
+                                <thead>
+                                    <tr>
+                                        <th class='th-td_fecha_derecha'>
+                                            FECHA
+                                        </th>
+                                        <th class='th-td_mid_derecha'>
+                                            TOTAL TOTAL
+                                            <br>
+                                            DIARIO DÉBITOS
+                                        </th>
+                                        <th class='th-td_importe'>
+                                            $
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="tabla_2_cuerpo cuerpo">
+                                <table>
+                                    <tbody>
+                                        <?php
+                                        $sql = "SELECT SUM(detallemateriales) AS totaldebitomateriales, SUM(detalleferreteria) AS totaldebitoferreteria, fechaing from productos
                                                         WHERE pagotipo = 'debito' GROUP BY fechaing order by id DESC LIMIT 200";
-                                    $result = mysqli_query($con, $sql);
-                                    while ($crow = mysqli_fetch_assoc($result)) {
-                                    ?>
-                                        <tr>
-                                            <td class='th-td_fecha_derecha'>
-                                                <?php echo $crow['fechaing']; ?>
-                                            </td>
-                                            <td class='th-td_mid_derecha'>
-                                                <ul class="items_venta_dia items">
-                                                    <li class="item_tipo_1 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/materiales.png" alt="materiales imagen">
-                                                        </div>
-                                                        <div class="detalle">Materiales:</div>
-                                                    </li>
-                                                    <li class="item_tipo_2 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
-                                                        </div>
-                                                        <div class="detalle">Ferreteria:</div>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                            <td class='th-td_importe'>
-                                                <ul class="importes">
-                                                    <li class="importe_tipo_1 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class="importe">
-                                                            <?php echo $crow['totaldebitomateriales']; ?>
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_2 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class="importe">
-                                                            <?php echo $crow['totaldebitoferreteria']; ?>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
+                                        $result = mysqli_query($con, $sql);
+                                        while ($crow = mysqli_fetch_assoc($result)) {
+                                        ?>
+                                            <tr>
+                                                <td class='th-td_fecha_derecha'>
+                                                    <?php echo $crow['fechaing']; ?>
+                                                </td>
+                                                <td class='th-td_mid_derecha'>
+                                                    <ul class="items_venta_dia items">
+                                                        <li class="item_tipo_1 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/materiales.png" alt="materiales imagen">
+                                                            </div>
+                                                            <div class="detalle">Materiales:</div>
+                                                        </li>
+                                                        <li class="item_tipo_2 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                            </div>
+                                                            <div class="detalle">Ferreteria:</div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td class='th-td_importe'>
+                                                    <ul class="importes">
+                                                        <li class="importe_tipo_1 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class="importe">
+                                                                <?php echo $crow['totaldebitomateriales']; ?>
+                                                            </div>
+                                                        </li>
+                                                        <li class="importe_tipo_2 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class="importe">
+                                                                <?php echo $crow['totaldebitoferreteria']; ?>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tablas_izquierda_3">
-                        <table class='tabla_3_head'>
-                            <thead>
-                                <tr>
-                                    <th class='th-td_fecha_derecha'>
-                                        FECHA
-                                    </th>
-                                    <th class='th-td_mid_derecha'>
-                                        TOTAL TOTAL
-                                        <br>
-                                        DIARIO CONTADO
-                                    </th>
-                                    <th class='th-td_importe'>
-                                        $
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                        <div class="tabla_3_cuerpo cuerpo">
-                            <table>
+                        <div class="tablas_izquierda_3">
+                            <table class='tabla_3_head'>
+                                <thead>
+                                    <tr>
+                                        <th class='th-td_fecha_derecha'>
+                                            FECHA
+                                        </th>
+                                        <th class='th-td_mid_derecha'>
+                                            TOTAL TOTAL
+                                            <br>
+                                            DIARIO CONTADO
+                                        </th>
+                                        <th class='th-td_importe'>
+                                            $
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="tabla_3_cuerpo cuerpo">
+                                <table>
 
-                                <tbody>
-                                    <?php
-                                    $sql = "SELECT SUM(detallemateriales) AS totalmat, SUM(detalleferreteria) AS totalfer, SUM(acuenta) AS totalacuenta, SUM(detallepedido) AS totalpedidos, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC LIMIT 30";
-                                    $result = mysqli_query($con, $sql);
-                                    while ($crow = mysqli_fetch_assoc($result)) {
-                                    ?>
-                                        <tr>
-                                            <td class='th-td_fecha_derecha'>
-                                                <?php echo $crow['fechaing']; ?>
-                                            </td>
-                                            <td class='th-td_mid_derecha'>
-                                                <ul class="items_venta_dia items">
-                                                    <li class="item_tipo_1 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/materiales.png" alt="materiales imagen">
-                                                        </div>
-                                                        <div class="detalle">Materiales:</div>
-                                                    </li>
-                                                    <li class="item_tipo_2 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/ferreteria.png" alt="ferreteria img">
-                                                        </div>
-                                                        <div class="detalle">Ferreteria:</div>
-                                                    </li>
-                                                    <li class="item_tipo_3 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/pedidos.png" alt="pedidos imagen">
-                                                        </div>
-                                                        <div class="detalle">Pedidos:</div>
-                                                    </li>
-                                                    <li class="item_tipo_4 ventas_dia">
-                                                        <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div>
-                                                        <div class="detalle">A cuenta:</div>
-                                                    </li>
-                                                    <li class="item_tipo_5 ventas_dia">
-                                                        <div class="item">
-                                                            <img src="/img/total.png" alt="acuenta imagen">
-                                                        </div>
-                                                        <div class="detalle">Total:</div>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                            <td class='th-td_importe'>
-                                                <ul class="importes">
-                                                    <li class="importe_tipo_1 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class='importe'>
-                                                            <?php echo $crow['totalmat']; ?>
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_2 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class='importe'>
-                                                            <?php echo $crow['totalfer']; ?>
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_3 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class='importe'>
-                                                            <?php echo $crow['totalpedidos']; ?>
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_4 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class='importe'>
-                                                            <?php echo $crow['totalacuenta']; ?>
-                                                        </div>
-                                                    </li>
-                                                    <li class="importe_tipo_4 importe-signo">
-                                                        <div class="signo">$</div>
-                                                        <div class='importe'>
-                                                            <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
+                                    <tbody>
+                                        <?php
+                                        $sql = "SELECT SUM(detallemateriales) AS totalmat, SUM(detalleferreteria) AS totalfer, SUM(acuenta) AS totalacuenta, SUM(detallepedido) AS totalpedidos, fechaing from productos WHERE pagotipo = 'contado' GROUP BY fechaing order by id DESC LIMIT 30";
+                                        $result = mysqli_query($con, $sql);
+                                        while ($crow = mysqli_fetch_assoc($result)) {
+                                        ?>
+                                            <tr>
+                                                <td class='th-td_fecha_derecha'>
+                                                    <?php echo $crow['fechaing']; ?>
+                                                </td>
+                                                <td class='th-td_mid_derecha'>
+                                                    <ul class="items_venta_dia items">
+                                                        <li class="item_tipo_1 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/materiales.png" alt="materiales imagen">
+                                                            </div>
+                                                            <div class="detalle">Materiales:</div>
+                                                        </li>
+                                                        <li class="item_tipo_2 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/ferreteria.png" alt="ferreteria img">
+                                                            </div>
+                                                            <div class="detalle">Ferreteria:</div>
+                                                        </li>
+                                                        <li class="item_tipo_3 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/pedidos.png" alt="pedidos imagen">
+                                                            </div>
+                                                            <div class="detalle">Pedidos:</div>
+                                                        </li>
+                                                        <li class="item_tipo_4 ventas_dia">
+                                                            <div class="item"><img src="/img/acuenta.png" alt="acuenta imagen"></div>
+                                                            <div class="detalle">A cuenta:</div>
+                                                        </li>
+                                                        <li class="item_tipo_5 ventas_dia">
+                                                            <div class="item">
+                                                                <img src="/img/total.png" alt="acuenta imagen">
+                                                            </div>
+                                                            <div class="detalle">Total:</div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td class='th-td_importe'>
+                                                    <ul class="importes">
+                                                        <li class="importe_tipo_1 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class='importe'>
+                                                                <?php echo $crow['totalmat']; ?>
+                                                            </div>
+                                                        </li>
+                                                        <li class="importe_tipo_2 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class='importe'>
+                                                                <?php echo $crow['totalfer']; ?>
+                                                            </div>
+                                                        </li>
+                                                        <li class="importe_tipo_3 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class='importe'>
+                                                                <?php echo $crow['totalpedidos']; ?>
+                                                            </div>
+                                                        </li>
+                                                        <li class="importe_tipo_4 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class='importe'>
+                                                                <?php echo $crow['totalacuenta']; ?>
+                                                            </div>
+                                                        </li>
+                                                        <li class="importe_tipo_4 importe-signo">
+                                                            <div class="signo">$</div>
+                                                            <div class='importe'>
+                                                                <?php echo $crow['totalacuenta'] + $crow['totalmat'] + $crow['totalfer'] + $crow['totalpedidos'] ?>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
                 <div class="resumenes resumen_tablas_derecha">
                     <div class="tablas_derecha_1">
                         <table class='tabla_1_head'>

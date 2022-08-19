@@ -1,9 +1,12 @@
-.registrar_form {
+.registrar_forms{
+    @include flexColumnCenter;
+    margin: 0 auto;
+    .registrar_form {
     @include tabla_css;
     font-size: 1rem;
     width: 73vw;
     max-width: 45vw;
-
+    margin: 0 auto;
     .registrar_ul {
         // height: 94%;
         list-style: none;
@@ -269,7 +272,7 @@
         }
     }
 
-}
+}}
 
 .registrar_opciones input,
 .registrar_mostrar input {

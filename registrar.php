@@ -153,7 +153,7 @@ $_SESSION['FORM_SECRET'] = $secret;
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="registrar_forms" >
         <form class="registrar_form" method="post" action="registrar_formulas.php">
 
             <ul class="registrar_ul">

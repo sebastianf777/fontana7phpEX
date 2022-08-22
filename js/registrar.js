@@ -14,8 +14,6 @@ const fer_li = document.querySelector(".fer_li");
 const mat_first = document.querySelector(".mat_first");
 const fer_first = document.querySelector(".fer_first");
 
-
-
 let mat_new = mat_li.cloneNode(true);
 let mat_fer = fer_li.cloneNode(true);
 
@@ -262,8 +260,7 @@ function funcionMultiplicar() {
         cantidad_cifra == "" || cantidad_cifra == 0 ? total_multiplicado.value = cada_uno : total_multiplicado.value = (cantidad_cifra * cada_uno);
 
         sumarTotal();
-        // sum += total_multiplicado;
-        // total_suma.textContent = sum;
+
       })
 
     }
@@ -278,11 +275,7 @@ function funcionMultiplicar() {
         cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value;
         e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);;
 
-
         sumarTotal();
-
-        // sum += total_multiplicado;
-        // total_suma.textContent = sum;
 
       })
 
@@ -292,8 +285,6 @@ function funcionMultiplicar() {
 }
 
 //Cambiar modo
-
-
 
 function funcionModoMat() {
   boton_modo_mat.forEach(element => {

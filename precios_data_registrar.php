@@ -1,6 +1,7 @@
 <?php
 require('conectar.php');
 ?>
+<option value="">Elegir-opción</option>
 
 <?php
 $sql = "SELECT id, material, precio From precios_viamonte";

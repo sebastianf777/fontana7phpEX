@@ -188,10 +188,13 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="registrar_mostrar">
                         <input id="con_numero" name="con_sin_numero" type="radio" maxlength="255" value="con_numero"
                             checked="checked" />
-                        <label for="con_numero">CON</label>
+                        <label class="button_3" for="con_numero">CON</label>
                         <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero" />
-                        <label for="sin_numero">SIN</label>
+                        <label class="button_3" for="sin_numero">SIN</label>
                     </div>
+                    <button class="tipo-registro">
+                        REGISTRAR PEDIDO
+                    </button>
                 </li>
                 <!-- MATERIALES -->
 
@@ -275,10 +278,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <label class="registrar_icono">MOSTRAR: </label>
                     <div class="registrar_opciones">
                         <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
-                        <label class="mostrar" for="element_13_1">SI</label>
+                        <label class="mostrar button_3" for="element_13_1">SI</label>
                         <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No"
                             checked="checked" />
-                        <label class="mostrar" for="element_13_2">NO</label>
+                        <label class="mostrar button_3" for="element_13_2">NO</label>
 
                     </div>
 
@@ -320,11 +323,11 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="registrar_opciones">
                         <input id="element_8_1" name="element_8" type="radio" maxlength="255" value="Contado"
                             checked="checked" />
-                        <label for="element_8_1">Contado</label>
+                        <label class="button_3" for="element_8_1">Contado</label>
                         <input id="element_8_2" name="element_8" type="radio" maxlength="255" value="Debito" />
-                        <label for="element_8_2">Débito</label>
+                        <label class="button_3" for="element_8_2">Débito</label>
                         <input id="element_8_3" name="element_8" type="radio" maxlength="255" value="Fiado" />
-                        <label for="element_8_3">Fiado</label>
+                        <label class="button_3" for="element_8_3">Fiado</label>
 
                     </div>
 
@@ -335,9 +338,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div id="vendedor_opciones" class="registrar_opciones">
                         <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian"
                             checked="checked" />
-                        <label for="element_3_1">Brian</label>
+                        <label class="button_3" for="element_3_1">Brian</label>
                         <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
-                        <label for="element_3_2">Sebastian</label>
+                        <label class="button_3" for="element_3_2">Sebastian</label>
                     </div>
                 </li>
                 <li class="registrar_fecha-icono-img">
@@ -362,7 +365,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <li class="registrar_submit">
                     <input type="hidden" name="form_secret" id="form_secret"
                         value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
-                    <input id="registrar_submit" type="submit" name="submit" value="Submit" />
+                    <input class="button_3" id="registrar_submit" type="submit" name="submit" value="Submit" />
                 </li>
             </ul>
         </form>
@@ -378,9 +381,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="registrar_mostrar">
                         <input id="con_numero" name="con_sin_numero" type="radio" maxlength="255" value="con_numero"
                             checked="checked" />
-                        <label for="con_numero">CON</label>
+                        <label class="button_3" for="con_numero">CON</label>
                         <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero" />
-                        <label for="sin_numero">SIN</label>
+                        <label class="button_3" for="sin_numero">SIN</label>
                     </div>
                 </li>
                 <!-- MATERIALES -->
@@ -465,10 +468,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <label class="registrar_icono">MOSTRAR: </label>
                     <div class="registrar_opciones">
                         <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
-                        <label class="mostrar" for="element_13_1">SI</label>
+                        <label class="mostrar button_3" for="element_13_1">SI</label>
                         <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No"
                             checked="checked" />
-                        <label class="mostrar" for="element_13_2">NO</label>
+                        <label class="mostrar button_3" for="element_13_2">NO</label>
 
                     </div>
 
@@ -510,11 +513,11 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="registrar_opciones">
                         <input id="element_8_1" name="element_8" type="radio" maxlength="255" value="Contado"
                             checked="checked" />
-                        <label for="element_8_1">Contado</label>
+                        <label class="button_3" for="element_8_1">Contado</label>
                         <input id="element_8_2" name="element_8" type="radio" maxlength="255" value="Debito" />
-                        <label for="element_8_2">Débito</label>
+                        <label class="button_3" for="element_8_2">Débito</label>
                         <input id="element_8_3" name="element_8" type="radio" maxlength="255" value="Fiado" />
-                        <label for="element_8_3">Fiado</label>
+                        <label class="button_3" for="element_8_3">Fiado</label>
 
                     </div>
 
@@ -525,9 +528,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div id="vendedor_opciones" class="registrar_opciones">
                         <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian"
                             checked="checked" />
-                        <label for="element_3_1">Brian</label>
+                        <label class="button_3" for="element_3_1">Brian</label>
                         <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
-                        <label for="element_3_2">Sebastian</label>
+                        <label class="button_3" for="element_3_2">Sebastian</label>
                     </div>
                 </li>
                 <li class="registrar_fecha-icono-img">
@@ -552,7 +555,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <li class="registrar_submit">
                     <input type="hidden" name="form_secret" id="form_secret"
                         value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
-                    <input id="registrar_submit" type="submit" name="submit" value="Submit" />
+                    <input class="button_3" id="registrar_submit" type="submit" name="submit" value="Submit" />
                 </li>
             </ul>
         </form>
@@ -578,6 +581,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255"
                     value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
                 <select id="select_element_2" name="element_2[]" class="select_materiales">
+                    
                 </select>
             </div>
             <div class="registrar_importe">

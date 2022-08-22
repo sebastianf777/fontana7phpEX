@@ -34,3 +34,26 @@
 
     }
 }
+
+.button_3  {
+
+    display: inline-block;
+    background-color: $button_bg_primary;
+    padding: 1vh 0.7vw;
+    font-size: .7rem;
+    border: 2px solid #444;
+    border-radius: 4px;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+    min-width: 1rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1vw;
+
+    &:hover {
+        background-color: $button_bg_secondary;
+    }
+
+}

@@ -354,7 +354,7 @@ td {
   width: 2rem;
   text-align: center;
 }
-.registrar_forms .registrar_form .registrar_ul .registrar_numero-mostrar .tipo-registro {
+.registrar_forms .registrar_form .registrar_ul .registrar_numero-mostrar .cambiar_tipo_registro {
   position: absolute;
   right: 0;
 }
@@ -395,9 +395,6 @@ td {
   width: 20px;
   padding: 0;
   margin-right: 5px;
-}
-.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .ocultar_modo {
-  display: none;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item textarea {
   height: 1.5rem;
@@ -562,6 +559,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .hidden_copies {
+  display: none;
+}
+
+.ocultar_modo {
   display: none;
 }
 

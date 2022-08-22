@@ -176,7 +176,7 @@ $_SESSION['FORM_SECRET'] = $secret;
         </nav>
     </header>
     <section class="registrar_forms">
-        <form class="registrar_form" method="post" action="registrar_formulas.php">
+        <form class="registrar_form" id="registrar_venta" method="post" action="registrar_formulas.php">
 
             <ul class="registrar_ul">
                 <li class="registrar_numero-mostrar">
@@ -192,7 +192,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero" />
                         <label class="button_3" for="sin_numero">SIN</label>
                     </div>
-                    <button class="tipo-registro">
+                    <button type="button" class="cambiar_tipo_registro">
                         REGISTRAR PEDIDO
                     </button>
                 </li>
@@ -369,7 +369,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
             </ul>
         </form>
-        <form class="registrar_form" method="post" action="registrar_formulas.php">
+        <form class="registrar_form ocultar_modo" id="registrar_pedido" method="post" action="registrar_formulas.php">
 
             <ul class="registrar_ul">
                 <li class="registrar_numero-mostrar">
@@ -385,6 +385,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero" />
                         <label class="button_3" for="sin_numero">SIN</label>
                     </div>
+                    <button type="button" class="cambiar_tipo_registro">
+                        REGISTRAR PEDIDO
+                    </button>
                 </li>
                 <!-- MATERIALES -->
 
@@ -464,18 +467,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="signo">$</div>
                     <div class="total_suma"></div>
                 </li>
-                <li class="registrar_opciones-icono">
-                    <label class="registrar_icono">MOSTRAR: </label>
-                    <div class="registrar_opciones">
-                        <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
-                        <label class="mostrar button_3" for="element_13_1">SI</label>
-                        <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No"
-                            checked="checked" />
-                        <label class="mostrar button_3" for="element_13_2">NO</label>
-
-                    </div>
-
-                </li>
+              
                 <li class="registrar_item-importe">
                     <div class="registrar_item">
                         <label class="item_icono" for="element_9">

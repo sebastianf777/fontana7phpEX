@@ -46,6 +46,11 @@ let select_materiales = document.querySelectorAll('.select_materiales');
 let eliminar_boton = document.querySelectorAll('.eliminar_boton');
 let delete_item;
 let sum2 = 0;
+
+const cambiar_tipo_registro = document.querySelectorAll(".cambiar_tipo_registro");
+const registrar_venta_form = document.getElementById("registrar_venta");
+const registrar_pedido_form = document.getElementById("registrar_pedido");
+
 //Función checkeo registro
 
 function checkeoRegistro() {
@@ -358,7 +363,18 @@ function funcionModoFer() {
   });
 }
 
-
+function cambiarTipoRegistro() {
+  cambiar_tipo_registro.forEach(element => {
+    element.addEventListener("click", (e) => {
+      e.preventDefault;
+      registrar_pedido_form.classList.toggle('ocultar_modo');
+      registrar_venta_form.classList.toggle('ocultar_modo');
+  
+    })
+  });
+  
+  
+}
 
 
 
@@ -374,5 +390,6 @@ window.onload = function () {
   checkeoRegistro();
   precioAuto();
   eliminarItem();
+  cambiarTipoRegistro();
 }
 

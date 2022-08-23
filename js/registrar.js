@@ -1,7 +1,8 @@
-const fecha = document.getElementById('calendar_4');
-const month = document.getElementById('element_4_1');
-const date = document.getElementById('element_4_2');
-const year = document.getElementById('element_4_3');
+// const fecha = document.getElementById('calendar_4');
+const month = document.querySelectorAll('.element_4_1');
+const date = document.querySelectorAll('.element_4_2');
+const year = document.querySelectorAll('.element_4_3');
+
 const numero = document.getElementById('element_1');
 const sin_numero = document.getElementById('sin_numero');
 const mostrar_numero = document.querySelector('.registrar_mostrar');
@@ -95,11 +96,20 @@ function formatDate(date, format) {
   return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
 }
 function ponerFecha() {
-  month.value = formatDate(todayNew, 'mm');
-  date.value = formatDate(todayNew, 'dd');
-  year.value = formatDate(todayNew, 'yy');
+  month.forEach(element => {
+  element.value = formatDate(todayNew, 'mm');
+    
+  });
+  date.forEach(element => {
+  element.value = formatDate(todayNew, 'dd');
+    
+  });
+  year.forEach(element => {
+  element.value = formatDate(todayNew, 'yy');
+    
+  });
 }
-fecha.addEventListener("click", ponerFecha())
+// fecha.addEventListener("click", ponerFecha())
 
 //Guardar última opción vendedor
 

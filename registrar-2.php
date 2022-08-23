@@ -315,9 +315,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <img src="./img/calendar-icon.png" alt="fecha icono">
                     </div>
                     <div class="registrar_fecha">
-                        <input id="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
-                        <input id="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
-                        <input id="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
+                        <input class="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
+                        <input class="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
+                        <input class="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
                     </div>
 
                     <div class="registrar_img" id="calendar_4">
@@ -335,7 +335,7 @@ $_SESSION['FORM_SECRET'] = $secret;
         <form class="registrar_form ocultar_modo" id="registrar_pedido" method="post" action="registrar_formulas.php">
 
             <ul class="registrar_ul">
-
+                <!-- NUMERO -->
                 <li class="registrar_numero-mostrar">
                     <div class="registrar-numero">
                         <label for="element_1">N°: </label>
@@ -348,9 +348,12 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="button_3" for="sin_numero">SIN</label>
                     </div>
                     <button type="button" class="cambiar_tipo_registro">
-                        REGISTRAR PEDIDO
+                        REGISTRAR
+                        <br>
+                        VENTA
                     </button>
                 </li>
+                <!-- CLIENTE -->
                 <li class="registrar_item-importe">
 
                     <div class="registrar_item">
@@ -359,17 +362,35 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </label>
                         <textarea id="element_11" name="element_11" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="CLIENTE"></textarea>
                     </div>
-                    <div class="registrar_importe">
+                        <!-- FECHA -->
+
+                    <div class="registrar_fecha-icono-img">
+                        <!-- <div class="registrar_icono">
+                            <img src="./img/calendar-icon.png" alt="fecha icono">
+                        </div> -->
+                        <div class="registrar_fecha">
+                            <input class="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
+                            <input class="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
+                            <input class="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
+                        </div>
+
+                        <!-- <div class="registrar_img" id="calendar_4">
+                            <img tabindex="1" src="img/fecha.png" alt="Pick a date.">
+                        </div> -->
+
+                    </div>
+                    <!-- <div class="registrar_importe">
                         <label for="element_12">$</label>
                         <input id="element_12" name="element_12" type="number" maxlength="255" value="" step=".01" placeholder="A CUENTA" />
-                    </div>
+                    </div> -->
                 </li>
+                <!-- DIRECCIÓN -->
                 <li class="registrar_item-importe">
                     <div class="registrar_item">
                         <label class="item_icono" for="element_9">
                             <img src="/img/pedidos.png" alt="pedidos imagen">
                         </label>
-                        <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="PEDIDO"></textarea>
+                        <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="DIRECCIÓN"></textarea>
                     </div>
                     <!-- <div class="registrar_importe">
                         <label for="element_10">$</label>
@@ -454,7 +475,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
 
 
-                
+
                 <li class="registrar_opciones-icono">
                     <div class="registrar_icono">
                         TIPO DE PAGO:
@@ -480,21 +501,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="button_3" for="element_3_2">Sebastian</label>
                     </div>
                 </li>
-                <li class="registrar_fecha-icono-img">
-                    <div class="registrar_icono">
-                        <img src="./img/calendar-icon.png" alt="fecha icono">
-                    </div>
-                    <div class="registrar_fecha">
-                        <input id="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
-                        <input id="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
-                        <input id="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
-                    </div>
 
-                    <div class="registrar_img" id="calendar_4">
-                        <img tabindex="1" src="img/fecha.png" alt="Pick a date.">
-                    </div>
-
-                </li>
 
                 <li class="registrar_submit">
                     <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />

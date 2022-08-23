@@ -357,6 +357,7 @@ td {
 .registrar_forms .registrar_form .registrar_ul .registrar_numero-mostrar .cambiar_tipo_registro {
   position: absolute;
   right: 0;
+  font-size: clamp(12px, 1vw, 18px);
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe {
   display: flex;
@@ -495,6 +496,9 @@ td {
 @media only screen and (max-width: 900px) {
   .registrar_forms .registrar_form .registrar_ul {
     padding: 1rem 1rem;
+  }
+  .registrar_forms .registrar_form .registrar_ul .registrar_numero-mostrar {
+    justify-content: flex-start;
   }
 }
 @media only screen and (max-width: 600px) {

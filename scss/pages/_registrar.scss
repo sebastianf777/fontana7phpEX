@@ -4,8 +4,6 @@
     .registrar_form {
     @include tabla_css;
     font-size: 1rem;
-    width: 73vw;
-    max-width: 45vw;
     margin: 0 auto;
     .registrar_ul {
         // height: 94%;
@@ -38,6 +36,9 @@
             }
         }
 
+        .cabezal_presupuesto{
+            @include flexColumn;
+        }
         .registrar_item-importe {
             @include flexRow;
 
@@ -206,7 +207,17 @@
             }
 
         }
-
+        .registrar_fecha_pedido{
+            .registrar_fecha{
+                display: flex;
+                .element_4_2, .element_4_1{
+                    width: 15px;
+                }
+                .element_4_3{
+                    width: 30px;
+                }
+            }
+        }
         .registrar_submit {
             margin: 0 auto;
         }
@@ -215,6 +226,8 @@
     }
 
     @media only screen and (max-width: 900px) {
+        width: 73vw;
+        max-width: 45vw;
         .registrar_ul {
             padding: 1rem 1rem;
             .registrar_numero-mostrar{
@@ -277,7 +290,8 @@
         }
     }
 
-}}
+}
+}
 
 .registrar_opciones input,
 .registrar_mostrar input {
@@ -295,31 +309,6 @@
     }
 }
 
-// .registrar_opciones label,
-// .registrar_mostrar label,
-// #registrar_submit  {
-
-//     display: inline-block;
-//     background-color: $button_bg_primary;
-//     padding: 1vh 0.7vw;
-//     font-size: .7rem;
-//     border: 2px solid #444;
-//     border-radius: 4px;
-//     text-transform: uppercase;
-//     user-select: none;
-//     cursor: pointer;
-//     min-width: 1rem;
-//     text-align: center;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     margin-left: 1vw;
-
-//     &:hover {
-//         background-color: $button_bg_secondary;
-//     }
-
-// }
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -334,3 +323,33 @@ input[type=number]::-webkit-outer-spin-button {
 .ocultar_modo {
     display: none;
 }
+
+@media print {
+    .navbar{
+        display: none;
+    }
+    .registrar_forms{
+        #registrar_venta{
+            display: none;
+        }
+        #registrar_pedido{
+            .registrar_numero-mostrar{
+                display: none;
+            }
+            .registrar_opciones-icono{
+                display: none;
+            }
+            .registrar_submit{
+                display: none;
+            }
+            .registrar_item-importe{
+                .registrar_item{
+                    .item_icono, .agregar_mat, .agregar_fer, .modo_mat, .modo_fer{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+ 
+ }

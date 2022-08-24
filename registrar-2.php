@@ -336,7 +336,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
             <ul class="registrar_ul">
                 <!-- NUMERO -->
-                <li class="registrar_numero-mostrar">
+                <li class= registrar_numero-mostrar ">
                     <div class="registrar-numero">
                         <label for="element_1">N°: </label>
                         <input id="element_1" name="element_1" type="text" maxlength="255" value="" required placeholder="X" />
@@ -353,6 +353,31 @@ $_SESSION['FORM_SECRET'] = $secret;
                         VENTA
                     </button>
                 </li>
+                <li class="cabezal_presupuesto">
+                    <div class="cabezal_izq">
+                        <div class="titulo">
+                            FONTANA MATERIALES
+                        </div>
+                        <div class="subtitulo">
+                            Materiales para la construcción
+                        </div>
+                        <div class="dir-tel">
+                            Av. Belgrano 1904 - Tel 423 6628
+                            <br>
+                            Viamonte y Ramírez de Velazco - Tel 434 2963
+                        </div>
+                        <div class="whatsApp-cel">
+                            <div class="icono"></div>
+                            <div class="cel">Cel. (0381) 155-788058</div>
+                        </div>
+                        <div class="cp-provincia">
+                            C.P 4000 - S.M. de Tucumán
+                        </div>
+                    </div>
+                    <div class="cabezal_der">
+
+                    </div>
+                </li>
                 <!-- CLIENTE -->
                 <li class="registrar_item-importe">
 
@@ -362,9 +387,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </label>
                         <textarea id="element_11" name="element_11" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="CLIENTE"></textarea>
                     </div>
-                        <!-- FECHA -->
+                    <!-- FECHA -->
 
-                    <div class="registrar_fecha-icono-img">
+                    <div class="registrar_fecha-icono-img registrar_fecha_pedido">
                         <!-- <div class="registrar_icono">
                             <img src="./img/calendar-icon.png" alt="fecha icono">
                         </div> -->
@@ -472,10 +497,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="signo">$</div>
                     <div class="total_suma"></div>
                 </li>
-
-
-
-
+                <!-- TIPO DE PAGO -->
                 <li class="registrar_opciones-icono">
                     <div class="registrar_icono">
                         TIPO DE PAGO:
@@ -490,7 +512,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                     </div>
 
-                <li class="registrar_opciones-icono">
+                <li class="registrar_opciones-icono ">
                     <label class="registrar_icono">
                         <img src="/img/vendedor.png" alt="vendedor img">
                     </label>
@@ -503,7 +525,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
 
 
-                <li class="registrar_submit">
+                <li class= "registrar_submit">
+                    <button id="imprimir_boton" type="button">
+                        Imprimir
+                    </button>
                     <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
                     <input class="button_3" id="registrar_submit" type="submit" name="submit" value="Submit" />
                 </li>

@@ -52,6 +52,8 @@ const cambiar_tipo_registro = document.querySelectorAll(".cambiar_tipo_registro"
 const registrar_venta_form = document.getElementById("registrar_venta");
 const registrar_pedido_form = document.getElementById("registrar_pedido");
 
+const boton_imprimir = document.getElementById("imprimir_boton");
+
 //Función checkeo registro
 
 function checkeoRegistro() {
@@ -373,6 +375,8 @@ function funcionModoFer() {
   });
 }
 
+//Cambiar tipo de registro
+
 function cambiarTipoRegistro() {
   cambiar_tipo_registro.forEach(element => {
     element.addEventListener("click", (e) => {
@@ -386,7 +390,15 @@ function cambiarTipoRegistro() {
   
 }
 
+//Imprimir
 
+const funcionImprimir = () => {
+  boton_imprimir.addEventListener("click", (e) =>{
+    e.preventDefault;
+    window.print();
+  })
+
+}
 
 //Usar funciones al iniciar
 
@@ -401,5 +413,6 @@ window.onload = function () {
   precioAuto();
   eliminarItem();
   cambiarTipoRegistro();
+  funcionImprimir();
 }
 

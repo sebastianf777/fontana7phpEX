@@ -1,296 +1,358 @@
-.registrar_forms{
+.registrar_forms {
     @include flexColumnCenter;
     margin: 0 auto;
+
     .registrar_form {
-    @include tabla_css;
-    font-size: 1rem;
-    margin: 0 auto;
-    .registrar_ul {
-        // height: 94%;
-        list-style: none;
-        margin: 0;
-        padding: 1rem 2rem;
-        justify-content: space-evenly;
-        @include flexColumn;
+        @include tabla_css;
+        font-size: 1rem;
+        margin: 0 auto;
 
-        li {
-            padding-bottom: 1rem;
-        }
-
-        .registrar_numero-mostrar {
-            @include flexRowCenter;
-            position: relative;
-            .registrar-numero {
-                align-items: center;
-                @include flexRow;
-
-                input {
-                    width: 2rem;
-                    text-align: center;
-                }
-            }
-            .cambiar_tipo_registro{
-                position: absolute;
-                right: 0;
-                font-size: clamp(12px, 1vw, 18px);
-            }
-        }
-
-        .cabezal_presupuesto{
+        .registrar_ul {
+            // height: 94%;
+            list-style: none;
+            margin: 0;
+            padding: 1rem 2rem;
+            justify-content: space-evenly;
             @include flexColumn;
-        }
-        .registrar_item-importe {
-            @include flexRow;
-
-            .registrar_item {
-                display: flex;
-                align-items: center;
-                width: 80%;
-
-                .item_icono {
-                    width: 30px;
-                    margin-right: 5px;
-
-                    img {
-                        width: 30px;
-                    }
-                }
-
-                .cantidad {
-                    width: 30px;
-                    display: flex;
-                    margin-right: 5px;
-
-                    input {
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                    }
-                }
-
-                .modo_mat,
-                .modo_fer {
-                    width: 20px;
-                    padding: 0;
-                    margin-right: 5px;
-
-                }
-
-                .agregar_mat,
-                .agregar_fer, .eliminar_boton {
-                    width: 20px;
-                    padding: 0;
-                    margin-right: 5px;
-
-                }
-
-                textarea {
-                    height: 1.5rem;
-                    resize: none;
-                    margin: 0 2vw;
-                    width: inherit;
-                    overflow: hidden;
-                    padding: 0;
-                    text-align: center;
-                    line-height: 1.4rem;
-                    padding: 0 0.3rem;
-                    font-size: 1rem;
-                }
-                select{
-                    height: 1.5rem;
-                    margin: 0 2vw;
-                    width: inherit;
-                }
-            }
-
-            .registrar_importe {
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                width: 20%;
-
-                label {
-                    width: auto;
-                }
-
-                input {
-                    width: 90%;
-                }
-
-                .precio_unitario {
-                    display: flex;
-                    width: 100%;
-                    margin-right: 5px;
-                }
-
-            }
-        }
-
-        .mat_li,
-        .fer_li {
-            display: none
-        }
-
-        .total_li {
-            display: flex;
-            justify-content: end;
-        }
-
-        .registrar_opciones-icono {
-            @include flexRow;
-
-            align-items: center;
-
-            .registrar_icono {
-                text-align: start;
-                width: 20%;
-                img{
-                    width: 28px;
-                }
-            }
-
-            .registrar_opciones {
-                width: 80%;
-                @include flexCenter;
-
-
-
-                .mostrar {
-                    margin-right: 1rem;
-                }
-
-
-            }
-        }
-
-        .registrar_fecha-icono-img {
-            @include flexRow;
-            margin: 0 auto;
-            align-items: center;
-
-            .registrar_icono img {
-                width: 6vh;
-                margin-right: 1vh;
-            }
-
-            .registrar_fecha input {
-                text-align: center;
-            }
-
-            .registrar_img {
-                img {
-                    width: 5vh;
-                    padding: 0.3vw;
-                    background: $button_bg_primary;
-                    border-radius: 2vw;
-                    margin-left: 1vw;
-                    border: $button_border_primary solid 2px;
-
-                    &:hover {
-                        background: $button_bg_secondary;
-
-                    }
-
-                    &:active {
-                        background: $button_border_secondary;
-
-                    }
-                }
-            }
-
-            .registrar_fecha {
-
-                #element_4_2,
-                #element_4_1 {
-                    width: 2vw;
-                }
-            }
-
-        }
-        .registrar_fecha_pedido{
-            .registrar_fecha{
-                display: flex;
-                .element_4_2, .element_4_1{
-                    width: 15px;
-                }
-                .element_4_3{
-                    width: 30px;
-                }
-            }
-        }
-        .registrar_submit {
-            margin: 0 auto;
-        }
-
-
-    }
-
-    @media only screen and (max-width: 900px) {
-        width: 73vw;
-        max-width: 45vw;
-        .registrar_ul {
-            padding: 1rem 1rem;
-            .registrar_numero-mostrar{
-                justify-content: flex-start;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 600px) {
-        width: 90vw;
-        margin-bottom: 75px;
-        max-width: none;
-
-        .registrar_ul {
-            padding: 1rem 0.5rem;
 
             li {
-                padding-bottom: 0.7rem;
+                padding-bottom: 1rem;
+            }
+
+            .registrar_numero-mostrar {
+                @include flexRowCenter;
+                position: relative;
+
+                .registrar-numero {
+                    align-items: center;
+                    @include flexRow;
+
+                    input {
+                        width: 2rem;
+                        text-align: center;
+                    }
+                }
+
+                .cambiar_tipo_registro {
+                    position: absolute;
+                    right: 0;
+                    font-size: clamp(12px, 1vw, 18px);
+                }
+            }
+
+            .cabezal_presupuesto {
+                @include flexRow;
+                border: solid 1px;
+                padding: 0;
+                margin-bottom: 0.7rem;
+
+                .cabezal_izq {
+                    text-align: center;
+                    border-right: solid 1px;
+                    width: 50%;
+
+                    .titulo {
+                        font-family: fantasy;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .cabezal_der {
+                    text-align: center;
+                    width: 50%;
+                    .documento-aviso{
+                        padding-top: 3px;
+                    }
+
+                    .presupuesto {
+                        font-weight: bold;
+                        padding-bottom: 3px;
+                    }
+
+                    .cuit {
+                        margin-top: 7px;
+                    }
+
+                    .registrar_fecha_pedido {
+                        @include flexRow;
+                        padding: 3px 0;
+                        border-top: solid 1px;
+                        border-bottom: solid 1px;
+                        justify-content: center;
+
+                        .registrar_fecha {
+                            input {
+                                border: none;
+                            }
+                        }
+                    }
+                }
             }
 
             .registrar_item-importe {
-                .registrar_item {
-                    width: 75%;
+                @include flexRow;
 
-                    // .cantidad {
-                    //     width: auto;
-                    // }
+                .registrar_item {
+                    display: flex;
+                    align-items: center;
+                    width: 80%;
 
                     .item_icono {
-                        width: auto;
+                        width: 30px;
+                        margin-right: 5px;
 
                         img {
-                            width: 15px;
+                            width: 30px;
                         }
+                    }
+
+                    .cantidad {
+                        width: 30px;
+                        display: flex;
+                        margin-right: 5px;
+
+                        input {
+                            width: 100%;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+
+                    .modo_mat,
+                    .modo_fer {
+                        width: 20px;
+                        padding: 0;
+                        margin-right: 5px;
+
+                    }
+
+                    .agregar_mat,
+                    .agregar_fer,
+                    .eliminar_boton {
+                        width: 20px;
+                        padding: 0;
+                        margin-right: 5px;
+
+                    }
+
+                    textarea {
+                        height: 1.5rem;
+                        resize: none;
+                        margin: 0 2vw;
+                        width: inherit;
+                        overflow: hidden;
+                        padding: 0;
+                        text-align: center;
+                        line-height: 1.4rem;
+                        padding: 0 0.3rem;
+                        font-size: 1rem;
+                    }
+
+                    select {
+                        height: 1.5rem;
+                        margin: 0 2vw;
+                        width: inherit;
                     }
                 }
 
                 .registrar_importe {
-                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 20%;
+
+                    label {
+                        width: auto;
+                    }
+
+                    input {
+                        width: 90%;
+                    }
+
+                    .precio_unitario {
+                        display: flex;
+                        width: 100%;
+                        margin-right: 5px;
+                    }
+
                 }
             }
-            .registrar_opciones-icono .registrar_icono img{
-                width: 20px;
+
+            .mat_li,
+            .fer_li {
+                display: none
             }
+
+            .total_li {
+                display: flex;
+                justify-content: end;
+            }
+
+            .registrar_opciones-icono {
+                @include flexRow;
+
+                align-items: center;
+
+                .registrar_icono {
+                    text-align: start;
+                    width: 20%;
+
+                    img {
+                        width: 28px;
+                    }
+                }
+
+                .registrar_opciones {
+                    width: 80%;
+                    @include flexCenter;
+
+
+
+                    .mostrar {
+                        margin-right: 1rem;
+                    }
+
+
+                }
+            }
+
             .registrar_fecha-icono-img {
-                
+                @include flexRow;
+                margin: 0 auto;
+                align-items: center;
+
+                .registrar_icono img {
+                    width: 6vh;
+                    margin-right: 1vh;
+                }
+
+                .registrar_fecha input {
+                    text-align: center;
+                }
+
+                .registrar_img {
+                    img {
+                        width: 5vh;
+                        padding: 0.3vw;
+                        background: $button_bg_primary;
+                        border-radius: 2vw;
+                        margin-left: 1vw;
+                        border: $button_border_primary solid 2px;
+
+                        &:hover {
+                            background: $button_bg_secondary;
+
+                        }
+
+                        &:active {
+                            background: $button_border_secondary;
+
+                        }
+                    }
+                }
+
                 .registrar_fecha {
 
                     #element_4_2,
                     #element_4_1 {
-                        width: 5vw;
+                        width: 2vw;
+                    }
+                }
+
+            }
+
+            .registrar_fecha_pedido {
+                .registrar_fecha {
+                    display: flex;
+
+                    .element_4_2,
+                    .element_4_1 {
+                        width: 15px;
                     }
 
-                    #element_4_3 {
-                        width: 7vw;
-                        min-width: 30px;
+                    .element_4_3 {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .registrar_submit {
+                margin: 0 auto;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 900px) {
+            width: 73vw;
+            max-width: 45vw;
+
+            .registrar_ul {
+                padding: 1rem 1rem;
+
+                .registrar_numero-mostrar {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            width: 90vw;
+            margin-bottom: 75px;
+            max-width: none;
+
+            .registrar_ul {
+                padding: 1rem 0.5rem;
+
+                li {
+                    padding-bottom: 0.7rem;
+                }
+
+                .registrar_item-importe {
+                    .registrar_item {
+                        width: 75%;
+
+                        // .cantidad {
+                        //     width: auto;
+                        // }
+
+                        .item_icono {
+                            width: auto;
+
+                            img {
+                                width: 15px;
+                            }
+                        }
+                    }
+
+                    .registrar_importe {
+                        width: 25%;
+                    }
+                }
+
+                .registrar_opciones-icono .registrar_icono img {
+                    width: 20px;
+                }
+
+                .registrar_fecha-icono-img {
+
+                    .registrar_fecha {
+
+                        #element_4_2,
+                        #element_4_1 {
+                            width: 5vw;
+                        }
+
+                        #element_4_3 {
+                            width: 7vw;
+                            min-width: 30px;
+                        }
                     }
                 }
             }
         }
-    }
 
-}
+    }
 }
 
 .registrar_opciones input,
@@ -320,36 +382,47 @@ input[type=number]::-webkit-outer-spin-button {
 .hidden_copies {
     display: none;
 }
+
 .ocultar_modo {
     display: none;
 }
 
 @media print {
-    .navbar{
+    .navbar {
         display: none;
     }
-    .registrar_forms{
-        #registrar_venta{
+
+    .registrar_forms {
+        #registrar_venta {
             display: none;
         }
-        #registrar_pedido{
-            .registrar_numero-mostrar{
+
+        #registrar_pedido {
+            .registrar_numero-mostrar {
                 display: none;
             }
-            .registrar_opciones-icono{
+
+            .registrar_opciones-icono {
                 display: none;
             }
-            .registrar_submit{
+
+            .registrar_submit {
                 display: none;
             }
-            .registrar_item-importe{
-                .registrar_item{
-                    .item_icono, .agregar_mat, .agregar_fer, .modo_mat, .modo_fer{
+
+            .registrar_item-importe {
+                .registrar_item {
+
+                    .item_icono,
+                    .agregar_mat,
+                    .agregar_fer,
+                    .modo_mat,
+                    .modo_fer {
                         display: none;
                     }
                 }
             }
         }
     }
- 
- }
+
+}

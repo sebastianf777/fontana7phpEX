@@ -336,10 +336,10 @@ $_SESSION['FORM_SECRET'] = $secret;
 
             <ul class="registrar_ul">
                 <!-- NUMERO -->
-                <li class= registrar_numero-mostrar ">
-                    <div class="registrar-numero">
-                        <label for="element_1">N°: </label>
-                        <input id="element_1" name="element_1" type="text" maxlength="255" value="" required placeholder="X" />
+                <li class=registrar_numero-mostrar ">
+                    <div class=" registrar-numero">
+                    <label for="element_1">N°: </label>
+                    <input id="element_1" name="element_1" type="text" maxlength="255" value="" required placeholder="X" />
                     </div>
                     <div class="registrar_mostrar">
                         <input id="con_numero" name="con_sin_numero" type="radio" maxlength="255" value="con_numero" checked="checked" />
@@ -373,8 +373,45 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <div class="cp-provincia">
                             C.P 4000 - S.M. de Tucumán
                         </div>
+                        <div class="iva-resp">
+                            IVA RESPONSABLE INSCRIPTO
+                        </div>
+
                     </div>
                     <div class="cabezal_der">
+                        <div class="documento-aviso">
+                            Documento No Válido Como Factura
+                        </div>
+                        <div class="presupuesto">
+                            PRESUPUESTO
+                        </div>
+                        <!-- FECHA -->
+
+                        <div class="registrar_fecha-icono-img registrar_fecha_pedido">
+                            <div class="fecha-titulo">
+                                FECHA:
+                            </div>
+                            <div class="registrar_fecha">
+                                <input class="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
+                                <input class="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
+                                <input class="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
+                            </div>
+                        </div>
+                        <div class="cuit">
+                            <span>CUIT:</span> 30716077728
+                        </div>
+                        <div class="ingresos-brutos">
+                            <span>Ingresos Brutos:</span> 30716077728
+                        </div>
+                        <div class="inicio-actividades">
+                            <span>
+                                Fecha de Inicio de Actividades:
+                            </span>
+                            01/10/2018
+                        </div>
+                        <!-- <div class="registrar_img" id="calendar_4">
+                            <img tabindex="1" src="img/fecha.png" alt="Pick a date.">
+                        </div> -->
 
                     </div>
                 </li>
@@ -387,23 +424,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </label>
                         <textarea id="element_11" name="element_11" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="CLIENTE"></textarea>
                     </div>
-                    <!-- FECHA -->
 
-                    <div class="registrar_fecha-icono-img registrar_fecha_pedido">
-                        <!-- <div class="registrar_icono">
-                            <img src="./img/calendar-icon.png" alt="fecha icono">
-                        </div> -->
-                        <div class="registrar_fecha">
-                            <input class="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
-                            <input class="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
-                            <input class="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
-                        </div>
-
-                        <!-- <div class="registrar_img" id="calendar_4">
-                            <img tabindex="1" src="img/fecha.png" alt="Pick a date.">
-                        </div> -->
-
-                    </div>
                     <!-- <div class="registrar_importe">
                         <label for="element_12">$</label>
                         <input id="element_12" name="element_12" type="number" maxlength="255" value="" step=".01" placeholder="A CUENTA" />
@@ -525,7 +546,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
 
 
-                <li class= "registrar_submit">
+                <li class="registrar_submit">
                     <button id="imprimir_boton" type="button">
                         Imprimir
                     </button>

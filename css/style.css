@@ -359,7 +359,44 @@ td {
 }
 .registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  border: solid 1px;
+  padding: 0;
+  margin-bottom: 0.7rem;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_izq {
+  text-align: center;
+  border-right: solid 1px;
+  width: 50%;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_izq .titulo {
+  font-family: fantasy;
+  font-size: 1.5rem;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der {
+  text-align: center;
+  width: 50%;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .documento-aviso {
+  padding-top: 3px;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .presupuesto {
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .cuit {
+  margin-top: 7px;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido {
+  display: flex;
+  flex-direction: row;
+  padding: 3px 0;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  justify-content: center;
+}
+.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido .registrar_fecha input {
+  border: none;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe {
   display: flex;
@@ -394,7 +431,8 @@ td {
   margin-right: 5px;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_mat,
-.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer, .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton {
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer,
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton {
   width: 20px;
   padding: 0;
   margin-right: 5px;
@@ -495,7 +533,8 @@ td {
 .registrar_forms .registrar_form .registrar_ul .registrar_fecha_pedido .registrar_fecha {
   display: flex;
 }
-.registrar_forms .registrar_form .registrar_ul .registrar_fecha_pedido .registrar_fecha .element_4_2, .registrar_forms .registrar_form .registrar_ul .registrar_fecha_pedido .registrar_fecha .element_4_1 {
+.registrar_forms .registrar_form .registrar_ul .registrar_fecha_pedido .registrar_fecha .element_4_2,
+.registrar_forms .registrar_form .registrar_ul .registrar_fecha_pedido .registrar_fecha .element_4_1 {
   width: 15px;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_fecha_pedido .registrar_fecha .element_4_3 {
@@ -601,7 +640,11 @@ input[type=number]::-webkit-outer-spin-button {
   .registrar_forms #registrar_pedido .registrar_submit {
     display: none;
   }
-  .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .item_icono, .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_mat, .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_fer, .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_mat, .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_fer {
+  .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .item_icono,
+.registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_mat,
+.registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_fer,
+.registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_mat,
+.registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_fer {
     display: none;
   }
 }

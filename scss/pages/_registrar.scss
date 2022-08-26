@@ -16,7 +16,7 @@
             @include flexColumn;
 
             li {
-                padding-bottom: 1rem;
+                padding-bottom: 0.3rem;
             }
 
             .registrar_numero-mostrar {
@@ -40,54 +40,7 @@
                 }
             }
 
-            .cabezal_presupuesto {
-                @include flexRow;
-                border: solid 1px;
-                padding: 0;
-                margin-bottom: 0.7rem;
 
-                .cabezal_izq {
-                    text-align: center;
-                    border-right: solid 1px;
-                    width: 50%;
-
-                    .titulo {
-                        font-family: fantasy;
-                        font-size: 1.5rem;
-                    }
-                }
-
-                .cabezal_der {
-                    text-align: center;
-                    width: 50%;
-                    .documento-aviso{
-                        padding-top: 3px;
-                    }
-
-                    .presupuesto {
-                        font-weight: bold;
-                        padding-bottom: 3px;
-                    }
-
-                    .cuit {
-                        margin-top: 7px;
-                    }
-
-                    .registrar_fecha_pedido {
-                        @include flexRow;
-                        padding: 3px 0;
-                        border-top: solid 1px;
-                        border-bottom: solid 1px;
-                        justify-content: center;
-
-                        .registrar_fecha {
-                            input {
-                                border: none;
-                            }
-                        }
-                    }
-                }
-            }
 
             .registrar_item-importe {
                 @include flexRow;
@@ -95,7 +48,7 @@
                 .registrar_item {
                     display: flex;
                     align-items: center;
-                    width: 80%;
+                    width: 100%;
 
                     .item_icono {
                         width: 30px;
@@ -348,6 +301,151 @@
                             min-width: 30px;
                         }
                     }
+                }
+            }
+        }
+
+    }
+
+    #registrar_pedido {
+        ul {
+            .cabezal_presupuesto {
+                @include flexRow;
+                border: solid 1px;
+                padding: 0;
+
+                .cabezal_izq {
+                    text-align: center;
+                    border-right: solid 1px;
+                    width: 50%;
+
+                    .titulo {
+                        font-family: fantasy;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .cabezal_der {
+                    text-align: center;
+                    width: 50%;
+
+                    .documento-aviso {
+                        padding-top: 3px;
+                    }
+
+                    .presupuesto {
+                        font-weight: bold;
+                        padding-bottom: 3px;
+                    }
+
+                    .cuit {
+                        margin-top: 7px;
+                    }
+
+                    .registrar_fecha_pedido {
+                        @include flexRow;
+                        padding: 3px 0;
+                        border-top: solid 1px;
+                        border-bottom: solid 1px;
+                        justify-content: center;
+
+                        .registrar_fecha {
+                            input {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .registrar_item-importe {
+
+                .registrar_item {
+                   
+
+                   
+                    label img {
+                        width: 20px;
+                        display: flex;
+                        margin: 0 auto;
+                    }
+
+                    textarea,
+                    select {
+                        border: none;
+                        border-bottom: 2px dotted $color_primary_ex;
+                        margin: 0 1vw;
+                    }
+                }
+                
+            }
+            .materiales-ferreteria{
+                .registrar_item{
+                    width: 80%;
+                    .cantidad{
+                        width: 10%;
+                    }
+                    textarea, select{
+                        width: 90%;
+                    }
+                }
+                .registrar_importe{
+                    width: 20%;
+    
+                    }
+            }
+            
+
+            .direccion-cliente {
+                border: solid 1px;
+                @include flexColumn;
+                margin-top: 2px;
+
+                .registrar_item {
+                    .cliente-titulo {
+                        width: 10%;
+                    }
+
+                    textarea,
+                    select {
+                        max-width: 80%;
+
+                    }
+                }
+            }
+
+            .cabezal_materiales {
+                @include flexRow;
+                border: 1px solid;
+                border-top: none;
+                text-align: center;
+                padding: 0;
+                font-size: 20px;
+                .cabezal_cant {
+                    width: 10%;
+                    border-right: solid 1px;
+                    padding: 3px 0;
+
+                }
+
+                .cabezal_detalles {
+                    width: 70%;
+                    padding: 3px 0;
+                    border-right: solid 1px;
+
+                }
+
+                .cabezal_precio_unitario {
+                    width: 10%;
+                    padding: 3px 0;
+                    border-right: solid 1px;
+
+                }
+
+                .cabezal_importe {
+                    width: 10%;
+                    padding: 3px 0;
+
                 }
             }
         }

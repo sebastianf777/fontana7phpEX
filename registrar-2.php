@@ -416,37 +416,50 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                 </li>
                 <!-- CLIENTE -->
-                <li class="registrar_item-importe">
+                <li class="registrar_item-importe direccion-cliente">
 
                     <div class="registrar_item">
                         <label class="item_icono" for="element_11">
                             <img src="/img/acuenta.png" alt="acuenta imagen">
                         </label>
+                        <div class="cliente-titulo">
+                            Cliente:
+                        </div>
                         <textarea id="element_11" name="element_11" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="CLIENTE"></textarea>
                     </div>
-
-                    <!-- <div class="registrar_importe">
-                        <label for="element_12">$</label>
-                        <input id="element_12" name="element_12" type="number" maxlength="255" value="" step=".01" placeholder="A CUENTA" />
-                    </div> -->
-                </li>
                 <!-- DIRECCIÓN -->
-                <li class="registrar_item-importe">
                     <div class="registrar_item">
                         <label class="item_icono" for="element_9">
                             <img src="/img/pedidos.png" alt="pedidos imagen">
                         </label>
+                        <div class="cliente-titulo">
+                            Domicilio:
+                        </div>
                         <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="DIRECCIÓN"></textarea>
                     </div>
-                    <!-- <div class="registrar_importe">
-                        <label for="element_10">$</label>
-                        <input id="element_10" name="element_10" type="number" maxlength="255" value="" step=".01"
-                            placeholder="TOTAL" />
-                    </div> -->
+                    
+                </li>
+                <!-- <li class="registrar_item-importe">
+                    
+                   
+                </li> -->
+                <li class="cabezal_materiales">
+                    <div class="cabezal_cant">
+                        Cant.
+                    </div>
+                    <div class="cabezal_detalles">
+                        Detalle
+                    </div>
+                    <div class="cabezal_precio_unitario">
+                        P. Unit.
+                    </div>
+                    <div class="cabezal_importe">
+                        Importe
+                    </div>
                 </li>
                 <!-- MATERIALES -->
 
-                <li class="registrar_item-importe mat_first">
+                <li class="registrar_item-importe mat_first materiales-ferreteria">
                     <div class="registrar_item">
 
                         <div class="item_icono" for="element_2">
@@ -477,7 +490,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
 
                 <!-- FERRETERIA -->
-                <li class="registrar_item-importe fer_first">
+                <li class="registrar_item-importe fer_first materiales-ferreteria">
                     <div class="registrar_item">
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">

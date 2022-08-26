@@ -335,7 +335,7 @@ td {
   flex-direction: column;
 }
 .registrar_forms .registrar_form .registrar_ul li {
-  padding-bottom: 1rem;
+  padding-bottom: 0.3rem;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_numero-mostrar {
   display: flex;
@@ -357,47 +357,6 @@ td {
   right: 0;
   font-size: clamp(12px, 1vw, 18px);
 }
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto {
-  display: flex;
-  flex-direction: row;
-  border: solid 1px;
-  padding: 0;
-  margin-bottom: 0.7rem;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_izq {
-  text-align: center;
-  border-right: solid 1px;
-  width: 50%;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_izq .titulo {
-  font-family: fantasy;
-  font-size: 1.5rem;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der {
-  text-align: center;
-  width: 50%;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .documento-aviso {
-  padding-top: 3px;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .presupuesto {
-  font-weight: bold;
-  padding-bottom: 3px;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .cuit {
-  margin-top: 7px;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido {
-  display: flex;
-  flex-direction: row;
-  padding: 3px 0;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
-  justify-content: center;
-}
-.registrar_forms .registrar_form .registrar_ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido .registrar_fecha input {
-  border: none;
-}
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe {
   display: flex;
   flex-direction: row;
@@ -405,7 +364,7 @@ td {
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 100%;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .item_icono {
   width: 30px;
@@ -590,6 +549,110 @@ td {
     width: 7vw;
     min-width: 30px;
   }
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px;
+  padding: 0;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_izq {
+  text-align: center;
+  border-right: solid 1px;
+  width: 50%;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_izq .titulo {
+  font-family: fantasy;
+  font-size: 1.5rem;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der {
+  text-align: center;
+  width: 50%;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der .documento-aviso {
+  padding-top: 3px;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der .presupuesto {
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der .cuit {
+  margin-top: 7px;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido {
+  display: flex;
+  flex-direction: row;
+  padding: 3px 0;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  justify-content: center;
+}
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido .registrar_fecha input {
+  border: none;
+}
+.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item label img {
+  width: 20px;
+  display: flex;
+  margin: 0 auto;
+}
+.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item textarea,
+.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item select {
+  border: none;
+  border-bottom: 2px dotted #2525e4;
+  margin: 0 1vw;
+}
+.registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_item {
+  width: 80%;
+}
+.registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_item .cantidad {
+  width: 10%;
+}
+.registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_item textarea, .registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_item select {
+  width: 90%;
+}
+.registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_importe {
+  width: 20%;
+}
+.registrar_forms #registrar_pedido ul .direccion-cliente {
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+.registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item .cliente-titulo {
+  width: 10%;
+}
+.registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item textarea,
+.registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item select {
+  max-width: 80%;
+}
+.registrar_forms #registrar_pedido ul .cabezal_materiales {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  border-top: none;
+  text-align: center;
+  padding: 0;
+  font-size: 20px;
+}
+.registrar_forms #registrar_pedido ul .cabezal_materiales .cabezal_cant {
+  width: 10%;
+  border-right: solid 1px;
+  padding: 3px 0;
+}
+.registrar_forms #registrar_pedido ul .cabezal_materiales .cabezal_detalles {
+  width: 70%;
+  padding: 3px 0;
+  border-right: solid 1px;
+}
+.registrar_forms #registrar_pedido ul .cabezal_materiales .cabezal_precio_unitario {
+  width: 10%;
+  padding: 3px 0;
+  border-right: solid 1px;
+}
+.registrar_forms #registrar_pedido ul .cabezal_materiales .cabezal_importe {
+  width: 10%;
+  padding: 3px 0;
 }
 
 .registrar_opciones input,

@@ -565,6 +565,9 @@ td {
   font-family: fantasy;
   font-size: 1.5rem;
 }
+.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_izq .iva-resp {
+  border-top: solid 1px;
+}
 .registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der {
   text-align: center;
   width: 50%;
@@ -590,7 +593,7 @@ td {
 .registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido .registrar_fecha input {
   border: none;
 }
-.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item label img {
+.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item .item_icono img {
   width: 20px;
   display: flex;
   margin: 0 auto;

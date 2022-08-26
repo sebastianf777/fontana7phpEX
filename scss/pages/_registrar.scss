@@ -323,6 +323,10 @@
                         font-family: fantasy;
                         font-size: 1.5rem;
                     }
+                    .iva-resp{
+                    border-top: solid 1px;
+
+                    }
                 }
 
                 .cabezal_der {
@@ -364,7 +368,7 @@
                    
 
                    
-                    label img {
+                    .item_icono img {
                         width: 20px;
                         display: flex;
                         margin: 0 auto;

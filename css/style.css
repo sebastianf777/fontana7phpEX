@@ -717,7 +717,7 @@ input[type=number]::-webkit-outer-spin-button {
 .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_mat,
 .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_fer,
 .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_mat,
-.registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_fer {
+.registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_fer, .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .eliminar_boton {
     display: none;
   }
 }

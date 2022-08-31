@@ -190,17 +190,26 @@ const agregarFuncionMat = () => {
 
 }
 const agregarFuncionFer = () => {
-  fer_new = fer_li.cloneNode(true);
-  fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
-  fer_new.classList.remove('fer_li');
-  boton_modo_fer = document.querySelectorAll('.modo_fer');
-  cantidad = document.querySelectorAll('.cantidad');
-  cada_uno = document.querySelectorAll('.cada_uno');
-
-  funcionModoFer();
-  funcionMultiplicar();
-  funcionSumar();
-  eliminarItem();
+  agregar_item_fer = document.querySelectorAll('.agregar_fer');
+  agregar_item_fer.forEach(element => {
+    if (element.parentElement.parentElement.classList.contains('fer_li') == false && element.classList.contains('tiene_funcion_AgregarItem') == false) {
+      element.classList.add('tiene_funcion_AgregarItem');
+      element.addEventListener('click', function (e) {
+      fer_new = fer_li.cloneNode(true);
+      fer_first = e.target.parentElement.parentElement;
+      fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
+      fer_new.classList.remove('fer_li');
+      // cantidad = document.querySelectorAll('.cantidad');
+      // cada_uno = document.querySelectorAll('.cada_uno');
+    
+      funcionModoFer();
+      funcionMultiplicar();
+      funcionSumar();
+      eliminarItem();
+      })
+    };
+  })
+  
 }
 
 //Eliminar Item
@@ -372,6 +381,8 @@ function funcionModoMat() {
 }
 
 function funcionModoFer() {
+  boton_modo_fer = document.querySelectorAll('.modo_fer');
+
   boton_modo_fer.forEach(element => {
 
     if (element.parentElement.parentElement.classList.contains('fer_li') == false && element.classList.contains('tiene_funcion_modo') == false) {
@@ -448,5 +459,6 @@ window.onload = function () {
   cambiarTipoRegistro();
   funcionImprimir();
   agregarFuncionMat();
+  agregarFuncionFer();
 }
 

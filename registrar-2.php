@@ -212,7 +212,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
                         </label>
-                        <button type="button" class="agregar_fer" onclick='agregarFuncionFer()'>
+                        <button type="button" class="agregar_fer" >
                             +
                         </button>
                         <button type="button" class="modo_fer">
@@ -572,7 +572,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
     <!-- COPIAS EN BLANCO -->
     <div class="hidden_copies">
-        <li class="registrar_item-importe mat_li copia">
+        <li class="registrar_item-importe mat_li copia materiales-ferreteria">
             <div class="registrar_item">
 
                 <div class="item_icono" for="element_2">
@@ -604,7 +604,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
         <!-- COPIA FERRETERIA -->
 
-        <li class="registrar_item-importe fer_li copia">
+        <li class="registrar_item-importe fer_li copia materiales-ferreteria">
             <div class="registrar_item">
                 <label class="item_icono" for="element_6">
                     <img src="/img/ferreteria.png" alt="ferreteria img">

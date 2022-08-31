@@ -7,16 +7,21 @@ const numero = document.getElementById('element_1');
 const sin_numero = document.getElementById('sin_numero');
 const mostrar_numero = document.querySelector('.registrar_mostrar');
 const vendedor_opciones = document.getElementById('vendedor_opciones');
-const materiales_textarea = document.getElementById("element_2");
 
-const agregar_item = document.querySelectorAll(".agregar_mat");
+const materiales_textarea = document.getElementById("element_2");
+// const agregar_item = document.querySelectorAll(".agregar_mat");
 const mat_li = document.querySelector(".mat_li");
 const fer_li = document.querySelector(".fer_li");
-const mat_first = document.querySelector(".mat_first");
-const fer_first = document.querySelector(".fer_first");
-
-let mat_new = mat_li.cloneNode(true);
-let mat_fer = fer_li.cloneNode(true);
+// const mat_first = document.querySelector(".mat_first");
+// const fer_first = document.querySelector(".fer_first");
+let mat_first;
+let fer_first;
+let agregar_item_mat;
+let agregar_item_fer;
+// let mat_new = mat_li.cloneNode(true);
+// let mat_fer = fer_li.cloneNode(true);
+let mat_new;
+let mat_fer;
 
 let ferreteria_textarea = document.getElementById("element_6");
 let pedidos_textarea = document.getElementById("element_9");
@@ -99,16 +104,16 @@ function formatDate(date, format) {
 }
 function ponerFecha() {
   month.forEach(element => {
-  element.value = formatDate(todayNew, 'mm');
-    
+    element.value = formatDate(todayNew, 'mm');
+
   });
   date.forEach(element => {
-  element.value = formatDate(todayNew, 'dd');
-    
+    element.value = formatDate(todayNew, 'dd');
+
   });
   year.forEach(element => {
-  element.value = formatDate(todayNew, 'yy');
-    
+    element.value = formatDate(todayNew, 'yy');
+
   });
 }
 // fecha.addEventListener("click", ponerFecha())
@@ -146,21 +151,43 @@ registrar_submit.onclick = function () {
 }
 
 //Agregar item
-const agregarFuncionMat = () => {
-  mat_new = mat_li.cloneNode(true);
-  mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
-  mat_new.classList.remove('mat_li');
-  boton_modo_mat = document.querySelectorAll('.modo_mat');
-  cantidad = document.querySelectorAll('.cantidad');
-  cada_uno = document.querySelectorAll('.cada_uno');
-  precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
-  select_materiales = document.querySelectorAll('.select_materiales');
+// const agregarFuncionMat = () => {
+//   mat_new = mat_li.cloneNode(true);
+//   mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
+//   mat_new.classList.remove('mat_li');
+//   boton_modo_mat = document.querySelectorAll('.modo_mat');
+//   cantidad = document.querySelectorAll('.cantidad');
+//   cada_uno = document.querySelectorAll('.cada_uno');
+//   precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
+//   select_materiales = document.querySelectorAll('.select_materiales');
 
-  funcionModoMat();
-  funcionMultiplicar();
-  funcionSumar();
-  precioAuto();
-  eliminarItem();
+//   funcionModoMat();
+//   funcionMultiplicar();
+//   funcionSumar();
+//   precioAuto();
+//   eliminarItem();
+// }
+const agregarFuncionMat = () => {
+  agregar_item_mat = document.querySelectorAll('.agregar_mat');
+  agregar_item_mat.forEach(element => {
+    if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_AgregarItem') == false) {
+      element.classList.add('tiene_funcion_AgregarItem');
+      element.addEventListener('click', function (e) {
+        mat_new = mat_li.cloneNode(true);
+        mat_first = e.target.parentElement.parentElement;
+        mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
+        mat_new.classList.remove('mat_li');
+
+        funcionModoMat();
+        funcionMultiplicar();
+        funcionSumar();
+        precioAuto();
+        eliminarItem();
+      })
+
+    }
+  });
+
 }
 const agregarFuncionFer = () => {
   fer_new = fer_li.cloneNode(true);
@@ -169,7 +196,6 @@ const agregarFuncionFer = () => {
   boton_modo_fer = document.querySelectorAll('.modo_fer');
   cantidad = document.querySelectorAll('.cantidad');
   cada_uno = document.querySelectorAll('.cada_uno');
-  precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
 
   funcionModoFer();
   funcionMultiplicar();
@@ -223,13 +249,15 @@ function conseguirSibling(elem, selector) {
 //Precio automático
 
 function precioAuto() {
+  select_materiales = document.querySelectorAll('.select_materiales');
+
   select_materiales.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li'))) && element.classList.contains('..tiene_funcion_precio_auto') == false) {
       element.classList.add('.tiene_funcion_precio_auto');
       element.addEventListener('focusout', function (e) {
         const [option] = e.target.selectedOptions;
-        cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio;
-
+        
+        (option.dataset.precio != undefined) ? cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio : ''; 
       }
       )
     }
@@ -239,6 +267,20 @@ function precioAuto() {
 
 //Sumar Total y funcion Sumar
 
+
+
+function funcionSumar() {
+  precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
+
+  precio_multiplicado.forEach(element => {
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_sumar') == false)) {
+      element.classList.add('tiene_funcion_sumar');
+      element.addEventListener('focusout', function (e) {
+        sumarTotal();
+      })
+    }
+  });
+}
 function sumarTotal() {
   sum = 0;
   for (let i = 0; i < precio_multiplicado.length; i++) {
@@ -250,21 +292,11 @@ function sumarTotal() {
 
 }
 
-function funcionSumar() {
-
-  precio_multiplicado.forEach(element => {
-    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_sumar') == false)) {
-      element.classList.add('tiene_funcion_sumar');
-      element.addEventListener('focusout', function (e) {
-        sumarTotal();
-      })
-    }
-  });
-}
-
 //Multiplicar cantidad x unidad
 
 function funcionMultiplicar() {
+  cada_uno = document.querySelectorAll('.cada_uno');
+  cantidad = document.querySelectorAll('.cantidad');
   cada_uno.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
 
@@ -304,6 +336,7 @@ function funcionMultiplicar() {
 //Cambiar modo
 
 function funcionModoMat() {
+  boton_modo_mat = document.querySelectorAll('.modo_mat');
   boton_modo_mat.forEach(element => {
 
     if (element.parentElement.parentElement.classList.contains('mat_li') == false && element.classList.contains('tiene_funcion_modo') == false) {
@@ -383,17 +416,17 @@ function cambiarTipoRegistro() {
       e.preventDefault;
       registrar_pedido_form.classList.toggle('ocultar_modo');
       registrar_venta_form.classList.toggle('ocultar_modo');
-  
+
     })
   });
-  
-  
+
+
 }
 
 //Imprimir
 
 const funcionImprimir = () => {
-  boton_imprimir.addEventListener("click", (e) =>{
+  boton_imprimir.addEventListener("click", (e) => {
     e.preventDefault;
     window.print();
   })
@@ -414,5 +447,6 @@ window.onload = function () {
   eliminarItem();
   cambiarTipoRegistro();
   funcionImprimir();
+  agregarFuncionMat();
 }
 

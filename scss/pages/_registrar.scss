@@ -22,6 +22,7 @@
             .registrar_numero-mostrar {
                 @include flexRowCenter;
                 position: relative;
+                padding: 0 0 33px 0;
 
                 .registrar-numero {
                     align-items: center;
@@ -366,8 +367,9 @@
 
                 .registrar_item {
                    
-
-                   
+                    .cantidad input{
+                        border: none;
+                    }
                     .item_icono img {
                         width: 20px;
                         display: flex;
@@ -379,6 +381,11 @@
                         border: none;
                         border-bottom: 2px dotted $color_primary_ex;
                         margin: 0 1vw;
+                    }
+                }
+                .registrar_importe{
+                    .cada_uno, .precio_multiplicado{
+                        border: none;
                     }
                 }
                 

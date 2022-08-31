@@ -168,10 +168,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero" />
                         <label class="button_3" for="sin_numero">SIN</label>
                     </div>
-                    <button type="button" class="cambiar_tipo_registro">
-                        REGISTRAR
+                    <button type="button" class="cambiar_tipo_registro button_3">
+                        fORMULARIO
                         <br>
-                        PEDIDO
+                        PEDIDOS
                     </button>
                 </li>
                 <!-- MATERIALES -->
@@ -182,7 +182,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <div class="item_icono" for="element_2">
                             <img src="/img/materiales.png" alt="materiales imagen">
                         </div>
-                        <button type="button" class="agregar_mat" onclick='agregarFuncionMat()'>
+                        <button type="button" class="agregar_mat">
                             +
                         </button>
                         <button type="button" class="modo_mat">
@@ -347,10 +347,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero" />
                         <label class="button_3" for="sin_numero">SIN</label>
                     </div>
-                    <button type="button" class="cambiar_tipo_registro">
-                        REGISTRAR
+                    <button type="button" class="cambiar_tipo_registro button_3">
+                        FORMULARIO
                         <br>
-                        VENTA
+                        VENTAS
                     </button>
                 </li>
                 <li class="cabezal_presupuesto">
@@ -560,7 +560,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
 
                 <li class="registrar_submit">
-                    <button id="imprimir_boton" type="button">
+                    <button id="imprimir_boton" class="button_3"  type="button">
                         Imprimir
                     </button>
                     <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />

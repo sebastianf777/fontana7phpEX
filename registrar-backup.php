@@ -153,8 +153,8 @@ $_SESSION['FORM_SECRET'] = $secret;
             </ul>
         </nav>
     </header>
-    <section class="registrar_forms">
-        <form class="registrar_form" id="registrar_venta" method="post" action="registrar_formulas.php">
+    <section class="registrar_forms" >
+        <form class="registrar_form" method="post" action="registrar_formulas.php">
 
             <ul class="registrar_ul">
                 <li class="registrar_numero-mostrar">
@@ -164,15 +164,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="registrar_mostrar">
                         <input id="con_numero" name="con_sin_numero" type="radio" maxlength="255" value="con_numero" checked="checked" />
-                        <label class="button_3" for="con_numero">CON</label>
+                        <label for="con_numero">CON</label>
                         <input id="sin_numero" name="con_sin_numero" type="radio" maxlength="255" value="sin_numero" />
-                        <label class="button_3" for="sin_numero">SIN</label>
+                        <label for="sin_numero">SIN</label>
                     </div>
-                    <button type="button" class="cambiar_tipo_registro button_3">
-                        fORMULARIO
-                        <br>
-                        PEDIDOS
-                    </button>
                 </li>
                 <!-- MATERIALES -->
 
@@ -182,7 +177,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <div class="item_icono" for="element_2">
                             <img src="/img/materiales.png" alt="materiales imagen">
                         </div>
-                        <button type="button" class="agregar_mat">
+                        <button type="button" class="agregar_mat" onclick='agregarFuncionMat()'>
                             +
                         </button>
                         <button type="button" class="modo_mat">
@@ -212,7 +207,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
                         </label>
-                        <button type="button" class="agregar_fer">
+                        <button type="button" class="agregar_fer" onclick='agregarFuncionFer()'>
                             +
                         </button>
                         <button type="button" class="modo_fer">
@@ -252,9 +247,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <label class="registrar_icono">MOSTRAR: </label>
                     <div class="registrar_opciones">
                         <input id="element_13_1" name="element_13" type="radio" maxlength="255" value="Si" />
-                        <label class="mostrar button_3" for="element_13_1">SI</label>
+                        <label class="mostrar" for="element_13_1">SI</label>
                         <input id="element_13_2" name="element_13" type="radio" maxlength="255" value="No" checked="checked" />
-                        <label class="mostrar button_3" for="element_13_2">NO</label>
+                        <label class="mostrar" for="element_13_2">NO</label>
 
                     </div>
 
@@ -291,11 +286,11 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="registrar_opciones">
                         <input id="element_8_1" name="element_8" type="radio" maxlength="255" value="Contado" checked="checked" />
-                        <label class="button_3" for="element_8_1">Contado</label>
+                        <label for="element_8_1">Contado</label>
                         <input id="element_8_2" name="element_8" type="radio" maxlength="255" value="Debito" />
-                        <label class="button_3" for="element_8_2">Débito</label>
+                        <label for="element_8_2">Débito</label>
                         <input id="element_8_3" name="element_8" type="radio" maxlength="255" value="Fiado" />
-                        <label class="button_3" for="element_8_3">Fiado</label>
+                        <label for="element_8_3">Fiado</label>
 
                     </div>
 
@@ -305,9 +300,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </label>
                     <div id="vendedor_opciones" class="registrar_opciones">
                         <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian" checked="checked" />
-                        <label class="button_3" for="element_3_1">Brian</label>
+                        <label for="element_3_1">Brian</label>
                         <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
-                        <label class="button_3" for="element_3_2">Sebastian</label>
+                        <label for="element_3_2">Sebastian</label>
                     </div>
                 </li>
                 <li class="registrar_fecha-icono-img">
@@ -315,9 +310,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <img src="./img/calendar-icon.png" alt="fecha icono">
                     </div>
                     <div class="registrar_fecha">
-                        <input class="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
-                        <input class="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
-                        <input class="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
+                        <input id="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
+                        <input id="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
+                        <input id="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
                     </div>
 
                     <div class="registrar_img" id="calendar_4">
@@ -328,263 +323,16 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                 <li class="registrar_submit">
                     <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
-                    <input class="button_3" id="registrar_submit" type="submit" name="submit" value="Submit" />
+                    <input id="registrar_submit" type="submit" name="submit" value="Submit" />
                 </li>
             </ul>
         </form>
-        <form class="registrar_form ocultar_modo" id="registrar_pedido" method="post" action="registrar_formulas.php">
 
-            <ul class="registrar_ul">
-                <!-- NUMERO -->
-                <li class=registrar_numero-mostrar ">
-                    <div class=" registrar-numero">
-                    <!-- element_1 -->
-                    <label for="element_1">N°: </label>
-                    <input id="element_1" name="element_1" type="text" maxlength="255" value="" required placeholder="X" />
-                    </div>
-
-                    <button type="button" class="cambiar_tipo_registro button_3">
-                        FORMULARIO
-                        <br>
-                        VENTAS
-                    </button>
-                </li>
-                <li class="cabezal_presupuesto">
-                    <div class="cabezal_izq">
-                        <div class="titulo">
-                            FONTANA MATERIALES
-                        </div>
-                        <div class="subtitulo">
-                            Materiales para la construcción
-                        </div>
-                        <div class="dir-tel">
-                            Av. Belgrano 1904 - Tel 423 6628
-                            <br>
-                            Viamonte y Ramírez de Velazco - Tel 434 2963
-                        </div>
-                        <div class="whatsApp-cel">
-                            <div class="icono"></div>
-                            <div class="cel">Cel. (0381) 155-788058</div>
-                        </div>
-                        <div class="cp-provincia">
-                            C.P 4000 - S.M. de Tucumán
-                        </div>
-                        <div class="iva-resp">
-                            IVA RESPONSABLE INSCRIPTO
-                        </div>
-
-                    </div>
-                    <div class="cabezal_der">
-                        <div class="documento-aviso">
-                            Documento No Válido Como Factura
-                        </div>
-                        <div class="presupuesto">
-                            PRESUPUESTO
-                        </div>
-                        <!-- FECHA -->
-
-                        <div class="registrar_fecha-icono-img registrar_fecha_pedido">
-                            <div class="fecha-titulo">
-                                FECHA:
-                            </div>
-                            <!-- element_4_2, element_4_1, element_4_3 -->
-                            <div class="registrar_fecha">
-                                <input class="element_4_2" name="element_4_2" size="2" maxlength="2" value="" type="text" placeholder="DD" required> /
-                                <input class="element_4_1" name="element_4_1" size="2" maxlength="2" value="" type="text" placeholder="MM" required> /
-                                <input class="element_4_3" name="element_4_3" size="4" maxlength="4" value="" type="text" placeholder="YYYY" required>
-                            </div>
-                        </div>
-                        <div class="cuit">
-                            <span>CUIT:</span> 30716077728
-                        </div>
-                        <div class="ingresos-brutos">
-                            <span>Ingresos Brutos:</span> 30716077728
-                        </div>
-                        <div class="inicio-actividades">
-                            <span>
-                                Fecha de Inicio de Actividades:
-                            </span>
-                            01/10/2018
-                        </div>
-                        <!-- <div class="registrar_img" id="calendar_4">
-                            <img tabindex="1" src="img/fecha.png" alt="Pick a date.">
-                        </div> -->
-
-                    </div>
-                </li>
-                <!-- CLIENTE -->
-                <li class="registrar_item-importe direccion-cliente">
-
-                    <div class="registrar_item">
-                        <!-- element_11 -->
-                        <label class="item_icono" for="element_11">
-                            <img src="/img/acuenta.png" alt="acuenta imagen">
-                        </label>
-                        <div class="cliente-titulo">
-                            Cliente:
-                        </div>
-                        <textarea id="element_11" name="element_11" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="CLIENTE"></textarea>
-                    </div>
-                    <!-- DIRECCIÓN -->
-                    <div class="registrar_item">
-                        <!-- element_9 -->
-                        <label class="item_icono" for="element_9">
-                            <img src="/img/pedidos.png" alt="pedidos imagen">
-                        </label>
-                        <div class="cliente-titulo">
-                            Domicilio:
-                        </div>
-                        <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="DIRECCIÓN"></textarea>
-                    </div>
-
-                </li>
-
-                <li class="cabezal_materiales">
-                    <div class="cabezal_cant">
-                        Cant.
-                    </div>
-                    <div class="cabezal_detalles">
-                        Detalle
-                    </div>
-                    <div class="cabezal_precio_unitario">
-                        P. Unit.
-                    </div>
-                    <div class="cabezal_importe">
-                        Importe
-                    </div>
-                </li>
-                <!-- MATERIALES -->
-
-                <li class="registrar_item-importe mat_first materiales-ferreteria">
-                    <div class="registrar_item">
-
-                        <div class="item_icono">
-                            <img src="/img/materiales.png" alt="materiales imagen">
-                        </div>
-                        <button type="button" class="agregar_mat">
-                            +
-                        </button>
-                        <button type="button" class="modo_mat">
-                            M
-                        </button>
-                        <!-- count_mat -->
-                        <div class="cantidad">
-                            <input type="number" name="count_mat[]" placeholder="C">
-                        </div>
-                        <!-- element_2 -->
-                        <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
-
-
-                        <select id="select_element_2" name="element_2[]" class=" select_materiales">
-
-                        </select>
-                    </div>
-                    <div class="registrar_importe">
-                        <label for="cada_uno">$</label>
-                        <input class="cada_uno" name="cada_uno" type="number" placeholder="C/U">
-                        <!-- total -->
-                        <label for="element_5">$</label>
-                        <input id="element_5" name="element_5[]" class="precio_multiplicado" type="number" maxlength="255" value="" step=".01" placeholder="--" />
-                    </div>
-                </li>
-
-                <!-- FERRETERIA -->
-                <li class="registrar_item-importe fer_first materiales-ferreteria">
-                    <div class="registrar_item">
-                        <label class="item_icono" for="element_6">
-                            <img src="/img/ferreteria.png" alt="ferreteria img">
-                        </label>
-                        <button type="button" class="agregar_fer" onclick='agregarFuncionFer()'>
-                            +
-                        </button>
-                        <button type="button" class="modo_fer">
-                            M
-                        </button>
-                        <div class="cantidad">
-                            <!-- count_fer -->
-                            <input type="number" name="count_fer[]" placeholder="C">
-                        </div>
-                        <textarea id="element_6" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="FERRETERIA - MODO MANUAL"></textarea>
-                        <!-- element_6 -->
-                        <select id="select_element_6" name="element_6[]" class="">
-                            <option value="">Elegir-opción</option>
-                            <option value="Ferreteria">Ferreteria</option>
-                            <option value="PP/PVC">PP/PVC</option>
-                            <option value="Electricidad">Electricidad</option>
-                            <option value="Sanitarios">Sanitarios</option>
-                            <option value="Pinturería">Pinturería</option>
-                            <option value="Fraccionados">Fraccionados</option>
-
-                        </select>
-                    </div>
-
-                    <div class="registrar_importe">
-
-                        <label for="cada_uno">$</label>
-                        <input name="cada_uno" class="cada_uno" type="number" placeholder="C/U">
-
-                        <label for="element_7">$</label>
-                        <!-- element_7 -->
-                        <input id="element_7" name="element_7[]" type="number" maxlength="255" class="precio_multiplicado" value="" step=".01" placeholder="--" />
-                    </div>
-
-                </li>
-                <li class="total_li">
-                    <div class="signo">$</div>
-                    <div class="total_suma"></div>
-                </li>
-                <li class="presupuesto_footer">
-                    <div class="precio-iva">
-                        PRECIO + IVA
-                    </div>
-                    <div class="gracias-consulta">
-                        ¡Gracias por su Consulta!
-                    </div>
-                </li>
-                <!-- TIPO DE PAGO -->
-                <li class="registrar_opciones-icono">
-                    <div class="registrar_icono">
-                        TIPO DE PAGO:
-                    </div>
-                    <!-- element_8 -->
-                    <div class="registrar_opciones">
-                        <input id="element_8_1" name="element_8" type="radio" maxlength="255" value="Contado" checked="checked" />
-                        <label class="button_3" for="element_8_1">Contado</label>
-                        <input id="element_8_2" name="element_8" type="radio" maxlength="255" value="Debito" />
-                        <label class="button_3" for="element_8_2">Débito</label>
-                        <input id="element_8_3" name="element_8" type="radio" maxlength="255" value="Fiado" />
-                        <label class="button_3" for="element_8_3">Fiado</label>
-
-                    </div>
-
-                <li class="registrar_opciones-icono ">
-                    <label class="registrar_icono">
-                        <img src="/img/vendedor.png" alt="vendedor img">
-                    </label>
-                    <!-- element_3 -->
-                    <div id="vendedor_opciones" class="registrar_opciones">
-                        <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian" checked="checked" />
-                        <label class="button_3" for="element_3_1">Brian</label>
-                        <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
-                        <label class="button_3" for="element_3_2">Sebastian</label>
-                    </div>
-                </li>
-
-
-                <li class="registrar_submit">
-                    <button id="imprimir_boton" class="button_3" type="button">
-                        Imprimir
-                    </button>
-                    <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
-                    <input class="button_3" id="registrar_submit" type="submit" name="submit" value="Submit" />
-                </li>
-            </ul>
-        </form>
     </section>
 
     <!-- COPIAS EN BLANCO -->
     <div class="hidden_copies">
-        <li class="registrar_item-importe mat_li copia materiales-ferreteria">
+        <li class="registrar_item-importe mat_li copia">
             <div class="registrar_item">
 
                 <div class="item_icono" for="element_2">
@@ -601,7 +349,6 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </div>
                 <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
                 <select id="select_element_2" name="element_2[]" class="select_materiales">
-
                 </select>
             </div>
             <div class="registrar_importe">
@@ -610,13 +357,13 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <input class="cada_uno" name="cada_uno" type="number" placeholder="C/U">
 
                 <label for="element_5">$</label>
-                <input class="precio_multiplicado" id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" placeholder="--" />
+                <input class="precio_multiplicado" id="element_5" name="element_5[]" type="number" maxlength="255" value="" step=".01" placeholder="--"/>
             </div>
         </li>
 
         <!-- COPIA FERRETERIA -->
 
-        <li class="registrar_item-importe fer_li copia materiales-ferreteria">
+        <li class="registrar_item-importe fer_li copia">
             <div class="registrar_item">
                 <label class="item_icono" for="element_6">
                     <img src="/img/ferreteria.png" alt="ferreteria img">

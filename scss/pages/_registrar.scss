@@ -309,7 +309,14 @@
     }
 
     #registrar_pedido {
+        border-radius: 0;
+
         ul {
+            //LI BORRAR LUEGO
+            .registrar_numero-mostrar{
+                height: 50px
+            }
+            //LI     
             .cabezal_presupuesto {
                 @include flexRow;
                 border: solid 1px;
@@ -324,8 +331,9 @@
                         font-family: fantasy;
                         font-size: 1.5rem;
                     }
-                    .iva-resp{
-                    border-top: solid 1px;
+
+                    .iva-resp {
+                        border-top: solid 1px;
 
                     }
                 }
@@ -363,13 +371,15 @@
                 }
             }
 
+            //LI
             .registrar_item-importe {
 
                 .registrar_item {
-                   
-                    .cantidad input{
+
+                    .cantidad input {
                         border: none;
                     }
+
                     .item_icono img {
                         width: 20px;
                         display: flex;
@@ -383,30 +393,42 @@
                         margin: 0 1vw;
                     }
                 }
-                .registrar_importe{
-                    .cada_uno, .precio_multiplicado{
+
+                .registrar_importe {
+
+                    .cada_uno,
+                    .precio_multiplicado {
                         border: none;
                     }
                 }
-                
+
             }
-            .materiales-ferreteria{
-                .registrar_item{
+
+            //LI
+            .materiales-ferreteria {
+                padding-top: 5px;
+                .registrar_item {
                     width: 80%;
-                    .cantidad{
+
+                    .cantidad {
                         width: 10%;
                     }
-                    textarea, select{
+
+                    textarea,
+                    select {
                         width: 90%;
+                        border-bottom: 1px dotted $color_primary_ex;
+
                     }
                 }
-                .registrar_importe{
-                    width: 20%;
-    
-                    }
-            }
-            
 
+                .registrar_importe {
+                    width: 20%;
+
+                }
+            }
+
+            //LI
             .direccion-cliente {
                 border: solid 1px;
                 @include flexColumn;
@@ -425,6 +447,7 @@
                 }
             }
 
+            //LI
             .cabezal_materiales {
                 @include flexRow;
                 border: 1px solid;
@@ -432,6 +455,7 @@
                 text-align: center;
                 padding: 0;
                 font-size: 20px;
+
                 .cabezal_cant {
                     width: 10%;
                     border-right: solid 1px;
@@ -458,6 +482,34 @@
                     padding: 3px 0;
 
                 }
+            }
+
+            //LI
+            .registrar_opciones-icono{
+                padding-top: 10px
+            }
+            //LI
+            .presupuesto_footer {
+                @include flexRow;
+                border: solid 1px;
+                text-align: center;
+                padding: 0;
+
+                .precio-iva {
+                    width: 40%;
+                    border-right: solid 1px;
+                    padding: 3px 0;
+                }
+
+                .gracias-consulta {
+                    width: 60%;
+                    padding: 3px 0;
+
+                }
+            }
+            //LI QUIZAS BORRAR LUEGO
+            .registrar_submit{
+                padding-top: 20px;
             }
         }
 
@@ -501,6 +553,13 @@ input[type=number]::-webkit-outer-spin-button {
         display: none;
     }
 
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+
     .registrar_forms {
         #registrar_venta {
             display: none;
@@ -526,7 +585,8 @@ input[type=number]::-webkit-outer-spin-button {
                     .agregar_mat,
                     .agregar_fer,
                     .modo_mat,
-                    .modo_fer, .eliminar_boton {
+                    .modo_fer,
+                    .eliminar_boton {
                         display: none;
                     }
                 }

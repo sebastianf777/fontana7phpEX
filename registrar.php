@@ -336,7 +336,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
             <ul class="registrar_ul">
                 <!-- NUMERO -->
-                <li class=registrar_numero-mostrar ">
+                <li class="registrar_numero-mostrar">
                     
 
                     <button type=" button" class="cambiar_tipo_registro button_3">

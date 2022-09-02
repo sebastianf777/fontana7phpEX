@@ -58,8 +58,10 @@ let total_suma;
 const cambiar_tipo_registro = document.querySelectorAll(".cambiar_tipo_registro");
 const registrar_venta_form = document.getElementById("registrar_venta");
 const registrar_pedido_form = document.getElementById("registrar_pedido");
-
+// BOTON IMPRIMIR
 const boton_imprimir = document.getElementById("imprimir_boton");
+// BOTON DUPLICAR
+const boton_duplicar = document.getElementById("duplicar_boton");
 
 //Función checkeo registro
 
@@ -450,6 +452,18 @@ const funcionImprimir = () => {
 
 }
 
+//Duplicar
+
+const funcionDuplicar = () => {
+  boton_duplicar.addEventListener("click", (e) => {
+    e.preventDefault;
+    const form_pedido = document.getElementById('registrar_pedido');
+    const replica = form_pedido.cloneNode(true);
+    form_pedido.parentNode.insertBefore(replica, form_pedido.nextSibling)
+  })
+
+}
+
 //Usar funciones al iniciar
 
 window.onload = function () {
@@ -466,5 +480,6 @@ window.onload = function () {
   funcionImprimir();
   agregarFuncionMat();
   agregarFuncionFer();
+  funcionDuplicar();
 }
 

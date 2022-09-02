@@ -339,10 +339,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <li class=registrar_numero-mostrar ">
                     
 
-                    <button type="button" class="cambiar_tipo_registro button_3">
-                        FORMULARIO
-                        <br>
-                        VENTAS
+                    <button type=" button" class="cambiar_tipo_registro button_3">
+                    FORMULARIO
+                    <br>
+                    VENTAS
                     </button>
                 </li>
                 <li class="cabezal_presupuesto">
@@ -539,6 +539,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
 
                 <li class="registrar_submit">
+                    <button id="duplicar_boton" class="button_3" type="button">
+                        Duplicar
+                    </button>
                     <button id="imprimir_boton" class="button_3" type="button">
                         Imprimir
                     </button>

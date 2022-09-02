@@ -296,16 +296,15 @@ function sumarTotal(e) {
 
   if (e != undefined) {
     preciosAMultiplicar = e.target.closest('form').querySelectorAll('.precio_multiplicado');
-  total_suma = e.target.closest('form').querySelector('.total_suma');
-
-  sum = 0;
-  for (let i = 0; i < preciosAMultiplicar.length; i++) {
-    sum += Number(preciosAMultiplicar[i].value);
+    total_suma = e.target.closest('form').querySelector('.total_suma');
+    let li_padre = e.target.closest('li');
+    sum = 0;
+    for (let i = 0; i < preciosAMultiplicar.length; i++) {
+      sum += Number(preciosAMultiplicar[i].value);
+    }
+    total_suma.textContent = sum;
+    total_suma.textContent != 0  ? li_padre.classList.remove('no-imprimir') : li_padre.classList.add('no-imprimir') ;
   }
-  total_suma.textContent = sum;
-
-  }
-  
 }
 
 //Multiplicar cantidad x unidad

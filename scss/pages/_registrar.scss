@@ -375,11 +375,11 @@
                         border-bottom: solid 1px;
                         justify-content: center;
 
-                        .registrar_fecha {
-                            input {
-                                border: none;
-                            }
-                        }
+                        // .registrar_fecha {
+                        //     input {
+                        //         border: none;
+                        //     }
+                        // }
                     }
                 }
             }
@@ -389,9 +389,7 @@
 
                 .registrar_item {
 
-                    .cantidad input {
-                        border: none;
-                    }
+                    
 
                     .item_icono img {
                         width: 20px;
@@ -401,18 +399,18 @@
 
                     textarea,
                     select {
-                        border: none;
-                        border-bottom: 2px dotted $color_primary_ex;
+                        
+                        // border-bottom: 2px dotted $color_primary_ex;
                         margin: 0 1vw;
                     }
                 }
 
                 .registrar_importe {
-
-                    .cada_uno,
-                    .precio_multiplicado {
-                        border: none;
-                    }
+                    margin-right: 5px;
+                    // .cada_uno,
+                    // .precio_multiplicado {
+                    //     border: none;
+                    // }
                 }
 
             }
@@ -431,13 +429,13 @@
                     textarea,
                     select {
                         width: 90%;
-                        border-bottom: 1px dotted $color_primary_ex;
+                        // border-bottom: 1px dotted $color_primary_ex;
 
                     }
                 }
 
                 .registrar_importe {
-                    width: 20%;
+                    width: 25%;
 
                 }
             }
@@ -445,19 +443,21 @@
             //LI
             .direccion-cliente {
                 border: solid 1px;
-                @include flexColumn;
+                @include flexColumnCenter;
                 margin-top: 2px;
+                height: 60px;
 
                 .registrar_item {
                     .cliente-titulo {
-                        width: 10%;
+                        width: 100px;
                         padding-left: 10px;
                     }
 
                     textarea,
                     select {
                         max-width: 80%;
-
+                        margin-left: 43px;
+                        text-align: start
                     }
                 }
             }
@@ -470,7 +470,7 @@
                 text-align: center;
                 padding: 0;
                 font-size: 20px;
-
+                height: 31px;
                 .cabezal_cant {
                     width: 10%;
                     border-right: solid 1px;
@@ -486,14 +486,14 @@
                 }
 
                 .cabezal_precio_unitario {
-                    width: 10%;
+                    width: 13%;
                     padding: 3px 0;
                     border-right: solid 1px;
 
                 }
 
                 .cabezal_importe {
-                    width: 10%;
+                    width: 13%;
                     padding: 3px 0;
 
                 }
@@ -523,7 +523,12 @@
 
                 }
             }
-
+            //LI
+            .total_li{
+                .total_suma{
+                    width: 11%;
+                }
+            }
             //LI QUIZAS BORRAR LUEGO
             .registrar_submit {
                 padding-top: 20px;
@@ -583,6 +588,10 @@ input[type=number]::-webkit-outer-spin-button {
         }
 
         #registrar_pedido {
+            
+            .no-imprimir{
+                display: none;
+            }
             .registrar_numero-mostrar {
                 display: none;
             }
@@ -597,7 +606,10 @@ input[type=number]::-webkit-outer-spin-button {
 
             .registrar_item-importe {
                 .registrar_item {
-
+                    
+                    textarea, select, .cantidad input {
+                        border: none;
+                    }
                     .item_icono,
                     .agregar_mat,
                     .agregar_fer,
@@ -606,6 +618,15 @@ input[type=number]::-webkit-outer-spin-button {
                     .eliminar_boton {
                         display: none;
                     }
+
+                }
+                .registrar_importe input{
+                    border: none;
+                }
+            }
+            .registrar_fecha_pedido{
+                .registrar_fecha input{
+                    border: none;
                 }
             }
         }

@@ -606,12 +606,6 @@ td {
   border-bottom: solid 1px;
   justify-content: center;
 }
-.registrar_forms #registrar_pedido ul .cabezal_presupuesto .cabezal_der .registrar_fecha_pedido .registrar_fecha input {
-  border: none;
-}
-.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item .cantidad input {
-  border: none;
-}
 .registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item .item_icono img {
   width: 20px;
   display: flex;
@@ -619,13 +613,10 @@ td {
 }
 .registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item textarea,
 .registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_item select {
-  border: none;
-  border-bottom: 2px dotted #2525e4;
   margin: 0 1vw;
 }
-.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_importe .cada_uno,
-.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_importe .precio_multiplicado {
-  border: none;
+.registrar_forms #registrar_pedido ul .registrar_item-importe .registrar_importe {
+  margin-right: 5px;
 }
 .registrar_forms #registrar_pedido ul .materiales-ferreteria {
   padding-top: 5px;
@@ -639,24 +630,27 @@ td {
 .registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_item textarea,
 .registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_item select {
   width: 90%;
-  border-bottom: 1px dotted #2525e4;
 }
 .registrar_forms #registrar_pedido ul .materiales-ferreteria .registrar_importe {
-  width: 20%;
+  width: 25%;
 }
 .registrar_forms #registrar_pedido ul .direccion-cliente {
   border: solid 1px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   margin-top: 2px;
+  height: 60px;
 }
 .registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item .cliente-titulo {
-  width: 10%;
+  width: 100px;
   padding-left: 10px;
 }
 .registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item textarea,
 .registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item select {
   max-width: 80%;
+  margin-left: 43px;
+  text-align: start;
 }
 .registrar_forms #registrar_pedido ul .cabezal_materiales {
   display: flex;
@@ -666,6 +660,7 @@ td {
   text-align: center;
   padding: 0;
   font-size: 20px;
+  height: 31px;
 }
 .registrar_forms #registrar_pedido ul .cabezal_materiales .cabezal_cant {
   width: 10%;
@@ -678,12 +673,12 @@ td {
   border-right: solid 1px;
 }
 .registrar_forms #registrar_pedido ul .cabezal_materiales .cabezal_precio_unitario {
-  width: 10%;
+  width: 13%;
   padding: 3px 0;
   border-right: solid 1px;
 }
 .registrar_forms #registrar_pedido ul .cabezal_materiales .cabezal_importe {
-  width: 10%;
+  width: 13%;
   padding: 3px 0;
 }
 .registrar_forms #registrar_pedido ul .registrar_opciones-icono {
@@ -704,6 +699,9 @@ td {
 .registrar_forms #registrar_pedido ul .presupuesto_footer .gracias-consulta {
   width: 60%;
   padding: 3px 0;
+}
+.registrar_forms #registrar_pedido ul .total_li .total_suma {
+  width: 11%;
 }
 .registrar_forms #registrar_pedido ul .registrar_submit {
   padding-top: 20px;
@@ -754,6 +752,9 @@ input[type=number]::-webkit-outer-spin-button {
   .registrar_forms #registrar_venta {
     display: none;
   }
+  .registrar_forms #registrar_pedido .no-imprimir {
+    display: none;
+  }
   .registrar_forms #registrar_pedido .registrar_numero-mostrar {
     display: none;
   }
@@ -763,6 +764,9 @@ input[type=number]::-webkit-outer-spin-button {
   .registrar_forms #registrar_pedido .registrar_submit {
     display: none;
   }
+  .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item textarea, .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item select, .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .cantidad input {
+    border: none;
+  }
   .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .item_icono,
 .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_mat,
 .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .agregar_fer,
@@ -770,6 +774,12 @@ input[type=number]::-webkit-outer-spin-button {
 .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .modo_fer,
 .registrar_forms #registrar_pedido .registrar_item-importe .registrar_item .eliminar_boton {
     display: none;
+  }
+  .registrar_forms #registrar_pedido .registrar_item-importe .registrar_importe input {
+    border: none;
+  }
+  .registrar_forms #registrar_pedido .registrar_fecha_pedido .registrar_fecha input {
+    border: none;
   }
 }
 .deposito_tabla {

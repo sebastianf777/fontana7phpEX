@@ -451,7 +451,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
                 <!-- MATERIALES -->
 
-                <li class="registrar_item-importe mat_first materiales-ferreteria">
+                <li class="registrar_item-importe mat_first materiales-ferreteria no-imprimir">
                     <div class="registrar_item">
 
                         <div class="item_icono">
@@ -485,7 +485,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
 
                 <!-- FERRETERIA -->
-                <li class="registrar_item-importe fer_first materiales-ferreteria">
+                <li class="registrar_item-importe fer_first materiales-ferreteria no-imprimir">
                     <div class="registrar_item">
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
@@ -549,7 +549,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
     <!-- COPIAS EN BLANCO -->
     <div class="hidden_copies">
-        <li class="registrar_item-importe mat_li copia materiales-ferreteria">
+        <li class="registrar_item-importe mat_li copia materiales-ferreteria no-imprimir">
             <div class="registrar_item">
 
                 <div class="item_icono" for="element_2">
@@ -581,7 +581,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
         <!-- COPIA FERRETERIA -->
 
-        <li class="registrar_item-importe fer_li copia materiales-ferreteria">
+        <li class="registrar_item-importe fer_li copia materiales-ferreteria no-imprimir">
             <div class="registrar_item">
                 <label class="item_icono" for="element_6">
                     <img src="/img/ferreteria.png" alt="ferreteria img">

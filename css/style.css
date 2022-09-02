@@ -438,6 +438,15 @@ td {
 .registrar_forms .registrar_form .registrar_ul .total_li {
   display: flex;
   justify-content: end;
+  position: relative;
+  height: 20px;
+}
+.registrar_forms .registrar_form .registrar_ul .total_li .signo {
+  width: 1%;
+}
+.registrar_forms .registrar_form .registrar_ul .total_li .total_suma {
+  width: 9%;
+  text-align: center;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_opciones-icono {
   display: flex;
@@ -643,6 +652,7 @@ td {
 }
 .registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item .cliente-titulo {
   width: 10%;
+  padding-left: 10px;
 }
 .registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item textarea,
 .registrar_forms #registrar_pedido ul .direccion-cliente .registrar_item select {

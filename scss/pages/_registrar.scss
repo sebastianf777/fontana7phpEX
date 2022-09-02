@@ -140,6 +140,17 @@
             .total_li {
                 display: flex;
                 justify-content: end;
+                position: relative;
+                height: 20px;
+
+                .signo {
+                    width: 1%;
+                }
+
+                .total_suma {
+                    width: 9%;
+                    text-align: center;
+                }
             }
 
             .registrar_opciones-icono {
@@ -312,10 +323,12 @@
         border-radius: 0;
 
         ul {
+
             //LI BORRAR LUEGO
-            .registrar_numero-mostrar{
+            .registrar_numero-mostrar {
                 height: 50px
             }
+
             //LI     
             .cabezal_presupuesto {
                 @include flexRow;
@@ -407,6 +420,7 @@
             //LI
             .materiales-ferreteria {
                 padding-top: 5px;
+
                 .registrar_item {
                     width: 80%;
 
@@ -437,6 +451,7 @@
                 .registrar_item {
                     .cliente-titulo {
                         width: 10%;
+                        padding-left: 10px;
                     }
 
                     textarea,
@@ -485,9 +500,10 @@
             }
 
             //LI
-            .registrar_opciones-icono{
+            .registrar_opciones-icono {
                 padding-top: 10px
             }
+
             //LI
             .presupuesto_footer {
                 @include flexRow;
@@ -507,8 +523,9 @@
 
                 }
             }
+
             //LI QUIZAS BORRAR LUEGO
-            .registrar_submit{
+            .registrar_submit {
                 padding-top: 20px;
             }
         }

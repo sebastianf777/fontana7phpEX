@@ -537,8 +537,6 @@ $_SESSION['FORM_SECRET'] = $secret;
                         ¡Gracias por su Consulta!
                     </div>
                 </li>
-                
-
 
                 <li class="registrar_submit">
                     <button id="imprimir_boton" class="button_3" type="button">

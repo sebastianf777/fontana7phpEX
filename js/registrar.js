@@ -39,8 +39,8 @@ let boton_modo_mat = document.querySelectorAll('.modo_mat');;
 let boton_modo_fer = document.querySelectorAll('.modo_fer');;
 let sibling;
 
-const total_suma = document.querySelector('.total_suma');
 let precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
+
 let cantidad = document.querySelectorAll('.cantidad');
 let cada_uno = document.querySelectorAll('.cada_uno');
 let cantidad_cifra;
@@ -52,6 +52,8 @@ let select_materiales = document.querySelectorAll('.select_materiales');
 let eliminar_boton = document.querySelectorAll('.eliminar_boton');
 let delete_item;
 let sum2 = 0;
+let preciosAMultiplicar;
+let total_suma;
 
 const cambiar_tipo_registro = document.querySelectorAll(".cambiar_tipo_registro");
 const registrar_venta_form = document.getElementById("registrar_venta");
@@ -195,21 +197,21 @@ const agregarFuncionFer = () => {
     if (element.parentElement.parentElement.classList.contains('fer_li') == false && element.classList.contains('tiene_funcion_AgregarItem') == false) {
       element.classList.add('tiene_funcion_AgregarItem');
       element.addEventListener('click', function (e) {
-      fer_new = fer_li.cloneNode(true);
-      fer_first = e.target.parentElement.parentElement;
-      fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
-      fer_new.classList.remove('fer_li');
-      // cantidad = document.querySelectorAll('.cantidad');
-      // cada_uno = document.querySelectorAll('.cada_uno');
-    
-      funcionModoFer();
-      funcionMultiplicar();
-      funcionSumar();
-      eliminarItem();
+        fer_new = fer_li.cloneNode(true);
+        fer_first = e.target.parentElement.parentElement;
+        fer_first.parentNode.insertBefore(fer_new, fer_first.nextSibling);
+        fer_new.classList.remove('fer_li');
+        // cantidad = document.querySelectorAll('.cantidad');
+        // cada_uno = document.querySelectorAll('.cada_uno');
+
+        funcionModoFer();
+        funcionMultiplicar();
+        funcionSumar();
+        eliminarItem();
       })
     };
   })
-  
+
 }
 
 //Eliminar Item
@@ -265,8 +267,8 @@ function precioAuto() {
       element.classList.add('.tiene_funcion_precio_auto');
       element.addEventListener('focusout', function (e) {
         const [option] = e.target.selectedOptions;
-        
-        (option.dataset.precio != undefined) ? cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio : ''; 
+
+        (option.dataset.precio != undefined) ? cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio : '';
       }
       )
     }
@@ -284,21 +286,26 @@ function funcionSumar() {
   precio_multiplicado.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_sumar') == false)) {
       element.classList.add('tiene_funcion_sumar');
-      element.addEventListener('focusout', function (e) {
+      element.addEventListener('focusout', function () {
         sumarTotal();
       })
     }
   });
 }
-function sumarTotal() {
+function sumarTotal(e) {
+
+  if (e != undefined) {
+    preciosAMultiplicar = e.target.closest('form').querySelectorAll('.precio_multiplicado');
+  total_suma = e.target.closest('form').querySelector('.total_suma');
+
   sum = 0;
-  for (let i = 0; i < precio_multiplicado.length; i++) {
-
-    sum += Number(precio_multiplicado[i].value);
-
+  for (let i = 0; i < preciosAMultiplicar.length; i++) {
+    sum += Number(preciosAMultiplicar[i].value);
   }
   total_suma.textContent = sum;
 
+  }
+  
 }
 
 //Multiplicar cantidad x unidad
@@ -317,7 +324,7 @@ function funcionMultiplicar() {
         total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado');
         cantidad_cifra == "" || cantidad_cifra == 0 ? total_multiplicado.value = cada_uno : total_multiplicado.value = (cantidad_cifra * cada_uno);
 
-        sumarTotal();
+        sumarTotal(e);
 
       })
 
@@ -333,7 +340,7 @@ function funcionMultiplicar() {
         cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value;
         e.target.closest('li').querySelector('.precio_multiplicado').value = (cantidad_cifra * cada_uno);;
 
-        sumarTotal();
+        sumarTotal(e);
 
       })
 

@@ -56,8 +56,8 @@ let preciosAMultiplicar;
 let total_suma;
 
 const cambiar_tipo_registro = document.querySelectorAll(".cambiar_tipo_registro");
-const registrar_venta_form = document.getElementById("registrar_venta");
-const registrar_pedido_form = document.getElementById("registrar_pedido");
+const registrar_venta_form = document.querySelector(".registrar_venta");
+const registrar_pedido_form = document.querySelector(".registrar_pedido");
 // BOTON IMPRIMIR
 const boton_imprimir = document.getElementById("imprimir_boton");
 // BOTON DUPLICAR
@@ -457,9 +457,15 @@ const funcionImprimir = () => {
 const funcionDuplicar = () => {
   boton_duplicar.addEventListener("click", (e) => {
     e.preventDefault;
-    const form_pedido = document.getElementById('registrar_pedido');
-    const replica = form_pedido.cloneNode(true);
-    form_pedido.parentNode.insertBefore(replica, form_pedido.nextSibling)
+    const form_pedidos = document.querySelectorAll('.registrar_pedido');
+    const form_pedidos_original = form_pedidos[0];
+    const form_pedidos_replicado = form_pedidos[1];
+    form_pedidos_replicado != undefined ? form_pedidos_replicado.remove() : "";
+    
+    const replicar = form_pedidos_original.cloneNode(true);
+    replicar.querySelector(".registrar_numero-mostrar").remove();
+    replicar.querySelector(".registrar_submit").remove();
+    form_pedidos_original.parentNode.insertBefore(replicar, form_pedidos_original.nextSibling)
   })
 
 }

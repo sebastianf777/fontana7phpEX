@@ -154,8 +154,8 @@ $_SESSION['FORM_SECRET'] = $secret;
         </nav>
     </header>
     <section class="registrar_forms">
-        <form class="registrar_form" id="registrar_venta" method="post" action="registrar_formulas.php">
-
+        <form class="registrar_form registrar_venta" method="post" action="registrar_formulas.php">
+            <!-- id="registrar_venta" -->
             <ul class="registrar_ul">
                 <li class="registrar_numero-mostrar">
                     <div class="registrar-numero">
@@ -332,17 +332,17 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
             </ul>
         </form>
-        <form class="registrar_form ocultar_modo" id="registrar_pedido" method="post" action="registrar_formulas.php">
-
+        <form class="registrar_pedido registrar_form ocultar_modo" method="post" action="registrar_formulas.php">
+            <!-- id="registrar_pedido" -->
             <ul class="registrar_ul">
                 <!-- NUMERO -->
                 <li class="registrar_numero-mostrar">
-                    
 
-                    <button type=" button" class="cambiar_tipo_registro button_3">
-                    FORMULARIO
-                    <br>
-                    VENTAS
+
+                    <button type="button" class="cambiar_tipo_registro button_3">
+                        FORMULARIO
+                        <br>
+                        VENTAS
                     </button>
                 </li>
                 <li class="cabezal_presupuesto">

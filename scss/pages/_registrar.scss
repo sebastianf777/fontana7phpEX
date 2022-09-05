@@ -1,7 +1,8 @@
 .registrar_forms {
     @include flexColumnCenter;
     margin: 0 auto;
-
+    justify-content: space-around;
+    height: 1200px;
     .registrar_form {
         @include tabla_css;
         font-size: 1rem;
@@ -319,10 +320,15 @@
 
     }
 
-    #registrar_pedido {
+    .registrar_pedido {
+        border: none;
+        box-shadow: none;
         border-radius: 0;
+        width: 1000px;
+        margin: 0 auto auto;
+        // height: 1450px;
 
-        ul {
+        .registrar_ul {
 
             //LI BORRAR LUEGO
             .registrar_numero-mostrar {
@@ -352,6 +358,8 @@
                 }
 
                 .cabezal_der {
+                    @include flexColumn;
+                    justify-content: space-around;
                     text-align: center;
                     width: 50%;
 
@@ -364,13 +372,14 @@
                         padding-bottom: 3px;
                     }
 
-                    .cuit {
-                        margin-top: 7px;
-                    }
+                    // .cuit {
+                    //     margin-top: 7px;
+                    // }
 
                     .registrar_fecha_pedido {
                         @include flexRow;
                         padding: 3px 0;
+                        margin: 0;
                         border-top: solid 1px;
                         border-bottom: solid 1px;
                         justify-content: center;
@@ -429,6 +438,7 @@
                     textarea,
                     select {
                         width: 90%;
+                        text-align: start;
                         // border-bottom: 1px dotted $color_primary_ex;
 
                     }
@@ -583,52 +593,55 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .registrar_forms {
-        #registrar_venta {
+        .registrar_venta {
             display: none;
         }
 
-        #registrar_pedido {
+        .registrar_pedido {
             
-            .no-imprimir{
-                display: none;
-            }
-            .registrar_numero-mostrar {
-                display: none;
-            }
-
-            .registrar_opciones-icono {
-                display: none;
-            }
-
-            .registrar_submit {
-                display: none;
-            }
-
-            .registrar_item-importe {
-                .registrar_item {
-                    
-                    textarea, select, .cantidad input {
+            .registrar_ul{
+                .no-imprimir{
+                    display: none;
+                }
+                .registrar_numero-mostrar {
+                    display: none;
+                }
+    
+                .registrar_opciones-icono {
+                    display: none;
+                }
+    
+                .registrar_submit {
+                    display: none;
+                }
+    
+                .registrar_item-importe {
+                    .registrar_item {
+                        
+                        textarea, select, .cantidad input {
+                            border: none;
+                        }
+                        .item_icono,
+                        .agregar_mat,
+                        .agregar_fer,
+                        .modo_mat,
+                        .modo_fer,
+                        .eliminar_boton {
+                            display: none;
+                        }
+    
+                    }
+                    .registrar_importe input{
                         border: none;
                     }
-                    .item_icono,
-                    .agregar_mat,
-                    .agregar_fer,
-                    .modo_mat,
-                    .modo_fer,
-                    .eliminar_boton {
-                        display: none;
+                }
+                .registrar_fecha_pedido{
+                    .registrar_fecha input{
+                        border: none;
                     }
-
-                }
-                .registrar_importe input{
-                    border: none;
                 }
             }
-            .registrar_fecha_pedido{
-                .registrar_fecha input{
-                    border: none;
-                }
-            }
+            
         }
     }
 

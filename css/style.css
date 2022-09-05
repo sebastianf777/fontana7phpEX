@@ -314,11 +314,9 @@ td {
 
 .registrar_forms {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   margin: 0 auto;
   justify-content: space-around;
-  height: 1200px;
 }
 .registrar_forms .registrar_form {
   background-color: ghostwhite;
@@ -563,6 +561,9 @@ td {
   }
 }
 .registrar_forms .registrar_pedido {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
   border: none;
   box-shadow: none;
   border-radius: 0;
@@ -692,27 +693,31 @@ td {
 .registrar_forms .registrar_pedido .registrar_ul .registrar_opciones-icono {
   padding-top: 10px;
 }
-.registrar_forms .registrar_pedido .registrar_ul .presupuesto_footer {
+.registrar_forms .registrar_pedido .registrar_ul .total_li .total_suma {
+  width: 11%;
+}
+.registrar_forms .registrar_pedido .registrar_ul .registrar_submit {
+  padding-top: 20px;
+}
+.registrar_forms .registrar_pedido .presupuesto_footer {
   display: flex;
   flex-direction: row;
   border: solid 1px;
   text-align: center;
   padding: 0;
 }
-.registrar_forms .registrar_pedido .registrar_ul .presupuesto_footer .precio-iva {
+.registrar_forms .registrar_pedido .presupuesto_footer .precio-iva {
   width: 40%;
   border-right: solid 1px;
   padding: 3px 0;
 }
-.registrar_forms .registrar_pedido .registrar_ul .presupuesto_footer .gracias-consulta {
+.registrar_forms .registrar_pedido .presupuesto_footer .gracias-consulta {
   width: 60%;
   padding: 3px 0;
 }
-.registrar_forms .registrar_pedido .registrar_ul .total_li .total_suma {
-  width: 11%;
-}
-.registrar_forms .registrar_pedido .registrar_ul .registrar_submit {
-  padding-top: 20px;
+
+.registrar_forms-pedido {
+  height: 1200px;
 }
 
 .registrar_opciones input,

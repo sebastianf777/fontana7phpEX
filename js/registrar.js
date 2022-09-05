@@ -1,3 +1,5 @@
+//VARIABLES
+
 // const fecha = document.getElementById('calendar_4');
 const month = document.querySelectorAll('.element_4_1');
 const date = document.querySelectorAll('.element_4_2');
@@ -54,10 +56,11 @@ let delete_item;
 let sum2 = 0;
 let preciosAMultiplicar;
 let total_suma;
-
+// BOTON CAMBIAR TIPO REGISTRO
 const cambiar_tipo_registro = document.querySelectorAll(".cambiar_tipo_registro");
 const registrar_venta_form = document.querySelector(".registrar_venta");
 const registrar_pedido_form = document.querySelector(".registrar_pedido");
+const forms_padre = document.querySelector(".registrar_forms");
 // BOTON IMPRIMIR
 const boton_imprimir = document.getElementById("imprimir_boton");
 // BOTON DUPLICAR
@@ -433,6 +436,9 @@ function cambiarTipoRegistro() {
   cambiar_tipo_registro.forEach(element => {
     element.addEventListener("click", (e) => {
       e.preventDefault;
+      // forms_padre.style.height="1200px";
+      forms_padre.classList.toggle('registrar_forms-pedido');
+
       registrar_pedido_form.classList.toggle('ocultar_modo');
       registrar_venta_form.classList.toggle('ocultar_modo');
 

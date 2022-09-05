@@ -529,14 +529,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="signo">$</div>
                     <div class="total_suma"></div>
                 </li>
-                <li class="presupuesto_footer">
-                    <div class="precio-iva">
-                        PRECIO + IVA
-                    </div>
-                    <div class="gracias-consulta">
-                        ¡Gracias por su Consulta!
-                    </div>
-                </li>
+
 
                 <li class="registrar_submit">
                     <button id="duplicar_boton" class="button_3" type="button">
@@ -547,6 +540,14 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </button>
                 </li>
             </ul>
+            <div class="presupuesto_footer">
+                <div class="precio-iva">
+                    PRECIO + IVA
+                </div>
+                <div class="gracias-consulta">
+                    ¡Gracias por su Consulta!
+                </div>
+            </div>
         </form>
     </section>
 

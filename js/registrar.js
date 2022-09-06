@@ -438,7 +438,7 @@ function cambiarTipoRegistro() {
       e.preventDefault;
       // forms_padre.style.height="1200px";
       forms_padre.classList.toggle('registrar_forms-pedido');
-
+      registrar_pedido_form.classList.toggle('pedido_config');
       registrar_pedido_form.classList.toggle('ocultar_modo');
       registrar_venta_form.classList.toggle('ocultar_modo');
 

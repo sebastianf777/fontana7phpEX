@@ -322,7 +322,7 @@
 
     .registrar_pedido {
         // @include flexColumn;
-        flex-direction: column;
+        // flex-direction: column;
         justify-content: space-between;
         height: 700px;
         border: none;
@@ -549,6 +549,9 @@
         }
 
 
+    }
+    .pedido_config{
+        @include flexColumn;
     }
 }
 

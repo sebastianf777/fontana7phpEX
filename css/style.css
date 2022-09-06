@@ -561,7 +561,6 @@ td {
   }
 }
 .registrar_forms .registrar_pedido {
-  flex-direction: column;
   justify-content: space-between;
   height: 700px;
   border: none;
@@ -714,6 +713,10 @@ td {
 .registrar_forms .registrar_pedido .presupuesto_footer .gracias-consulta {
   width: 60%;
   padding: 3px 0;
+}
+.registrar_forms .pedido_config {
+  display: flex;
+  flex-direction: column;
 }
 
 .registrar_forms-pedido {

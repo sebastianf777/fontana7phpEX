@@ -444,9 +444,12 @@ function cambiarTipoRegistro() {
 
     })
   });
-
-
 }
+
+//Cambiar tipo de hoja
+
+const ul_height = document.querySelector('.ul_pedidos')
+console.log(ul_height.offsetHeight)
 
 //Imprimir
 

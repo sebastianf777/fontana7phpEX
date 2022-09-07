@@ -334,7 +334,7 @@ $_SESSION['FORM_SECRET'] = $secret;
         </form>
         <form class="registrar_pedido registrar_form ocultar_modo" method="post" action="registrar_formulas.php">
             <!-- id="registrar_pedido" -->
-            <ul class="registrar_ul">
+            <ul class="registrar_ul ul_pedidos">
                 <!-- NUMERO -->
                 <li class="registrar_numero-mostrar">
 

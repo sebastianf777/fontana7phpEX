@@ -525,9 +525,18 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
 
                 </li>
-                <li class="total_li">
-                    <div class="signo">$</div>
-                    <div class="total_suma"></div>
+                <li class="total-descuento_li">
+                    <div class="descuento-titulo">
+                        DESCUENTO
+                    </div>
+                    <div class="descuento">
+                        <div class="signo">$</div>
+                        <input type="number" class="descuento_valor"></input>
+                    </div>
+                    <div class="total">
+                        <div class="signo">$</div>
+                        <div class="total_suma"></div>
+                    </div>
                 </li>
 
 

@@ -636,7 +636,7 @@ td {
   padding-top: 5px;
 }
 .registrar_forms .registrar_pedido .registrar_ul .materiales-ferreteria .registrar_item {
-  width: 80%;
+  width: 75%;
 }
 .registrar_forms .registrar_pedido .registrar_ul .materiales-ferreteria .registrar_item .cantidad {
   width: 10%;
@@ -699,8 +699,37 @@ td {
 .registrar_forms .registrar_pedido .registrar_ul .registrar_opciones-icono {
   padding-top: 10px;
 }
-.registrar_forms .registrar_pedido .registrar_ul .total_li .total_suma {
-  width: 11%;
+.registrar_forms .registrar_pedido .registrar_ul .total-descuento_li {
+  display: flex;
+  flex-direction: row;
+}
+.registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .descuento-titulo {
+  width: 80%;
+  text-align: end;
+}
+.registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .descuento {
+  width: 12.5%;
+  padding-left: 2.6%;
+  display: flex;
+}
+.registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .descuento input {
+  width: 44px;
+  height: 13px;
+}
+.registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .descuento .descuento_valor {
+  width: 46px;
+  height: 13px;
+  margin-left: 27px;
+}
+.registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .total {
+  display: flex;
+  width: 12.5%;
+  padding-left: 1%;
+}
+.registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .total .total_suma {
+  width: 44px;
+  text-align: center;
+  margin-left: 30%;
 }
 .registrar_forms .registrar_pedido .registrar_ul .registrar_submit {
   padding-top: 20px;
@@ -783,7 +812,9 @@ input[type=number]::-webkit-outer-spin-button {
   .registrar_forms .registrar_pedido .registrar_ul .registrar_submit {
     display: none;
   }
-  .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item textarea, .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item select, .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item .cantidad input {
+  .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item textarea,
+.registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item select,
+.registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item .cantidad input {
     border: none;
   }
   .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item .item_icono,
@@ -798,6 +829,9 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
   }
   .registrar_forms .registrar_pedido .registrar_ul .registrar_fecha_pedido .registrar_fecha input {
+    border: none;
+  }
+  .registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .descuento input {
     border: none;
   }
 }

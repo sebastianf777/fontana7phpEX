@@ -55,7 +55,7 @@ let eliminar_boton = document.querySelectorAll('.eliminar_boton');
 let delete_item;
 let sum2 = 0;
 let preciosAMultiplicar;
-let total_suma;
+// let total_suma;
 // BOTON CAMBIAR TIPO REGISTRO
 const cambiar_tipo_registro = document.querySelectorAll(".cambiar_tipo_registro");
 const registrar_venta_form = document.querySelector(".registrar_venta");
@@ -65,6 +65,9 @@ const forms_padre = document.querySelector(".registrar_forms");
 const boton_imprimir = document.getElementById("imprimir_boton");
 // BOTON DUPLICAR
 const boton_duplicar = document.getElementById("duplicar_boton");
+// DESCUENTO AUTOMATICO
+const descuento = document.querySelector(".descuento_valor");
+
 
 //Función checkeo registro
 
@@ -285,7 +288,6 @@ function precioAuto() {
 //Sumar Total y funcion Sumar
 
 
-
 function funcionSumar() {
   precio_multiplicado = document.querySelectorAll('.precio_multiplicado');
 
@@ -299,17 +301,23 @@ function funcionSumar() {
   });
 }
 function sumarTotal(e) {
-
+const descuento_valor = document.querySelector(".descuento_valor").value;
   if (e != undefined) {
     preciosAMultiplicar = e.target.closest('form').querySelectorAll('.precio_multiplicado');
-    total_suma = e.target.closest('form').querySelector('.total_suma');
+    let total_suma = e.target.closest('form').querySelector('.total_suma');
     let li_padre = e.target.closest('li');
     sum = 0;
     for (let i = 0; i < preciosAMultiplicar.length; i++) {
       sum += Number(preciosAMultiplicar[i].value);
     }
+    sum-= descuento_valor;
     total_suma.textContent = sum;
     total_suma.textContent != 0 ? li_padre.classList.remove('no-imprimir') : li_padre.classList.add('no-imprimir');
+  }else{
+    let total_suma = document.querySelectorAll(".total_suma")[1];
+    let calculo = sum - descuento_valor;
+    total_suma.textContent = calculo;
+    console.log(total_suma);
   }
 }
 
@@ -353,6 +361,17 @@ function funcionMultiplicar() {
     }
   });
 }
+
+//Descuento automático
+
+funcionDescuentoAuto = () =>{
+  descuento.addEventListener('keyup', function () {
+    // let total_suma = document.querySelector('.total_suma');
+    sumarTotal();
+  })
+  
+}
+
 
 //Cambiar modo
 
@@ -450,7 +469,6 @@ function cambiarTipoRegistro() {
 //Cambiar tipo de hoja
 
 const ul_height = document.querySelector('.ul_pedidos')
-console.log(ul_height.offsetHeight)
 
 const funcionCambiarHeight = () => {
   const ul_height = document.querySelector('.ul_pedidos')
@@ -508,5 +526,6 @@ window.onload = function () {
   agregarFuncionMat();
   agregarFuncionFer();
   funcionDuplicar();
+  funcionDescuentoAuto();
 }
 

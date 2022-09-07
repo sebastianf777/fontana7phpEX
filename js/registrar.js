@@ -317,7 +317,6 @@ const descuento_valor = document.querySelector(".descuento_valor").value;
     let total_suma = document.querySelectorAll(".total_suma")[1];
     let calculo = sum - descuento_valor;
     total_suma.textContent = calculo;
-    console.log(total_suma);
   }
 }
 
@@ -472,7 +471,7 @@ const ul_height = document.querySelector('.ul_pedidos')
 
 const funcionCambiarHeight = () => {
   const ul_height = document.querySelector('.ul_pedidos')
-console.log(ul_height.offsetHeight)
+
   if (ul_height.offsetHeight <= '676') {
     registrar_pedido_form.style.height = '700px'
   } else {

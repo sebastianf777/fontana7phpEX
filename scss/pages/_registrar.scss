@@ -84,11 +84,35 @@
 
                     .agregar_mat,
                     .agregar_fer,
+                    .modo_fer,
+                    .modo_mat {
+                        background-color: $button_bg_primary;
+                        color: $button_bg_secondary;
+
+                        &:hover {
+                            background-color: $button_bg_secondary;
+                            color: $button_bg_primary;
+                        }
+                    }
+
                     .eliminar_boton {
-                        width: 20px;
+                        background-color: $color_primary_ex;
+                        color: red;
+
+                        &:hover {
+                            background-color: red;
+                            color: $color_primary_ex;
+                        }
+                    }
+
+                    .agregar_mat,
+                    .agregar_fer,
+                    .eliminar_boton {
+                        width: 23px;
                         padding: 0;
                         margin-right: 5px;
-
+                        border-radius: 8px;
+                        margin-right: 5px;
                     }
 
                     textarea {
@@ -96,6 +120,8 @@
                         resize: none;
                         margin: 0 2vw;
                         width: inherit;
+                        max-width: 447px;
+                        box-sizing: border-box;
                         overflow: hidden;
                         padding: 0;
                         text-align: center;
@@ -106,8 +132,9 @@
 
                     select {
                         height: 1.5rem;
+                        width: 90%;
                         margin: 0 2vw;
-                        width: inherit;
+                        max-width: 447px;
                     }
                 }
 
@@ -321,6 +348,12 @@
 
     }
 
+    .registrar_venta {
+        .registrar_ul {
+            width: clamp(50vw, 84vw, 53vw);
+        }
+    }
+
     .registrar_pedido {
         // @include flexColumn;
         // flex-direction: column;
@@ -404,11 +437,16 @@
 
                 .registrar_item {
 
-                    .item_icono img {
-                        width: 20px;
-                        display: flex;
-                        margin: 0 auto;
+                    .item_icono {
+                        margin-left: 1.3vw;
+                        img {
+                            width: 20px;
+                            display: flex;
+                            margin: 0 auto;
+                        }
                     }
+                    
+                    
 
                     textarea,
                     select {
@@ -426,7 +464,6 @@
                         padding: 0 3px;
                     }
                 }
-
             }
 
             //LI
@@ -438,12 +475,15 @@
 
                     .cantidad {
                         width: 10%;
+                        margin-left: 0.7vw;
+                        margin-right: 1vw;
                     }
 
                     textarea,
                     select {
                         width: 90%;
                         text-align: start;
+                        margin: 0 auto;
                         // border-bottom: 1px dotted $color_primary_ex;
 
                     }
@@ -523,19 +563,23 @@
             //LI
             .total-descuento_li {
                 @include flexRow;
-                .descuento-titulo{
+
+                .descuento-titulo {
                     width: 80%;
                     text-align: end;
                 }
+
                 .descuento {
                     width: 12.5%;
                     padding-left: 2.6%;
                     display: flex;
-                    input{
+
+                    input {
                         width: 44px;
                         height: 13px;
                     }
-                    .descuento_valor{
+
+                    .descuento_valor {
                         width: 46px;
                         height: 13px;
                         margin-left: 27px;
@@ -690,7 +734,8 @@ input[type=number]::-webkit-outer-spin-button {
                         border: none;
                     }
                 }
-                .total-descuento_li .descuento input{
+
+                .total-descuento_li .descuento input {
                     border: none;
                 }
             }

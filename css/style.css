@@ -569,6 +569,9 @@ td {
   width: 1000px;
   margin: 0 auto auto;
 }
+.registrar_forms .registrar_pedido .registrar_ul {
+  padding: 1rem 2rem 0;
+}
 .registrar_forms .registrar_pedido .registrar_ul .registrar_numero-mostrar {
   height: 50px;
 }
@@ -624,6 +627,10 @@ td {
 }
 .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_importe {
   margin-right: 5px;
+}
+.registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_importe input {
+  width: 44px;
+  padding: 0 3px;
 }
 .registrar_forms .registrar_pedido .registrar_ul .materiales-ferreteria {
   padding-top: 5px;
@@ -717,10 +724,6 @@ td {
 .registrar_forms .pedido_config {
   display: flex;
   flex-direction: column;
-}
-
-.registrar_forms-pedido {
-  height: 1200px;
 }
 
 .registrar_opciones input,

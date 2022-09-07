@@ -333,7 +333,7 @@
         // height: 1450px;
 
         .registrar_ul {
-
+            padding: 1rem 2rem 0;
             //LI BORRAR LUEGO
             .registrar_numero-mostrar {
                 height: 50px
@@ -402,8 +402,6 @@
 
                 .registrar_item {
 
-                    
-
                     .item_icono img {
                         width: 20px;
                         display: flex;
@@ -411,19 +409,20 @@
                     }
 
                     textarea,
-                    select {
-                        
+                    select { 
                         // border-bottom: 2px dotted $color_primary_ex;
                         margin: 0 1vw;
                     }
+                    
                 }
 
                 .registrar_importe {
                     margin-right: 5px;
-                    // .cada_uno,
-                    // .precio_multiplicado {
-                    //     border: none;
-                    // }
+               
+                    input{
+                        width: 44px;
+                        padding: 0 3px;
+                    }
                 }
 
             }
@@ -555,9 +554,9 @@
     }
 }
 
-.registrar_forms-pedido{
-    height: 1200px;
-}
+// .registrar_forms-pedido{
+//     height: 1200px;
+// }
 .registrar_opciones input,
 .registrar_mostrar input {
     opacity: 0;

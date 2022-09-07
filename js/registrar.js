@@ -184,7 +184,7 @@ const agregarFuncionMat = () => {
         mat_first = e.target.parentElement.parentElement;
         mat_first.parentNode.insertBefore(mat_new, mat_first.nextSibling);
         mat_new.classList.remove('mat_li');
-
+        funcionCambiarHeight();
         funcionModoMat();
         funcionMultiplicar();
         funcionSumar();
@@ -454,7 +454,7 @@ console.log(ul_height.offsetHeight)
 
 const funcionCambiarHeight = () => {
   const ul_height = document.querySelector('.ul_pedidos')
-
+console.log(ul_height.offsetHeight)
   if (ul_height.offsetHeight <= '676') {
     registrar_pedido_form.style.height = '700px'
   } else {

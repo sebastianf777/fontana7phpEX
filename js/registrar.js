@@ -274,7 +274,7 @@ function precioAuto() {
   select_materiales.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li'))) && element.classList.contains('..tiene_funcion_precio_auto') == false) {
       element.classList.add('.tiene_funcion_precio_auto');
-      element.addEventListener('focusout', function (e) {
+      element.addEventListener('change', function (e) {
         const [option] = e.target.selectedOptions;
 
         (option.dataset.precio != undefined) ? cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio : '';
@@ -330,7 +330,7 @@ function funcionMultiplicar() {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
 
       element.classList.add('tiene_funcion_multiplicar');
-      element.addEventListener('focusout', function (e) {
+      element.addEventListener('keyup', function (e) {
         e.preventDefault();
         cada_uno = e.target.value;
         cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
@@ -347,7 +347,7 @@ function funcionMultiplicar() {
   cantidad.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
       element.classList.add('tiene_funcion_multiplicar');
-      element.addEventListener('focusout', function (e) {
+      element.addEventListener('keyup', function (e) {
         e.preventDefault();
         cantidad_cifra = e.target.value;
         cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value;

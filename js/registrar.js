@@ -208,7 +208,7 @@ const agregarFuncionFer = () => {
         fer_new.classList.remove('fer_li');
         // cantidad = document.querySelectorAll('.cantidad');
         // cada_uno = document.querySelectorAll('.cada_uno');
-
+        funcionCambiarHeight();
         funcionModoFer();
         funcionMultiplicar();
         funcionSumar();
@@ -238,6 +238,7 @@ const eliminarItem = () => {
           sumarTotal();
           delete_item.parentElement.removeChild(delete_item);
         }
+        funcionCambiarHeight();
 
       })
 
@@ -308,7 +309,7 @@ function sumarTotal(e) {
       sum += Number(preciosAMultiplicar[i].value);
     }
     total_suma.textContent = sum;
-    total_suma.textContent != 0  ? li_padre.classList.remove('no-imprimir') : li_padre.classList.add('no-imprimir') ;
+    total_suma.textContent != 0 ? li_padre.classList.remove('no-imprimir') : li_padre.classList.add('no-imprimir');
   }
 }
 
@@ -451,6 +452,17 @@ function cambiarTipoRegistro() {
 const ul_height = document.querySelector('.ul_pedidos')
 console.log(ul_height.offsetHeight)
 
+const funcionCambiarHeight = () => {
+  const ul_height = document.querySelector('.ul_pedidos')
+
+  if (ul_height.offsetHeight <= '676') {
+    registrar_pedido_form.style.height = '700px'
+  } else {
+    registrar_pedido_form.style.height = '1450px'
+
+  }
+}
+
 //Imprimir
 
 const funcionImprimir = () => {
@@ -470,7 +482,7 @@ const funcionDuplicar = () => {
     const form_pedidos_original = form_pedidos[0];
     const form_pedidos_replicado = form_pedidos[1];
     form_pedidos_replicado != undefined ? form_pedidos_replicado.remove() : "";
-    
+
     const replicar = form_pedidos_original.cloneNode(true);
     replicar.querySelector(".registrar_numero-mostrar").remove();
     replicar.querySelector(".registrar_submit").remove();

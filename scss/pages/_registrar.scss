@@ -13,7 +13,7 @@
             // height: 94%;
             list-style: none;
             margin: 0;
-            padding: 1rem 2rem;
+            padding: 1rem 1rem;
             justify-content: space-evenly;
             @include flexColumn;
 
@@ -49,7 +49,7 @@
                 @include flexRow;
 
                 .registrar_item {
-                    display: flex;
+                    @include flexCenter;
                     align-items: center;
                     width: 100%;
 
@@ -95,13 +95,14 @@
                         }
                     }
 
-                    .eliminar_boton {
-                        background-color: $color_primary_ex;
-                        color: red;
+                    .eliminar_boton,
+                    .modo_auto {
+                        background-color: $button_bg_secondary;
+                        color: $button_bg_primary;
 
                         &:hover {
-                            background-color: red;
-                            color: $color_primary_ex;
+                            background-color: $button_bg_primary;
+                            color: $button_bg_secondary;
                         }
                     }
 
@@ -118,7 +119,7 @@
                     textarea {
                         height: 1.5rem;
                         resize: none;
-                        margin: 0 2vw;
+                        margin: 0 1vw;
                         width: inherit;
                         max-width: 447px;
                         box-sizing: border-box;
@@ -133,7 +134,7 @@
                     select {
                         height: 1.5rem;
                         width: 90%;
-                        margin: 0 2vw;
+                        margin: 0 1vw;
                         max-width: 447px;
                     }
                 }
@@ -277,6 +278,8 @@
 
         }
 
+
+
         @media only screen and (max-width: 900px) {
             width: 73vw;
             max-width: 45vw;
@@ -348,11 +351,26 @@
 
     }
 
-    .registrar_venta {
-        .registrar_ul {
-            width: clamp(50vw, 84vw, 53vw);
+    @media only screen and (min-width: 901px) {
+        .registrar_venta .registrar_ul .registrar_item-importe {
+            width: 700px;
+
+            .registrar_item {
+
+                textarea,
+                select {
+                    width: 447px;
+                }
+            }
         }
+
     }
+
+    // .registrar_venta {
+    //     .registrar_ul {
+    //         width: clamp(40vw, 50vw, 85vw);
+    //     }
+    // }
 
     .registrar_pedido {
         // @include flexColumn;
@@ -439,14 +457,15 @@
 
                     .item_icono {
                         margin-left: 1.3vw;
+
                         img {
                             width: 20px;
                             display: flex;
                             margin: 0 auto;
                         }
                     }
-                    
-                    
+
+
 
                     textarea,
                     select {

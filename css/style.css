@@ -329,7 +329,7 @@ td {
 .registrar_forms .registrar_form .registrar_ul {
   list-style: none;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   justify-content: space-evenly;
   display: flex;
   flex-direction: column;
@@ -364,6 +364,7 @@ td {
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -404,13 +405,15 @@ td {
   background-color: #f9f140;
   color: #ff8601;
 }
-.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton {
-  background-color: #2525e4;
-  color: red;
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton,
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_auto {
+  background-color: #f9f140;
+  color: #ff8601;
 }
-.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton:hover {
-  background-color: red;
-  color: #2525e4;
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton:hover,
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_auto:hover {
+  background-color: #ff8601;
+  color: #f9f140;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_mat,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer,
@@ -424,7 +427,7 @@ td {
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item textarea {
   height: 1.5rem;
   resize: none;
-  margin: 0 2vw;
+  margin: 0 1vw;
   width: inherit;
   max-width: 447px;
   box-sizing: border-box;
@@ -438,7 +441,7 @@ td {
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item select {
   height: 1.5rem;
   width: 90%;
-  margin: 0 2vw;
+  margin: 0 1vw;
   max-width: 447px;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_importe {
@@ -587,8 +590,14 @@ td {
     min-width: 30px;
   }
 }
-.registrar_forms .registrar_venta .registrar_ul {
-  width: 53vw;
+@media only screen and (min-width: 901px) {
+  .registrar_forms .registrar_venta .registrar_ul .registrar_item-importe {
+    width: 700px;
+  }
+  .registrar_forms .registrar_venta .registrar_ul .registrar_item-importe .registrar_item textarea,
+.registrar_forms .registrar_venta .registrar_ul .registrar_item-importe .registrar_item select {
+    width: 447px;
+  }
 }
 .registrar_forms .registrar_pedido {
   justify-content: space-between;

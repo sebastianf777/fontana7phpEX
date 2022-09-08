@@ -389,7 +389,6 @@ function funcionModoMat() {
           sibling.setAttribute('name', 'element_2[]')
           sibling.classList.toggle('ocultar_modo')
         } else {
-          console.log(sibling.getAttribute('name'));
           sibling.classList.add('ocultar_modo')
           sibling.setAttribute('name', '')
         }
@@ -397,11 +396,15 @@ function funcionModoMat() {
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_2[]')
           sibling.classList.toggle('ocultar_modo')
-
+          let boton_modo = e.target.closest('li').querySelector('.tiene_funcion_modo')
+          boton_modo.textContent = 'M';
+          boton_modo.classList.toggle('modo_auto');
         } else {
           sibling.setAttribute('name', '');
           sibling.classList.add('ocultar_modo')
-
+          let boton_modo = e.target.closest('li').querySelector('.tiene_funcion_modo')
+          boton_modo.textContent = 'A';
+          boton_modo.classList.toggle('modo_auto');
         }
 
       })
@@ -421,13 +424,12 @@ function funcionModoFer() {
         e.preventDefault();
 
         conseguirSibling(e.target, '#element_6');
-        console.log(sibling.getAttribute('name'));
+
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_6[]')
           sibling.classList.toggle('ocultar_modo')
 
         } else {
-          console.log(sibling.getAttribute('name'));
           sibling.setAttribute('name', '')
           sibling.classList.add('ocultar_modo')
 
@@ -436,10 +438,16 @@ function funcionModoFer() {
         if (sibling.getAttribute('name') == '') {
           sibling.setAttribute('name', 'element_6[]')
           sibling.classList.toggle('ocultar_modo')
+          let boton_modo = e.target.closest('li').querySelector('.tiene_funcion_modo')
+          boton_modo.textContent = 'M';
+          boton_modo.classList.toggle('modo_auto');
 
         } else {
           sibling.setAttribute('name', '')
           sibling.classList.add('ocultar_modo')
+          let boton_modo = e.target.closest('li').querySelector('.tiene_funcion_modo')
+          boton_modo.textContent = 'A';
+          boton_modo.classList.toggle('modo_auto');
 
         }
 

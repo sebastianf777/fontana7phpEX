@@ -453,10 +453,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                 <li class="registrar_item-importe mat_first materiales-ferreteria no-imprimir">
                     <div class="registrar_item">
-                        <!-- count_mat -->
-                        <div class="cantidad">
-                            <input type="number" name="count_mat[]" placeholder="C">
-                        </div>
+
                         <div class="item_icono">
                             <img src="/img/materiales.png" alt="materiales imagen">
                         </div>
@@ -466,7 +463,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <button type="button" class="modo_mat">
                             M
                         </button>
-
+                        <!-- count_mat -->
+                        <div class="cantidad">
+                            <input type="number" name="count_mat[]" placeholder="C">
+                        </div>
                         <!-- element_2 -->
                         <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
 
@@ -487,10 +487,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <!-- FERRETERIA -->
                 <li class="registrar_item-importe fer_first materiales-ferreteria no-imprimir">
                     <div class="registrar_item">
-                        <div class="cantidad">
-                            <!-- count_fer -->
-                            <input type="number" name="count_fer[]" placeholder="C">
-                        </div>
+                        
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
                         </label>
@@ -500,7 +497,10 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <button type="button" class="modo_fer">
                             M
                         </button>
-
+                        <div class="cantidad">
+                            <!-- count_fer -->
+                            <input type="number" name="count_fer[]" placeholder="C">
+                        </div>
                         <textarea id="element_6" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="FERRETERIA - MODO MANUAL"></textarea>
                         <!-- element_6 -->
                         <select id="select_element_6" name="element_6[]" class="">

@@ -538,7 +538,9 @@
 
             //LI
             .cabezal_materiales {
-                @include flexRow;
+                // @include flexRow;
+                display: none;
+                flex-direction: row;
                 border: 1px solid;
                 border-top: none;
                 text-align: center;
@@ -630,6 +632,7 @@
             border: solid 1px;
             text-align: center;
             padding: 0;
+            margin: 0 2rem;
 
             .precio-iva {
                 width: 40%;
@@ -649,6 +652,7 @@
 
     .pedido_config {
         @include flexColumn;
+        border: solid 1px;
     }
 }
 
@@ -710,7 +714,9 @@ input[type=number]::-webkit-outer-spin-button {
                 .no-imprimir {
                     display: none;
                 }
-
+                .cabezal_materiales{
+                    display: flex;
+                }
                 .registrar_numero-mostrar {
                     display: none;
                 }
@@ -758,7 +764,11 @@ input[type=number]::-webkit-outer-spin-button {
                     border: none;
                 }
             }
+            
 
+        }
+        .pedido_config{
+            border: none;
         }
     }
 

@@ -464,6 +464,11 @@ function cambiarTipoRegistro() {
     element.addEventListener("click", (e) => {
       e.preventDefault;
       // forms_padre.style.height="1200px";
+      let pedidos__form = document.querySelectorAll('.registrar_pedido');
+      let duplicado_form = pedidos__form[1];
+      if (duplicado_form != undefined) {
+        duplicado_form.remove();
+      }
       forms_padre.classList.toggle('registrar_forms-pedido');
       registrar_pedido_form.classList.toggle('pedido_config');
       registrar_pedido_form.classList.toggle('ocultar_modo');

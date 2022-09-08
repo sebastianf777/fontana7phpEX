@@ -109,10 +109,10 @@
                     .agregar_mat,
                     .agregar_fer,
                     .eliminar_boton {
-                        width: 23px;
+                        width: 20px;
                         padding: 0;
                         margin-right: 5px;
-                        border-radius: 8px;
+                        border-radius: 10px;
                         margin-right: 5px;
                     }
 
@@ -184,7 +184,7 @@
             }
 
             .registrar_opciones-icono {
-                @include flexRow;
+                @include flexRowCenter;
 
                 align-items: center;
 
@@ -198,7 +198,7 @@
                 }
 
                 .registrar_opciones {
-                    width: 80%;
+                    // width: 80%;
                     @include flexCenter;
 
 

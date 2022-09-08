@@ -49,7 +49,7 @@ if (isset($_SESSION["FORM_SECRET"])) {
             }
 
             if ($stmt->error) {
-                echo '<script type="text/javascript">';
+                echo '<script async type="text/javascript">';
                 echo 'alert("ERROR! REVISAR SI FALTA ALGUN DATO");';
                 echo 'window.location = "registrar.php";';
                 echo '</script>';

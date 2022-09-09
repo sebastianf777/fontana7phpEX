@@ -556,20 +556,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <label class="button_3" for="element_8_3">Fiado</label>
 
                     </div>
-
-                <li class="registrar_opciones-icono ">
-                    <label class="registrar_icono">
-                        <img src="/img/vendedor.png" alt="vendedor img">
-                    </label>
-                    <!-- element_3 -->
-                    <div id="vendedor_opciones" class="registrar_opciones">
-                        <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian" checked="checked" />
-                        <label class="button_3" for="element_3_1">Brian</label>
-                        <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
-                        <label class="button_3" for="element_3_2">Sebastian</label>
-                    </div>
                 </li>
 
+                
 
                 <li class="registrar_submit">
                     <button id="imprimir_boton" class="button_3" type="button">

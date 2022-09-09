@@ -154,6 +154,7 @@ $_SESSION['FORM_SECRET'] = $secret;
         </nav>
     </header>
     <section class="registrar_forms">
+        <!-- FORM REGISTRAR VENTA -->
         <form class="registrar_form registrar_venta" method="post" action="registrar_formulas.php">
             <!-- id="registrar_venta" -->
             <ul class="registrar_ul">
@@ -303,11 +304,17 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <label class="registrar_icono">
                         <img src="/img/vendedor.png" alt="vendedor img">
                     </label>
-                    <div id="vendedor_opciones" class="registrar_opciones">
-                        <input id="element_3_1" name="element_3" type="radio" maxlength="255" value="Brian" checked="checked" />
-                        <label class="button_3" for="element_3_1">Brian</label>
-                        <input id="element_3_2" name="element_3" type="radio" maxlength="255" value="Sebastian" />
-                        <label class="button_3" for="element_3_2">Sebastian</label>
+                    <div class="registrar_opciones vendedor_opciones">
+                        <label for="brian_venta" class="button_3">
+                            
+                            Brian
+                        </label>
+                        <input name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
+                        <label for="sebastian_venta" class="button_3">
+                        Sebastian
+                            
+                        </label>
+                        <input name="sebastian_venta" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
                     </div>
                 </li>
                 <li class="registrar_fecha-icono-img">
@@ -332,10 +339,11 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
             </ul>
         </form>
+        <!-- FORM REGISTRAR PEDIDO -->
         <form class="registrar_pedido registrar_form ocultar_modo" method="post" action="registrar_formulas.php">
             <!-- id="registrar_pedido" -->
             <ul class="registrar_ul ul_pedidos">
-                <!-- NUMERO -->
+                <!-- NUMERO ELEMENT-->
                 <li class="registrar_numero-mostrar">
                     <div class=" registrar-numero">
                         <!-- element_1 -->
@@ -349,6 +357,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         VENTAS
                     </button>
                 </li>
+                <!-- FECHA ELEMENT -->
                 <li class="cabezal_presupuesto">
                     <div class="cabezal_izq">
                         <div class="titulo">
@@ -412,7 +421,7 @@ $_SESSION['FORM_SECRET'] = $secret;
 
                     </div>
                 </li>
-                <!-- CLIENTE -->
+                <!-- CLIENTE & DIRECCION ELEMENT -->
                 <li class="registrar_item-importe direccion-cliente">
 
                     <div class="registrar_item registrar_item_cliente">
@@ -436,9 +445,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </div>
                         <textarea id="element_9" name="element_9" class="registrar_input_text" type="text" maxlength="255" value="" placeholder="DIRECCIÓN"></textarea>
                     </div>
-
                 </li>
-
                 <li class="cabezal_materiales">
                     <div class="cabezal_cant">
                         Cant.
@@ -453,11 +460,9 @@ $_SESSION['FORM_SECRET'] = $secret;
                         Importe
                     </div>
                 </li>
-                <!-- MATERIALES -->
-
+                <!-- MATERIALES COUNT-MAT E, MATERIALES E, TOTAL-M E-->
                 <li class="registrar_item-importe mat_first materiales-ferreteria no-imprimir">
                     <div class="registrar_item">
-
                         <div class="item_icono">
                             <img src="/img/materiales.png" alt="materiales imagen">
                         </div>
@@ -474,9 +479,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <!-- element_2 -->
                         <textarea id="element_2" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="MATERIALES - MODO MANUAL"></textarea>
 
-
                         <select id="select_element_2" name="element_2[]" class=" select_materiales">
-
                         </select>
                     </div>
                     <div class="registrar_importe">
@@ -487,8 +490,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <input id="element_5" name="element_5[]" class="precio_multiplicado" type="number" maxlength="255" value="" step=".01" placeholder="--" />
                     </div>
                 </li>
-
-                <!-- FERRETERIA -->
+                <!-- FERRETERIA COUNT-FER, FERRETERIA E, TOTAL-F E -->
                 <li class="registrar_item-importe fer_first materiales-ferreteria no-imprimir">
                     <div class="registrar_item">
 
@@ -541,6 +543,22 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <div class="total">
                         <div class="signo">$</div>
                         <div class="total_suma"></div>
+                    </div>
+                </li>
+                <!-- VENDEDOR ELEMENT -->
+                <li class="registrar_opciones-icono">
+                    <label class="registrar_icono">
+                        <img src="/img/vendedor.png" alt="vendedor img">
+                    </label>
+                    <div class="registrar_opciones vendedor_opciones">
+                        <label class="button_3">
+                            <input name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
+                            Brian
+                        </label>
+                        <label class="button_3">
+                            <input name="element_3" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
+                            Sebastian
+                        </label>
                     </div>
                 </li>
 

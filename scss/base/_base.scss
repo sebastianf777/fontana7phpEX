@@ -52,6 +52,7 @@ td {
 }
 
 input, select, textarea, button, label {
+
     &:focus {
         outline: none;
         border: 2.3px dashed $orange_medium;
@@ -59,4 +60,8 @@ input, select, textarea, button, label {
         color: $blue_light;
         font-weight: bold;
     }
+}
+input, select, textarea, button{
+    border: 1px solid $orange_medium;
+
 }

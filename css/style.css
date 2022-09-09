@@ -122,6 +122,10 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
   font-weight: bold;
 }
 
+input, select, textarea, button {
+  border: 1px solid #ff8601;
+}
+
 .navbar {
   width: 5rem;
   height: 100vh;
@@ -796,7 +800,7 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
 .registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .descuento .descuento_valor {
   width: 46px;
   height: 13px;
-  margin-left: 27px;
+  margin-left: 29px;
 }
 .registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .total {
   display: flex;

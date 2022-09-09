@@ -8,7 +8,7 @@ const year = document.querySelectorAll('.element_4_3');
 const numero = document.getElementById('element_1');
 const sin_numero = document.getElementById('sin_numero');
 const mostrar_numero = document.querySelector('.registrar_mostrar');
-const vendedor_opciones = document.getElementById('vendedor_opciones');
+const vendedor_opciones = document.querySelectorAll('.vendedor_opciones');
 
 const materiales_textarea = document.getElementById("element_2");
 // const agregar_item = document.querySelectorAll(".agregar_mat");
@@ -30,8 +30,12 @@ let pedidos_textarea = document.getElementById("element_9");
 let cliente_textarea = document.getElementById("element_11");
 let registrar_submit = document.getElementById("registrar_submit");
 
-let vendedor_brian = document.getElementById("element_3_1");
-let vendedor_sebastian = document.getElementById("element_3_2");
+// let vendedor_brian = document.getElementById("element_3_1");
+// let vendedor_sebastian = document.getElementById("element_3_2");
+// let vendedor_opcion = localStorage.getItem("vendedor");
+
+let vendedor_brian = document.querySelectorAll(".vendedor_brian");
+let vendedor_sebastian = document.querySelectorAll(".vendedor_sebastian");
 let vendedor_opcion = localStorage.getItem("vendedor");
 
 let textarea_manual = document.querySelector('#element_2');
@@ -130,19 +134,33 @@ function ponerFecha() {
 
 //Guardar última opción vendedor
 
-vendedor_opciones.addEventListener("click", function () {
-  if (vendedor_sebastian.checked === true) {
-    localStorage.setItem("vendedor", "sebastian");
+vendedor_opciones.forEach(element => {
+  element.addEventListener("click", function () {
+    let vendedor_sebastian_venta = vendedor_sebastian[0];
+    let vendedor_sebastian_pedido = vendedor_sebastian[1];
 
-  } else {
-    localStorage.setItem("vendedor", "brian");
-  }
-})
+    if (vendedor_sebastian_venta.checked === true || vendedor_sebastian_pedido.checked === true) {
+      localStorage.setItem("vendedor", "sebastian");
+      console.log("guardado seb")
+    } else {
+      localStorage.setItem("vendedor", "brian");
+      console.log("guardado b")
+
+    }
+  })
+  
+});
 
 function ponerOpcionVendedor() {
   if (vendedor_opcion == "sebastian") {
-    vendedor_brian.checked = false;
-    vendedor_sebastian.checked = true;
+    vendedor_brian.forEach(element => {
+      element.checked = false;
+    });
+    vendedor_sebastian.forEach(element => {
+      element.checked = true;
+    });
+    // vendedor_brian.checked = false;
+    // vendedor_sebastian.checked = true;
   }
 }
 

@@ -309,12 +309,13 @@ $_SESSION['FORM_SECRET'] = $secret;
                             
                             Brian
                         </label>
-                        <input name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
+                        <input id="brian_venta" name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
+
                         <label for="sebastian_venta" class="button_3">
                         Sebastian
                             
                         </label>
-                        <input name="sebastian_venta" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
+                        <input id="sebastian_venta" name="element_3" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
                     </div>
                 </li>
                 <li class="registrar_fecha-icono-img">

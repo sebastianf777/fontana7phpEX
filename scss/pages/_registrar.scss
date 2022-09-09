@@ -96,9 +96,12 @@
                             background-color: $button_bg_secondary;
                             color: $blue_light;
                         }
-                        &:focus{
+
+                        &:focus {
                             outline: none;
-                            border: 2.5px dashed $blue_dark;
+                            border: 2px dashed $orange_medium;
+                            background-color: $yellow_light;
+                            color: $blue_light;
 
                         }
                     }
@@ -110,8 +113,16 @@
                         border: solid #ff8601 3px;
 
                         &:hover {
-                            background-color: $button_bg_primary;
-                            color: $button_bg_secondary;
+                            background-color: $orange_medium;
+                            color: $yellow_light;
+                            // border: solid $yellow_light 3px;
+
+                        }
+
+                        &:focus {
+                            background-color: $yellow_light;
+                            border: 2px dashed $orange_medium;
+
                         }
                     }
 
@@ -682,7 +693,9 @@
     }
 
     &:focus+label {
-        border: 3px dashed $blue_dark;
+        border: 2px dashed $orange_medium;
+        background-color: $yellow_light;
+
     }
 }
 

@@ -27,13 +27,13 @@ h1{
 }
 .light {
 
-    --bg-nav: #9f9fce;
-    --bg-nav-2: #6d6d86;
-    --color-nav: #adaaaa ;
-    --color-nav-2: #ffffff ;
+    --bg-nav: #ff8601;
+    --bg-nav-2: #d3b806;
+    --color-nav: #e5ff00;
+    --color-nav-2: #e5ff00;
     --filter-img-nav: invert(0.1);
-    --filter-img-nav-hover: invert(0);
-    --filter-nav-link-nav: grayscale(50%) opacity(0.7) ;
+    --filter-img-nav-hover: invert(0.1);
+    --filter-nav-link-nav: grayscale(0%) opacity(.7) ;
     --filter-nav-link-nav-hover: grayscale(0%) opacity(1);
     
     // --bg: var(--gray0);

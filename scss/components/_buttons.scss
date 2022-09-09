@@ -57,8 +57,11 @@
         color: $blue_light;
         background-color: $button_bg_secondary;
         font-weight: bold;
-        border: solid $orange_medium;
+        // border: dashed 2px $orange_medium;
     }
+    // &:focus{
+        
+    // }
 
 }
 

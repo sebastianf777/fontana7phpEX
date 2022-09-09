@@ -29,13 +29,13 @@ h1 {
 }
 
 .light {
-  --bg-nav: #9f9fce;
-  --bg-nav-2: #6d6d86;
-  --color-nav: #adaaaa ;
-  --color-nav-2: #ffffff ;
+  --bg-nav: #ff8601;
+  --bg-nav-2: #d3b806;
+  --color-nav: #e5ff00;
+  --color-nav-2: #e5ff00;
   --filter-img-nav: invert(0.1);
-  --filter-img-nav-hover: invert(0);
-  --filter-nav-link-nav: grayscale(50%) opacity(0.7) ;
+  --filter-img-nav-hover: invert(0.1);
+  --filter-nav-link-nav: grayscale(0%) opacity(.7) ;
   --filter-nav-link-nav-hover: grayscale(0%) opacity(1);
 }
 
@@ -116,7 +116,10 @@ td {
 
 input:focus, select:focus, textarea:focus, button:focus, label:focus {
   outline: none;
-  border: 3px dashed #1a1a93;
+  border: 2.3px dashed #ff8601;
+  background-color: #fff934;
+  color: #4671ff;
+  font-weight: bold;
 }
 
 .navbar {
@@ -416,7 +419,9 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_fer:focus,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_mat:focus {
   outline: none;
-  border: 2.5px dashed #1a1a93;
+  border: 2px dashed #ff8601;
+  background-color: #fff934;
+  color: #4671ff;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_auto {
@@ -427,7 +432,12 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton:hover,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_auto:hover {
   background-color: #ff8601;
-  color: #f9f140;
+  color: #fff934;
+}
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton:focus,
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_auto:focus {
+  background-color: #fff934;
+  border: 2px dashed #ff8601;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_mat,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer,
@@ -831,7 +841,8 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
 }
 .registrar_opciones input:focus + label,
 .registrar_mostrar input:focus + label {
-  border: 3px dashed #1a1a93;
+  border: 2px dashed #ff8601;
+  background-color: #fff934;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -1389,7 +1400,6 @@ input[type=number]::-webkit-outer-spin-button {
   color: #4671ff;
   background-color: #f9f140;
   font-weight: bold;
-  border: solid #ff8601;
 }
 
 .button_3_active {

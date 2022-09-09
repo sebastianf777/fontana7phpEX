@@ -337,7 +337,11 @@ $_SESSION['FORM_SECRET'] = $secret;
             <ul class="registrar_ul ul_pedidos">
                 <!-- NUMERO -->
                 <li class="registrar_numero-mostrar">
-
+                    <div class=" registrar-numero">
+                        <!-- element_1 -->
+                        <label for="element_1">N°: </label>
+                        <input id="element_1" name="element_1" type="text" maxlength="255" value="" required placeholder="X" />
+                    </div>
 
                     <button type="button" class="cambiar_tipo_registro button_3">
                         FORMULARIO
@@ -411,7 +415,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <!-- CLIENTE -->
                 <li class="registrar_item-importe direccion-cliente">
 
-                    <div class="registrar_item">
+                    <div class="registrar_item registrar_item_cliente">
                         <!-- element_11 -->
                         <label class="item_icono" for="element_11">
                             <img src="/img/acuenta.png" alt="acuenta imagen">
@@ -487,7 +491,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 <!-- FERRETERIA -->
                 <li class="registrar_item-importe fer_first materiales-ferreteria no-imprimir">
                     <div class="registrar_item">
-                        
+
                         <label class="item_icono" for="element_6">
                             <img src="/img/ferreteria.png" alt="ferreteria img">
                         </label>
@@ -532,7 +536,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="descuento">
                         <div class="signo">$</div>
-                        <input type="number" class="descuento_valor"></input>
+                        <input type="number" class="descuento_valor" placeholder="--"></input>
                     </div>
                     <div class="total">
                         <div class="signo">$</div>
@@ -548,6 +552,8 @@ $_SESSION['FORM_SECRET'] = $secret;
                     <button id="imprimir_boton" class="button_3" type="button">
                         Imprimir
                     </button>
+                    <input type="hidden" name="form_secret" id="form_secret" value="<?php echo $_SESSION['FORM_SECRET']; ?>" />
+                    <input class="button_3" id="registrar_submit" type="submit" name="submit" value="Submit" />
                 </li>
             </ul>
             <div class="presupuesto_footer">

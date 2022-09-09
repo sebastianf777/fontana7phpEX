@@ -687,6 +687,9 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
   display: flex;
   margin: 0 auto;
 }
+.registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item select, .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item textarea {
+  max-width: 515px;
+}
 .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item textarea,
 .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item select {
   margin: 0 1vw;
@@ -705,7 +708,7 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
   width: 75%;
 }
 .registrar_forms .registrar_pedido .registrar_ul .materiales-ferreteria .registrar_item .cantidad {
-  width: 10%;
+  width: 48px;
   margin-left: 0.7vw;
   margin-right: 1vw;
 }
@@ -723,7 +726,8 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2px;
+  margin: 2px 0;
+  padding: 0 0px 1px 0;
   height: 60px;
 }
 .registrar_forms .registrar_pedido .registrar_ul .direccion-cliente .registrar_item .cliente-titulo {
@@ -734,7 +738,11 @@ input:focus, select:focus, textarea:focus, button:focus, label:focus {
 .registrar_forms .registrar_pedido .registrar_ul .direccion-cliente .registrar_item select {
   max-width: 80%;
   margin-left: 43px;
+  margin-right: 18px;
   text-align: start;
+}
+.registrar_forms .registrar_pedido .registrar_ul .direccion-cliente .registrar_item_cliente {
+  margin-bottom: 3px;
 }
 .registrar_forms .registrar_pedido .registrar_ul .cabezal_materiales {
   display: none;

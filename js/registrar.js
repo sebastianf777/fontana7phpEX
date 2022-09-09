@@ -325,20 +325,23 @@ const descuento_valor = document.querySelector(".descuento_valor").value;
 function funcionMultiplicar() {
   cada_uno = document.querySelectorAll('.cada_uno');
   cantidad = document.querySelectorAll('.cantidad');
+  
   cada_uno.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
-
       element.classList.add('tiene_funcion_multiplicar');
-      element.addEventListener('keyup', function (e) {
-        e.preventDefault();
-        cada_uno = e.target.value;
-        cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
-        total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado');
-        cantidad_cifra == "" || cantidad_cifra == 0 ? total_multiplicado.value = cada_uno : total_multiplicado.value = (cantidad_cifra * cada_uno);
 
-        sumarTotal(e);
-
-      })
+      ['focusout','keyup'].forEach( evt => 
+        element.addEventListener(evt, function (e) {
+          e.preventDefault();
+          cada_uno = e.target.value;
+          cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
+          total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado');
+          cantidad_cifra == "" || cantidad_cifra == 0 ? total_multiplicado.value = cada_uno : total_multiplicado.value = (cantidad_cifra * cada_uno);
+  
+          sumarTotal(e);
+  
+        }, false)
+    );
 
     }
 

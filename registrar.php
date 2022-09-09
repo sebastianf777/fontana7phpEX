@@ -305,17 +305,18 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <img src="/img/vendedor.png" alt="vendedor img">
                     </label>
                     <div class="registrar_opciones vendedor_opciones">
+                        
+                        <input id="brian_venta" name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
                         <label for="brian_venta" class="button_3">
                             
                             Brian
                         </label>
-                        <input id="brian_venta" name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
-
+                        
+                        <input id="sebastian_venta" name="element_3" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
                         <label for="sebastian_venta" class="button_3">
                         Sebastian
                             
                         </label>
-                        <input id="sebastian_venta" name="element_3" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
                     </div>
                 </li>
                 <li class="registrar_fecha-icono-img">

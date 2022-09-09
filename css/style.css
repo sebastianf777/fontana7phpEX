@@ -114,6 +114,11 @@ td {
   border: 1px solid;
 }
 
+input:focus, select:focus, textarea:focus, button:focus, label:focus {
+  outline: none;
+  border: 3px dashed #1a1a93;
+}
+
 .navbar {
   width: 5rem;
   height: 100vh;
@@ -397,18 +402,27 @@ td {
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_mat {
   background-color: #ff8601;
   color: #f9f140;
+  border: solid #ff8601 3px;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_mat:hover,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer:hover,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_fer:hover,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_mat:hover {
   background-color: #f9f140;
-  color: #ff8601;
+  color: #4671ff;
+}
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_mat:focus,
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .agregar_fer:focus,
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_fer:focus,
+.registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_mat:focus {
+  outline: none;
+  border: 2.5px dashed #1a1a93;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_auto {
   background-color: #f9f140;
-  color: #ff8601;
+  color: #4671ff;
+  border: solid #ff8601 3px;
 }
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .eliminar_boton:hover,
 .registrar_forms .registrar_form .registrar_ul .registrar_item-importe .registrar_item .modo_auto:hover {
@@ -810,12 +824,14 @@ td {
 }
 .registrar_opciones input:checked + label,
 .registrar_mostrar input:checked + label {
-  background-color: #f9f140;
-  border-color: rgb(93, 68, 204);
+  background-color: #fff934;
+  border-color: #ff8601;
+  color: #4671ff;
+  font-weight: bold;
 }
 .registrar_opciones input:focus + label,
 .registrar_mostrar input:focus + label {
-  border: 2px solid rgb(93, 68, 204);
+  border: 3px dashed #1a1a93;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -1355,6 +1371,31 @@ input[type=number]::-webkit-outer-spin-button {
 .button_3 {
   display: inline-block;
   background-color: #ff8601;
+  border: solid #ff8601;
+  color: #fff934;
+  padding: 1vh 0.7vw;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+  min-width: 1rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 1vw;
+}
+.button_3:hover {
+  color: #4671ff;
+  background-color: #f9f140;
+  font-weight: bold;
+  border: solid #ff8601;
+}
+
+.button_3_active {
+  display: inline-block;
+  background-color: #ff8601;
+  color: #4671ff;
   padding: 1vh 0.7vw;
   font-size: 0.7rem;
   border: 2px solid #444;
@@ -1368,7 +1409,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-overflow: ellipsis;
   margin-left: 1vw;
 }
-.button_3:hover {
+.button_3_active:hover {
   background-color: #f9f140;
 }
 

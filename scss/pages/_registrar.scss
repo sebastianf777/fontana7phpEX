@@ -88,17 +88,26 @@
                     .modo_mat {
                         background-color: $button_bg_primary;
                         color: $button_bg_secondary;
+                        border: solid $orange_medium 3px;
+
+
 
                         &:hover {
                             background-color: $button_bg_secondary;
-                            color: $button_bg_primary;
+                            color: $blue_light;
+                        }
+                        &:focus{
+                            outline: none;
+                            border: 2.5px dashed $blue_dark;
+
                         }
                     }
 
                     .eliminar_boton,
                     .modo_auto {
                         background-color: $button_bg_secondary;
-                        color: $button_bg_primary;
+                        color: $blue_light;
+                        border: solid #ff8601 3px;
 
                         &:hover {
                             background-color: $button_bg_primary;
@@ -392,7 +401,7 @@
                 height: 50px
             }
 
-            //LI     
+            //LI
             .cabezal_presupuesto {
                 @include flexRow;
                 border: solid 1px;
@@ -666,12 +675,14 @@
     width: 0;
 
     &:checked+label {
-        background-color: $button_bg_secondary;
-        border-color: $button_border_primary;
+        background-color: $yellow_light;
+        border-color: $orange_medium;
+        color: $blue_light;
+        font-weight: bold;
     }
 
     &:focus+label {
-        border: 2px solid $button_border_secondary;
+        border: 3px dashed $blue_dark;
     }
 }
 
@@ -714,9 +725,11 @@ input[type=number]::-webkit-outer-spin-button {
                 .no-imprimir {
                     display: none;
                 }
-                .cabezal_materiales{
+
+                .cabezal_materiales {
                     display: flex;
                 }
+
                 .registrar_numero-mostrar {
                     display: none;
                 }
@@ -764,10 +777,11 @@ input[type=number]::-webkit-outer-spin-button {
                     border: none;
                 }
             }
-            
+
 
         }
-        .pedido_config{
+
+        .pedido_config {
             border: none;
         }
     }

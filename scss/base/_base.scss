@@ -50,3 +50,10 @@ th,
 td {
     border: 1px solid;
 }
+
+input, select, textarea, button, label {
+    &:focus {
+        outline: none;
+        border: 3px dashed $blue_dark;
+    }
+}

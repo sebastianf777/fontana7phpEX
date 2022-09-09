@@ -39,6 +39,34 @@
 
     display: inline-block;
     background-color: $button_bg_primary;
+    border: solid $orange_medium;
+    color: $yellow_light;
+    padding: 1vh 0.7vw;
+    font-size: .7rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+    min-width: 1rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1vw;
+
+    &:hover {
+        color: $blue_light;
+        background-color: $button_bg_secondary;
+        font-weight: bold;
+        border: solid $orange_medium;
+    }
+
+}
+
+.button_3_active  {
+
+    display: inline-block;
+    background-color: $orange_medium;
+    color: $blue_light;
     padding: 1vh 0.7vw;
     font-size: .7rem;
     border: 2px solid #444;
@@ -57,3 +85,5 @@
     }
 
 }
+
+

@@ -55,6 +55,8 @@ let total_multiplicado;
 let sum = 0;
 
 let select_materiales = document.querySelectorAll('.select_materiales');
+let select_ferreteria = document.querySelectorAll('.select_ferreteria');
+
 let eliminar_boton = document.querySelectorAll('.eliminar_boton');
 let delete_item;
 let sum2 = 0;
@@ -141,10 +143,10 @@ vendedor_opciones.forEach(element => {
 
     if (vendedor_sebastian_venta.checked === true || vendedor_sebastian_pedido.checked === true) {
       localStorage.setItem("vendedor", "sebastian");
-      console.log("guardado seb")
+      // console.log("guardado seb")
     } else {
       localStorage.setItem("vendedor", "brian");
-      console.log("guardado b")
+      // console.log("guardado b")
 
     }
   })
@@ -288,13 +290,41 @@ function conseguirSibling(elem, selector) {
 
 function precioAuto() {
   select_materiales = document.querySelectorAll('.select_materiales');
+  select_ferreteria = document.querySelectorAll('.select_ferreteria');
 
   select_materiales.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li'))) && element.classList.contains('..tiene_funcion_precio_auto') == false) {
       element.classList.add('.tiene_funcion_precio_auto');
       element.addEventListener('change', function (e) {
         const [option] = e.target.selectedOptions;
-
+        const textarea_pedido = e.target.closest('li').querySelector('textarea')
+        const li_pedido = e.target.closest('li');
+       
+        if (li_pedido.classList.contains('materiales-ferreteria') == true) {
+        textarea_pedido.textContent = option.value;
+          
+        }
+        // const option_clone = option_base.cloneNode(true);
+        // option_base.parentNode.insertBefore(option_clone, option_base.nextSibling);
+        (option.dataset.precio != undefined) ? cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio : '';
+      }
+      )
+    }
+  });
+  select_ferreteria.forEach(element => {
+    if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li'))) && element.classList.contains('..tiene_funcion_precio_auto') == false) {
+      element.classList.add('.tiene_funcion_precio_auto');
+      element.addEventListener('change', function (e) {
+        const [option] = e.target.selectedOptions;
+        const textarea_pedido = e.target.closest('li').querySelector('textarea')
+        const li_pedido = e.target.closest('li');
+       
+        if (li_pedido.classList.contains('materiales-ferreteria') == true) {
+        textarea_pedido.textContent = option.value;
+          
+        }
+        // const option_clone = option_base.cloneNode(true);
+        // option_base.parentNode.insertBefore(option_clone, option_base.nextSibling);
         (option.dataset.precio != undefined) ? cada_uno = e.target.closest('li').querySelector('.registrar_importe .cada_uno').value = option.dataset.precio : '';
       }
       )

@@ -305,17 +305,17 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <img src="/img/vendedor.png" alt="vendedor img">
                     </label>
                     <div class="registrar_opciones vendedor_opciones">
-                        
+
                         <input id="brian_venta" name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
                         <label for="brian_venta" class="button_3">
-                            
+
                             Brian
                         </label>
-                        
+
                         <input id="sebastian_venta" name="element_3" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
                         <label for="sebastian_venta" class="button_3">
-                        Sebastian
-                            
+                            Sebastian
+
                         </label>
                     </div>
                 </li>
@@ -511,7 +511,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                         </div>
                         <textarea id="element_6" name="" class="registrar_input_text ocultar_modo" type="text" maxlength="255" value="" placeholder="FERRETERIA - MODO MANUAL"></textarea>
                         <!-- element_6 -->
-                        <select id="select_element_6" name="element_6[]" class="">
+                        <select id="select_element_6" name="element_6[]" class="select_ferreteria">
                             <option value="">Elegir-opción</option>
                             <option value="Ferreteria">Ferreteria</option>
                             <option value="PP/PVC">PP/PVC</option>
@@ -553,12 +553,14 @@ $_SESSION['FORM_SECRET'] = $secret;
                         <img src="/img/vendedor.png" alt="vendedor img">
                     </label>
                     <div class="registrar_opciones vendedor_opciones">
-                        <label class="button_3">
-                            <input name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
+
+                        <input id="brian_pedido" name="element_3" class="vendedor_brian" type="radio" maxlength="255" value="Brian" checked="checked" />
+                        <label class="button_3" for="brian_pedido">
                             Brian
                         </label>
-                        <label class="button_3">
-                            <input name="element_3" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
+
+                        <input id="sebastian_pedido" name="element_3" class="vendedor_sebastian" type="radio" maxlength="255" value="Sebastian" />
+                        <label for="sebastian_pedido" class="button_3">
                             Sebastian
                         </label>
                     </div>

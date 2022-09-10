@@ -17,16 +17,27 @@ if (isset($_SESSION["FORM_SECRET"])) {
             $direccion = mysqli_real_escape_string($conn, $_POST['element_9']);
             $fechaing = mysqli_real_escape_string($conn, $_POST['element_4_3'] . "-" . $_POST['element_4_1'] . "-" . $_POST['element_4_2']);
 
-            $serie = mysqli_real_escape_string($conn, $_POST['element_3']);
-            $pagotipo = mysqli_real_escape_string($conn, $_POST['element_8']);
-            $total_pedido = mysqli_real_escape_string($conn, $_POST['element_10']);
-            $acuenta = mysqli_real_escape_string($conn, $_POST['element_12']);
-            $mostrar = mysqli_real_escape_string($conn, $_POST['element_13']);
+            $vendedor = mysqli_real_escape_string($conn, $_POST['element_3']);
+            // $pagotipo = mysqli_real_escape_string($conn, $_POST['element_8']);
+
+             $total_pedido = mysqli_real_escape_string($conn, $_POST['element_10']);
+             $acuenta_pedido = mysqli_real_escape_string($conn, $_POST['element_12']);
+            // $mostrar = mysqli_real_escape_string($conn, $_POST['element_13']);
 
             $count_mat = count($_POST['count_mat']);
             $count_fer = count($_POST['count_fer']);
             $cantidad_rows_mat = $_POST['count_mat'];
             $cantidad_rows_fer = $_POST['count_fer'];
+            // $query = "INSERT INTO productos ( numero, producto, total_materiales, fechaing, serie, ferreteria, total_ferreteria, pagotipo, pedido, total_pedido, cliente, acuenta, mostrar, count_mat, count_fer ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $query = "INSERT INTO pedidos ( numero_pedido, cliente, direccion, fechaing, cantidad_materiales, materiales, total_materiales, cantidad_ferreteria, ferreteria, total_ferreteria, vendedor, total_pedido, acuenta_pedido ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+            $stmt = $con->prepare($query);
+
+            // $stmt->bind_param('issssssssssssss', $numero_pedido, $materiales, $total_materiales, $fechaing, $serie, $ferreteria, $total_ferreteria, $pagotipo, $direccion, $total_pedido, $cliente, $acuenta, $mostrar, $cantidad_materiales, $cantidad_ferreteria);
+            $stmt->bind_param('issssssssssss', $numero_pedido, $cliente, $direccion, $fechaing, $cantidad_materiales, $materiales, $total_materiales, $cantidad_ferreteria, $ferreteria, $total_ferreteria, $vendedor, $total_pedido, $acuenta_pedido);
+
+
+
             ($count_mat >= $count_fer) ? $bigger_count = $count_mat : $bigger_count = $count_fer;
 
             for ($i = 0; $i < $bigger_count; $i++) {
@@ -40,15 +51,7 @@ if (isset($_SESSION["FORM_SECRET"])) {
                 $stmt->execute();
             }
 
-            // $query = "INSERT INTO productos ( numero, producto, total_materiales, fechaing, serie, ferreteria, total_ferreteria, pagotipo, pedido, total_pedido, cliente, acuenta, mostrar, count_mat, count_fer ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            $query = "INSERT INTO productos ( numero_pedido, cliente, direccion, fechaing, cantidad_materiales, materiales, total_materiales, cantidad_ferreteria, ferreteria, total_ferreteria ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-            $stmt = $con->prepare($query);
-
-            // $stmt->bind_param('issssssssssssss', $numero_pedido, $materiales, $total_materiales, $fechaing, $serie, $ferreteria, $total_ferreteria, $pagotipo, $direccion, $total_pedido, $cliente, $acuenta, $mostrar, $cantidad_materiales, $cantidad_ferreteria);
-            $stmt->bind_param('issssssss', $numero_pedido, $cliente, $fechaing, $direccion, $cantidad_materiales, $materiales, $total_materiales, $cantidad_ferreteria, $ferreteria, $total_ferreteria);
-
-            
 
             if ($stmt->error) {
                 echo '<script type="text/javascript">';

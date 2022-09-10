@@ -342,7 +342,7 @@ $_SESSION['FORM_SECRET'] = $secret;
             </ul>
         </form>
         <!-- FORM REGISTRAR PEDIDO -->
-        <form class="registrar_pedido registrar_form ocultar_modo" method="post" action="registrar_formulas.php">
+        <form class="registrar_pedido registrar_form ocultar_modo" method="post" action="registrar_pedido_formulas.php">
             <!-- id="registrar_pedido" -->
             <ul class="registrar_ul ul_pedidos">
                 <!-- NUMERO ELEMENT-->
@@ -540,11 +540,11 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="descuento">
                         <div class="signo">$</div>
-                        <input type="number" class="descuento_valor" placeholder="--"></input>
+                        <input type="number" class="descuento_valor" type="number" name="element_12"  placeholder="--"></input>
                     </div>
-                    <div class="total">
+                    <div class="total" >
                         <div class="signo">$</div>
-                        <div class="total_suma"></div>
+                        <input class="total_suma" name='element_10' type="number"></input>
                     </div>
                 </li>
                 <!-- VENDEDOR ELEMENT -->

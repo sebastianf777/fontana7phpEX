@@ -150,7 +150,7 @@ vendedor_opciones.forEach(element => {
 
     }
   })
-  
+
 });
 
 function ponerOpcionVendedor() {
@@ -299,10 +299,13 @@ function precioAuto() {
         const [option] = e.target.selectedOptions;
         const textarea_pedido = e.target.closest('li').querySelector('textarea')
         const li_pedido = e.target.closest('li');
-       
+
         if (li_pedido.classList.contains('materiales-ferreteria') == true) {
-        textarea_pedido.textContent = option.value;
-          
+          const modo_pedido_boton = e.target.closest('li').querySelector('.tiene_funcion_modo')
+          textarea_pedido.textContent = option.value;
+          modo_pedido_boton.click();
+          textarea_pedido.focus();
+
         }
         // const option_clone = option_base.cloneNode(true);
         // option_base.parentNode.insertBefore(option_clone, option_base.nextSibling);
@@ -318,10 +321,14 @@ function precioAuto() {
         const [option] = e.target.selectedOptions;
         const textarea_pedido = e.target.closest('li').querySelector('textarea')
         const li_pedido = e.target.closest('li');
-       
+
         if (li_pedido.classList.contains('materiales-ferreteria') == true) {
-        textarea_pedido.textContent = option.value;
-          
+          const modo_pedido_boton = e.target.closest('li').querySelector('.tiene_funcion_modo')
+          textarea_pedido.textContent = option.value;
+
+          modo_pedido_boton.click();
+          textarea_pedido.focus();
+
         }
         // const option_clone = option_base.cloneNode(true);
         // option_base.parentNode.insertBefore(option_clone, option_base.nextSibling);
@@ -349,7 +356,7 @@ function funcionSumar() {
   });
 }
 function sumarTotal(e) {
-const descuento_valor = document.querySelector(".descuento_valor").value;
+  const descuento_valor = document.querySelector(".descuento_valor").value;
   if (e != undefined) {
     preciosAMultiplicar = e.target.closest('form').querySelectorAll('.precio_multiplicado');
     let total_suma = e.target.closest('form').querySelector('.total_suma');
@@ -358,10 +365,10 @@ const descuento_valor = document.querySelector(".descuento_valor").value;
     for (let i = 0; i < preciosAMultiplicar.length; i++) {
       sum += Number(preciosAMultiplicar[i].value);
     }
-    sum-= descuento_valor;
+    sum -= descuento_valor;
     total_suma.textContent = sum;
     total_suma.textContent != 0 ? li_padre.classList.remove('no-imprimir') : li_padre.classList.add('no-imprimir');
-  }else{
+  } else {
     let total_suma = document.querySelectorAll(".total_suma")[1];
     let calculo = sum - descuento_valor;
     total_suma.textContent = calculo;
@@ -373,23 +380,23 @@ const descuento_valor = document.querySelector(".descuento_valor").value;
 function funcionMultiplicar() {
   cada_uno = document.querySelectorAll('.cada_uno');
   cantidad = document.querySelectorAll('.cantidad');
-  
+
   cada_uno.forEach(element => {
     if (((element.parentElement.parentElement.classList.contains('mat_li') == false) || (element.parentElement.parentElement.classList.contains('fer_li')) && element.classList.contains('.tiene_funcion_multiplicar') == false)) {
       element.classList.add('tiene_funcion_multiplicar');
 
-      ['focusout','keyup'].forEach( evt => 
+      ['focusout', 'keyup'].forEach(evt =>
         element.addEventListener(evt, function (e) {
           e.preventDefault();
           cada_uno = e.target.value;
           cantidad_cifra = e.target.closest('li').querySelector('.cantidad input').value;
           total_multiplicado = e.target.closest('li').querySelector('.precio_multiplicado');
           cantidad_cifra == "" || cantidad_cifra == 0 ? total_multiplicado.value = cada_uno : total_multiplicado.value = (cantidad_cifra * cada_uno);
-  
+
           sumarTotal(e);
-  
+
         }, false)
-    );
+      );
 
     }
 
@@ -414,12 +421,12 @@ function funcionMultiplicar() {
 
 //Descuento automático
 
-funcionDescuentoAuto = () =>{
+funcionDescuentoAuto = () => {
   descuento.addEventListener('keyup', function () {
     // let total_suma = document.querySelector('.total_suma');
     sumarTotal();
   })
-  
+
 }
 
 

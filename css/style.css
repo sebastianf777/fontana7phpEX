@@ -799,7 +799,7 @@ input, select, textarea, button {
 }
 .registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .descuento .descuento_valor {
   width: 46px;
-  height: 13px;
+  height: 16px;
   margin-left: 29px;
 }
 .registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .total {
@@ -808,9 +808,9 @@ input, select, textarea, button {
   padding-left: 1%;
 }
 .registrar_forms .registrar_pedido .registrar_ul .total-descuento_li .total .total_suma {
-  width: 44px;
+  width: 47px;
   text-align: center;
-  margin-left: 30%;
+  margin-left: 26%;
 }
 .registrar_forms .registrar_pedido .registrar_ul .registrar_submit {
   padding-top: 20px;

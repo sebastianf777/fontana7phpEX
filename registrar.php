@@ -544,7 +544,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                     <div class="total" >
                         <div class="signo">$</div>
-                        <input class="total_suma" name='element_10' type="number"></input>
+                        <input class="total_suma" placeholder="--" name='element_10' type="number"></input>
                     </div>
                 </li>
                 <!-- VENDEDOR ELEMENT -->

@@ -386,12 +386,12 @@ function sumarTotal(e) {
       sum += Number(preciosAMultiplicar[i].value);
     }
     sum -= descuento_valor;
-    total_suma.textContent = sum;
-    total_suma.textContent != 0 ? li_padre.classList.remove('no-imprimir') : li_padre.classList.add('no-imprimir');
+    total_suma.value = sum;
+    total_suma.value != 0 ? li_padre.classList.remove('no-imprimir') : li_padre.classList.add('no-imprimir');
   } else {
     let total_suma = document.querySelectorAll(".total_suma")[1];
     let calculo = sum - descuento_valor;
-    total_suma.textContent = calculo;
+    total_suma.value = calculo;
   }
 }
 

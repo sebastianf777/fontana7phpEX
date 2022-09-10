@@ -406,10 +406,16 @@
 
         .registrar_ul {
             padding: 1rem 2rem 0;
+            position: relative;
 
             //LI BORRAR LUEGO
             .registrar_numero-mostrar {
-                height: 50px
+                height: 50px;
+                .registrar-numero{
+                    top: 26px;
+                    left: 32%;
+                    position: absolute
+                }
             }
 
             //LI
@@ -484,10 +490,12 @@
                             margin: 0 auto;
                         }
                     }
-                    select, textarea{
+
+                    select,
+                    textarea {
                         max-width: 515px;
                     }
-                   
+
 
 
 
@@ -560,7 +568,8 @@
                         text-align: start
                     }
                 }
-                .registrar_item_cliente{
+
+                .registrar_item_cliente {
                     margin-bottom: 3px;
                 }
             }
@@ -608,6 +617,19 @@
             //LI
             .registrar_opciones-icono {
                 padding-top: 10px
+            }
+
+            //LI
+            .pedido_form_li {
+                position: absolute;
+                top: 27px;
+            }
+
+            //LI
+            .pedido_form_li_registrar {
+                position: absolute;
+                top: 18px;
+                right: 25%;
             }
 
             //LI
@@ -682,6 +704,7 @@
     .pedido_config {
         @include flexColumn;
         border: solid 1px;
+        margin-bottom: 1rem;
     }
 }
 

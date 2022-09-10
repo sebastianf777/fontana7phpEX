@@ -247,7 +247,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
                 <li class="total_li">
                     <div class="signo">$</div>
-                    <div class="total_suma"></div>
+                    <input type="number" placeholder="--" class="total_suma"></input type="number">
                 </li>
                 <li class="registrar_opciones-icono">
                     <label class="registrar_icono">MOSTRAR: </label>
@@ -548,7 +548,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                 </li>
                 <!-- VENDEDOR ELEMENT -->
-                <li class="registrar_opciones-icono">
+                <li class="pedido_form_li registrar_opciones-icono">
                     <label class="registrar_icono">
                         <img src="/img/vendedor.png" alt="vendedor img">
                     </label>
@@ -567,7 +567,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                 </li>
 
 
-                <li class="registrar_submit">
+                <li class="pedido_form_li_registrar registrar_submit">
                     <button id="duplicar_boton" class="button_3" type="button">
                         Duplicar
                     </button>

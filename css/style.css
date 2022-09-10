@@ -638,9 +638,15 @@ input, select, textarea, button {
 }
 .registrar_forms .registrar_pedido .registrar_ul {
   padding: 1rem 2rem 0;
+  position: relative;
 }
 .registrar_forms .registrar_pedido .registrar_ul .registrar_numero-mostrar {
   height: 50px;
+}
+.registrar_forms .registrar_pedido .registrar_ul .registrar_numero-mostrar .registrar-numero {
+  top: 26px;
+  left: 32%;
+  position: absolute;
 }
 .registrar_forms .registrar_pedido .registrar_ul .cabezal_presupuesto {
   display: flex;
@@ -691,7 +697,8 @@ input, select, textarea, button {
   display: flex;
   margin: 0 auto;
 }
-.registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item select, .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item textarea {
+.registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item select,
+.registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item textarea {
   max-width: 515px;
 }
 .registrar_forms .registrar_pedido .registrar_ul .registrar_item-importe .registrar_item textarea,
@@ -780,6 +787,15 @@ input, select, textarea, button {
 .registrar_forms .registrar_pedido .registrar_ul .registrar_opciones-icono {
   padding-top: 10px;
 }
+.registrar_forms .registrar_pedido .registrar_ul .pedido_form_li {
+  position: absolute;
+  top: 27px;
+}
+.registrar_forms .registrar_pedido .registrar_ul .pedido_form_li_registrar {
+  position: absolute;
+  top: 18px;
+  right: 25%;
+}
 .registrar_forms .registrar_pedido .registrar_ul .total-descuento_li {
   display: flex;
   flex-direction: row;
@@ -836,6 +852,7 @@ input, select, textarea, button {
   display: flex;
   flex-direction: column;
   border: solid 1px;
+  margin-bottom: 1rem;
 }
 
 .registrar_opciones input,

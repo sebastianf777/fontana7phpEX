@@ -136,24 +136,44 @@ function ponerFecha() {
 
 //Guardar última opción vendedor
 
-vendedor_opciones.forEach(element => {
-  element.addEventListener("click", function () {
-    let vendedor_sebastian_venta = vendedor_sebastian[0];
-    let vendedor_sebastian_pedido = vendedor_sebastian[1];
 
-    if (vendedor_sebastian_venta.checked === true || vendedor_sebastian_pedido.checked === true) {
+
+function ponerOpcionVendedor() {
+  const vendedor_opciones_venta = vendedor_opciones[0];
+  const vendedor_opciones_pedido = vendedor_opciones[1];
+  const vendedor_sebastian_venta = vendedor_sebastian[0];
+  const vendedor_sebastian_pedido = vendedor_sebastian[1];
+  const vendedor_brian_venta = vendedor_brian[0];
+  const vendedor_brian_pedido = vendedor_brian[1];
+  vendedor_opciones_venta.addEventListener("click", function () {
+
+    if (vendedor_sebastian_venta.checked === true) {
       localStorage.setItem("vendedor", "sebastian");
+      vendedor_sebastian_pedido.checked = true;
       // console.log("guardado seb")
     } else {
       localStorage.setItem("vendedor", "brian");
+      vendedor_brian_pedido.checked = true;
+
+      // console.log("guardado b")
+
+    }
+  })
+  vendedor_opciones_pedido.addEventListener("click", function () {
+    
+    if (vendedor_sebastian_pedido.checked === true) {
+      localStorage.setItem("vendedor", "sebastian");
+      vendedor_sebastian_venta.checked = true;
+      // console.log("guardado seb")
+    } else {
+      localStorage.setItem("vendedor", "brian");
+      vendedor_brian_venta.checked = true;
+
       // console.log("guardado b")
 
     }
   })
 
-});
-
-function ponerOpcionVendedor() {
   if (vendedor_opcion == "sebastian") {
     vendedor_brian.forEach(element => {
       element.checked = false;

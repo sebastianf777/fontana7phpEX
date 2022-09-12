@@ -787,7 +787,7 @@ input, select, textarea, button {
 .registrar_forms .registrar_pedido .registrar_ul .registrar_opciones-icono {
   padding-top: 10px;
 }
-.registrar_forms .registrar_pedido .registrar_ul .pedido_form_li {
+.registrar_forms .registrar_pedido .registrar_ul .pedido_form_li_vendedor {
   position: absolute;
   top: 27px;
 }

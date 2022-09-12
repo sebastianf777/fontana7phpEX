@@ -534,6 +534,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
 
                 </li>
+                <!--TOTAL_PEDIDO + DESCUENTO( ACUENTA_PEDIDO) -->
                 <li class="total-descuento_li">
                     <div class="descuento-titulo">
                         DESCUENTO
@@ -548,7 +549,7 @@ $_SESSION['FORM_SECRET'] = $secret;
                     </div>
                 </li>
                 <!-- VENDEDOR ELEMENT -->
-                <li class="pedido_form_li registrar_opciones-icono">
+                    <li class="pedido_form_li_vendedor registrar_opciones-icono">
                     <label class="registrar_icono">
                         <img src="/img/vendedor.png" alt="vendedor img">
                     </label>

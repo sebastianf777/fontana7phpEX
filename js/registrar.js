@@ -594,6 +594,7 @@ const funcionDuplicar = () => {
     const replicar = form_pedidos_original.cloneNode(true);
     replicar.querySelector(".registrar_numero-mostrar").remove();
     replicar.querySelector(".registrar_submit").remove();
+    replicar.querySelector(".pedido_form_li_vendedor").remove();
     form_pedidos_original.parentNode.insertBefore(replicar, form_pedidos_original.nextSibling)
   })
 

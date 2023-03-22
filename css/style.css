@@ -132,6 +132,7 @@ input, select, textarea, button {
   position: fixed;
   background-color: var(--bg-nav);
   transition: width 200ms ease;
+  z-index: 999;
 }
 .navbar .navbar-nav {
   list-style: none;
